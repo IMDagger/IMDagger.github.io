@@ -1,0 +1,84 @@
+Генератор названий планет: возвращение
+======================================
+:date: 2013-06-11 23:54:26
+:modified: 2013-06-12 11:45:52
+:tags: браузер, новый, планета, название, javascript, скрипт, генератор, пример
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1814
+
+В этот раз я решил немного переписать \ `мой старый
+генератор <{filename}../2010/9-5-1105.rst>`__ названий
+планет (который написан на Python, заодно я нашёл там небольшую ошибку и
+исправил). На этот раз генератор **не требует ничего кроме** браузера,
+т.к. написан на JavaScript. И в этот раз я даже
+его \ `положил <https://gist.github.com/IMDagger/5761809>`__ на GitHub
+Gist, чтобы было удобнее править и загружать.
+Вот \ `тут <https://gist.github.com/IMDagger/5761809/download>`__ можно
+его скачать. Достаточно загрузить архив, распаковать, открыть вложенный
+HTML и понажимать кнопку “Сгенерировать новую!”. Получаются забавные
+варианты:
+
+    | Kut
+    | Perr
+    | Koai L3
+    | Vet
+    | Baonda
+    | Kee
+    | Pea
+    | Cris
+    | Cenyal
+    | Koaolia
+    | Melanal
+    | Vaviet K4
+    | Badabana K
+    | Beboha 1I
+    | Keate IV
+    | Oniian
+    | Bebancolia
+    | Fractirion
+    | Gaean
+    | Bebomvian
+    | Monera KI
+    | Jacoanet AR7
+    | Eacomodate
+    | Luiic
+    | Oniancolia VII
+    | Crematoth
+    | Odvolar K
+    | Kon
+    | Onivilon VIIILA
+    | Colar
+    | Cremcumber X
+    | Deat Crypto
+    | Cucun
+    | Vive VIII
+    | Crematooro
+    | Bic III
+    | Vivcytal L3
+    | Beh IVP
+    | Cucut K4
+    | Asesar IIII
+    | Yaer X
+    | Con
+    | Fracek
+    | Aca
+    | Centut
+    | Odactal
+    | Oolia
+    | Venera 7
+    | Ortyh
+    | Embarrala VII
+    | Jacal
+
+.. class:: text-center
+
+`скачать`_
+
+.. class:: text-center
+
+|Код генератора|
+
+.. |Код генератора| image:: http://img-fotki.yandex.ru/get/9155/22199227.b/0_8e033_e8d9bd5d_L
+   :target: `скачать`_
+.. _`скачать`: https://gist.github.com/IMDagger/5761809/download

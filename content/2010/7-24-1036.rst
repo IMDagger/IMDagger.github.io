@@ -1,0 +1,103 @@
+Реализация Няшки
+================
+:date: 2010-07-24 16:27:53
+:tags: blender, няшка, котёнок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1036
+
+На мех сил у меня не хватило, я его не проработал. Да и давно я не
+моделил, а искусством меха не владел, не успел ещё научиться. Вот что за
+пару часов я успел сделать:
+
+.. class:: text-center
+
+|image0|
+
+Котёнок Няшка говорит: “Няяяя!”
+
+**Процесс создания: **
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+Тут у Няшки скелет пока управляет только усами
+
+.. class:: text-center
+
+|image2|
+
+.. class:: text-center
+
+Няшка даже в режиме редактирования няшная :)
+
+.. class:: text-center
+
+|image3|
+
+.. class:: text-center
+
+А тут виден хвост
+
+.. class:: text-center
+
+|image4|
+
+.. class:: text-center
+
+Забыл отдельный материал сделать для ушек
+
+.. class:: text-center
+
+|image5|
+
+.. class:: text-center
+
+Соединил кости с телом через модификатор, т.к. это намного лучше, оно
+хорошо тогда работает с Mirror
+
+.. class:: text-center
+
+|image6|
+
+.. class:: text-center
+
+Вид сбоку
+
+.. class:: text-center
+
+|image7|
+
+.. class:: text-center
+
+Добавил землю, на которой сидит на подушке Няшка
+
+.. class:: text-center
+
+|image8|
+
+.. class:: text-center
+
+Добавил частицы меха
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4801/imdagger.7/0_3a0ce_80a2c4f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237774/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4802/imdagger.7/0_3a0cf_396260b8_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237775/
+.. |image2| image:: http://img-fotki.yandex.ru/get/5403/imdagger.7/0_3a0d0_87eb8ae1_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237776/
+.. |image3| image:: http://img-fotki.yandex.ru/get/4801/imdagger.7/0_3a0d1_898348_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237777/
+.. |image4| image:: http://img-fotki.yandex.ru/get/5402/imdagger.7/0_3a0d2_13aaf4cc_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237778/
+.. |image5| image:: http://img-fotki.yandex.ru/get/5403/imdagger.7/0_3a0d3_92907978_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237779/
+.. |image6| image:: http://img-fotki.yandex.ru/get/4801/imdagger.7/0_3a0d4_806f4d2_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237780/
+.. |image7| image:: http://img-fotki.yandex.ru/get/5103/imdagger.7/0_3a0d5_f5b7bec6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237781/
+.. |image8| image:: http://img-fotki.yandex.ru/get/4803/imdagger.7/0_3a0d6_21750dbd_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237782/

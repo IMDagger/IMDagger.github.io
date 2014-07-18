@@ -1,0 +1,22 @@
+Редактор рюкзака
+================
+:date: 2009-12-22 18:36:49
+:tags: blender, рюкзак, last_gateway_to_hell
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=536
+
+Доделал возможность добавки предметов (изображения в тестовой сцене
+не вставлял, поэтому они отсутствуют), просмотра рюкзака, управление
+предметами. Осталось только скроллбар отрегулировать. Сейчас закоммичу
+новые изменения. В стандартной документации по 2.49 почему-то не нашёл
+описания функции *Scrollbar*, полазал по инету и нашёл себе небольшую
+`шпаргалку <http://download.blender.org/documentation/NaN_docs/Manual2.0/PythonScripting.html>`__
+по его параметрам (и даже больше).
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4111/imdagger.5/0_1b0ef_3fa05e38_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/110831/

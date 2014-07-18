@@ -1,0 +1,12 @@
+Blend-формат изнутри
+====================
+:date: 2010-11-21 17:49:28
+:tags: blender, формат, файл, документация
+:category: link
+:author: IMDagger
+:attached-url: http://www.atmind.nl/blender/mystery_ot_blend.html
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1183
+
+Очень доступно объясняет, как устроены blend-файлы, т.к. даже по
+исходнику трудно понять, что там происходит.
+

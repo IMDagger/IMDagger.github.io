@@ -1,0 +1,21 @@
+Любовь в стиле ретро
+====================
+:date: 2010-06-12 15:43:19
+:tags: gimp, ретро, коллаж, Леська, фото, фейк
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=968
+
+Надеюсь, что `Леська Lou~katze <http://loukat.ya.ru/>`__ простит меня, что я чуток поглумился над её фото :).
+Хотя `=Tati= <http://tatifly.ya.ru/>`__ досталось ещё больше :), но такое я показывать не могу, там я
+пересёк все рамки. Так что выкладываю мои первые шаги в GIMP… и так … «В
+стиле ретро»:
+
+.. class:: text-center
+
+|image0|
+
+Что там за парень на фоне я не знаю :) Просто нашёл в интернете.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4202/imdagger.7/0_341c3_bba14b7a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/213443/

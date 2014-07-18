@@ -1,0 +1,12 @@
+Clonezilla SE
+=============
+:date: 2009-08-25 16:26:14
+:tags: clonezilla, клонирование, drbl
+:category: link
+:author: IMDagger
+:attached-url: http://forums.atomicmpc.com.au/index.php?s=24d2b989bac3080cb1b150006935e7ac&showtopic=19601&pid=399751&st=0&#entry399751
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=166
+
+Описание установки и настройки DRBL и Clonezilla, которое мне помогло
+решить часть проблем с запуском сервера dcs.
+

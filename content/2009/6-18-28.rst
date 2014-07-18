@@ -1,0 +1,15 @@
+
+
+:date: 2009-06-18 11:16:27
+:tags: 
+:category: join
+:author: IMDagger
+:club-ya-ru-id: urn:ya.ru:club/4611686018427390328
+:club-name: Erlang
+:attached-url: http://clubs.ya.ru/4611686018427390328
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=28
+:slug: urn:ya.ru:post/22199227/28
+
+Верю, что за этим языком часть нашего будущего, хотя я пока мало чего
+написал на ЯФП, но они у меня вызывают особое чувство.
+

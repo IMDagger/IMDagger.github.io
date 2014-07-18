@@ -1,0 +1,45 @@
+Актуаторы в BGE
+===============
+:date: 2009-07-29 11:53:19
+:tags: python, bge, action, актуатор
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=118
+
+Не задумывался раньше, что в BGE такие актуаторы, как: **Action**,
+**Motion** и некоторые другие, добавленные при помощи
+**addActiveActuator** из Python-скрипта с флагом True, работают до тех
+пор, пока их не добавят с инвертированным сигналом, т.е.
+GameLogic.addActiveActuator(my\_act, False). Только после этого актуатор
+перестанет выполняться на каждом тике. И это верно даже для
+**Action—>Property**, хотя я думал, что оно установит один раз и не
+будет больше мешать. Я написал такой скрипт для логики скелета:
+
+.. code-block:: python
+
+    cc = GameLogic.getCurrentController()
+    restart_frame = cc.getActuator('restart')
+    pressed_key_restart = cc.getSensor('pressed r').isPositive()
+    if pressed_key_move:
+        GameLogic.addActiveActuator(restart_frame, True)
+        …
+
+Актуатор *restart* — **Action** типа **Property**, который сбрасывал
+текущий кадр в 1. Ещё данный сценарий переносил одновременно с
+обнулением анимации объект в новую позицию. Но возникла проблема, что
+после срабатывания скрипта, больше не возможно запустить анимацию ещё
+раз. Немного покумекав и исследовав топики форума
+http://blenderartists.org/forum/ я понял, что после активации актуатор
+*restart* постоянно пытается сбросить кадр анимации и не даёт нормально
+работать дальше. Это мне пришло в голову, когда я нашёл на форуме топик
+про Motion и, что его нужно деактивировать. Вышел такой Python-скрипт:
+
+.. code-block:: python
+
+    cc = GameLogic.getCurrentController()
+    restart_frame = cc.getActuator('restart')
+    pressed_key_restart = cc.getSensor('pressed r').isPositive()
+    need_activate = pressed_key_restart
+    GameLogic.addActiveActuator(restart_frame, need_activate)
+
+И это помогло решить проблемы. Всё работает, как и требуется :).

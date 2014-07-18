@@ -1,0 +1,11 @@
+Сборка информации о КОП
+=======================
+:date: 2013-10-20 21:22:44
+:tags: компонента, ориентированный, программирование, метод, разработка
+:category: link
+:author: IMDagger
+:attached-url: http://entity-systems.wikidot.com/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1878
+
+    В частности в сфере гейм девелопмента.
+

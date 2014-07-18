@@ -1,0 +1,21 @@
+Мой прогресс
+============
+:date: 2011-06-05 19:12:36
+:tags: здоровье, Я, сборка, прогресс, QEMU
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1353
+
+Пока компилировался QEMU для всех архитектур (вообще мне хватило бы
+только x64, но я решил собрать разные платформы), я набрал в электронном
+виде данные из тетради за год моих занятий по одной третьей программы. И
+построил график роста суммарного усилия килограмм-повторений. А QEMU
+занял почти 400 мегов диска для сборки :) Скоро буду туда ставить Debian
+для ICFPC.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5506/imdagger.9/0_5e079_c8992fde_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/385145/

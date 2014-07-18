@@ -1,0 +1,12 @@
+Заметка
+=======
+:date: 2010-02-28 18:10:01
+:tags: blender, жизнь, заметка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=706
+
+Ещё полезная вещь :kbd:`W, Alt + 8`. Выбираешь две точки, применяешь
+функцию и вуаля.. оно выбрало все вершины на пути от одной точки к
+другой. Это в дополнение к Edge Loop Select и Edge Ring Select. Думаю
+моя жизнь станет немного проще.

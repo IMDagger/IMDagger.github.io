@@ -1,0 +1,38 @@
+Adobe Flex
+==========
+:date: 2010-02-19 19:29:02
+:tags: linux, flex
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=695
+
+Выкачал я посмотреть Adobe Flex 3.5. Забавная вещь, скачал ещё
+дополнительно библиотеку Flixel, чтобы можно было делать небольшие игры
+на Flash, если у меня потребность появится. Почему Flex? Он же
+изначально не создан для игр? Всё потому, что он предоставляет удобное
+привычное создание игр: просто писать исходный код, а ресурсы отдельно,
+а ещё он работает под Linux. Я нарисовал небольшую заставку и сделал
+средненький прогрессбар. Пока разобрался с AS3 потратил порядочно
+времени, но всё де смог сделать :) И кода вышло не много. Правда mxmlc
+компилирует .as файлы долговато. Ещё я поставил actionscript-mode для
+Emacs.
+
+.. class:: text-center
+
+|image0|
+
+полная загрузка в плеере
+
+.. class:: text-center
+
+|image1|
+
+частичная загрузка
+
+Хотелось бы и в этом всё наловчиться работать. Вдруг кушать будет
+нечего, буду делать Flash-игры :).
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3811/imdagger.5/0_22a71_b6492bb3_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/141937/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3809/imdagger.5/0_22a72_845695fd_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/141938/

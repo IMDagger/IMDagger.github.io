@@ -1,0 +1,67 @@
+Составил
+========
+:date: 2010-03-22 18:25:26
+:tags: резюме, работа
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=763
+
+Составил небольшое резюме о себе. Опыт у меня не большой, но я
+старался писать не всё подряд, чтобы вышло по делу и не было
+перегруженным. Решил разделить его на три классические части:
+
+#. Кто я и как связаться со мной
+#. Мои знания и умения в технической сфере, опыт работы
+#. Образование, языки, личностные качества и хобби
+
+Вроде написал только о том, где «прочно укрепился», а не
+поверхностно. Помню видел резюме, где описано чуть ли не несколько
+десятков языков и технологий O\_o.
+
+  | **\*\*\*\*\*\*\*\*\*** **\*\*\*\*\*\*\*\*\***, 22 years
+  | (Velcom) **\*\*\*\*\*\*\***, home **\*\*\*\*\*\***
+  | e-mail: **\*\*\*\*\*\*\*\***\ @\ **\*\***.\ **\*\***,
+  | **\*\*\*\*\*\*\*\***\ @\ **\*\*\*\***.\ **\*\*\*\***
+  |
+  | WORK EXPERIENCE:
+  | Engineer Programmer
+  | GSRL
+  | 2006-present
+  |     \* Proxy, email, web server administration
+  |     \* Primary domain controller administration and upgrade from Git
+  | repository (Samba4)
+  |     \* Keep and track image cloning software and images
+    (RDBL+Clonezilla)
+  | PROGRAMMING SKILLS:
+  |     \* Programming languages known are: C, C++, Python, Lua
+  |     \* DB and query languages: ANSI SQL, MSSQL, MySQL
+  |     \* Version control systems: Bazaar, Git
+  |     \* Want to lean more deeply: Erlang, LISP
+  | TECHNICAL SKILLS:
+  |     \* Experience in administration Linux and FreeBSD
+  |     \* Advanced Linux user (7 years experience)
+  | PARTICIPATION IN PROJECTS:
+  |     \* Midnight Commander (language C; bug fixing)
+  |     \* Blender GE (language C++, Python; bug fixing and coding
+    simple new features)
+  |     \* Distance Learning Belarus (Java; refactoring and rewriting
+    old code base to Hibernate+Spring)
+  |     \* Own little quest game project (Python; coding game logic and
+    connection layer with BGE API) 
+  | EDUCATION: 
+  | 2005-2010
+  |     \* Higher education, programmer, F. Scorina Gomel State
+    University, Gomel, Belarus
+  | ALSO:
+  |     \* Foreign languages: technical English
+  |     \* Hobbies: 3D modeling (work with Blender Internal Render and
+    LuxRender), game making
+  |     \* Personal qualities: communicable, fast learner, ready to
+    learn new technologies, paradigms and methodologies, easily perceive
+    constructive criticism
+  |     \* Microblog: imdagger.ya.ru
+  |     \* Interests in spheres: web services, building entertainment
+    services and games
+
+Решил выбросить про разработку скриптов, протоколы и жизненные
+хобби, оставил всё гиковское :)

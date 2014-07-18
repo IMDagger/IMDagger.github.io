@@ -1,0 +1,16 @@
+Bazaar fast forward
+===================
+:date: 2011-05-23 20:23:41
+:tags: fast, forward, bazaar, merge
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1339
+
+    Теперь я осознал, что стоило побольше почитать про Bazaar, когда я
+его начал использовать, т.к. только при работе с Git я узнал про fast
+forward. Раньше, если **bzr pull** не хотел срабатывать, то я делал
+полноценный merge, что приводило к некоторому уровню «спагетти», но
+когда я узнал про fast forward из Git, решил взглянуть на эту же
+возможность в Bazaar. Оказывается всё просто, нужно лишь писать **bzr
+merge –pull**.
+

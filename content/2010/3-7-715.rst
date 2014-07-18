@@ -1,0 +1,125 @@
+Я маленький TeXник
+==================
+:date: 2010-03-07 09:10:05
+:modified: 2014-07-18 22:14
+:tags: диплом, tex, программирование, окончания, страницы, latex
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=715
+
+Уже несколько лет я всё собирался добавить моему шаблону возможность
+выводить количество страниц с учётом, что в русском языке есть
+окончания. Но раньше мне не хватало знаний и понимания ни Τεχ ни других
+LaΤεχ. Но вчера я собрался с силами и духом и потратил пару часов на
+эксперименты, написание кода и изучения исходников LaΤεχ. Я открыл
+**/usr/share/texmf/tex/latex/base/latex.ltx**. Я знал, что
+\\‍ref{TotPages} выводит страницы правильно и всего одно число, хоть и в
+самой переменной r@TotPages хранится {число}{число} (оно попадает туда
+aux-файла при помощи \\‍newlabel{TotPages}{{23}{23}}).
+
+Я взглянул на код макроса ref:
+
+.. code-block:: tex
+
+    \def\‍ref#1{\expandafter\@setref\csname r@#1\endcsname\@firstoftwo{#1}}
+
+Видно, что он использует для выбора параметра из двух макрос
+\\@firstoftwo. Но я не мог понять, как оно передаёт один параметр этому
+макросу. если тот требует два. А потом до меня дошло и понеслось…
+
+.. code-block:: tex
+
+    %% расширить макрос \@setref только после его аргументов, а у него их 3-и
+    \expandafter\@setref
+    %%  преобразует ссылку TotPages в \‍r@TotPages
+    \csname r@#1\endcsname
+    %% макрос, при помощи которого будет выбирать аргумент для вывода
+    \@firstoftwo
+    %% название ссылки, т.е. в моём случае строка TotPages, используется для
+    %% вывода ошибки, если она не найдена
+    {#1}
+
+Тогда я решил сделать свой макрос \\totpagesvalue, который в
+указанный счётчик сохранит число страниц из aux-файла. Вот такой он
+получился по аналогии:
+
+.. code-block:: tex
+
+    \def\totpagesvalue#1{\expandafter\@totpagesvalue\csname r@TotPages\endcsname\@firstoftwo{#1}}
+    \def\@totpagesvalue#1#2#3{%
+      \ifx#1\‍relax
+       \protect\G@refundefinedtrue
+       \@latex@warning{Reference \`TotPages' on page \thepage \space
+                          undefined}%
+      \else
+       \countdef\@pagescount=#3
+       \expandafter\@pagescount=\expandafter#2#1\‍null
+      \fi}
+
+Таким образом, если вызвать :code:`\\totpagesvalue{88}`, то число страниц
+будет помещено в счётчик :code:`\\count88`. Затем я написал команду вывода числа
+и текста с правильным окончанием :code:`\\writewithword`.
+
+.. code-block:: tex
+
+    %% вывод числа с текстом:
+    %% 1. число
+    %% 2. для 1 (т.е. страниц-а, рисунок-0)
+    %% 3. для 2,3,4 (т.е. страниц-ы, рисунк-а)
+    %% 4. для 0, 5, 6, 7, 8, 9 (страниц-0, рисунк-ов)
+    %% 5. номер счётчика для временного хранения данных
+    %% 6. номер второго временного счётчика для расчётов
+    \‍newcommand{\writewithword}[6] {
+      \countdef\@pagescount=#5
+      \@pagescount=#1
+      \countdef\@mod=#6
+      \@mod=\@pagescount
+      %% для x11 ... x19
+      \divide\@mod by 100
+      \multiply\@mod by 100
+      \advance\@mod by -\@pagescount
+      \multiply\@mod by -1
+      \ifthenelse{\the\@mod>10 \and \the\@mod<20}{
+        \the\@pagescount~#4
+      }{
+        \@mod=\@pagescount
+        %% для x0 … x9
+        \divide\@mod by 10
+        \multiply\@mod by 10
+        \advance\@mod by -\@pagescount
+        \multiply\@mod by -1
+        \the\@pagescount
+        \ifthenelse{\equal{\the\@mod}{1}}{#2}{
+          \ifthenelse{\equal{\the\@mod}{2}
+            \or \equal{\the\@mod}{3}
+            \or \equal{\the\@mod}{4}} {#3}{#4}
+        }
+      }
+    }
+
+Оставалось только объединить оба макроса в :code:`\\showpagecount`,
+который выводит, например, 23 страниц\ **ы** или 11 страни\ **ц**.
+
+.. code-block:: tex
+
+    %% вывод вида: [число страниц] страниц/а/ы
+    \‍newcommand{\showpagecount}[5] {
+     \totpagesvalue{#4}
+     \countdef\@pagescount=#4
+     \writewithword{\@pagescount}{#1}{#2}{#3}{#4}{#5}
+    }
+
+У меня есть файл referat.sty, который подготавливает реферат и
+выводит число страниц и другую информацию по отчёту или диплому.
+Используется вывод страниц в нём так:
+
+.. code-block:: tex
+
+   \showpagecount{страница}{страницы}{страниц}{48}{47}.
+
+.. alert-warning::
+   Не забыть подключить пакеты :code:`totpages` и :code:`ifthen`.
+
+Переменная TotPages у
+меня сбрасывается :code:`\\setcounter{TotPages}{-1}`, чтобы не нумеровать
+титульный лист, а реферат не учитывается в страницы.

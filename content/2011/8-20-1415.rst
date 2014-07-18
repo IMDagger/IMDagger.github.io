@@ -1,0 +1,24 @@
+Я назову его Сашко
+==================
+:date: 2011-08-20 18:19:07
+:tags: паук, паук-оса
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1415
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4610/22199227.a/0_63569_16041fc_-1-L
+   :link: http://fotki.yandex.ru/users/imdagger/view/406889
+   :title: Я назову его Сашко
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4707/22199227.a/0_6356a_f021a072_-1-L
+   :link: http://fotki.yandex.ru/users/imdagger/view/406890
+   :title: Я назову его Сашко
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4812/22199227.a/0_6356c_a15991d1_-2-L
+   :link: http://fotki.yandex.ru/users/imdagger/view/406892
+   :title: Я назову его Сашко
+
+Это паук-оса, у нас нынче начинает встречаться всё чаще и чаще, для
+человека без аллергий безобиден, укусить может, но не больно. Я его
+сфоткал в дождь.
+

@@ -1,0 +1,19 @@
+Принудительный сброс кэша в RequireJS
+=====================================
+:date: 2012-05-29 16:37:24
+:modified: 2012-05-29 21:37:41
+:tags: RequireJS, кэш, программирование, кеш
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1599
+
+Нашёл в `доке по
+RequireJS <http://requirejs.org/docs/api.html#config>`__\ параметр
+urlArgs, который позволяет после каждого загруженного
+модуля добавлять некоторые параметры. Как сказано в документации это
+можно применять для
+принудительного сброса кэша (cache bust), например:
+
+.. code-block:: js
+
+    require.config({urlArgs: "version=инкрементальная_версия"});

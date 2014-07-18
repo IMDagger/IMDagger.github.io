@@ -1,0 +1,86 @@
+Вселенная Bell AMP-PI
+=====================
+:date: 2011-01-01 19:12:40
+:tags: вселенная, планета, название, python, генератор, параметры
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1213
+
+Набросал небольшой генератор вселенной, нужно подчистить его код и
+выложу сюда. В него осталось добавить выбор орбиты для подсистемы.
+Генератор пока умеет создавать только вселенные, где орбиты круговые. В
+данном генераторе я использовал ранее описанный генератор названий
+планет и добавил запрет на повторение названий. Вот лишь небольшой
+кусочек вселенной (т.к. целиком текст с описанием всех планет и
+подсистем весит 126Кб)::
+
+   System "Bell AMP-PI" (own angle: 16.3660517193, orbit angle: 1.35566592858)
+   Kernel
+  . System "Jacm L3CLA" (own angle: 52.4699971472, orbit angle: 11.1852662647)
+    Kernel
+  .. System "Crematol V" (own angle: 42.9356828613, orbit angle: 8.56155368931)
+     Kernel
+  ... System "Kevlit" (own angle: 1.78621553426, orbit angle: 2.78555639001)
+      Kernel
+  .... System "Cuo IX" (own angle: 22.4737305671, orbit angle: 13.2149029823)
+       Kernel
+  ..... System "Cul OmegaHI" (own angle: 36.2602458326, orbit angle: 10.8243369757)
+        Kernel
+  ...... Planet  "Mliae" mass: 1927.545984, radius: 24.3900492429, own angle: 28.3825946285, orbit angle: 3.54812948961
+        Other
+  ...... System "Veno" (own angle: 36.8008379182, orbit angle: 7.42926566603)
+         Kernel
+  ....... Planet  "Caes" mass: 297.683510191, radius: 20.3040866122, own angle: 46.2487757716, orbit angle: 10.5372898181
+         Other
+  ....... Planet  "Luisl" mass: 4.47974197292, radius: 16.1556491809, own angle: 2.14866049643, orbit angle: 0.518113077734
+  ....... Planet  "Plaso I-PI" mass: 3.59825174505, radius: 13.5296422189, own angle: 12.9894142906, orbit angle: 12.3335314842
+  ....... Planet  "Ooak" mass: 50.1910708357, radius: 23.9784340864, own angle: 24.0885015369, orbit angle: 18.3719686185
+  ....... Planet  "Unife II" mass: 77.1220043454, radius: 23.7519538256, own angle: 1.56963269716, orbit angle: 9.66778420497
+  ....... Planet  "Generc" mass: 0.954859525078, radius: 2.89965063537, own angle: 15.1977192455, orbit angle: 1.56909202794
+  ....... Planet  "Luisr V-PI" mass: 9.15857260061, radius: 23.6343097555, own angle: 41.4134654258, orbit angle: 8.60298718306
+  ....... System "Vavila" (own angle: 58.4942904382, orbit angle: 5.42910843328)
+          Kernel
+  ........ Planet  "Mega" mass: 9.90668278086, radius: 21.2579091744, own angle: 55.4839170633, orbit angle: 5.35352709001
+          Other
+  ........ Planet  "Ceno 7" mass: 4.08791579404, radius: 20.6325573986, own angle: 27.5536444655, orbit angle: 18.9861267757
+  ........ Planet  "Mell" mass: 0.929107086513, radius: 4.48521899506, own angle: 40.9585332724, orbit angle: 2.45913512337
+  ........ Planet  "Neh" mass: 1.58743230669, radius: 7.86796678631, own angle: 50.0154890556, orbit angle: 3.46508067616
+  ....... Planet  "Cremati" mass: 2.57073825248, radius: 8.08656305806, own angle: 51.5767084156, orbit angle: 14.4613865496
+  ....... Planet  "Slayeb L3" mass: 0.892278171643, radius: 3.2104856728, own angle: 35.280864282, orbit angle: 7.17439269782
+  ....... System "Mop 7" (own angle: 28.8260733051, orbit angle: 10.581857998)
+          Kernel
+  ........ Planet  "Generr IINI" mass: 19.8259856835, radius: 21.9458559811, own angle: 7.17385648429, orbit angle: 8.2028602292
+          Other
+  ........ Planet  "Plyn 13" mass: 0.412215424555, radius: 3.99815118569, own angle: 43.2833339043, orbit angle: 3.15689005144
+  ........ Planet  "Peaa X" mass: 1.67652635186, radius: 16.3246855463, own angle: 44.6282903891, orbit angle: 3.68209069637
+  ........ Planet  "Clelaenm K" mass: 0.907430385201, radius: 8.7767363707, own angle: 44.6876879735, orbit angle: 9.42593184082
+  ........ Planet  "Plastil" mass: 7.56815559442, radius: 24.2110500286, own angle: 42.0886798957, orbit angle: 6.4736934436
+  ........ Planet  "Venel" mass: 0.548937028953, radius: 4.91524672657, own angle: 41.9364356155, orbit angle: 14.0150452196
+  ........ Planet  "Reactin" mass: 1.17891410296, radius: 10.2043601182, own angle: 21.6836902623, orbit angle: 9.93692803484
+  ........ Planet  "Mon" mass: 0.378742194024, radius: 3.63136144907, own angle: 59.3554914813, orbit angle: 14.1281845017
+  ........ Planet  "Plo AMP" mass: 1.15902934644, radius: 9.67906191922, own angle: 57.8785245009, orbit angle: 4.02157922693
+  ....... Planet  "Ges X" mass: 0.386065174927, radius: 1.38940642345, own angle: 48.3281945841, orbit angle: 11.174225646
+  ...... Planet  "Lilv IIP" mass: 18.4287270936, radius: 22.8811413153, own angle: 49.7535392847, orbit angle: 9.484113229
+  ...... System "Lebrola" (own angle: 2.07589402431, orbit angle: 17.7681479731)
+         Kernel
+  ....... Planet  "Nee" mass: 206.931454168, radius: 24.2282229636, own angle: 22.3670052921, orbit angle: 4.94854757469
+         Other
+  ....... Planet  "Badar" mass: 9.02902141779, radius: 23.5211240764, own angle: 27.5983732014, orbit angle: 5.9324001535
+
+Kernel означает, что далее следует подсистема (или планета), которая
+является ядром данной подсистемы, Other это список подсистем (или
+планет) по порядку от ядра по орбиталям. Грубо говоря алгоритм работает
+следующим образом:
+
+#. Выбрать параметры вселенной: общую массу и размер
+#. Выбрать произвольные углы для подсистемы с учётом диапазонов
+#. Выбрать случайное уникальное название (используется нарее описанный
+   модуль, его можно *поискать при помощи поиска по дневнику на Я.ру*:
+   *генератор названий планет*)
+#. Если масса слишком маленькая или размер, то разбиению система не
+   подлежит
+#. Разбить систему на случайное число подсистем
+#. Выбрать массу ядра (около 60% от общей массы)
+#. Выбрать произвольные массы для подсистем, но не слишком маленькие
+#. Выбрать размер подсистемы пропорционально массе
+#. **Рекурсивно развернуть каждую из подсистем**

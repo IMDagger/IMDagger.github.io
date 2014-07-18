@@ -1,0 +1,25 @@
+Живые бабочки
+=============
+:date: 2013-05-04 20:41:05
+:tags: красота, бабочка, живой, живность
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1787
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6426/22199227.a/0_8c124_fef7a_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/573732
+   :title: Живые бабочки
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5647/22199227.b/0_8c125_444e86b9_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/573733
+   :title: Живые бабочки
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6439/22199227.b/0_8c126_1a19cf6f_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/573734
+   :title: Живые бабочки
+
+Пару фоток с выставки живых бабочек, которую сегодня посещали. Бабочки
+достаточно большие, заморские Они прямо там едят, живут и размножаются.
+Если повезёт, то можно прямо увидеть как бабочка рождается из куколки
+или кокона.
+

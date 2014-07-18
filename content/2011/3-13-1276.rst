@@ -1,0 +1,33 @@
+UBlenderJS версии 0.0.6
+=======================
+:date: 2011-03-13 16:05:51
+:tags: исправление, доработка, javascript, blender, UBlenderJS, форум, дополнительно
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1276
+
+.. role:: code-bold(code)
+   :class: strong-1
+
+Выпустил
+`фикс <http://blender3d.org.ua/forum/bu/iwe/upload/blender_org_ua_v006%2Euser.js>`__
+для UBlenderJS. Завёл отдельный
+`топик <http://blender3d.org.ua/forum/bu/46.html>`__ на форуме
+`БлендерУкраина <http://blender3d.org.ua>`__. Пришлось сделать проверку
+на innerText, который есть в Opera, но нет в Firefox, я раньше пробовал
+заменить его на textContent, но это не аналогичная функция в Javascript.
+Т.к. она работает неправильно для многострочных данных и с пробелами
+иное поведение. Нашёл на Stack Overflow
+`решение <http://stackoverflow.com/questions/3907846/innertext-shim-for-firefox>`__
+для Firefox с использованием :code-bold:`toString` и выделением (в Opera оно
+себя ведёт не очень дружелюбно):
+
+.. code-block:: js
+
+   var sel = window.getSelection();
+   sel.removeAllRanges();
+   var range = document.createRange();
+   range.selectNodeContents(textNode);
+   sel.addRange(range);
+   var str = sel.toString();
+   sel.removeAllRanges();

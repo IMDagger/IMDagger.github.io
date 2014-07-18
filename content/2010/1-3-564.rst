@@ -1,0 +1,21 @@
+Тружусь
+=======
+:date: 2010-01-03 16:57:14
+:modified: 2014-07-18 23:59
+:tags: Я, бредни
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=564
+
+Вырасту, буду большим и грозным и много много кодить без отдыха. А пока
+я ещё вот такой и нуждаюсь в перерывах :) **Погладьте меня**\ … :D
+
+UPD 18 июля 2014: :underline:`“много много кодить без отдыха”` — наииивный... зрение упало и
+уже не могу без делать передышек
+
+.. class:: text-center
+
+|Изображение малыша кролика|
+
+.. |Изображение малыша кролика| image:: http://demotivators.to/media/posters/3855/472581_malyish-milashka-.jpg
+   :target: http://demotivators.to/posters/472581/malyish-milashka-.htm

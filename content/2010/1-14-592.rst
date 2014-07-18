@@ -1,0 +1,18 @@
+Квантовая механика
+==================
+:date: 2010-01-14 19:59:23
+:tags: электрон, физика, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=592
+
+Чтобы получить 10 придётся пройти через обе щели :) Вот по-быстрому
+набросал, как это должно выглядеть (вечно эти наблюдатели мешают
+получать 10):
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4108/imdagger.5/0_1ddde_870674b0_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/122334/

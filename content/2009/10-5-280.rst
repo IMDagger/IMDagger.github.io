@@ -1,0 +1,16 @@
+Мучаюсь
+=======
+:date: 2009-10-05 17:41:47
+:tags: java, hibernate
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=280
+
+Эх, приходится переносить комплексные запросы на Hibernate и
+мучаться. Но всё же нашёл кое-какое решение для создания объектов,
+оказывается можно в HQL писать :code:`select new MyMegaClass(параметры, …)
+from OtherClass left join и т.д.`. Что позволит мне создавать
+объекты другого типа.
+
+Я как-то не обращал на это внимание, пока не наткнулся
+`тут <http://www.javalobby.org/articles/hibernate-query-101/>`__.

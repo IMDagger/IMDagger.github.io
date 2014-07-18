@@ -1,0 +1,18 @@
+Сорняк засадил по самые булочки
+===============================
+:date: 2011-08-20 18:08:39
+:tags: сорняк, плод, картофель, проросло
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1414
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4610/22199227.a/0_63566_b477af59_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/406886
+   :title: ALIM2235.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4610/22199227.a/0_63567_24e8e50d_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/406887
+   :title: Заголовок
+
+Аааа! Сорняки атакуют мою картошку и измываются над ней
+

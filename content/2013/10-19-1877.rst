@@ -1,0 +1,211 @@
+Авторизация для нескольких сайтов на Django
+===========================================
+:date: 2013-10-19 22:57:45
+:modified: 2013-10-19 23:02:48
+:tags: сервис, Django, сайт, авторизация, python, разделение, django-oauth2-provider, django-social-auth, OAuth2, пользователь
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1877
+
+Обдумав разные варианты общей авторизации для разрабатываемых и
+поддерживаемых мной сервисов, я решил, что оптимальнее всего будет
+использовать OAuth2 для этих целей. Ибо вариант с синхронизацией
+пользователей для двух сервисом может и подходит, но когда их количество
+увеличивается и будет увеличиваться, при чём разного формата, то
+синхронизация начнёт приносить всё больше боли. И в течение нескольких
+дней я воплотил общую авторизацию на основе OAuth2 в жизнь для двух
+сервисов (благо для django есть и provider модуль и social auth модули).
+При чём, старый способ авторизации для основного сервиса пока продолжает
+работать, а новый в режиме испытания. Пришлось только немного пошаманить
+над \ `django-oauth2-provider <http://django-oauth2-provider.readthedocs.org/>`__
+и подсмотреть как сделать клиента на основе
+`django-social-auth <http://django-social-auth.readthedocs.org/>`__. Для
+провайдера особых телодвижений не нужно, почти всё из коробки (только в
+моём случае есть свои особенности связанные с поддоменами):
+
+    | **req.txt:**
+
+    .. code-block:: python
+
+        ...
+        django-oauth2-provider
+        django-social-auth # если требуется связывать свою авторизацию со сторонней
+
+    | **settings.py:**
+
+    .. code-block:: python
+
+        INSTALLED_APPS = (
+            ...
+            'provider',
+            'provider.oauth2',
+            'social_auth', # а это для того, чтобы провайдер умел
+            # подключать к своей авторизации другие сети (ВК, Я.ру
+            # и Facebook и т.д.), всё из коробки и даже больше
+        )
+
+    | **mainauth/urls.py:**
+
+    .. code-block:: python
+
+        from django.conf.urls import patterns, include, url
+        from django.conf import settings
+        ...
+
+        urlpatterns = patterns('',
+            url(r'^accounts/profile/$', 'mainauth.views.index', name='show_profile'),
+            url(r'^$', 'django.contrib.auth.views.login',
+                {'template_name': 'auth_service/login.html'}, name='login'),
+            url(r'^logout/$', 'django.contrib.auth.views.logout',
+                {'next_page': '/'}, name='logout'),
+
+            url(r'^api/me$', 'mainauth.views.describe_me', name='api_me'),
+            url(r'^oauth2/', include('provider.oauth2.urls', namespace='oauth2')),
+        )
+
+    | **mainauth/views.py:**
+
+    .. code-block:: python
+
+        from annoying.decorators import render_to, ajax_request
+        from django.views.decorators.csrf import csrf_exempt
+        from provider.oauth2 import models as oauth_models
+        ...
+
+        @ajax_request
+        @csrf_exempt
+        def describe_me(request):
+            token_str = request.GET.get('oauth_token', '')
+            try:
+                token = oauth_models.AccessToken.objects.get_token(token_str)
+            except oauth_models.AccessToken.DoesNotExist:
+                return {'rc': 1, 'msg': 'Wrong access token'}
+            user = token.user
+            return {
+                'rc': 0,
+                'user': {
+                    # естественно mydomain.com это просто пример
+                    # как и генерация уникального хеша для user.profile
+                    'id': 'urn:mydomain.com:{0}'.format(user.profile.hashcode),
+                    'username': user.username,
+                    'first_name': user.first_name,
+                    'last_name': user.last_name,
+                    'email': user.email,
+                    'staff': user.is_staff,
+                    'super': user.is_superuser,
+                    ...
+                }
+            }
+
+В админке провайдера нужно будет создать экземпляр модели Client из
+раздела OAuth2. Для каждого сайта свой, коллбэк (или URI
+перенаправления) будет формата
+http://\ *наш-домен*/auth/complete/*mymegaconn*/. Где *наш-домен* и
+*mymegaconn* (про него будет понятно далее по тексту) нужно заменить на
+своё.
+
+А для всех сервисов, которые будут использовать авторизацию
+корневого сервиса, нужно также сделать классы для обработки OAuth2
+новоиспечённого провайдера и получение данных через его API. В
+настройках settings.py (или в компоненте настройки, если вдруг
+используется
+`django-split-settings <https://github.com/2general/django-split-settings/>`__,
+как делаю я) нужно указать параметры клиента (которые были сгенерированы
+ранее в админке):
+
+.. code-block:: python
+
+    ...
+    INSTALLED_APPS = (
+        ...
+        'social_auth', # и не забыть добавить django-social-auth в зависимости
+    )
+    ...
+    AUTHENTICATION_BACKENDS = (
+        'приложение.MyMegaConnAuthBackend', # наш специальный класс для авторизации по OAuth2
+        ...
+    )
+    ...
+    # конечно же MYMEGACONN нужно заменить на своё осмысленное
+    MYMEGACONN_AUTH_DOMAIN = 'наш-домен'
+    MYMEGACONN_APP_ID = '5bcdda....'                  # fill this in the local settings
+    MYMEGACONN_API_SECRET = 'a3fef...'
+    MYMEGACONN_AUTH_USERNAME_IS_FULL_EMAIL = True
+
+Чтобы URL-ы работали как требуется, не забываем добавить по views.py
+приложения строку с включением из social\_auth:
+
+.. code-block:: python
+
+    ...
+    url(r'^auth/', include('social_auth.urls')),
+    ...
+
+Ну и конечно же сам класс MyMegaConnAuthBackend и его помощники (по
+образу и подобию social\_auth.backends.contrib.yandex.YaruAuth):
+
+.. code-block:: python
+
+        import requests
+        from django.conf import settings
+        from social_auth import utils as auth_utils
+        from social_auth import backends
+        ...
+
+        class MyMegaConnAuthBackend(backends.OAuthBackend):
+            name = 'mymegaconn'
+            EXTRA_DATA = [
+                ('id', 'id'),
+                ('expires', auth_utils.setting('SOCIAL_AUTH_EXPIRATION', 'expires'))
+            ]
+
+            def get_user_details(self, response):
+                return {
+                    'username': response.get('username'),
+                    'email': response.get('email'),
+                    'first_name': response.get('first_name'),
+                    'last_name': response.get('last_name'),
+                    'is_superuser': response.get('super'),
+                    'is_staff': response.get('staff'),
+                }
+
+        class MyMegaConnAuth(backends.BaseOAuth2):
+            AUTHORIZATION_URL = 'http://{0}/oauth2/authorize'.format(settings.MYMEGACONN_AUTH_DOMAIN)
+            ACCESS_TOKEN_URL = 'http://{0}/oauth2/access_token'.format(settings.MYMEGACONN_AUTH_DOMAIN)
+            AUTH_BACKEND = MyMegaConnAuthBackend
+            SETTINGS_KEY_NAME = 'MYMEGACONN_APP_ID'
+            SETTINGS_SECRET_NAME = 'MYMEGACONN_API_SECRET'
+            # довольно важный параметр
+            REDIRECT_STATE = False # т.к. наш oauth2 провайдер не ожидает дополнительных параметров
+
+            @property
+            def get_api_url(self):
+                return 'http://{0}/api/me'.format(settings.MYMEGACONN_AUTH_DOMAIN)
+
+            def user_data(self, access_token, response, *args, **kwargs):
+                answer = requests.post(self.get_api_url, params={'oauth_token': access_token})
+                return answer.json()['user']
+
+        BACKENDS = {
+            'mymegaconn': MyMegaConnAuth,
+        }
+
+Чтобы использовать всё это счастье в шаблонах достаточно
+воспользоваться стандарным набором, который предоставляет
+django-social-auth. Т.к. только что был показан бэкенд для него и он
+будет импортирован и зарегистрирован в social\_auth под именем
+*mymegacon*. Ведь он был добавлен в settings.py в
+AUTHENTICATION\_BACKENDS. Библиотека рекомендует использовать вот такую
+конструкцию для получения ссылки, по которой начнётся подключение,
+используя OAuth2, с указанным в бэкенде сервером, по заданному адресу:
+
+    | некий.html:
+
+    |       <нужный-тег его-аттрибут="**{% url 'socialauth\_begin' 'mymegaconn' %}**\ " …>…</нужный-тег>
+
+Всё это довольно легко и работает на ура. На каждом сайте есть свой
+User, который привязан к UserSocialAuth. Нужно только не забыть все
+шаблоны, которые не устраивают и коробки (их вид, текст), переопределить
+на свои. Информация с центрального сервера авторизации обновляется на
+клиентах. Можно регулировать время выдачи тикетов, прав доступа, на
+каждом сайте у пользователя доступны свои специфические профили.

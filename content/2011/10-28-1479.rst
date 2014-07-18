@@ -1,0 +1,13 @@
+Fossil SCM
+==========
+:date: 2011-10-28 23:52:47
+:tags: SCM, fossil, контроль, версия, разработка
+:category: link
+:author: IMDagger
+:attached-url: http://www.fossil-scm.org
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1479
+
+Наткнулся ещё раз на Fossil, до этого только немного про него читал. Как
+SCM+Wiki+Blog+Trac в одном флаконе, очень даже интересно выглядит. Нужно
+будет как-нибудь попробовать его, чтобы ощутить на себе фичи и баги.
+

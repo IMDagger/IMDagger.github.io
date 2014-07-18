@@ -1,0 +1,57 @@
+Ошибка в моей ДНК-цепочке
+==========================
+:date: 2009-10-06 15:52:08
+:tags: python, jython, SSPI, jtds
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=281
+
+Сегодня снова воевал с jTDS и MSSQL. Нужно было, чтобы моё
+приложение, которое было написано ещё в прошлом году на Jython, было
+немного модифицировано и работало на другом компьютере. Но как и в
+прошлый раз (моя глупая голова забыла все прошлогодние шишки) я
+вспоминал куда нужно положить этот ntlmauth.dll. Снача оно мне сказало:
+:code:`Native SSPI library not loaded. Check the java.library.path system
+property`. Поэтому я проверил его значение:
+
+
+.. code-block:: pycon
+
+   >>> from java.lang import System
+   >>> System.getProperty("java.library.path")
+   тут оно выдало директории
+
+Но я решил вместо того, чтобы скопировать файл ntlm.dll, а затем
+запустить приложение, загрузил Jython и подкючил классы для соединения с
+базой, а во время этого скопировал динамическую библиотеку (даже в
+jdk/bin и jre/bin положил x-D):
+
+.. code-block:: pycon
+
+   >>> from com.ziclix.python.sql import zxJDBC
+   >>> url = 'jdbc:jtds:sqlserver://%s/%s;domain=%s;piped=true' %\
+                ('SERVER', 'WorkDB', 'DOMAIN')
+   >>> db = zxJDBC.connect(url, '', '',  # имя и пароль не нужны из-за NTLM
+                'net.sourceforge.jtds.jdbc.Driver',
+                CHARSET='utf-8')
+
+На что оно мне радостно заявило исключением, я даже пытался создать
+вручную загрузку библиотеки при помощи :code:`SSPIJNIClient.getInstance()`, но
+каждый раз натыкался на :code:`java.lang.Exception: Native SSPI library not
+loaded`. Тогда я  нашёл исходники jTDS, отыскал класс SSPIJNIClient и
+понял, что он лишь один раз пытается инициализировать свои статические
+методы и загрудить ntlmauth:
+
+.. code-block:: java
+
+    static {
+        try {
+            System.loadLibrary("ntlmauth");
+            SSPIJNIClient.libraryLoaded = true;
+        } catch (UnsatisfiedLinkError err) {
+            Logger.println("Unable to load library: " + err);
+        }
+    }
+
+Поэтому всё решилось просто выходом из оболочки Jython и загрузкой
+заново x-D.

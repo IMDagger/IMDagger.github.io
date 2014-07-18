@@ -1,0 +1,63 @@
+django-polymorphic
+==================
+:date: 2013-12-24 22:42:09
+:tags: менеджер, ошибка, библиотека, django-polymorphic, модель
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1900
+
+Обнаружилась проблема в библиотеке полиморфных моделей. При чём в
+документации приведён пример, что всё должно быть хорошо, но на деле
+выходит по-другому.
+Даже \ `багрепорт <https://github.com/chrisglass/django_polymorphic/issues/64>`__
+есть на GitHub, при чём свеженький. Проблема заключается в том, что код
+пропускает менеджеры, которые являются в чистом виде экземплярами
+PolymorphicManager, при чём `так
+задумано <https://github.com/chrisglass/django_polymorphic/commit/78253bfe1238b5e46fed2597838427204666b5de#diff-dfb26a32320efe61614aaf8a602afd9bR152>`__,
+почему так? Точно не знаю. Ну да ладно, мы простых путей не ищем, и
+объявляем наследника:
+
+.. code-block:: python
+
+        class TimeOrderedManager(PolymorphicManager):
+            ...
+
+        class CustomPolymorphicManager(PolymorphicManager):
+            pass
+        class Project(PolymorphicModel):
+            objects = CustomPolymorphicManager() # рассчитываем, что это менеджер по умолчанию
+            objects_ordered = TimeOrderedManager()       # а это дополнительный
+            ...
+
+После этого кажется, что всё работает как и требуется:
+:code:`Project.\_default\_manager` указывает на экземпляр
+:code:`CustomPolymorphicManager`. Но достаточно унаследовать хотя бы одну модель
+от Project и всё ломается:
+
+.. code-block:: pycon
+
+        class ProjectChild(Project):
+            pass
+        >>> print ProjectChild._default_manager # а вот это уже не порядок
+        <TimeOrderedManager object at 0x28d4990>
+
+Получается, что в потомке менеджером по умолчанию стал другой
+менеджер, не тот, что был в objects. Хотя ничего дополнительного не
+объявлялось. И даже если снова указать принудительно objects в
+ProjectChild — это **не поможет**.
+
+А всё вероятно потому, что в django-polymorphic есть баг с
+обработкой менеджеров, которые пришли от потомка. Я обнаружил, что он их
+сортирует опираясь на имя, что не хорошо без учёта :code:`creation\_counter`
+параметра. После вот такой правки в base.py код выздоровел:
+
+.. code-block:: python
+
+   >         add_managers = sorted(add_managers, key=lambda item: (item[1].startswith('_'), item[1]))
+   ---
+   <         add_managers = sorted(add_managers, key=lambda item: (item[1].startswith('_'), item[2].creation_counter, item[1]))
+
+Попробую её продвинуть в мэйнстрим. Хотя может это и не полное
+решение, но как мне кажется, необходимо при сортировке сначала отправить
+в конец всё, что начинается с нижнего подчёркивания, ну а на следующем
+уровне ориентироваться уже на индекс менеджера.

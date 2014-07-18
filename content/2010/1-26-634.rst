@@ -1,0 +1,28 @@
+Squidward Tentacles
+===================
+:date: 2010-01-26 19:49:38
+:tags: blender
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=634
+
+Сделал для конкурса Сквидварда из мультфильма про губку Боба :).
+Подробнее, как делал расскажу уже завтра, потому что пора сдавать на
+сигнализацию помещение. Использовал как обычно кости, а рисовал в
+начальной позиции.
+
+.. class:: text-center
+
+|image0|
+
+В режиме Wire (а сетку уже завтра, т.к. меня убьют, если сдам не вовремя
+на сигналку):
+
+.. class:: text-center
+
+|image1|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3810/imdagger.5/0_1f6ae_5e4e7e8_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/128686/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4108/imdagger.5/0_1f6af_e97273a5_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/128687/

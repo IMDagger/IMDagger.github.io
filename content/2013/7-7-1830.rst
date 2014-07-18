@@ -1,0 +1,27 @@
+Прибывшая посылка
+=================
+:date: 2013-07-07 22:39:01
+:tags: почта, USB, китай, посылка, фонарик, радость
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1830
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9168/22199227.b/0_8f9fc_e3a908d5_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/588284
+   :title: ALIM3213.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6716/22199227.b/0_8f9fd_aeed3a85_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/588285
+   :title: Прибывшая посылка
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9066/22199227.b/0_8f9fe_af777a0a_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/588286
+   :title: Прибывшая посылка
+
+    Прибыл на прошлой неделе мой USB-фонарик. Работает хорошо, пока
+провод держится жёстко, только правда в моём USB он немного проседает,
+поэтому я подкладываю что-нибудь под фонарик, чтобы не брал порт на
+излом. Во время доставки он выжил Не пострадал, китайцы постарались
+запаковать, хотя видно по коробке, что он месяц морем и поездами шёл.
+Хорошо, что БелПочта поддерживает трекинг.
+

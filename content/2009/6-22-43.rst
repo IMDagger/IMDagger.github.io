@@ -1,0 +1,12 @@
+Blender и освещение
+===================
+:date: 2009-06-22 09:58:23
+:tags: blender, свет
+:category: link
+:author: IMDagger
+:attached-url: http://krre.livejournal.com/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=43
+
+Дали ссылку на блог, где можно читать, куда стремиться, чтобы делать
+красивые рендеры в Blender
+

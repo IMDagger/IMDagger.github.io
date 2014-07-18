@@ -1,0 +1,31 @@
+Мультяшный глаз
+===============
+:date: 2009-07-25 17:20:03
+:tags: blender, глаз
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=114
+
+Делаю глазик, пока ещё ресницы не доделал. Всё время они какие-то не
+такие получаются :S.
+
+С ресницами (не очень):
+
+.. class:: text-center
+
+|image0|
+
+Без ресниц:
+
+.. class:: text-center
+
+|image1|
+
+Если возник вопрос: “А что это за штука внизу?”, то смотри заголовок
+записи: “Мультяшный глаз”. Поэтому эта “штука” - способ крепления к телу
+персонажа.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3508/imdagger.2/0_f38b_e8e1cfc0_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/62347/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3513/imdagger.2/0_f38c_b16b943d_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/62348/

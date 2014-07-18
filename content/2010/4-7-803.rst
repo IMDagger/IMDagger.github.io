@@ -1,0 +1,49 @@
+Решил проблему с риггингом
+==========================
+:date: 2010-04-07 18:42:57
+:tags: blender, mirror, арматура, анимация, риггинг
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=803
+
+Я использовал модификатор Mirror, чтобы было проще редактировать обе
+половины сразу, т.к. этот способ не изменяет меш. В нём есть возможность
+*Mirror VGroups*, она включена по умолчанию и отражает все вершинные
+группы с суффиксом **.L** в такие же, но с суффиксом **.R**. Я создал
+арматуру, выставил названия костям подходящие, но получил вот такое:
+
+.. class:: text-center
+
+|image0|
+
+Т.е. анимация правых костей задевала вершины левой части. Я думал
+думал, экспериментировал и осознавал, что возможность правильно сделать
+есть, но я не понимаю как. Я обратился к справочнику по модификатору и
+(о чудо!) обнаружил заметку об особенности модификатора Mirror:
+
+    | *эту я знал:*
+    | First, the vertex groups you want to mirror must be named following
+      the usual left/right pattern (i.e. suffixed by something like “.R”,
+      “.right”, “.L”, etc…).
+    | *а вот то, что нужно самому создать пустые .R вершинные группы
+      забыл:*
+    | **Next, you must have the “mirrored” groups already existing (i.e.
+      same names suffixed by the “other side”) and completely empty (no
+      vertex assigned to it), else it won’t work…**
+
+После добавки пустых вершинных групп всё заработало, как я и ожидал:
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+|image2|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3806/imdagger.6/0_2ac9b_7994284c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/175259/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4307/imdagger.6/0_2ac9d_a98a32d6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/175261/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3806/imdagger.6/0_2ac9e_88216c5f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/175262/

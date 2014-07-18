@@ -1,0 +1,10 @@
+ICFPC 2014
+==========
+:date: 2014-05-22 00:34:41
+:tags: соревнование, 2014, ожидание, icfpc
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1963
+
+Ура! Наконец стали известны даты ICFP Programming Contest 2014. Это
+будет 3 дня начиная с 25 июля. С нетерпением жду новых приключений :).

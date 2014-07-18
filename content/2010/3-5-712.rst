@@ -1,0 +1,20 @@
+Место для линзы
+===============
+:date: 2010-03-05 19:59:42
+:tags: blender, r2d2
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=712
+
+Сделал крепление и механизм линзы для R2D2. Хтел вчера выложить, но
+Яндекс уже четвёртый день тормозит по вечерам (не выносимо!). Пожалуй не
+стоило включать сглаживание для всего синего материала, т.к. появились
+косяки в других местах, ну ничего всё равно я ещё LuxRender не
+настраивал:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3808/imdagger.6/0_23c6b_83058a66_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/146539/

@@ -1,0 +1,18 @@
+Обновился
+=========
+:date: 2009-10-15 12:27:53
+:tags: обновление, opera
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=331
+
+Обновился до новой версии Opera, теперь у меня 10-я :). И заодно
+обновил Flash Player до 10 версии. Теперь буду смотреть, как оно у меня
+фурычит.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3901/imdagger.3/0_1680a_6c76c18e_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/92170/

@@ -1,0 +1,15 @@
+
+
+:date: 2014-05-15 23:00:52
+:tags: byfly, интернет, проблема
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1958
+:slug: urn:ya.ru:post/22199227/1958
+
+Пожалуй у ByFly сегодня даже более серьёзные проблемы, чем все эти две
+или три недели:
+
+    | …
+    | 3354 packets transmitted, 12 received, **99% packet loss**, time 3380764ms
+    | rtt min/avg/max/mdev = 244.105/1204.424/3983.568/1329.357 ms, pipe 4

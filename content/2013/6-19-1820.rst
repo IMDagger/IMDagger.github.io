@@ -1,0 +1,14 @@
+Маленькая пантера :)
+====================
+:date: 2013-06-19 14:05:51
+:tags: трава, природа, котёнок
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1820
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9228/22199227.b/0_8f194_926161c4_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/586132
+   :title: ALIM3180.JPG
+
+
+

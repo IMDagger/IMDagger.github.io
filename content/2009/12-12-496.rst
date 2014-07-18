@@ -1,0 +1,84 @@
+Если долго мучаться...
+======================
+:date: 2009-12-12 19:08:17
+:tags: диплом, радость, устал, hibernate, облом
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=496
+
+Что-нибудь получится. Так и у меня. Я пытался при помощи native-SQL
+запроса извлечь не только простые данные для POJO-объекта, но и
+вложенные объекты (проще говоря JOIN для объектов). Я много разной
+литературы за сегодня перечитал, всё на английском, т.к. на русском
+вообще очень мало освещают тонкости мэппинга Hibernate :( Каким-то
+образом я смог соединить таблицу и NamedNativeQuery при помощи аннотаций
+(после прочтения информации по ссылке, которую уже выкладывал), но… но у
+меня выпала ошибка при преобразовании типов данных:
+
+
+.. code-block:: java
+
+    java.lang.ClassCastException: [Ljava.lang.Object; cannot be cast to results.SubCell
+     results.CellDao.grouped(CellDao.java:68)
+     results.CellDao.getCellsRowForCourse(CellDao.java:63)
+     results.CellService.getRowCellsFor(CellService.java:30)
+     results.RowDao.getRowsIn(RowDao.java:37)
+     results.RowService.courseRows(RowService.java:80)
+     results.RowsTableDao.getTableFor(RowsTableDao.java:28)
+     results.RowsTableService.getFullResultsFor(RowsTableService.java:32)
+     results.TableController.handleRequest(TableController.java:46)
+     org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:48)
+     org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:875)
+     org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:807)
+     org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:571)
+     org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:501)
+     javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+     javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+
+Этот крестовый поход начался ещё в ~11:00 и закончился ~21:00, а всё
+из-за того, что я не заметил **[**. А оно означало, что Hibernate мне
+вернул не один объект а несколько объектов, т.е. Object[]. Я думал, что
+он только проставит ссылки в родительский и всё, и вернёт мне
+только нужный типа SubCell. Оказалось, что он мне возвращал и *SubCell*
+объект и *User*. К этому моменту я уже успел создать пробный
+createSQLQuery с addJoin… (да SQL реально такой страшноватый, но я почти
+не виноват… т.к. структура такая, что приходится находить декартово
+произведение с результатом процедуры)
+
+.. code-block:: java
+
+    List result = ((SQLQuery) getSession().createSQLQuery(
+        "select itemId as {subCell.contest}, ts as {subCell.version}, typeId as
+         {subCell.type}, deep as {subCell.deep}, [value] as {subCell.value}, 'SubCell' as
+         {subCell.dtype}, userId as {subCell.user}, userId as {user.id}, 'last' as {user.name},
+         'first' as {user.surname} from dl2ResultsCell, dl2ResultsHeaderItemSubTree
+         (:rootId, :deep, 0, 1, :date) where itemId = headerItemId order by userId,
+         deep,itemIndex")
+    .setLong("rootId", contest)
+    .setParameter("date", Calendar.getInstance())
+    .setInteger("deep", deep))
+
+    .addEntity("subCell", SubCell.class)
+    .addJoin("user", "subCell.user")
+    .list();
+
+В классе SubCell есть свойство user (т.е. геттер getUser и сеттер
+setUser) для установки владельца яцейки. Объявлены они достаточно
+просто:
+
+.. code-block:: java
+
+    private User user;
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @Fetch(FetchMode.JOIN)
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User id) {
+        user = id;
+    }
+
+В классе User есть только одно ключевое поле, доступное при помощи getId
+и setId. К геттеру применена аннотация **@Id**.

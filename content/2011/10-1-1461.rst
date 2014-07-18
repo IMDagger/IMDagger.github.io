@@ -1,0 +1,30 @@
+Бенчмарк
+========
+:date: 2011-10-01 02:33:46
+:tags: python, сравнение, javascript, программирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1461
+
+По следам статьи http://nichol.as/benchmark-of-python-web-servers
+проверял производительность uWSGI и Twisted в standalone-режиме, uWSGI
+запускал в однопоточном режиме тоже. Благодаря этой статье узнал про
+чудесную pure-JavaScript библиотеку
+`Highcharts <http://www.highcharts.com/>`__ для отображения и
+просмотра графиков. Оно ещё и экспорт умеет и печать. Выглядит в
+браузере примерно вот так (это экспортированное изображение):
+
+.. class:: text-center
+
+|График|
+
+Мне очень понравилось то, как оно создаёт графики. Я написал
+небольшой Python-генератор, чтобы переваривать csv-файлы от
+`autobench <http://www.xenoclast.org/autobench/>`__ скрипта, который
+вызывает `httperf <http://www.hpl.hp.com/research/linux/httperf/>`__.
+Жаль только, что на моих тестах Twisted очень сильно проигрывает uWSGI в
+связке с Nginx, особенно из-за того, что не умеет возвращать клиенту
+сжатую gzip страницу.
+
+.. |График| image:: http://img-fotki.yandex.ru/get/4412/22199227.a/0_6643a_f1f6bf94_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/418874/

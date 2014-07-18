@@ -1,0 +1,29 @@
+
+
+:date: 2014-04-10 22:40:08
+:tags: magnitude, flonum, производительность, вычисление, расстояние, racket
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1948
+:slug: urn:ya.ru:post/22199227/1948
+
+Я расчитывал, что сборка числа в комплексное (достаточно дешёвая
+операция) и последующее вычисление магнитуды будут быстрее, чем сумма
+квадратов и извлечение корня, т.к. функция magnitude реализована в
+математическом ядре Racket и написана на C. Но это не так,
+JIT-оптимизированный код справляется с задачей быстрее, т.к. нет лишних
+вызовов функций, чистая математика. А если подключить racket/flonums для
+дробной арифметики, то скорость тогда ещё больше возрастает.
+
+.. code-block:: racket
+
+    > (time (for ([i (in-range 1000000)]) (magnitude (make-rectangular i i))))
+    cpu time: 2020 real time: 2013 gc time: 20
+    > (time (for ([i (in-range 1000000)]) (let ([i (->fl i)]) (magnitude (make-rectangular i i)))))
+    cpu time: 1280 real time: 1279 gc time: 48
+    > (time (for ([i (in-range 1000000)]) (sqrt (+ (* i i) (* i i)))))
+    cpu time: 984 real time: 980 gc time: 8
+    > (time (for ([i (in-range 1000000)]) (let ([i (->fl i)]) (flsqrt (fl+ (fl* i i) (fl* i i))))))
+    cpu time: 84 real time: 84 gc time: 8
+
+Разница между первым и последним вариантом наглядна.

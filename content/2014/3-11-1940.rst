@@ -1,0 +1,33 @@
+
+
+:date: 2014-03-11 23:59:11
+:tags: контракт, impersonate, racket, обработчик
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1940
+:slug: urn:ya.ru:post/22199227/1940
+
+Удобная штука декорирование в Racket для структур, правда я думал, что
+оно реализовано на уровне библиотеки, а оказалось, что в самом рантайме.
+Оно используется для контрактного программирования (есть и chaperone,
+который для постусловий), но может быть полезна для перехвата, например,
+момента, когда происходит установка поля в структуре и последующей
+модификации.
+
+.. code-block:: racket
+
+        (struct x (y) #:mutable)
+        (define (some f) (impersonate-struct (x 1)
+                             set-x-y! (lambda (self new-v) (f new-v))))
+
+        (define m (some (lambda (x) (add1 x))))
+        (define m2 (some (lambda (x) (sub1 x))))
+
+        (x-y m) ;; 1
+        (x-y m2) ;; 1
+
+        (set-x-y! m 3)
+        (set-x-y! m2 3)
+
+        (x-y m) ;; 4
+        (x-y m2) ;; 2

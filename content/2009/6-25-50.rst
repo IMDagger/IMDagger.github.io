@@ -1,0 +1,19 @@
+Жук-микросхема
+==============
+:date: 2009-06-25 11:43:04
+:tags: blender, микросхема, жук, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=50
+
+Никогда особо не работал с **Meta-поверхностями**, но выдалось как-то
+немного свободного времени, и я решил что-нибудь “сваять” при помощи
+meta. Получился вот такой жук-микросхема (никаких материалов не
+расставлял, голый рендер):
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3603/imdagger.1/0_cd43_2d2de5a4_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/52547/

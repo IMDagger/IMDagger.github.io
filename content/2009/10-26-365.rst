@@ -1,0 +1,44 @@
+Немножко 3D
+===========
+:date: 2009-10-26 20:02:42
+:tags: blender, 3d, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=365
+
+Что-то я проникся эти морским боем и решил набросать небольшой
+вариант подводной лодки. Вообще, сначала я делал его, чтобы отрендерить
+в 35x35 пикселей для программы, но потом подумал, что мне придётся
+делать сегодня ещё эсминец, крейсер и линкор, а я не успею. Так
+выглядить прямо в редакторе:
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+|image2|
+
+.. class:: text-center
+
+|image3|
+
+.. class:: text-center
+
+|image4|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4002/imdagger.3/0_17369_a42bb2b4_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/95081/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4005/imdagger.3/0_1736a_892729c0_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/95082/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3801/imdagger.3/0_1736b_ccc3d898_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/95083/
+.. |image3| image:: http://img-fotki.yandex.ru/get/3806/imdagger.3/0_1736c_bb5e8441_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/95084/
+.. |image4| image:: http://img-fotki.yandex.ru/get/4005/imdagger.3/0_1736d_dee9cdf9_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/95085/

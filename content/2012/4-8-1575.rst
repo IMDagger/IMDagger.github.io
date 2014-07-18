@@ -1,0 +1,13 @@
+Небольшие загвоздки с сокетом
+=============================
+:date: 2012-04-08 22:26:32
+:tags: flash, трудность, программирование, сокет, порт
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1575
+
+Придётся ещё на сервере открыть 843 порт и отдавать там файл
+crossdomain.xml, т.к. того требует Flash socket policy, эх… а я думал,
+что подводных камней вообще не будет :) Нашёл вот
+`тут <http://www.adobe.com/devnet/flashplayer/articles/socket_policy_files.html>`__,
+что и к чему и почему.

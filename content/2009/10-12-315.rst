@@ -1,0 +1,20 @@
+LDAP
+====
+:date: 2009-10-12 09:39:26
+:tags: samba4, ldap
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=315
+
+Чтобы работать с PDC Samba4 скачал JXplorer
+(`тут <http://jxplorer.org/>`__ и  написан на Java, правда давно не
+обновлялся, но надеюсь, что в нём уже основное и так допилено), а то
+надоело править через ldbedit и ldbadd и так база только пользователей
+уже 80MiB.
+
+.. class:: text-center
+
+|JXplorer|
+
+.. |JXplorer| image:: http://img-fotki.yandex.ru/get/3713/imdagger.3/0_164c9_16bac1b7_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/91337/

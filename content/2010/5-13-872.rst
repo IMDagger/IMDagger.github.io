@@ -1,0 +1,12 @@
+
+
+:date: 2010-05-13 17:07:00
+:tags: javascript, yui, jquery
+:category: link
+:author: IMDagger
+:attached-url: http://carlos.bueno.org/jq-yui.html
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=872
+:slug: urn:ya.ru:post/22199227/872
+
+Небольшая табличка сопоставления jQuery и YUI3.
+

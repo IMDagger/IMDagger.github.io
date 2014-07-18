@@ -1,0 +1,17 @@
+Поздравляю Яндекс.Почту
+=======================
+:date: 2010-06-26 08:51:56
+:tags: почта, Яндекс, день рождения
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1010
+
+Желаю быть быстрыми и вместительными ;)
+
+|Яндекс.Почте 10 лет|
+
+`Я.Почта у меня 4 года`_
+
+.. |Яндекс.Почте 10 лет| image:: http://mail.yandex.ru/promo/b/i/4.png
+   :target: `Я.Почта у меня 4 года`_
+.. _`Я.Почта у меня 4 года`:  http://mail.yandex.ru/promo/new/10let/

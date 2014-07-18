@@ -1,0 +1,24 @@
+Перцы
+=====
+:date: 2009-07-28 11:26:28
+:tags: перец
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=117
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3512/imdagger.2/0_f792_166b4d6_-1-L
+   :link: http://fotki.yandex.ru/users/imdagger/view/63378
+   :title: Обычный зелёный перец
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3613/imdagger.2/0_f793_4c8c2a70_-1-L
+   :link: http://fotki.yandex.ru/users/imdagger/view/63379
+   :title: Странный перец
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3511/imdagger.2/0_f794_e369247c_-1-L
+   :link: http://fotki.yandex.ru/users/imdagger/view/63380
+   :title: Рука-перец
+
+Почему-то на огороде вырос только единственный перец, как на первой
+картинке, а остальные растут вверх! Да ещё и странной формы :) Раньше
+они так весело не росли, наверное смущались :D.
+

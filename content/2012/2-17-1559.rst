@@ -1,0 +1,12 @@
+Unit-тесты для libGDX
+=====================
+:date: 2012-02-17 13:11:02
+:tags: код, ссылка, libGDX, программирование, тестирование
+:category: link
+:author: IMDagger
+:attached-url: http://libgdx.googlecode.com/svn/trunk/tests/gdx-tests/src/com/badlogic/gdx/tests/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1559
+
+Порой тесты поясняют суть библиотеки даже лучше, чем любая документация
+и туториалы.
+

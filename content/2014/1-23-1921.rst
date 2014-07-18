@@ -1,0 +1,14 @@
+
+
+:date: 2014-01-23 00:51:25
+:modified: 2014-01-23 00:51:45
+:tags: python, django-xadmin, кнопки
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1921
+:slug: urn:ya.ru:post/22199227/1921
+
+Разобрался как в django-xadmin добавить свои кнопки к тем, что есть.
+Придётся перекрывать шаблон :code:`includes/submit\_line.html`, т.к. там зашиты
+базовые кнопки. И нужно будет перехватывать :code:`post\_response` и производить
+свой набор действий.

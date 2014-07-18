@@ -1,0 +1,72 @@
+ШурупЪ
+======
+:date: 2009-11-15 13:33:34
+:tags: blender, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=402
+
+Делал ночью. Страшно хотелось спать, материалы уже не было сил
+расставить, да и не умею я их хорошо и правильно создавать. Освещение
+сделано при помощи трёх источников света без отбрасывания тени и
+отдельный источник только для тени.
+
+.. class:: text-center
+
+|image0|
+
+Нарезка создавалась с использованием кривой, у которой было задано
+сечение созданное в виде полукруга. Кривая была Curve Circle, которую
+конвертировал в Path и разъединил концы.
+
+.. class:: text-center
+
+|image1| |image2|
+
+Cопоставил концы получившегося объекта так, чтобы после применения
+модификатора Array петли образовали насечку. Главное не забыть включить
+в модификаторе Merge.
+
+.. class:: text-center
+
+|image3| |image4|
+
+Кольцо было преобразовано в меш ( :kbd:`Alt+C` ), на который действовал
+модификатор Array, пространтсов между кольцами было заполнено.
+
+После создания шурупа, была сделана решётка Lattice, которая стала
+родительской для объекта. С её помощью шуруп был деформирован.
+
+Руки и ноги созданы двольно просто, но я наконец-то начал применять
+кости для формирования поз. Отныне я рисую кисть в нормальном состоянии,
+а затем провожу риггинг. А раньше я пытался сразу поделировать часть
+тела в такой позции. Прогресс :)…
+
+.. class:: text-center
+
+|image5|
+
+.. class:: text-center
+
+|image6|
+
+Рельеф гайки образовался таким же образом, как и нарезка шурупа:
+рендеринг обратной стороны курочка  нарезки.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4002/imdagger.4/0_18a00_9bdaf896_L
+   :alt: Мистер ШюрупЪ в опасности
+   :target: http://fotki.yandex.ru/users/imdagger/view/100864/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4002/imdagger.4/0_18a08_ecb399b_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/100872/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3900/imdagger.4/0_18a09_a457f3a6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/100873/
+.. |image3| image:: http://img-fotki.yandex.ru/get/4100/imdagger.4/0_18a0a_613f45e2_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/100874/
+.. |image4| image:: http://img-fotki.yandex.ru/get/3905/imdagger.4/0_18a0b_76cefa0c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/100875/
+.. |image5| image:: http://img-fotki.yandex.ru/get/4004/imdagger.4/0_18a0c_b0559a99_L
+   :alt: Нога
+   :target: http://fotki.yandex.ru/users/imdagger/view/100876/
+.. |image6| image:: http://img-fotki.yandex.ru/get/4003/imdagger.4/0_18a0d_ccac473a_L
+   :alt: Рука
+   :target: http://fotki.yandex.ru/users/imdagger/view/100877/

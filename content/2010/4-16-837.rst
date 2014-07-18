@@ -1,0 +1,17 @@
+Текст
+=====
+:date: 2010-04-16 16:15:57
+:tags: спойлер, забавно, текст
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=837
+
+Пожалуй этот файл редактировать не стоит :) Вырезал только саму
+заставку, а лишние **названия замазал**:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/2914/imdagger.6/0_2bb7e_a62767ea_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/179070/

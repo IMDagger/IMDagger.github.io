@@ -1,0 +1,45 @@
+mediaItems на MySpace
+=====================
+:date: 2010-08-30 20:20:49
+:tags: Я, mediaItems, myspace, работа
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1101
+
+Разобрался сегодня как сделать так, чтобы mediaItems появились
+наконец в activity. Оказалось это список словарей, которые содержат ключ
+msMediaItemUri. В документации об этом лишь вскользь сказано (одна
+строчка в замечаниях, и как использовать не указано). Для работы я
+использую библиотеку opensocial для Python.
+
+.. code-block:: python
+
+    import opensocial
+    opensocial.ContainerContext(
+      opensocial.lib.ContainerConfig(
+        oauth_consumer_key='http://www.myspace.com/number',
+        oauth_consumer_secret='mysecretkey',
+        server_rest_base='http://opensocial.myspace.com/1.0/'
+      )
+    ).new_activity('userid',
+      params={
+        'titleId': 'myTemplateName',
+        'externalId': 'myExternalId',
+        'id': 'myspace.com.activity.-1',
+        'title': 'osapi test activity at',
+        'body': 'osapi test activity body',
+        'templateParams': {
+          'msParameters': [
+            {'key': 'param_name', 'value': 'param_value'},
+          ],
+        },
+        'mediaItems' : [
+          {'msMediaItemUri': 'some_myspace_url_with_image'},
+        ],
+      }
+   )
+
+Странно, что при постинге символа кавычка :code:`'`, MySpace реагирует очень
+странно и два раза обрабатывает этот символ, сначала сделает :code:`'` как
+положено, но затем & снова разворачивается в :code:`&amp;` Это мне доставляет
+огромную головную боль. Не знаю пока, что делать.

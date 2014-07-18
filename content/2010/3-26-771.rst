@@ -1,0 +1,19 @@
+Мой снег
+========
+:date: 2010-03-26 19:13:15
+:tags: blender, замёрзший, снег
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=771
+
+Моя проба сделать по памяти замёрзший снег и на свой лад:
+
+.. class:: text-center
+
+|image0|
+
+Немного желтовато вышло, нужно было мягкий источник сделать светлее
+и дальше.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3807/imdagger.6/0_28fba_2b89d9a5_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/167866/

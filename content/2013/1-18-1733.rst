@@ -1,0 +1,27 @@
+Bootstrap кнопка отправки
+=========================
+:date: 2013-01-18 20:23:02
+:tags: загрузка, HTML, программирование, отправка, кнопка, bootstrap, блокировка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1733
+
+Как сделать кнопку отправки формы с использованием Bootstrap,
+которая не позволит сработать ей дважды во время самой отправки? Можно
+воспользоваться data-loading-text аттрибутом, и не стоит забывать про
+:code:`autocomplete="off"`, чтобы Firefox не запоминал состояние кнопки:
+
+.. code-block:: html
+
+        <button type="submit" class="btn btn-success" name="submit"
+                data-loading-text="Выполнение..."
+                onclick="$(this).button('loading'); return true;"
+                autocomplete="off">
+                Подключить!
+        </button>
+
+В обработчике onclick происходит переключение кнопки в состояние
+loading, которое берёт текст из :code:`data-loading-text` атрибута. Атрибуты с
+префиксом :code:`data-` современными браузерами (ибо положено по стандарту) не
+считаются неправильными, а большинство старый браузеров должно их просто
+проигнорировать и не выдавать ошибок.

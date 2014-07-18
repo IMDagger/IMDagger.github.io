@@ -1,0 +1,11 @@
+Skype не умер :)
+================
+:date: 2011-05-26 11:56:30
+:tags: умер, skype
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1340
+
+Linux Skype 2.1.0.81 полёт нормальный, не падает, а все остальные
+умирают.
+

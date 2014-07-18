@@ -1,0 +1,19 @@
+Редактор
+========
+:date: 2010-03-28 17:25:08
+:tags: gimp, обновление
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=774
+
+Поставил себе Gimp-2.6, а то до этого был только XPaint, с которым я
+немного наловчился работать, но если что размыть или более сложные
+операции или фильтры, то приходилось оказываться или придумывать как
+выкрутиться. Темы на Gtk у меня нет, т.к. экономлю на ресурсах :).
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3801/imdagger.6/0_29301_728d9a0f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/168705/

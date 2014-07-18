@@ -1,0 +1,74 @@
+Работа с BGL в Blender
+======================
+:date: 2009-07-31 09:41:07
+:tags: spacehandler, opengl, треугольник, обработчик, triangle, matrix, blender, python
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=119
+
+Мне нужно было создать дополнительно в Blender шестигранную сетку.
+Но так, чтобы это был не объект Blender, а просто рисунок во время
+редактирования (чтобы было легче и нагляднее добавлять всё остальное в
+редакторе). Я к этому моменту уже знал, что такое **SpaceHandler** в
+Blender, поэтому создал его вида *#SPACEHANDLER.VIEW3D.DRAW*. Который
+вызывается на каждое событие перерисовки. Модуль BGL предоставляет набор
+функций OpenGL, которыми можно воспользоваться и дорисовать что-нибудь в
+сцену. Я решил нарисовать полупрозрачный треугольник (0; 0; 0) - (0; 1;
+0) - (1; 0; 0). Но возникла проблема, что я никак не мог установить
+матрицу преобразований верно, чтобы треугольник был в указанных
+координатах. Сначала он у меня не хотел воспринимать параметры
+масштабирования и вращения, а затем были проблемы с позицией и
+трансляцией координат в экранные. Поэтому я поискал подходящий скрипт на
+форуме
+`blenderartists.org/forum/ <http://www.blenderartists.org/forum>`__.
+Там нашёлся простой и понятный для моего ума
+`скрипт <http://blenderartists.org/forum/showthread.php?p=1333169>`__ от
+пользователя **Crouch**.
+
+Я сразу же вытащил из drawText первые строки по установке матрицы,
+немного подправил, т.к. можно это сделать проще, чем у **Crouch**.
+Вот, что получилось:
+
+.. code-block:: python
+
+    #SPACEHANDLER.VIEW3D.DRAW
+    from Blender import BGL, Window
+
+    viewMatrix = Window.GetPerspMatrix()
+    viewBuff = BGL.Buffer(BGL.GL_FLOAT, [4, 4], viewMatrix)
+    BGL.glLoadIdentity()
+    BGL.glMatrixMode(BGL.GL_PROJECTION)
+    BGL.glLoadMatrixf(viewBuff)
+    BGL.glEnable(BGL.GL_BLEND)  # без этого не будет прозрачности
+    BGL.glColor4f(0.0, 1.0, 0.0, 0.2)
+    BGL.glBegin(BGL.GL_TRIANGLES)  # чертит треугольник
+    BGL.glVertex3f(0.0, 0.0, 0.0)
+    BGL.glVertex3f(0.0, 1.0, 0.0)
+    BGL.glVertex3f(1.0, 0.0, 0.0)
+    BGL.glEnd()
+
+**BGL.Buffer** — это объект, первым параметром которого является тип
+данных, второй — размерность (для **glLoadMatrix** требуется 4x4),
+последний параметр — список инициализации, должен быть указанного
+размера (т.е. двумерный список 4x4).
+
+Главное в этом скрипте, что его отличает от других — комментарий в
+первой строке, этот комментарий говорит Blender’у, что это не простой
+сценарий, а обработчик события перерисовки в режиме просмотра 3D. Но по
+умолчанию скрипт выполнятся не будет, для этого его нужно включить.
+
+.. class:: text-center
+
+|image0|
+
+Нужно установить галочку напротив имени сценария. После этого
+появится треугольник:
+
+.. class:: text-center
+
+|image1|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3612/imdagger.2/0_ffa9_44eb7a60_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/65449/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3613/imdagger.2/0_ffaa_6ae2f86f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/65450/

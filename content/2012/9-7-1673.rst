@@ -1,0 +1,25 @@
+
+
+:date: 2012-09-07 23:48:32
+:tags: column, свойства, нотация, getter, kawa, вызов
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1673
+:slug: urn:ya.ru:post/22199227/1673
+
+    Второй раз уже обнаруживаю по результату вывода Jad, что я
+прокололся и снова вызвал свойство. В Kawa «:»-нотация позволяет
+прозрачно обрабатывать геттеры и сеттеры. Но я иногда забываю, что
+оперировать нужно с этим полем просто как со свойством, и вызываю как
+функцию. Jad показывает странность уже до запуска самого приложения,
+которая проявляется в дополнительных конструкциях в духе Float.valueOf +
+floatValue + force + конечно же apply1 для всего этого счастья.
+
+.. code-block:: scheme
+
+        (let* ((finished (media:update))
+               (new-progress-state media:manager:progress)) ;; вот тут media:manager:progress это
+                                                            ;; на самом деле
+                                                            ;;     media.getManager().getProgress()
+                                                            ;; в терминологии Java
+         ....)

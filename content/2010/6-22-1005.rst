@@ -1,0 +1,17 @@
+Закрылки
+========
+:date: 2010-06-22 18:53:47
+:tags: blender, игра, самолётик, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1005
+
+Добавил по-быстрому самолётику закрылки для дополнительного
+управления высотой, на хвосте сделаю позднее.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4201/imdagger.7/0_35adf_49f6ce96_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/219871/

@@ -1,0 +1,12 @@
+Проверка SSL-отпечатка
+======================
+:date: 2014-01-11 15:02:57
+:tags: fingerprint, сертификат, проверка, отпечаток, ssl
+:category: link
+:author: IMDagger
+:attached-url: http://askubuntu.com/questions/156620/how-to-verify-the-ssl-fingerprint-by-command-line-wget-curl
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1917
+
+Что-то сертификат на xmpp.ya.ru:5223 поменялся, вот решил перепроверить
+его fingerprint.
+

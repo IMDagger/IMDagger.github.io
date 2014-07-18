@@ -1,0 +1,13 @@
+Evolution
+=========
+:date: 2011-05-18 15:16:17
+:tags: почта, баг, evolution
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1336
+
+    Если в Evolution 2.28.2 из поставки Mandriva вызвать параметры и
+полазать по ним, попереключать, то локаль последующего интерфейса
+Evolution становится английской. И при цитировании писем тоже начинает
+использоваться английская локаль.
+

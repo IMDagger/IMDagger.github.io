@@ -1,0 +1,29 @@
+Скриншоты меню
+==============
+:date: 2009-08-05 17:05:44
+:tags: triad_vesuvius, проект, bge
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=127
+
+Так выглядит меню во время работы с картой, всё плавно нажимается:
+
+.. class:: text-center
+
+|image0|
+
+А так проект выглядит в режиме редактирования (скоро добавится ещё
+чуть-чуть GUI для управления воинами прямо из редактора):
+
+.. class:: text-center
+
+|image1|
+
+В целом :del:`работы ещё много` должны успеть сделать к дате релиза версии
+**TriadVesuvius** всё, что запланировано в эту итерацию. А дальше пойдёт
+набивка контентом.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3610/imdagger.3/0_1064b_393fec_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/67147/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3609/imdagger.3/0_1064a_15c244ec_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/67146/

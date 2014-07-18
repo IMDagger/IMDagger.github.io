@@ -1,0 +1,19 @@
+В прыжке
+========
+:date: 2010-11-06 20:04:34
+:tags: blender, кролик, мультфильм, рендер, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1164
+
+Вот один кадр зайчика в прыжке, тот кто нуждается в этом зайчике
+может его уже забрать. Я сделал видео прыжка и готов его отправить по
+почте вместе с исходными файлами. Там есть ветер, это ему на лету мех
+ветром раздувает, со спины поддувает :)
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5900/imdagger.8/0_46d64_614db28c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/290148/

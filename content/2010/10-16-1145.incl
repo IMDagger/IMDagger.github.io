@@ -1,0 +1,84 @@
+<form action="http://aeterna.qip.ru/ftell.php" method="get">
+    <input name="link" value="ftells:2216" type="hidden">
+    <table style="border: 1px solid #eeeeee; width: 400px;" border="0">
+        <tbody>
+            <tr>
+                <td style="margin: 0px; padding: 8px; text-align: center; background-color: #006680; color: #ffffff; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 16px; line-height: normal; font-size-adjust: none; font-stretch: normal;">
+                    <a style="display: block; padding-top: 4px; color: #ffffff;" href="http://aeterna.ru/ftell.php?link=ftells:2216" target="_blank">одним словом...</a>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">
+                    <table border="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">Ваше имя</td>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">
+                                    <input name="yourname" value="IMDagger" type="text">
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">слово, отражающее тебя -</td>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">сила</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">То, к чему ты стремишься -</td>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">впечатления</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">придает тебе силы -</td>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">музыка</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">то, что ранит -</td>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">воспоминания</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">то, чего у тебя никто не отнимет -</td>
+                                <td style="padding: 2px; text-align: left; background-color: #ffffff; color: #000000; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">сочувствие</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td style="margin: 0px; padding: 8px; text-align: center; background-color: #006680; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">
+                    <input value="Узнать" type="submit">
+                    <br>
+                    <small>
+                        <a style="display: block; padding-top: 4px; color: #ffffff;" href="http://aeterna.ru/ftells.php?link=ftells" target="_blank">все гадания на aeterna.ru</a>
+                    </small>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr></tbody><tbody><tr><td></td></tr></tbody></table></form>

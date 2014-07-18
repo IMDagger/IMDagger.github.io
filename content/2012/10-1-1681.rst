@@ -1,0 +1,68 @@
+Автоматическая версия сборки
+============================
+:date: 2012-10-01 22:16:09
+:tags: rhino, нумерация, сборка, тег, Android, ant, версия, контроль
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1681
+
+Хм.. оказывается в Ant есть такая задача, как
+`script <http://ant.apache.org/manual/Tasks/script.html>`__. Очень
+удобно для обработки информации, которая пришла из других источников или
+непосредственно из свойств в Ant. Можно запросто вызвать Rhino для
+исполнения JavaScript:
+
+.. code-block:: html
+
+    <script language="javascript" src="some_file.js" />
+    <!-- естественно можно и непосредственно в Ant build-файле писать этот код -->
+    <script language="javascript">
+        ...
+    </script>
+
+Существует возможность исполнять и другие языки, например: такие как
+Jython, но **Rhino** поставляется вместе с JRE. А при
+помощи \ `exec <http://ant.apache.org/manual/Tasks/exec.html>`__ можно
+запустить (с указанием свойства для результата), например, git и
+получить последний тег вместе с количеством коммитов до него:
+
+.. code-block:: xml
+
+    <exec executable="git" outputproperty="build.version"
+            failifexecutionfails="false" failonerror="true">
+        <arg value="describe" />
+        <arg value="--tags" />
+        <arg value="--always" />
+        <arg value="--abbrev=8" />
+        <arg value="--dirty=+" />
+    </exec>
+
+В свойство build.version попадает значение вида
+**<tagname>**-**<commits>**-**<sha1>**, например: *1.3-34-cbde6f15*. Я
+отключил прерывание сборки, если исполнение git прошло неудачно, т.к. в
+дальнейшем скрипт выставит ему значение по умолчанию (для неудачного
+свойства).
+
+Например можно вот так превратить описание от git describe в формат,
+который можно сохранить в versionCode для AndroidManifest.xml:
+
+.. code-block:: js
+
+    var tag = project.getProperty("build.version");
+    var separated = tag.split('\\.|-');
+
+    if (separated.length > 3) {
+        project.setProperty("build.code",
+            parseInt(separated[0]) * 100 * 100 + parseInt(separated[1]) * 100 +
+            parseInt(separated[2])
+        );
+    } else {
+        project.setProperty("build.code", -1);
+    }
+
+Для случая *1.3-34-cbde6f15* получится 10334. Если планируется
+больше 100 изменений без создания нового тега, то лучше число 100
+увеличить в скрипте. В Rhino метод строки *split* имеет особенность
+заключающуюся в строковом аргументе, который на самом деле описывает
+регулярное выражение. Поэтому строка :code:`\\\\.|-` означает, что
+разделителем является либо точка либо знак минуса.

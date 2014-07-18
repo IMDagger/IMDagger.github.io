@@ -1,0 +1,96 @@
+Использованные материалы
+========================
+:date: 2011-03-13 13:53:20
+:modified: 2014-07-17 01:35
+:tags: blender, материал, использование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1275
+
+Как и обещал выкладываю материалы, которые использовал при создании
+цветка:
+
+.. class:: table table-striped table-hover table-condensed table-post-50 borderless
+
+========================  =========================
+**Пользователь**          **Материал**
+========================  =========================
+mookie_                   `Blue Velvet`_
+
+                          |blue velvet|
+------------------------  -------------------------
+Ush_                      `English walnut`_
+
+                          |english walnut|
+------------------------  -------------------------
+hoehrer_                  `Eraser Rubber (red)`_
+
+                          |eraser rubber red|
+------------------------  -------------------------
+Guerraz_                  `Lemon`_
+
+                          |lemon|
+------------------------  -------------------------
+brikbot_                  `Manta Ray Skin`_
+
+                          |manta ray skin|
+------------------------  -------------------------
+meschoyez_                `Mud`_
+
+                          |mud|
+------------------------  -------------------------
+Paratron_ `[оригинал]`_   `Glass`_
+
+                          |glass|
+------------------------  -------------------------
+SoylentGreen_ [R]         `Gold Voronoi`_
+
+                          |gold voronoi|
+========================  =========================
+
+
+|
+| Все материалы (кроме реализованных мной и изображения за окном) взяты
+  с http://matrep.parastudios.de
+
+.. |blue velvet| image:: http://matrep.parastudios.de/mats/preview/480c7eddaa849.jpg
+   :target: `Blue velvet`_
+.. |english walnut| image:: http://matrep.parastudios.de/mats/preview/47039cf858805.jpg
+   :target: `English walnut`_
+.. |eraser rubber red| image:: http://matrep.parastudios.de/mats/preview/464ac1e1b735d.jpg
+   :target: `Eraser Rubber (red)`_
+.. |lemon| image:: http://matrep.parastudios.de/mats/preview/47330e20627ef.jpg
+   :target: `Lemon`_
+.. |manta ray skin| image:: http://matrep.parastudios.de/mats/preview/47ff01d00644b.jpg
+   :target: `Manta Ray Skin`_
+.. |mud| image:: http://matrep.parastudios.de/mats/preview/4661dadb99304.jpg
+   :target: `Mud`_
+.. |glass| image:: http://matrep.parastudios.de/mats/preview/470366623da9d.jpg
+   :target: `Glass`_
+.. |gold voronoi| image:: http://matrep.parastudios.de/mats/preview/46438cd2c8d74.jpg
+   :target: `Gold Voronoi`_
+
+.. _mookie: http://matrep.parastudios.de/index.php?p=8&u=205
+.. _`Blue velvet`: http://matrep.parastudios.de/index.php?action=view&material=651-blue-velvet&fc=5
+
+.. _Ush: http://matrep.parastudios.de/index.php?p=8&u=598
+.. _`English walnut`: http://matrep.parastudios.de/index.php?action=view&material=295-english-walnut&fc=10
+
+.. _hoehrer: http://matrep.parastudios.de/index.php?p=8&u=78
+.. _`Eraser Rubber (red)`: http://matrep.parastudios.de/index.php?action=view&material=139-eraser-rubber-red&fc=4
+
+.. _Guerraz: http://matrep.parastudios.de/index.php?p=8&u=557
+.. _`Lemon`: http://matrep.parastudios.de/index.php?action=view&material=360-lemon&fc=6
+
+.. _brikbot: http://matrep.parastudios.de/index.php?p=8&u=1005
+.. _`Manta Ray Skin`: http://matrep.parastudios.de/index.php?action=view&material=642-manta-ray-skin&fc=6
+
+.. _meschoyez: http://matrep.parastudios.de/index.php?p=8&u=61
+.. _`Mud`: http://matrep.parastudios.de/index.php?action=view&material=190-mud&fc=10
+
+.. _Paratron: http://matrep.parastudios.de/index.php?p=8&u=2
+.. _`[оригинал]`: http://swemat01.sweblend.se/
+.. _`Glass`: http://matrep.parastudios.de/index.php?action=view&material=291-glass&fc=3
+
+.. _`SoylentGreen`: http://matrep.parastudios.de/index.php?p=8&u=20
+.. _`Gold Voronoi`: http://matrep.parastudios.de/index.php?action=view&material=94-gold-voronoi&fc=2

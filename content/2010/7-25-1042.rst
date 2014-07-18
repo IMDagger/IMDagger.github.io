@@ -1,0 +1,12 @@
+Как раз про меня
+================
+:date: 2010-07-25 17:30:07
+:tags: Я, работа, смешно
+:category: link
+:author: IMDagger
+:attached-url: http://bash.org.ru/quote/407345
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1042
+
+| Мне это до боли знакомо:
+| xxx: Что такое отпуск?
+| yyy: это когда можно опоздать на работу и за это ничего не будет.

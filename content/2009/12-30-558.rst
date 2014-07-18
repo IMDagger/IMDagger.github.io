@@ -1,0 +1,23 @@
+Обои II: реинкарнация
+=====================
+:date: 2009-12-30 18:04:43
+:tags: blender, обои, slackware, linux
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=558
+
+Сел вчера немного поделал проект. Потом решил взглянуть на мои
+наработки за последние годы в Blender, такая вот ретроспекция :-/. И
+меня посетила мысль оптимизировать и немного улучшить обои рабочего
+стола, которые у меня уже два года не менялись :). В старой версии было
+1500000 фейсов, а в новой осталось 500000 и то, лишь потому, что
+сокращать дальше было лень. Новый вариант, более сглаженный,
+оптимизированный:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4106/imdagger.5/0_1be85_8e8ba9a4_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/114309/
+   :alt: Slackware Linux

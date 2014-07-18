@@ -1,0 +1,26 @@
+Небольшая доработка
+===================
+:date: 2010-06-19 11:54:15
+:tags: blender, игра, implaner, мини, изображение
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=984
+
+Выкроил время и ещё чуть улучшил самолётик (главный и единственный
+персонаж) для мини-игры. В прошлый раз я домой пришёл и завалился спать,
+а думал, что хватит сил на творческий процесс.
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+|image1|
+
+Нужно будет подумать над текстурой для него.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4202/imdagger.7/0_34f83_f8e81287_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/216963/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4306/imdagger.7/0_34f85_90a78a8d_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/216965/

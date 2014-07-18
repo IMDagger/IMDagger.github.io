@@ -1,0 +1,14 @@
+Сижу бездельничаю, лазаю по инету, отдыхаю
+==========================================
+:date: 2009-12-13 16:13:53
+:tags: демотиватор
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=499
+
+Хм… иногда попадаются на **Демотиваторы.ру** интересные демы :)
+
+|Демотиватор|
+
+.. |Демотиватор| image:: http://demotivators.to/media/posters/3183/360935_lyubov.jpg
+   :target: http://demotivators.to/posters/360935/lyubov.htm

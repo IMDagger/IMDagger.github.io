@@ -1,0 +1,43 @@
+Скалярная хранимая процедура
+============================
+:date: 2010-02-20 19:40:17
+:tags: процедура, проецирование, hibernate
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=696
+
+Сегодня спроецировал процедуру, которая возвращает число 1 или 0 на
+скалярную величину типа boolean. Вышло не очень сложно, но был подводный
+камень. Писать нужно не Boolean, а boolean, т.е. тип из разряда
+встроенных, но Hibernate вернёт объект в списке типа Boolean:
+
+.. code-block:: xml
+
+    <?xml version="1.0"?>
+    <!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd\ ">
+    <hibernate-mapping>
+    <sql-query name="users.isCanReadLog" callable="true">
+    <return-scalar column="isYouCanShow" type="boolean" />
+    { call spIsCanShowStrangerLog(:courseId, :userId) }
+    </sql-query>
+    </hibernate-mapping>
+
+Сначала я посмотрел пример, но там было написано {**? =** call
+spIsCanShowStrangerLog(:courseId, :userId) }, но эта запись вызывает
+ошибку, т.к. я передаю два параметра, а оно хочет 3-и. Всё дело в том,
+что пример не для MSSQL, для MSSQL не нужно передавать результат в
+параметр. Работать нужно из DAO с данным запросом так: 
+
+.. code-block:: java
+
+    List result = getHibernateTemplate().
+            findByNamedQueryAndNamedParam("users.isCanReadLog",
+                                 new String[]{"courseId", "userId"},
+                                 new Object[]{courseId, userId}
+            );
+    logger.info((Boolean) result.get(0));
+
+К встроенному boolean тип Object не конвертируется, а Hibernate
+возвращает всё типа Object.

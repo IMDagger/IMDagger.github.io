@@ -1,0 +1,32 @@
+VPN
+===
+:date: 2010-04-16 13:20:59
+:tags: проброс, forward, routing, openvpn, iptables
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=836
+
+Удалось пробросить VPN через своего старичка 2.4.32-fw, пришлось
+включить модули NAT и собрать с TUN. 10.12.2.162 это IP при соединении
+по tun0 от OpenVPN на сервере. А машинки 10.0.0.100 и 10.0.0.14 они за
+сервером, на котором запущен VPN клиент, который их отделяет от
+интернета.
+
+.. code-block:: sh
+
+    # включить форвардинг
+    echo 1 >/proc/sys/net/ipv4/ip_forward
+    /usr/sbin/iptables -A FORWARD -s 10.0.0.100/32 -j ACCEPT
+    /usr/sbin/iptables -A FORWARD -s 10.0.0.14/32 -j ACCEPT
+    # компьютер 1
+    /usr/sbin/iptables -t nat -A POSTROUTING -s 10.0.0.100/32 -o tun0 -j
+    SNAT --to-source 10.12.2.162
+    # компьютер 2
+    /usr/sbin/iptables -t nat -A POSTROUTING -s 10.0.0.14/32 -o tun0 -j
+    SNAT --to-source 10.12.2.162
+
+Нужно ещё не забыть добавить роуты на самих машинках: :code:`route add
+-net 10.10.0.0 netmask 255.255.0.0 gw 10.0.0.4` и т.д. для других
+пробрасываемых подсетей. Ещё нужно добавить на них в DNS соответствующий
+сервер доступный через VPN. SNAT режим подменяет IP моей машинки на
+общий, который прописан для /dev/net/tun0.

@@ -1,0 +1,12 @@
+Список продуктов питания
+========================
+:date: 2014-02-09 00:11:48
+:tags: база, продукты, информация, питание, список
+:category: link
+:author: IMDagger
+:attached-url: http://ndb.nal.usda.gov/ndb/search/list
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1928
+
+Ого, огромный список продуктов, где к каждому можно посмотреть,
+витамины, липиды, углеводы, воду, клетчатку и др.
+

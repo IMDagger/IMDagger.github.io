@@ -1,0 +1,25 @@
+Подсветка скобочек
+==================
+:date: 2012-07-04 22:39:33
+:tags: цвет, Scheme, emacs, режим, скобки, удобство, parentheses, highlight
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1623
+
+В режиме работы со Scheme (в частности bee-mode из поставки Bigloo)
+мне не хватало функции подсветки скобочек, чтобы видеть области кода. В
+начале я даже думал писать свой режим, т.к. не получалось найти то, что
+хочу. Но повременив с этим и более тщательно поискав, нашёлся минорный
+режим, который отлично ладит с моим основным режимом редактирования
+Scheme. Вот он —
+`highlight-parentheses-mode <http://www.emacswiki.org/HighlightParentheses>`__.
+Правда я думал, что он будет выделять цветом и код внутри скобок; но всё
+же, наверное, это меня раздражало и надоело бы, поэтому оно и так
+чудесно всё из коробки.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5210/22199227.a/0_7786c_9aadda4f_M
+   :target: http://fotki.yandex.ru/users/imdagger/view/489580/

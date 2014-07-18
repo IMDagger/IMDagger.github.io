@@ -1,0 +1,18 @@
+CEGUI Blender
+=============
+:date: 2011-03-20 20:13:02
+:tags: blender, bge, CEGUI, улучшение, доработка
+:category: video
+:author: IMDagger
+:attached-url: http://flv.video.yandex.ru/lite/imdagger/usjatc9vq3.2310/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1278
+
+Это видео показывает CEGUI в BGE Ketsji в динамике. До этого был просто
+скриншот, но я уже научил эту всю штуку обрабатывать курсор мыши.
+Следующим будет ввод с клавиатуры.
+
+.. class:: text-center
+
+.. yavideo:: usjatc9vq3.2310
+   :width: 450
+   :height: 370

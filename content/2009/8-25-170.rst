@@ -1,0 +1,16 @@
+PXE
+===
+:date: 2009-08-25 17:44:47
+:tags: pxe, asus
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=170
+
+Я “счастливый” обладатель 30 компов с материнской платой **ASUS P5VD2-VM
+SE**. Но я никогда не задумывался, куда можно засунуть настройку PXE
+загрузки, т.к. на моей домашней тачке он включён по дефолту. А тут
+пришлось повозиться… Оказалось PXE включается так (в *AMIBIOS*):
+**Advanced→Chipset→SouthBridge VIA VT8237S Configuration→LAN Option
+ROM→Enabled**. Это мне помогло грузить Clonezilla SE по сети используя
+PXE.
+

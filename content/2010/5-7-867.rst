@@ -1,0 +1,13 @@
+Копирование узла
+================
+:date: 2010-05-07 18:16:04
+:tags: javascript, yui, клонирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=867
+
+    Не знаю выбрал ли я нормальный способ клонировать узел в YUI3, я
+почему-то сделал пока *Y.Node.create(node\_for\_cloning.innerHTML)*. В
+jQuery была функция clone, я её использовал, а тут что-то я либо
+невнимательно смотрел, либо не туда смотрел.
+

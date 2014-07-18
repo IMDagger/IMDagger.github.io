@@ -1,0 +1,12 @@
+YouTube API ленты
+=================
+:date: 2011-05-06 12:37:46
+:tags: ошибка, лента, youtube
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1328
+
+    Кажется у YouTube только что отвалились feed-ы, т.к. запросы к API
+возвращают **Service Unavailable**, например на такой стандартный запрос
+http://gdata.youtube.com/feeds/api/standardfeeds/on_the_web
+

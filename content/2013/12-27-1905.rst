@@ -1,0 +1,41 @@
+django-polymorphic и bulk_create
+================================
+:date: 2013-12-27 23:39:20
+:modified: 2013-12-27 23:39:49
+:tags: django-polymorphic, тип, запрос, polymorphic_ctype, bulk_create, модель, особенность
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1905
+
+Если модель объявлена как полиморфная (к сожалению, не может быть
+наследником другой полиморфной модели, на данный момент, из-за
+накладываемых библиотекой ограничений), то django-polymorphic не очень
+хорошо обходится с bulk\_create запросом. Оно добавляет документы, но
+при попытке их извлечь выбрасывает ошибку:
+
+.. code-block:: pytb
+
+          File ".../site-packages/django/db/models/query.py", line 366, in get
+            % self.model._meta.object_name)
+        DoesNotExist: ContentType matching query does not exist.
+
+Всё из-за того, что в таблице polymorphic\_ctype\_id равен NULL. Мне
+пришла идея в голову, как это обойти (скорее всего, есть более красивые
+варианты, хотя бы просто сделать фикс для библиотеки и отправить в
+мэйнстрим):
+
+.. code-block:: python
+
+            from django.contrib.contenttypes.models import ContentType
+            from materials import models as mt_models # мои модели
+            ...
+            tag_ctype = ContentType.objects.get_for_model(mt_models.Tag)
+            new_tag = lambda tag_name: mt_models.Tag(polymorphic_ctype=tag_ctype,
+                                                     document=final_doc, text=tag_name, weight=0.0)
+            mt_models.Tag.objects.bulk_create(new_tag(tag_name) for tag_name in all_tags if tag_name)
+
+Самое важное, это получить tag\_ctype объект типа контента для моего
+полиморфного класса Tag. Django сохраняет это добро в таблицу
+django\_contenttypes. А затем для каждого объекта, предназначенного для
+bulk\_create, явно передать в качестве именованного параметра значение
+tag\_ctype.

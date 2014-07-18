@@ -1,0 +1,16 @@
+Про форматирование в строках
+============================
+:date: 2009-07-02 10:09:52
+:tags: python
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=72
+
+К предыдущим постам о выводе чисел с плавающей запятой. Открываю Python
+Lirbary Reference для моего Python 2.5 нахожу главу **3.6.2 String
+Formatting Operation**\ s и внимательно читаю: A length modifier (*h*,
+*l* or *L*) may be presented, **but is ignored** as it is not necessery
+for Python. Почему я раньше это не читал ? :( Вот дурная голова… Что ещё
+раз подтверждает, что спецификацию по нюансам языка нужно читать
+:underline:`внимательно`. Вот отсюда и следует, что в Python ‘%lf’ и ‘%f’ - :underline:`одно и
+тоже`.

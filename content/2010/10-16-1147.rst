@@ -1,0 +1,10 @@
+Я хочу 
+=======
+:date: 2010-10-16 18:22:26
+:tags: 
+:category: wishlist
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1147
+
+растворится в пустоте и познать дао (не паттерн проектирования).
+

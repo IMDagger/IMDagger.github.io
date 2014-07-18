@@ -1,0 +1,14 @@
+Куб Эшера
+=========
+:date: 2014-01-05 01:16:59
+:tags: нереальный, фигура, куб, Эшер, иллюзия
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1912
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9257/22199227.b/0_96d37_68c8f266_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/617783
+   :title: Куб Эшера
+
+Моя проба смоделировать нереальную фигуру куб Эшера.
+

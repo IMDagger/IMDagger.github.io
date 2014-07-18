@@ -1,0 +1,31 @@
+Отладка Python
+==============
+:date: 2009-06-23 14:30:36
+:tags: отладка, python, emacs, pydb
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=48
+
+Скачал отладчик `Pydb <http://bashdb.sourceforge.net/pydb/>`__, очень
+доволен им. Тем более, что в поставке прилагаются el-файлы для Emacs.
+теперь я могу отлаживать свои программы на Python легко и просто из
+моего Emacs 23. Стандартный pdb не поддерживает команды info и поэтому
+из GUD не возможно попросить показать буфер текущих переменных.
+
+Отладчик установился без проблем, даже сам установил расширение для
+моего любимого редактора. В мой .emacs файл я добавил лишь:
+
+.. code-block:: cl
+
+    (require 'pydb)
+    (setq pydb-many-windows t)
+
+Последняя строчка указывает, что нужно загрузить стандартный вид отладки
+и разместить в окнах (а не фреймах). Запускать нужно так: :kbd:`M-x pydb`.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3500/imdagger.1/0_cb34_222c6ee5_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/52020/

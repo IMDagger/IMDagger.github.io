@@ -1,0 +1,25 @@
+
+
+:date: 2013-09-27 13:22:01
+:tags: параметры, python, gunicorn, форма, CGI
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1870
+:slug: urn:ya.ru:post/22199227/1870
+
+При использовании чистого Gunicorn для работы с формой из тела
+запроса не стоит забывать указывать отдельно параметр файлового
+указателя данных :code:`env['wsgi.input']`, даже не смотря на то, что
+переменные среды передаются в этот же класс. Т.к. по умолчанию параметр
+fp равен sys.stdin, т.е. чтение из стандартного потока ввода (в моём
+случае терминала).
+
+.. code-block:: python
+
+        import cgi
+        ...
+        def application(environ, start_response):
+            status = '200 OK'
+            fields = cgi.FieldStorage(fp=environ['wsgi.input'], environ=environ)
+            ...
+            return [output]

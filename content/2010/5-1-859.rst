@@ -1,0 +1,20 @@
+Карта
+=====
+:date: 2010-05-01 15:48:51
+:tags: проект, last_gateway_to_hell, карта
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=859
+
+Перенёс в электронный вид карту земли мёртвых с листка. А то я чуть
+не потерял листок, и он немного потрепался за несколько лет лежания.
+Изображение формата A4, но я его уменьшил, чтобы было проще делать
+предпросмотр. Пора уже размещать предметы на сцене, хватит кубикам
+бегать по пустому полю :).
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4211/imdagger.7/0_2e102_9fa2f970_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/188674/

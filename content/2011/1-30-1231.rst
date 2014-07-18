@@ -1,0 +1,16 @@
+Персонаж эльфа
+==============
+:date: 2011-01-30 19:57:58
+:tags: blender, эльф, last_gateway_to_hell
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1231
+
+    Забыл сказать, что я завёл общую ветку для нашей группы
+разработчиков для
+`проекта <https://code.launchpad.net/~sim-game-group/+junk/main>`__. И
+O.din13 закоммитил своего
+`эльфа <http://bazaar.launchpad.net/~sim-game-group/+junk/main/revision/209>`__
+в репозиторий, теперь он тоже может участвовать в проекте, раз все тёрки
+с Bazaar под его Window$ решены :).
+

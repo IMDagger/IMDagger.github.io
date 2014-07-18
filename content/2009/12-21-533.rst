@@ -1,0 +1,19 @@
+Меню редактора
+==============
+:date: 2009-12-21 18:44:16
+:tags: рюкзак, last_gateway_to_hell
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=533
+
+Добавил управление рюкзаком из меню редактора. Ещё не до конца
+завершено, но остались рюшечки для меню и скроллбар. А так же
+возможность добавки и удаления. Главное, что все представления и
+контроллеры заработали, свободно сохраняют своё состояние и загружают.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4103/imdagger.5/0_1afe0_f7821e56_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/110560/

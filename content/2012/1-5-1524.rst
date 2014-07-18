@@ -1,0 +1,10 @@
+com.badlogic.gdx.utils
+======================
+:date: 2012-01-05 20:51:13
+:tags: utils, libGDX, программирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1524
+
+libGDX радует своим utils, там есть и :code:`JsonReader` и :code:`XmlReader` и
+другие полезные фишечки.

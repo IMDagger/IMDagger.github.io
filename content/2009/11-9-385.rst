@@ -1,0 +1,48 @@
+Сцены
+=====
+:date: 2009-11-09 18:19:27
+:tags: blender, сцены
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=385
+
+Вчера выкроил немного ночью времени поковыряться с Blender и вдруг
+наткнулся на выпадающий список с выбором сцены. Оказалось, что можно
+слинковать вместе две сцены в Blender, а не только отдельные объекты.
+Порой мне этого не хватало. Но теперь я смогу делать части объекта на
+нескольких сценах, рендерить их с отдельными параметрами из разных
+камер, а в итоге собирать в одну сцену (создание новых сцен происходит в
+верхнем правом углу, левее версии).
+
+.. class:: text-center
+
+|image0|
+
+Это сцена с кубом, а к ней присоединена сцена с шаром. Вторая камера
+— это из *SphereScene*, её нельзя редактировать в **CubeScene**. Сцена с
+шаром имеет своё собственное описание мира, параметры рендеринга (в
+данном случае 400 на 300):
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+|image2|
+
+А результат рендеринга общей сцены выглядит так, если включить
+**Edge**:
+
+.. class:: text-center
+
+|image3|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3904/imdagger.4/0_184cc_e6fd5674_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/99532/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4106/imdagger.4/0_184d0_3fce7106_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/99536/
+.. |image2| image:: http://img-fotki.yandex.ru/get/4000/imdagger.4/0_184cd_1168b8d_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/99533/
+.. |image3| image:: http://img-fotki.yandex.ru/get/4002/imdagger.4/0_184cf_86ec31e7_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/99535/

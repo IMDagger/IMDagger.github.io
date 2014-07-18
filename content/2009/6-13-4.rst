@@ -1,0 +1,14 @@
+
+
+:date: 2009-06-13 16:28:16
+:tags: Я
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=4
+:slug: urn:ya.ru:post/22199227/4
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3501/imdagger.0/0_c44b_935b02ff_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/50251
+   :title: ALIM0741.JPG
+
+хочу быть роботом

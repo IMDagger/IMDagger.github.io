@@ -1,0 +1,17 @@
+20 часов спустя
+===============
+:date: 2011-03-08 11:47:05
+:tags: blender, luxrender, lowpoly
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1267
+
+Таже lowpoly моделька, но уже 19 (почти 20) часов рендеринга на той
+же машинке, шумы вроде ушли полностью, достиг чуть буольше **17000S/p**.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5503/imdagger.9/0_54547_ded5f72b_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/345415/

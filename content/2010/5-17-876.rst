@@ -1,0 +1,17 @@
+Нормализация ID
+===============
+:date: 2010-05-17 18:07:22
+:tags: python, openid
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=876
+
+    Можно нормализовать и получить уникальный ID для пользователя в
+OpenID без авторизации. В пакете openid.consumer.discover присутствует
+функция discover, которая принимает URI OpenID пользователя. она
+возвратит кортеж и двух объектов: строка с display\_identifier и список
+объектов класса **OpenIDServiceEndpoint**. В доке 2.2.4 написано, что
+оно вернёт просто один объект этого класса, но это враки :). А вот у
+объекта есть свойства local\_id и claimed\_id, по ним и нужно
+ориентироваться.
+

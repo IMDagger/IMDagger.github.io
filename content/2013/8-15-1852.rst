@@ -1,0 +1,32 @@
+Обновление Emacs до 24.3.50.2 и пакет melpa.el
+==============================================
+:date: 2013-08-15 23:26:50
+:modified: 2013-08-15 23:27:16
+:tags: ошибка, emacs, melpa, новый, версия
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1852
+
+Т.к. я пользуюсь development версией Emacs, то в ней появляются
+самые свежие новинки постоянно, и они иногда ломают внутренний API так,
+что плагины ещё к нему не готовы, ибо плагины ориентируются на
+стабильную версию. Пакет melpa довольно давно не обновлялся и прекрасно
+работал до версии Emacs 24.3.50.2, а вот уже в ней функцию
+:code:`package-desc-vers` разбили на :code:`package-desc-version` и
+:code:`package--ac-desc-version` (до этого были только предупреждения от
+редактора). И это вызвало ошибку при загрузке melpa, что повлекло ошибки
+при попытке обновить пакеты. Поэтому пришлось немного подправить руками
+код melpa, как
+например \ `сделал <https://github.com/LiaoPengyu/emacs.d/commit/fc7a6fedb5c496c613d6d19a4fcdab18b36a8d87>`__
+другой человек для своей функции:
+
+.. code-block:: cl
+
+   (funcall (if (fboundp 'package-desc-version)
+               'package--ac-desc-version
+              'package-desc-vers)
+            (cdr package))
+
+Если :code:`package-desc-version` объявлена, то используем
+:code:`package--ac-desc-version` (т.к. это unstable версия Emacs), а если нет, то
+по старинке.

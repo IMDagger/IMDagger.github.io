@@ -1,0 +1,50 @@
+Ubuntu и wl.ko
+==============
+:date: 2013-05-09 20:41:51
+:tags: сеть, ошибка, беспроводная, ubuntu, broadcom, модуль, linux, DKMS, wl.ko
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1796
+
+Появилось время разобраться почему на ядре 3.2.0-41 у меня не
+подхватился Broadcom WiFi. Плюс ещё на младшей версии ядра не возможно
+было подключить NVidia из-за того, что я обновлялся и драйверы
+поставились под последнюю версию ядра. Но это было всё не столь
+критично, скорее меня тревожил более сильный выдув куллера на 3.2.0-39
+(видимо тоже из-за какого-то частичного обновления). Я сравнил вывод
+lsmod при запуске на обоих ядрах, и естественно была видна разница на
+глаз. Не хватало 3-ёх мегабайтного блоба от Broadcom (тьфу-тьфу на них)
+под названием **wl** (модуль wl.ko). Во всех версиях до 41 у себя я
+обнаружил в :code:`/lib/modules/3.2.0-xx-generic/updates/dkms/` модуль
+**wl.ko**. А вот в :code:`/lib/modules/3.2.0-41-generic/updates/dkms/` его не
+было.
+
+Но благо я помню про то, что такое DKMS и с чем его едят. Он
+оказался даже собран у меня, видимо не поставился от того, что когда я
+обновлялся я делал тяжеловесные задачи и инсталлятор просто немного
+прибило по памяти. Поэтому:
+
+.. code-block:: console
+
+    imdagger@thug-machine:~$ sudo dkms build -m bcmwl -v 6.20.155.1+bdcom
+    Module bcmwl/6.20.155.1+bdcom already built for kernel 3.2.0-41-generic/4
+    imdagger@thug-machine:~$ sudo dkms install -m bcmwl -v 6.20.155.1+bdcom
+
+    wl:
+    Running module version sanity check.
+
+    Good news! Module version  for wl.ko
+    exactly matches what is already found in kernel 3.2.0-41-generic.
+    DKMS will not replace this module.
+    You may override by specifying --force.
+
+    depmod...........
+
+    DKMS: install completed.
+    imdagger@thug-machine:~$ sudo modprobe wl
+    # Счастье. Сразу подхватился и подключился мгновенно WiFi после этой строчки.
+
+У утилиты dkms опция -m это указание названия модуля, а -v его
+версия. Т.к. я собирал из исходников, которые есть прямо в директории
+/var/lib/dkms, то ничего скачивать не пришлось, ибо у меня уже стоит
+пакет bcmwl-kernel-source.

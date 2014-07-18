@@ -1,0 +1,23 @@
+Весеннее настроение
+===================
+:date: 2013-05-26 23:07:02
+:tags: цветы, красота, радость, одуванчик, дерево, весна
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1802
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9231/22199227.b/0_8d3bf_339f6acc_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/578495
+   :title: Весеннее настроение
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9225/22199227.b/0_8d3c0_dfbff33e_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/578496
+   :title: Весеннее настроение
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9224/22199227.b/0_8d3c1_fe02e89b_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/578497
+   :title: Весеннее настроение
+
+Что-то похолодало, но я выложу немножечко этой весны, правда, больше
+похожей на жаркое лето.
+

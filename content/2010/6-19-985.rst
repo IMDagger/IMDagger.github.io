@@ -1,0 +1,11 @@
+Не знал
+=======
+:date: 2010-06-19 17:23:12
+:tags: работа, slide
+:category: link
+:author: IMDagger
+:attached-url: http://github.com/slideinc
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=985
+
+До вчерашнего для не знал, что мы частично OpenSource :)
+

@@ -1,0 +1,78 @@
+
+
+:date: 2013-03-29 22:48:29
+:tags: supervisor, сервис, django-supervisor, RPC, supervisord, rpyc, fabric, запуск
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1762
+:slug: urn:ya.ru:post/22199227/1762
+
+Попробовал пакет
+`django-supervisor <https://github.com/rfk/django-supervisor>`__. Мне
+понравилось то, что можно в конфигурацию Supervisor вставлять :code:`{{
+переменные }}` из настроек проекта, а также :code:`{% использовать %}` все
+конструкции шаблонов Django прямо в файле конфиругации Supervisor. Одно
+только не знаю: как себя поведёт данный пакет, если в конфигурационном
+файле используется include. Теперь достаточно легко запустить и
+задеплоить всю необходимую связку сервисов для проекта:
+
+.. code-block:: console
+
+    ./manage.py supervisor -d
+    # и Supervisord запущен
+    ./manage.py supervisor shell
+    # и мы уже в консоли управление supervisor-процессами
+
+Запуск консоли по управлению процессами я добавил в fabric, теперь я
+могу просто сделать локально “fab processes” и попадаю в консоль на
+удалённом сервере и могу управлять его сервисами, т.к. это fabric, то
+если потребуется, то я смогу легко провернуть такую же схему даже для N
+серверов. Просто добавлю пару команд, которые будут рассылаться в
+управляющие элементы Supervisor. А вообще мой fabric.py сейчас выглядит
+вот так:
+
+.. code-block:: python
+
+        from fabric.api import *
+        from fabric.colors import *
+
+        env.hosts = ['myhost:12345']
+        env.directory = '/service/path'
+
+        def virtualenv(command):
+            with cd(env.directory):
+                sudo('source /service/path/virtualenv/bin/activate' + ' && ' + command, user='username')
+
+        def processes():
+            virtualenv('./manage.py supervisor shell')
+
+        def restart():
+            print yellow('Reloading ...')
+            sudo('touch /etc/uwsgi.d/project.ini')   # reload uwsgi as root
+
+        def deps():
+            virtualenv('pip install -r req.txt')
+
+        def push(should_restart='yes', update_deps='no'):
+            print green('Pushing live ...')
+            local('git push origin master')
+            with cd(env.directory):
+                with settings(sudo_user='username'):
+                    sudo('git pull')
+                    if update_deps == 'yes':
+                        deps()
+                    virtualenv('./manage.py syncdb')
+                if should_restart == 'yes':
+                    restart()
+
+Под надзор супервизора я отдал небольшой (который будет большим
+попозже) RPC-сервис на основе фреймворка
+`rpyc <https://github.com/tomerfiliba/rpyc>`__. Хорошая, простая,
+достаточно безопасная библиотека RPC с бинарным протоколом. Всё отлично
+передаётся, по умолчанию разрешены только методы, атрибуты и классы с
+префиксом :code:`exposed_`, но есть возможность указать в конфигурации
+соединения, что разрешены все public поля. Указывается отдельно как для
+сервера, так и для клиента. Всё передаётся на клиент прозрачно, создать
+объект соединяющийся с сервером легко. Есть возможность авторизации по
+SSL-ключу. Я использую не режим по умолчанию, а режим с запуском с
+указанием конкретного класса в качестве сервиса.

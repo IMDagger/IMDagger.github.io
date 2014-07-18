@@ -1,0 +1,26 @@
+Успешный день
+=============
+:date: 2010-07-07 19:54:02
+:tags: Я, myspace, работа
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1019
+
+Сегодня день прошёл напряжённо, но успешно. Проблемы с кодом
+решились к концу дня. Нужно нам ещё приложить усилия и в ранчо на
+MySpace будет такая же фишка как уже есть на Facebook. Ине забыть
+глянуть, где я прописал показывать всегда 10 для коробки с сувенирами, а
+то уже впопыхах забыл. Я даже сегодня успел в тренажёрный зал сходить и
+размяться, если бы не напарник не знаю сколько бы я возился.
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+.. alert-warning::
+   © Все права на изображение принадлежат Slide.com
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/51/imdagger.7/0_376c7_59c1a0f2_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/227015/

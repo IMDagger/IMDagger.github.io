@@ -1,0 +1,13 @@
+SpriteMapper
+============
+:date: 2012-10-06 23:31:14
+:tags: упаковка, атлас, изображение, CEGO
+:category: link
+:author: IMDagger
+:attached-url: http://opensource.cego.dk/spritemapper/doc.html
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1692
+
+Неплохой пакер изображений в атлас, даже есть Ant-задача из коробки.
+Один недостаток, что можно регулировать только максимальную ширину
+атласа, а высоту нельзя.
+

@@ -1,0 +1,69 @@
+Track to
+========
+:date: 2009-11-24 16:01:15
+:tags: blender, python, bge, track to
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=426
+
+Сегодня смастерил маленький пример, как в BGE сделать, чтобы один
+объект «следил» за другими. При этом поворачивался в сторону ближайшего.
+Все объекты, за которыми нужно наблюдение являются динамическими с
+физикой. Сначала я добавил в сцену три кубика, для которых включил
+физику, из-за неё они стали падать вниз. Затем конус следящий за
+кубиками:
+
+.. class:: text-center
+
+|Конус|
+
+Кубики в логике не нуждаются, а вот для конуса добавил логические
+кирпичики. Сенсор *ojbect detect* определяет, что объекты попали в зону
+видимости в 30.0 единиц. Python-скрипт *orient* выбирает объект, на
+который нужно ориентироваться и присваивает его в свойство **object**
+актуатора *track to*. Нужно только учитывать, что у актуатора вида Edit
+Object с Track to свойство object принимает именно объекты, а не
+строковые имена. Хотя в логических блоках **OB** принимает названия
+объектов.
+
+.. class:: text-center
+
+|Брики|
+
+Важно не забыть включить свойство **3D**, чтобы объект следил в
+пространстве, а не по одной оси. Название объекта вписывать не
+обязательно, т.к. сценарий его сам выбирает. Код скрипта *orient*
+представлен ниже:
+
+.. code-block:: python
+
+   cc = GameLogic.getCurrentController()
+   objects_detected = cc.sensors['object detect']
+   x, y, z = cc.owner.position
+
+   if objects_detected.positive:
+       min_dist = None
+       closest = None
+
+       around = objects_detected.hitObjectList
+       for obj in around:
+           ox, oy, oz = obj.position
+           dist = ((x - ox) ** 2 + (y - oy) ** 2 + (z - oz) ** 2) ** 0.5
+
+           if min_dist is not None:
+               if min_dist > dist:
+                   min_dist = dist
+                   closest = obj
+               else:
+                   min_dist = dist
+                   closest = obj
+
+           if closest:
+               lookat = cc.actuators['track to']
+               lookat.object = closest
+               cc.activate(lookat)
+
+.. |Конус| image:: http://img-fotki.yandex.ru/get/3904/imdagger.4/0_19476_6e5def42_XL
+   :target: http://fotki.yandex.ru/users/imdagger/view/103542/
+.. |Брики| image:: http://img-fotki.yandex.ru/get/4101/imdagger.4/0_19479_da052e6a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/103545/

@@ -1,0 +1,15 @@
+С 8 Марта!
+==========
+:date: 2011-03-08 20:10:14
+:tags: поздравление, март, 8
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1270
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4703/imdagger.9/0_5458e_4dacde6f_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/345486
+   :title: С 8 Марта!
+
+В этот раз скелет при моделировании использовал по проще. Чуть позже
+выпишу все материалы, которые я использовал с Blender Materials.
+

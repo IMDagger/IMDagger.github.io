@@ -1,0 +1,29 @@
+
+
+:date: 2012-09-05 11:21:41
+:tags: emacs, процесс, обработчик, завершение
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1672
+:slug: urn:ya.ru:post/22199227/1672
+
+Чтобы породить в Emacs некий процесс и, когда он завершится, то
+вызвать обработчик, нужно сделать так:
+
+.. code-block:: cl
+
+        (defun some-restart-service (service)
+          (set-process-sentinel
+           ;; название процесса может быть любым, оно для именованного доступа
+           (start-process-shell-command "название-процесса" "*имя-буффера-вывода*"
+                                        "произвользая-комманда-для-оболочки")
+           (lambda (service-tool event)
+             (when (eq (process-status service-tool) 'exit)
+               (if (zerop (process-exit-status xsf-tool))
+                   (message "All is done.")
+                 (message "Something went wrong."))))))
+
+Вешаем наш **some-restart-service** на какую-нибудь клавишу или
+просто вызываем. Подсмотрел идею в
+http://xwl.appspot.com/ref/gmail-notifier.el
+(макрос :code:`gmail-notifier-shell-command-asynchronously-with-callback`).

@@ -1,0 +1,20 @@
+
+
+:date: 2011-11-09 16:53:37
+:tags: 
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1497
+:slug: urn:ya.ru:post/22199227/1497
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5818/22199227.a/0_687b8_5db982f8_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/427960
+   :title: tags_screen1.png
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4522/22199227.a/0_687b9_70b83188_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/427961
+   :title: tags_screen2.png
+
+Вот что я имею ввиду, а то из-за этой игры слов с “заголовок” путаница
+одна
+

@@ -1,0 +1,15 @@
+Cycles
+======
+:date: 2011-04-24 13:54:48
+:tags: blender, радость, cycles, возможности
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1300
+
+Новый Cycles это будет нечто! Крутота! /me пляшет от радости.
+
+.. class:: text-center
+
+.. youtube:: 8KgrBjt4e9k
+   :width: 450
+   :height: 370

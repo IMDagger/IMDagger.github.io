@@ -1,0 +1,16 @@
+Сервис Yandex
+=============
+:date: 2009-07-04 18:33:40
+:tags: Я
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=80
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3502/imdagger.2/0_dc16_83fc429f_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/56342
+   :title: Hacker 2
+
+Вот как бы сменить фото на странице на Yandex, не дублируя пост ? :-/ А
+то, если уже её опубликовал и она не первая, то не идёт в качестве
+фотки.
+

@@ -1,0 +1,18 @@
+Улучшенный бот
+==============
+:date: 2010-10-18 18:58:23
+:tags: python, google, конкурс, бот
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1151
+
+Со вчерашнего дня на сегодняшний мне хватило сил дописать своему
+боту кое-какую защиту и случайное нападение. Теперь он больше стал похож
+на игрока в Galcon :) даже начал выигрывать тестовых ботов. Мой красный:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4605/imdagger.8/0_44363_86b2b332_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/279395/

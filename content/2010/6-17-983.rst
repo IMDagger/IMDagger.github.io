@@ -1,0 +1,18 @@
+IMPlaner
+========
+:date: 2010-06-17 19:02:41
+:tags: blender, игра, bge
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=983
+
+Начал делать модель, сделал за 10 минут. Полигонов постарался
+потратить поменьше. Пойду сейчас домой, исправлю косяки (вспомню былое
+:) а то уже давно не моделил никак вообще), сделаю простую логику.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4205/imdagger.7/0_3484d_b15ff450_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/215117/

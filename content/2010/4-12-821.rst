@@ -1,0 +1,28 @@
+Ноги эльфа
+==========
+:date: 2010-04-12 14:27:41
+:tags: blender, эльф, ноги, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=821
+
+Спасибо Odin.13, сделанные им ступни я прикрутил к ногам моего
+эльфа. А то в ступне было 10 вершин, а у меня 6 и ассиметрия. Вот так
+было, когда я грязно и быстро их соединил, похоже, что эльф после
+неудачной операции на ногах:
+
+.. class:: text-center
+
+|image0|
+
+После уменьшения в ступнях по совету до 6 вершин, всё успешно
+соединилось и шов пропал:
+
+.. class:: text-center
+
+|image1|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4210/imdagger.6/0_2b4fb_31d4b801_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/177403/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4309/imdagger.6/0_2b4fc_bca43acc_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/177404/

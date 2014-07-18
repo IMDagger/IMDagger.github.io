@@ -1,0 +1,25 @@
+Mesa 7.11, Nouveau и DRI на nv05
+================================
+:date: 2011-03-05 19:48:52
+:tags: ошибка, nouveau, драйвер, MyGUI, печаль, медленно, ускорение, DRI
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1264
+
+Я смог перевести драйвер с Software rasterizer на Gallium Nouveau
+DRI, только вот почему-то OpenGL стал версии 1.2, а у меня было 1.5 и
+FPS упал :( Т.е. на процессоре без видео карты (Riva TNT2) оно быстрее
+успевает сделать все дела. Да ещё и глюки драйвера проявились (правда
+может это связано с версия OGL 1.2):
+
+.. class:: text-center
+
+|image0|
+
+А MyGUI захотел для своего OpenGL менеджера PBO, возможно придётся
+переделать менеждера, чтобы настолько требовательно не было. А то сам
+BGE и Blender не требуют PBO. А ещё OpenGL DataManager неправильно ищет
+ресурсы из-за ошибки в Common.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5704/imdagger.9/0_542ab_365eed77_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/344747/

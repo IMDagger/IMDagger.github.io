@@ -1,0 +1,12 @@
+
+
+:date: 2009-08-23 10:35:04
+:tags: 
+:category: mood
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=160
+:slug: urn:ya.ru:post/22199227/160
+
+Emacs + jabber.el + небольшая донастройка - это кайф, наконец-то в чате
+работает автодополнение слов по M - x!
+

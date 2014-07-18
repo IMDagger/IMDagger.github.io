@@ -1,0 +1,11 @@
+Zotonic
+=======
+:date: 2011-01-30 19:58:59
+:tags: erlang, cms, web
+:category: link
+:author: IMDagger
+:attached-url: http://zotonic.com
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1232
+
+Присматриваюсь к этой CMS на Erlang, прикольная штука.
+

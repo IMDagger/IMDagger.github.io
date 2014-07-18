@@ -1,0 +1,23 @@
+Стандартный режим подсветки Python в Emacs 23
+=============================================
+:date: 2009-06-24 18:41:25
+:tags: python, emacs, подсветка, синтаксис
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=49
+
+Я не хотел качать python-mode.el, а хотел просто использовать python.el
+со своей темой для Emacs. Т.к. раньше у меня, когда я писал на Lua,
+посвечивались методы моих самописных классов и числа (эту возможность я
+сам добавил в режиму *lua-mode*), то этого хотелось и в *python-mode*.
+Поэтому я полез в **python.el** и подправил его немного. Новый
+`python.el <http://narod.ru/disk/10241552000/python.el.gz.html>`__.
+
+.. class:: text-center
+
+|image0|
+
+Есть пока недочёты при подсветке в импорте.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3604/imdagger.1/0_ccfe_5bcafdb4_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/52478/

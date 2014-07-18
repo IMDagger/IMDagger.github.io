@@ -1,0 +1,55 @@
+
+
+:date: 2012-08-23 23:04:59
+:modified: 2014-07-15 03:00
+:tags: проблема, производительность, kawa, динамический, поведение, класс, процедура
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1667
+:slug: urn:ya.ru:post/22199227/1667
+
+Не до конца ясно для меня почему так, но скорее всего это связано
+как-то с рефлексией. Создание переменной типа procedure и присваивание в
+неё ссылки на метод класса приводит к тому, что дальнейшие её вызовы
+медленнее, чем аналогичная переменная, которая содержит lambda выражение
+с явным вызовом требуемого метода. Т.е. вот такой код (скомпилированный
+компилятором Kawa под целевую платформу JVM) исполняется на моём Intel
+Atom D525 с 1.8 GHz где-то не более 0.8 секунды:
+
+
+.. code-block:: scheme
+
+        (module-export Test)
+
+        (define-simple-class Test ()
+            (internal-field ::procedure init: (lambda () ((this):real-method)))
+            ;(internal-field ::procedure init: (this):real-method)
+            ((real-method) ::int (+ 1 2))
+            ((iter (MAX ::int)) :: void
+                (let loop ((i ::int 0))
+                        ((this):internal-field)
+                        (when (< i MAX) (loop (+ i 1))))))
+
+        ((Test):iter 10000000)
+
+
+
+
+
+А вот такой код исполняется уже около **8 секунд**: (вариант с set!
+внутри конструктора работает аналогично)
+
+.. code-block:: scheme
+
+        (module-export Test)
+
+        (define-simple-class Test ()
+            ;(internal-field ::procedure init: (lambda () ((this):real-method)))
+            (internal-field ::procedure init: (this):real-method)
+            ((real-method) ::int (+ 1 2))
+            ((iter (MAX ::int)) :: void
+                (let loop ((i ::int 0))
+                        ((this):internal-field)
+                        (when (< i MAX) (loop (+ i 1))))))
+
+        ((Test):iter 10000000)

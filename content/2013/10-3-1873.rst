@@ -1,0 +1,42 @@
+
+
+:date: 2013-10-03 01:34:59
+:tags: encoding, сайт, gzip, identity, requests, HTTP, python, особенность
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1873
+:slug: urn:ya.ru:post/22199227/1873
+
+Наткнулся на криво настроенный сайт, но я думаю он не единственный
+такой и с него мне тоже нужно тащить страницы. Он возвращает заголовок
+Content-Encoding равный gzip, а сами данные не ужимает, а оставляет как
+есть. Естественно библиотеке requests от этого сносит башню с ошибкой:
+
+.. code-block:: pytb
+
+          File ".../requests/packages/urllib3/response.py", line 225, in stream
+            data = self.read(amt=amt, decode_content=decode_content)
+          File ".../requests/packages/urllib3/response.py", line 193, in read
+            e)
+        requests.packages.urllib3.exceptions.DecodeError: ('Received response with
+                    content-encoding: , but failed to decode it.', error('Error -3
+                    while decompressing: incorrect header check',))
+
+Но, т.к. я делаю обычный GET запрос и оставляю заговоловки на
+усмотрение *requests*, то он не требует от сайта принудительного
+text/html. Поэтому я добавил принудительный Accept-Encoding, что дало
+положительный результат. Забываю всё время про него, т.к. без параметра
+headers короче писать запрос.
+
+.. code-block:: python
+
+   page = requests.get(resource.url, stream=True, headers={
+       'User-Agent': 'Some bot',
+       'Accept-Encoding': 'identity',
+       'Accept': 'text/*',
+   })
+
+С указанием identity стало полегче, но на всякий случай есть ещё
+:code:`page.raw.stream(decode\_content=False)`, для тех, кому вообще
+декодирование противопоказанно и точно нужны сырые данные. Только в
+таком случае :code:`stream=True` для запроса обязателен.

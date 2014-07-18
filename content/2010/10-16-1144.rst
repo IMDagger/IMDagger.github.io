@@ -1,0 +1,19 @@
+Кости для Кожеголового
+======================
+:date: 2010-10-16 17:35:12
+:tags: проект, набросок, last_gateway_to_hell, арматура, персонаж, риггинг
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1144
+
+Набросал скелет для Кожеголового персонажа. Ещё не крепил к телу и
+не настроил констрэйнты, от этого ноги гнутся немного странно.
+Постарался кости не сдвигать с оси, т.к. не силько умею потом бороться с
+IK.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4600/imdagger.8/0_44022_1a6cd51_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/278562/

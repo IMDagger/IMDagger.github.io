@@ -1,0 +1,40 @@
+Странное поведение lxml.html
+============================
+:date: 2013-02-08 22:57:04
+:modified: 2013-02-08 22:58:20
+:tags: странное поведение, HTML, поведение, python, отклонение, lxml
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1740
+
+Столкнулся с тем, что не очень валидные с точки зрения стандарта и
+логики кусочек HTML обрабатывается неоднозначно при помощи lxml.html.
+Браузеры без проблем его переваривают, BeautifulSoup тоже, и некоторые
+другие парсеры:
+
+.. code-block:: pycon
+
+        >>> import lxml.html
+        >>> import lxml.html.soupparser
+        >>> lxml.html.tostring(lxml.html.fromstring('<html><head></head><body><a href="link">' \
+                                 '<table><tr><td>Cell</td></tr></table></a></body></html>'))
+        '<html><head></head><body><a href="link"></a><table><tr><td>Cell</td></tr></table></body></html>'
+        >>> lxml.html.tostring(lxml.html.soupparser.fromstring('<html><head></head><body>' \
+                   '<a href="link"><table><tr><td>Cell</td></tr></table></a></body></html>'))
+        '<html><head></head><body><a href="link"><table><tr><td>Cell</td></tr></table></a></body></html>'
+
+Сразу видно, что lxml.html отделил <table> от <a>, оно то конечно и
+правильно, если бы я не столкнулся с такой разметкой на одном реальном
+сайте + для других похожих ситуаций оно себя тоже ведёт немного странно.
+Всё бы ничего, в DTD же прописано, что в <a> не стоит пихать <table>, но
+туда и <div> пихать не стоит, но:
+
+.. code-block:: pycon
+
+        >>> lxml.html.tostring(lxml.html.fromstring('<html><head></head><body>' \
+                    '<a href="link"><div>Text</div></a></body></html>'))
+        '<html><head></head><body><a href="link"><div>Text</div></a></body></html>'
+
+Всё же что-то не так, т.к. библиотеке нужно определиться: либо всё
+выносить из тега ссылки, что не является разрешённым, либо обрабатывать
+случай :code:`<table>`. Но не вести себя по разному.

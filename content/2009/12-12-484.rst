@@ -1,0 +1,12 @@
+Мэппинг
+=======
+:date: 2009-12-12 07:57:56
+:tags: hibernate
+:category: link
+:author: IMDagger
+:attached-url: http://www.redhat.com/docs/manuals/jboss/jboss-eap-4.3/doc/hibernate/Annotations_Reference_Guide/Mapping_Queries-Mapping_native_queries.html
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=484
+
+Про мэппинг native-запросов, а так же стоит прочитать и ознакомиться с
+примерами из главы 16 документации по Hibernate.
+

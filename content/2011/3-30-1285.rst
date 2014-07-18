@@ -1,0 +1,14 @@
+MinGW
+=====
+:date: 2011-03-30 20:09:00
+:tags: blender, кросскомпиляция, сборка, MinGW
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1285
+
+    Установил MinGW, попробую сам собрать Blender под Винду, используя
+кросскомпиляцию. Часть библиотек уже собранных возьму с launchpad.net из
+ветки для Blender 2.4x, а недостающие или неподходящие соберу сам
+(например там есть Python 3.1 и 3.2, но нет 2.6 и 2.5, которые нужны для
+Blender 2.49b).
+

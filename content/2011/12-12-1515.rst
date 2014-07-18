@@ -1,0 +1,17 @@
+$where в MongoDB
+================
+:date: 2011-12-12 00:55:54
+:tags: Я, невнимательность, $where, документация, MongoDB
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1515
+
+    Внимательнее нужно мне читать стандартную документацию к MongoDB, а
+то я был удивлён оператором $where для поиска, а также возможностью
+использовать регулярные выражения для поиска. Пока оно мне ещё не особо
+нужно, но я на них наткнулся на стороннем сайте, откуда затем снова
+пришёл на MongoDB
+`Wiki <http://www.mongodb.org/display/DOCS/Advanced+Queries#AdvancedQueries-RegularExpressions>`__.
+
+ 
+

@@ -1,0 +1,11 @@
+Буфер обмена
+============
+:date: 2009-09-20 12:18:46
+:tags: emacs, буфер
+:category: link
+:author: IMDagger
+:attached-url: http://fedorastones.blogspot.com/2009/06/blog-post.html
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=243
+
+Чтобы копировать в буфер обмена из Emacs в X-ы можно было простым
+привычным для Emacs нажатием :kbd:`M-w`.

@@ -1,0 +1,35 @@
+Stream posting
+==============
+:date: 2010-09-06 16:31:37
+:tags: stream, myspace, javascript, права, activity
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1111
+
+Сюрпризом оказалось, что на MySpace теперь для того, чтобы постить в
+stream нужно запросить права с индикатором UT
+(VIEWER\_SEND\_UPDATES\_TO\_FRIENDS). У меня приложение использует
+iframe, а не canvas. Вот код, который проверяет право на создание
+сообщений в stream пользователя, если они отсутствуют, то запускается
+запрос на получение таковых. И только затем вызывается показ диалога на
+добавку нового сообщения в ленту:
+
+.. code-block:: js
+
+    var container = MyOpenSpace.MySpaceContainer.get();
+    container.requestCreateActivity(os.newActivity(activityParams), priority, callback);
+    if (!container.hasPermission(MyOpenSpace.Permission.VIEWER_SEND_UPDATES_TO_FRIENDS))
+        container.requestPermission(MyOpenSpace.Permission.VIEWER_SEND_UPDATES_TO_FRIENDS,
+            "тут нужно написать сообщение для пользователя",
+            function(response) {
+                if (!response.errorMessage)
+                    container.requestCreateActivity(container.newActivity(activityParams),
+                                priority, callback);
+                }
+            );
+    else
+        container.requestCreateActivity(container.newActivity(activityParams), priority, callback);
+
+В комбинации с кодом для автоматической добавки постов со стороны
+сервера это даёт неплохой результат. Можно пользователя постоянно не
+доставать запросами для размещения нового сообщения.

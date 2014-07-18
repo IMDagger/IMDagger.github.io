@@ -1,0 +1,20 @@
+
+
+:date: 2011-08-16 08:58:02
+:tags: blender, bge, CEGUI, улучшение
+:category: video
+:author: IMDagger
+:attached-url: http://flv.video.yandex.ru/lite/imdagger/l385t35fji.4227/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1403
+:slug: urn:ya.ru:post/22199227/1403
+
+.. class:: text-center
+
+.. yavideo:: l385t35fji.4227
+   :width: 450
+   :height: 370
+
+Добавил обработку клавиатуры. Теперь можно не только мышью
+манипулировать, но и вводить тексты. Системный курсор на самом деле не
+виден, его просто ffmpeg добавляет, а версии, где можно выбирать это у
+меня не было.

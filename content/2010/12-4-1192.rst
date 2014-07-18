@@ -1,0 +1,45 @@
+YouTube Auth
+============
+:date: 2010-12-04 20:05:24
+:tags: видео, информация, youtube, api, python, авторизация, библиотека
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1192
+
+Некоторое время боролся с ошибкой 401, YouTube постоянно утверждал,
+что у меня неверный scope для моего AuthSubToken. Но воспоминание о том,
+что нужно ещё установить ключ разработчика дало мне надежду. И я
+отправился на YouTube получил ключ разработчика и выполнил такой код
+(использовать gdata-python-client библиотеку):
+
+.. code-block:: python
+
+        import gdata.youtube
+        import gdata.youtube.service
+
+        yt_service = gdata.youtube.service.YouTubeService()
+        yt_service.ssl = False
+        # не забыть про установку ключа!
+        yt_service.developer_key = '34-5Axrz123...'
+        # а client_id уже не нужен нынче
+        next = 'тут-адрес-моего-сервера'
+        scope = 'http://gdata.youtube.com'
+        secure = False
+        session = True
+        auth_url = yt_service.GenerateAuthSubURL(next, scope, secure, session)
+        #.... тут я получил URL для пользователя для авторизации и
+        # нужно показать ему отдельный popup ....
+        ...
+        # после получения токена (есть и функции которые сами
+        # парсят URL и достают оттуда и scope и token)
+        yt_service.SetAuthSubToken(authsub_token)
+        yt_service.UpgradeToSessionToken()
+
+        # получаем любимые видео пользователя, default это тот, кто авторизовал
+        favorite_feed = yt_service.GetUserFavoritesFeed(username='default')
+        for video_info in favorite_feed.entry:
+            print video_info # выводим XML информацию, можно
+            # работать и со свойствами, ведь это же объект!
+
+И о чудо! всё заработало, я смог получать информацию, которую
+пожелал.

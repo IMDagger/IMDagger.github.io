@@ -1,0 +1,18 @@
+Ironehide и ASUS EeePC 1215N
+============================
+:date: 2012-01-11 14:27:39
+:tags: asus, linux, optimus, nvidia, ironhide, blumblebee, eeepc
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1533
+
+    Теперь я смог оседлать Nvidia Optimus, в Ubuntu 11.10 после добавки
+ppa, как описано `здесь <http://kubuntu.ru/node/9078>`__ мне ещё
+пришлось убрать nouveau драйвер и переключиться на nvidia драйвер. При
+чём как-то с первого раза не вышло, я уже даже подумал, что всё …
+приехали, но потом отлегло. Ещё пока только не проверят bluetooth на
+своей машинке, надеюсь он тоже заработает без особых мучений. Пока всё
+заработало меньше, чем с полпинка. Без особых гуглений и тервотрёпки.
+
+ 
+

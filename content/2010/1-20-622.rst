@@ -1,0 +1,25 @@
+Тема
+====
+:date: 2010-01-20 18:46:51
+:tags: blender, тема
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=622
+
+Скачал вот эту тему
+`http://www.graphicall.org/themes/Dark\_theme]mr\_bomb].py <http://www.graphicall.org/themes/Dark_theme]mr_bomb].py>`__,
+как раз такая контрастная для моих глаз подойдёт, а то яркость на
+мониторе я всегда выкручиваю вверх и от светлых тем у меня глаза
+выпадают. А эта вроде ничего :) попробую, поюзаю, подправлю места, где
+контраст низкий (например в меню, что меня утомляет).
+
+.. class:: text-center
+
+|image0|
+
+Пойду на остаток того времени, что у меня есть возможность сидеть
+на работе, доправлю проблемы в контроллере по отображению результатов из
+дипломного проекта.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4101/imdagger.5/0_1eae3_6b4959dd_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/125667/

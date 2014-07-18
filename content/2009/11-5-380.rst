@@ -1,0 +1,94 @@
+Сглаживание
+===========
+:date: 2009-11-05 17:19:24
+:modified: 2014-07-14 04:49
+:tags: blender, bge, сглаживание
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=380
+
+Только обратил внимание на кнопку **Set Smooth** в Blender.
+Оказалось, что оно и в BGE работает, производит расчёт освещённости
+каждого полигона поверхности меша на основании соседних. Думаю, что для
+достаточно гладких поверхностей мне эта возможность в BGE очень даже
+пригодится, а то приходилось «одевать» текстуру высокополигонального
+объекта даже при минимальной необходимости.
+
+Для примера я создал обычную UV-сферу 32 на 32.
+
+.. class:: text-center
+
+|image0|
+
+Затем выделил левую половину сферы
+
+.. class:: text-center
+
+|image1|
+
+Нажал кнопку Set Smooth (вкладка Editing по :kbd:`F9`), которая
+применила сглаживание освещения для выбранных полигонов:
+
+.. class:: text-center
+
+|image2|
+
+При переходе обратно в объектный режим результат изменений стал
+сразу же очевиден:
+
+.. class:: text-center
+
+|image3|
+
+При этом, в игровом режиме BGE сфера отображалась таким же образом,
+т.е. такой тип расчёта освещения допускал и внутренний игровой движок.
+
+.. class:: text-center
+
+|image4|
+
+Но мне показалось этого мало :). Я решил создать два меша типа
+**Monkey** и поэкспериментировать с ними. Слева и справа два абсолюто
+идентичных объекта.
+
+.. class:: text-center
+
+|image5|
+
+Но к левой обезьянке затем был применён Set Smooth и запущен BGE.
+
+.. class:: text-center
+
+|image6|
+
+Ещё лучше стала видна разница после применения к обоим мешам
+модификатора SubSurf всего лишь 1-ого уровня (на рисунке включён Shaded
+Draw Type).
+
+.. class:: text-center
+
+|image7|
+
+Нашёл ещё пару ссылок по данной тематике:
+
+`Из документации <http://www.blender.org/documentation/htmlI/x2681.html>`__
+
+`Заметка о возможных проблемах при Set
+Smooth <http://feeblemind.tuxfamily.org/dotclear/index.php/2007/08/13/88-how-to-solve-blenders-smoothing-problems>`__
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4000/imdagger.4/0_18098_c848c4e1_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/98456/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4105/imdagger.4/0_18099_c16429b_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/98457/
+.. |image2| image:: http://img-fotki.yandex.ru/get/4002/imdagger.4/0_1809b_59d09d3_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/98459/
+.. |image3| image:: http://img-fotki.yandex.ru/get/3905/imdagger.4/0_1809c_528821a6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/98460/
+.. |image4| image:: http://img-fotki.yandex.ru/get/4105/imdagger.4/0_1809d_d711d4cd_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/98461/
+.. |image5| image:: http://img-fotki.yandex.ru/get/4106/imdagger.4/0_1809e_c095fd3d_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/98462/
+.. |image6| image:: http://img-fotki.yandex.ru/get/4106/imdagger.4/0_1809f_d25dd552_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/98463/
+.. |image7| image:: http://img-fotki.yandex.ru/get/3906/imdagger.4/0_180a1_e73f2b5c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/98465/

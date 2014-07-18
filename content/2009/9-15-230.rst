@@ -1,0 +1,17 @@
+ru_comicstrip
+=============
+:date: 2009-09-15 13:16:44
+:tags: комиксы
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=230
+
+Понравился переведённый комикс **x-D**
+
+|image0|
+
+оригинал перевода
+`здесь <http://community.livejournal.com/ru_comicstrip/469410.html>`__
+
+.. |image0| image:: http://media.trafficgods.ws/c/1555492274/09-08-07.gif
+

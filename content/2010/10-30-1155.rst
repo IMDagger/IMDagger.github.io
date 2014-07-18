@@ -1,0 +1,18 @@
+Прыжок кролика
+==============
+:date: 2010-10-30 17:56:31
+:tags: blender, кролик, анимация, экспорт
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1155
+
+Всё мой упрощённый мультяшный кролик как-то прыгает, можно отдавать
+его. Он готов, могу отдать :) Придётся сделать экспорт в FBX формат,
+т.к. OBJ не может работать с арматурами.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5901/imdagger.8/0_45553_93fd33ed_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/283987/

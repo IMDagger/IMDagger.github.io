@@ -1,0 +1,69 @@
+Уже не успею
+============
+:date: 2010-08-28 20:21:49
+:tags: Я, неудачник
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1095
+
+Слишком много времени я истратил в командировке. У меня было очень
+мало кода и я чуть успел сделать графику сегодня. И уже пора идти домой.
+Так что придётся просто доделать игру и выложить, но на pyweek не
+попадаю, ну да ладно всё равно врядли бы я одержал победу :/
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+Это тюрьма:
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+Это отдельно окна для картинки:
+
+.. class:: text-center
+
+|image2|
+
+.. class:: text-center
+
+Разбитые окна, когда преступник вылазит:
+
+.. class:: text-center
+
+|image3|
+
+.. class:: text-center
+
+А это два вида преступников :)
+
+.. class:: text-center
+
+|image4|
+
+.. class:: text-center
+
+Есть ещё преступники на парашютах :)
+
+.. class:: text-center
+
+|image5|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5104/imdagger.7/0_3dd44_510bcb1e_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/253252/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4804/imdagger.7/0_3dd45_f3630c8f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/253253/
+.. |image2| image:: http://img-fotki.yandex.ru/get/4604/imdagger.7/0_3dd46_bbd4e9af_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/253254/
+.. |image3| image:: http://img-fotki.yandex.ru/get/4600/imdagger.8/0_3dd47_8e232d89_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/253255/
+.. |image4| image:: http://img-fotki.yandex.ru/get/4508/imdagger.8/0_3dd48_2a4fba2b_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/253256/
+.. |image5| image:: http://img-fotki.yandex.ru/get/4506/imdagger.8/0_3dd49_e0e8535a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/253257/

@@ -1,0 +1,11 @@
+Отчёт
+=====
+:date: 2009-07-07 16:05:52
+:tags: практика
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=85
+
+Вот допишу отчёт по практике и сдам, а после этого что-нибудь сюда
+напишу про Blender, Python или Emacs…
+

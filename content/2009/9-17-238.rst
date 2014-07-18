@@ -1,0 +1,29 @@
+Война с Timestamp
+=================
+:date: 2009-09-17 18:17:33
+:tags: msssql, hibernate
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=238
+
+В MSSQL 2005 Timestamp он же RowVersion — 16-байтовое поле, которое
+отражает «версию изменений» ряда. Но если требуется промэппить это поле
+на метод POJO-объекта, то возникает вопрос: «Какой тип выбрать?». Сперва
+пришла мысль взять :code:`java.sql.Timestamp`, но… Hibernate выдавал ошибку,
+что нельзя преобразовать :code:`[B` в :code:`Timestamp`. Поэтому пришлось решить
+эту проблему, указав тип :code:`byte[]`.
+
+.. code-block:: java
+
+   @Id
+   @Column(name="ts")
+   public byte[] getVersion() {
+       return version;
+   };
+   public void setVersion(byte[] ts) {
+       version = ts;
+   };
+
+Не уверен, что мне нужен будет :code:`setVersion`, да и скорее всего я
+запрещу обновлять это поле и добавлять, при помощи параметров в
+аннотации :code:`@Column`.

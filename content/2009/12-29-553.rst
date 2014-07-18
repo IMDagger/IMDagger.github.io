@@ -1,0 +1,21 @@
+Птички 2
+========
+:date: 2009-12-29 10:28:28
+:tags: снег
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=553
+
+Сфотографировал снова голубей, только в этот раз они вышли почище
+:). Забавные они создания, одни сидят подальше от других и никто с ними
+сидеть не хочет рядом (ну это что-то типа меня), другие сидят парами и
+греются, некоторые не подпускают и отталкивают и они обиженно уходят
+сидеть на окраине.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4113/imdagger.5/0_1bb9d_c737e64e_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/113565/
+   :alt: Голуби на снегу

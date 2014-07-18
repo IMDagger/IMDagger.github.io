@@ -1,0 +1,19 @@
+Финальная версия
+================
+:date: 2010-10-31 16:46:09
+:tags: blender, кролик, анимация, fbx
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1156
+
+Кролик прыгает, поворачивает голову, есть текстура для глаз, но нет
+шерсти. В FBX экспортировался без проблем, единственное пришлось
+применить модификаторы. И ещё указать масштабирование в 100 раз
+уменьшить, чтобы в Maya смотрелось не огромным.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5601/imdagger.8/0_45744_41a3700a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/284484/

@@ -1,0 +1,14 @@
+Мой малыш
+=========
+:date: 2010-05-22 08:44:01
+:tags: маленький, ребёнок
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=890
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4214/imdagger.7/0_31852_bef2140_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/202834
+   :title: ALIM1441.JPG
+
+Ну как?
+

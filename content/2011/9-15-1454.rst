@@ -1,0 +1,12 @@
+Сохранение функций из PyMongo
+=============================
+:date: 2011-09-15 20:29:39
+:tags: 
+:category: link
+:author: IMDagger
+:attached-url: http://blog.schmichael.com/2010/01/11/making-server-side-mongodb-functions-less-awkward/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1454
+
+Думаю pymongo.code.Code поможет мне сохранять JavaScript код не как
+строки в поля документов.
+

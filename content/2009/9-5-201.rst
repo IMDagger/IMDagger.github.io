@@ -1,0 +1,13 @@
+PUT и POST
+==========
+:date: 2009-09-05 17:13:23
+:tags: REST, dl, PUT, HTTP, POST
+:category: link
+:author: IMDagger
+:attached-url: http://habrahabr.ru/blogs/webdev/38730/#comment_1936264
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=201
+
+Нужно будет запомнить эти мысли о том, как использовать эти методы при
+REST. Скоро они мне помогут и дадут почву и пищу для (уже) моих
+размышлений.
+

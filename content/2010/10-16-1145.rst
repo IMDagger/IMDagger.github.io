@@ -1,0 +1,11 @@
+Не верю, но забавно :)
+======================
+:date: 2010-10-16 17:40:18
+:tags: Я, бредни
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1145
+
+
+.. raw:: html
+   :file: 10-16-1145.incl

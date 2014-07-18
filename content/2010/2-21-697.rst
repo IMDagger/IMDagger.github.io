@@ -1,0 +1,66 @@
+Памятка о мультяшных материалах
+===============================
+:date: 2010-02-21 17:59:36
+:tags: blender, материал, памятка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=697
+
+Это небольшая памятка для себя о том, как я добивался мультяшности в
+некоторых своих 3D-работах для кожи, ткани и т.д. Сначала я создал два
+классических источника света: солнце и холодную подсветку тени. Солнце
+создаёт мягкую тень и блик:
+
+.. class:: text-center
+
+|image0|
+
+Чтобы не было видно вторую лампу, ей нужно выключить возможность
+создавать блики, и так как она Hemi то по умолчанию не создаёт теней:
+
+.. class:: text-center
+
+|image1|
+
+Сцена состоит из трёх сфер разного цвета с применённым Set Smooth:
+
+.. class:: text-center
+
+|image2|
+
+Если материал стандартный и изменён только цвет, то получится во
+такой результат:
+
+.. class:: text-center
+
+|image3|
+
+Такой материал подходит для блестящих гладких поверхностей, но не для
+мультяшных тканей. Поэтому я заменил шейдер освещения на Minnaert,
+который может создать по краям приятное освещение, если уменьшить Dark.
+От блика тоже стоит почти полностью избавиться в параметре Spec:
+
+.. class:: text-center
+
+|image4|
+
+После рендеринга той же сцены, но с изменёнными параметрами
+материалов, получится результат, который ИМХО более мультяшный и
+приятнее :)…
+
+.. class:: text-center
+
+|image5|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3807/imdagger.5/0_22bd8_9d6aa39a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/142296/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3810/imdagger.5/0_22bd9_5e2c11df_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/142297/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3907/imdagger.5/0_22bdb_238e4753_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/142299/
+.. |image3| image:: http://img-fotki.yandex.ru/get/3808/imdagger.5/0_22bdc_cb012c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/142300/
+.. |image4| image:: http://img-fotki.yandex.ru/get/3911/imdagger.5/0_22bdd_73c11629_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/142301/
+.. |image5| image:: http://img-fotki.yandex.ru/get/3811/imdagger.5/0_22bde_67ed4727_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/142302/

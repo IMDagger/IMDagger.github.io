@@ -1,0 +1,33 @@
+Смены статуса в Jabber
+======================
+:date: 2009-11-13 14:40:29
+:tags: jabber, emacs
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=393
+
+Бывает, что люди ставят небольшой интервал автостатуса и сидят
+что-нибудь делают за компьютером. От этого у них статус начинает
+постоянно переключаться, дошло до 100-300 раз за
+полчаса…away..online..do not disturbe и поехали… Emacs выгружить не
+хотелось, решил подправить функции «на лету».
+
+подправил код в моём jabber\_cfg.el:
+
+.. code-block:: cl
+
+    (setq my-must-ignore-presence '("******@******"))
+    (defun my-change-status-notification
+                          (who oldstatus newstatus statustext proposed-alert)
+        (when (not (member (format "%s" who) my-must-ignore-presence))
+            (jabber-presence-osd who oldstatus newstatus
+                                   statustext proposed-alert)))
+    (add-hook 'jabber-alert-presence-hooks 'my-change-status-notification)
+
+Выделил текст, вызвал :kbd:`M-x eval-region`. Всё! Теперь достаточно
+добавить контакт (не никнэйм) человека в список
+*my-must-ignore-presence*, и его изменения статуса меня не тревожат.
+
+Переменную *who* пришлось преобразовать в строку при помощи format,
+думаю есть более элегантные решения, но у меня нервов не хватило
+смотреть, как статус моргает….

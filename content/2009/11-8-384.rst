@@ -1,0 +1,88 @@
+Разреженная таблица 2
+=====================
+:date: 2009-11-08 11:23:28
+:tags: диплом, javascript, таблица
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=384
+
+Почитал вот
+`тут <http://www.mredkj.com/tutorials/tablebasics3.html>`__\ и
+`тут <http://www.quirksmode.org/dom/innerhtml.html>`__ материал (т.к.
+вчера ночью думал об innerHTML). Переделал свой скрипт и он стал
+работать на порядок быстрее. Firefox2 тратит на мою большую таблицу
+около 8 секунд, IE — где-то 12 секунд, ну и моя Opera 10 — 45 секунд.
+Что в любом случае вышло быстрее, чем грузить её с сервера и напрягать
+его по мелочам (только Opera что-то не радует, но нужно просто
+Javascript под неё заточить).
+
+.. code-block:: js
+
+    function expander() {
+        var table = document.getElementById("results");
+        var rows = table.rows;
+        var realNodes = table.innerHTML;
+
+        var nodes = realNodes.toLowerCase();
+        var p, lastp;
+        var strings = new Array();
+        strings.push("");
+
+        var emptyCell = "<td>&nbsp;</td>";
+        var groupOfCells = "";
+        var groupSize = 500;
+
+        for (i = 0; i < groupSize; i++)
+            groupOfCells += emptyCell;
+
+        do {
+            p = nodes.indexOf("<td size", lastp);
+            if (p != -1) {
+                var tagEnd = nodes.indexOf(">", p);
+                var size = nodes.substring(p, tagEnd);
+                var quot = size.indexOf('"') + 1;
+                var quotEnd = size.indexOf('"', quot);
+                var size = size.substring(quot, quotEnd);
+
+                strings.push(realNodes.substring(lastp, p));
+
+                size = parseInt(size);
+                while (size >  0) {
+                    var maxGet;
+                    if (groupSize > size)
+                        maxGet = size;
+                    else
+                        maxGet = groupSize;
+                    strings.push(groupOfCells.substring(0,
+                             emptyCell.length * maxGet));
+                    size -= groupSize;
+                }
+
+                p = tagEnd;
+            } else
+                strings.push(realNodes.substring(lastp,
+                         realNodes.length));
+
+            lastp = p + 1;
+        } while (p != -1);
+
+        table.innerHTML = strings.join('');
+    }
+
+Теперь скрипт перестраивает весь innerHTML, добавляет новые узлы,
+замещая старые. Всё собирается в один массив, а затем при помощи join в
+строку. Но IE не понивает innerHTML для table, поэтому пришлось
+заключить table в тег div.
+
+.. code-block:: html
+
+    <body onload="javascript:expander();">
+    **<div id="results">**
+    <table border="1">
+    <tr><td>Text</td><td size="4"/><td>Text2</td><td size="5"/></tr>
+    <tr><td
+    size="2"/><td>Text</td><td>Text2</td><td>Text2</td><td>Text2</td><td
+    size="5"/></tr>
+    </table>
+    **</div>**
+    </body>

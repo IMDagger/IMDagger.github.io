@@ -1,0 +1,185 @@
+Сделал немного монеток
+======================
+:date: 2009-06-17 14:55:11
+:tags: blender, монеты
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=21
+
+Потребовалось мне сегодня сделать небольшую группу монет для одного
+дела. Требовался среднего качества рендер и поэтому я решил, что
+справлюсь кое-как самостоятельно.
+
+.. class:: text-center
+
+|image0|
+
+Исходный файл с монетками и текстурой лежит тут
+`(coin.blend) <http://narod.ru/disk/9972558000/coin.blend.html>`__.
+
+Делалось это всё так:
+
+Для начала нужно создать цилиндр с 64 вершинами
+
+.. class:: text-center
+
+|image1|
+
+Затем его нужно сжать вдоль оси Y
+
+.. class:: text-center
+
+|image2|
+
+После того, как один цилиндр создан и смасштабирован, то нужно создать
+ещё один цилиндр с 64 вершинами. Нужно перейти в режим редактирования,
+выделить половину вершин пр ипомощи сочетания **Shift+B** и удалить
+этучасть. Получившаяся фигура служит частью ребра монетки. Объект
+необходимо переместить (клавиша **G**) по оси X так, чтобы он слегка
+касался монеты.
+
+.. class:: text-center
+
+|image3|
+
+Затем нужно в режиме редактирования выделить все вершины и при помощи
+**Spin Dup** (что на панели Mesh Tools) продублировать объект 48 раз,
+поворачивая вокруг оси Y на 360 градусов. После этой операции нужно не
+забыть выделить все вершины и нажать **Remove Doubles**.
+
+.. class:: text-center
+
+|image4|
+
+При помощи google.com было найдено изображение монеты с двух сторон:
+
+.. class:: text-center
+
+|image5|
+
+Для цилиндра, который будет основой монеты (**CoinHeart**) производится
+развёртка UVTex, как показано на рисунке:
+
+.. class:: text-center
+
+|image6|
+
+для обратной стороны:
+
+.. class:: text-center
+
+|image7|
+
+для обода, хотя для него можно и не делать развёртку:
+
+.. class:: text-center
+
+|image8|
+
+После того, как развёртка сделана корректно, нужно добавить материал с
+данной текстурой и настроить его. Т.к. цвет материала не важен, а только
+цвет текстуры, требуется включить опцию **TexFace** (на панели
+Material). Чтобы добавить немного блеска параметр **Spec**
+устанавливается равным *0.829*. Для текстурирования включается режим
+инверсии Nor (выделен жёлтым). Значение устанавливается *9.88*. Главное
+не забыть на панели **Map Input** установить, чтодля развёртки
+использовать UV.
+
+.. class:: text-center
+
+|image9|
+
+Некстуру нужно установить из файла coin.jpg, для этого на панели
+установки текстры нужно выбрать тип *Image*, а затем открыть файл
+coin.jpg (предварительно нажав кнопку *Relative*, чтобы путь был
+относительным):
+
+.. class:: text-center
+
+|image10|
+
+Чтобы было проще подобрать цвет ребра монеты, нужно перейти в режим
+редактора и просмотра изображений (**Shift+F10**), после нажатия левой
+клавиши на уже выбранной картинке, появится информация о координатах
+курсора мыши и параметрах текселя (пиксель текстуры) под курсором.
+
+.. class:: text-center
+
+|image11|
+
+Полученный цвет нужно установить в качестве цвета материала, а так же
+потребуется тебольшой не резкий шум для каймы. Для этого установим
+текстуру типа **Stucci** с параметрами по умолчанию. Цвет смешения с
+цветом материала нужно задать чуть более светлый, чем монета.
+
+.. class:: text-center
+
+|image12|
+
+После этого результат почти готов, за исключением того, что “обод” не
+плотно прилегает к “базису”. Но это можно исправить при помощи создания
+группы вершин (которые являются внутренней частью обода) и применения
+модификатора **Shrink Wrap**.
+
+Было:
+
+.. class:: text-center
+
+|image13|
+
+Применение модификатора:
+
+.. class:: text-center
+
+|image14|
+
+После применения края “прижались” к монете:
+
+.. class:: text-center
+
+|image15|
+
+Теперь остаётся только объединить обод и монету в группы CoinGroup и
+создать несколько экземепляров групп, разместив всё на сцене. Ещё
+потребуется два источника света: сбоку и сверху, чтобы создать чуть
+более сильный блики, а ещё нужно включить **Ambient Occlusion**, чтобы
+сцена не смотрелась тёмной.
+
+.. class:: text-center
+
+|image16|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3502/imdagger.0/0_c7b3_8c4cbf8e_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51123
+.. |image1| image:: http://img-fotki.yandex.ru/get/3500/imdagger.0/0_c7b7_34fff6e_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51127
+.. |image2| image:: http://img-fotki.yandex.ru/get/3606/imdagger.0/0_c7b8_5da0b6c4_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51128
+.. |image3| image:: http://img-fotki.yandex.ru/get/3506/imdagger.0/0_c7b9_cc85bf83_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51129
+.. |image4| image:: http://img-fotki.yandex.ru/get/3606/imdagger.0/0_c7ba_3144e56e_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51130
+.. |image5| image:: http://img-fotki.yandex.ru/get/3507/imdagger.0/0_c7bb_d8b64168_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51131
+.. |image6| image:: http://img-fotki.yandex.ru/get/3500/imdagger.0/0_c7be_f1755bda_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51134
+.. |image7| image:: http://img-fotki.yandex.ru/get/3604/imdagger.0/0_c7bf_ef8ea1f4_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51135
+.. |image8| image:: http://img-fotki.yandex.ru/get/3503/imdagger.0/0_c7c0_9d82ef0d_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51136
+.. |image9| image:: http://img-fotki.yandex.ru/get/3607/imdagger.0/0_c7c2_74cffcd8_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51138
+.. |image10| image:: http://img-fotki.yandex.ru/get/3601/imdagger.0/0_c7c3_73408b5a_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51139
+.. |image11| image:: http://img-fotki.yandex.ru/get/3603/imdagger.0/0_c7c4_cbd3e0a6_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51140
+.. |image12| image:: http://img-fotki.yandex.ru/get/3603/imdagger.0/0_c7c5_2d5ba5b8_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51141
+.. |image13| image:: http://img-fotki.yandex.ru/get/3503/imdagger.0/0_c7c6_dcb8af17_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51142
+.. |image14| image:: http://img-fotki.yandex.ru/get/3601/imdagger.0/0_c7c7_9a9b7c04_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51143
+.. |image15| image:: http://img-fotki.yandex.ru/get/3507/imdagger.0/0_c7c9_85368f4a_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51145
+.. |image16| image:: http://img-fotki.yandex.ru/get/3603/imdagger.0/0_c7ca_71f29ba1_L
+   :target: http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51146

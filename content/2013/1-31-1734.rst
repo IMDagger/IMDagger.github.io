@@ -1,0 +1,96 @@
+Странности MongoEngine
+======================
+:date: 2013-01-31 21:26:55
+:modified: 2013-01-31 21:27:47
+:tags: ошибка, уровень, словарь, странное поведение, MongoEngine, документ, вложенный, поведение, поле, python, программирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1734
+
+Странно, но в Mongoengine MapField внутри другого MapField ведёт
+себя немного неожиданно. Не знаю, так задумано или это ошибка (спрошу у
+них попозже), но если сделать вот так:
+
+.. code-block:: python
+
+        class SomeModel(EmbeddedDocument):
+            num = IntField()
+
+        class SomeModel(Document):
+            my_field = MapField(MapField(EmbeddedDocumentField(SomeSubModel)))
+
+То всё будет работать, но как только мы захотим получить документ и
+произвести правку в поле num начнётся самое интересное:
+
+.. code-block:: pycon
+
+        >>> some_obj = SomeModel.object[1]
+        >>> print some_obj.my_field['key1']['key2'].num
+        9
+        >>> some_obj.my_field['key1']['key2'].num = 10
+        >>> some_obj.save()
+        # и снова
+        >>> some_obj = SomeModel.object[1]
+        >>> print some_obj.my_field['key1']['key2'].num
+        9
+
+И он ни в какую не хочет сохранять. Хотя можно провернуть трюк с
+update, но это только для такой простой модели, а если там ещё уровень
+вложенности, то уже и update не помогает. А всё почему?
+
+А потому, что это заложено в поведение :code:`\_get\_changed\_fields` в
+base.BaseDocument у библиотеки, ошибка это или нет, но:
+
+.. code-block:: python
+
+        ...
+                 for field_name in field_list:
+
+                    db_field_name = self._db_field_map.get(field_name, field_name)
+                    key = '%s.' % db_field_name
+                    field = self._data.get(field_name, None)
+                    if hasattr(field, 'id'):
+                        if field.id in inspected:
+                            continue
+                        inspected.add(field.id)
+
+                    if (isinstance(field, (EmbeddedDocument, DynamicEmbeddedDocument))
+                       and db_field_name not in _changed_fields):
+                         # Find all embedded fields that have been changed
+                        changed = field._get_changed_fields(key, inspected)
+                        _changed_fields += ["%s%s" % (key, k) for k in changed if k]
+                    elif (isinstance(field, (list, tuple, dict)) and
+                            db_field_name not in _changed_fields):
+                        # Loop list / dict fields as they contain documents
+                        # Determine the iterator to use
+                        if not hasattr(field, 'items'):
+                            iterator = enumerate(field)
+                        else:
+                            iterator = field.iteritems()
+                        for index, value in iterator:
+                            if not hasattr(value, '_get_changed_fields'):
+                                continue
+                            list_key = "%s%s." % (key, index)
+                            changed = value._get_changed_fields(list_key, inspected)
+                            _changed_fields += ["%s%s" % (list_key, k)
+                                                for k in changed if k]
+
+Так вот в том месте, где метод проверяет являются ли данные
+связанные с полем словарём или списком, есть некоторая неточность в
+поведении. Для нашего случае получается словарь в словаре, если бы это
+был просто встроенных документ в словаре, то всё было бы хорошо. Но нет,
+у нас словарь в словаре, в котором документ, поэтому оно проверяет наш
+словарик на наличие специального метода (именно такого, в котором мы
+находимся):
+
+.. code-block:: python
+
+        if not hasattr(value, '_get_changed_fields'):
+
+Естественно он его не находит, это же простой словарь! И
+соответственно не подхватывает изменения из вложенного документа. Выход?
+Переработать структуру и сделать поля фиксированные, а не два словаря,
+или поправить код, чтобы он переварил такой случай и углублялся в
+словарь или ещё один вариант: попробовать сделать имя полю
+комбинированное через точку (вида 'key1.key2'). Хотя mongoengine стоило
+бы предупредить про такие странности.

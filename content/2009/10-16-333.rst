@@ -1,0 +1,26 @@
+Кеширование
+===========
+:date: 2009-10-16 16:55:03
+:tags: EhCache, кеширование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=333
+
+|image0| Можно конечно попробовать для кеширования страниц настроить Apache
+(остальные данные я кеширую при помощи EhCache, как и положено), но
+нашёл ещё один вариант, ктоторый мне тоже нравится: кешировать страницы
+при помощи EhCache. Благо есть класс **SimplePageCachingFilter**. Нужно
+будет только в web.xml добавить настройки фильтра:
+
+.. code-block:: xml
+
+    <filter>
+        <filter-name>CacheFilter</filter-name>
+        <filter-class>net.sf.ehcache.construct.web.filter.SimplePageCachingFilter</filter-class>
+    </filter>
+
+Попробую, когда допишу кеширование таблицы. Кеширования рядов по
+пользователям уже сделал.
+
+.. |image0| image:: http://s3.rimg.info/7cf3029812efca5d67443a7c072fd417.gif
+   :target: http://smajliki.ru/smilie-322805799.html

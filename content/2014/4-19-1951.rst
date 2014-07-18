@@ -1,0 +1,12 @@
+atan2
+=====
+:date: 2014-04-19 13:22:37
+:tags: внимательность, аргументы, atan2, python, racket, параметры
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1951
+
+    Стоит быть внимательным с функцией atan2 и из Python (math.atan2) и
+из Racket (да, и наверное везде так). Первый аргумент это Y, а второй X.
+Но не наоборот.
+

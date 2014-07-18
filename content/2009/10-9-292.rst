@@ -1,0 +1,12 @@
+Пользовательские типы
+=====================
+:date: 2009-10-09 16:37:10
+:tags: hibernate
+:category: link
+:author: IMDagger
+:attached-url: http://black-zorro.com/mediawiki/Hibernate:_Пользовательские_типы_в_hibernate._Разбираемся_с_UDT
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=292
+
+Про то, как создавать свои типы данных в Hibernate. Довольно понятное и
+подробное описание на русском языке.
+

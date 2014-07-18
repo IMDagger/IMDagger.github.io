@@ -1,0 +1,24 @@
+Здание
+======
+:date: 2009-06-21 16:03:18
+:tags: blender, здание
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=33
+
+Моделька получилась, а вот никак не могу подобрать освещение и
+материалы, всякий там мрамор, бетон. Рендерю без влияния окружающей
+среды, тогда получается слишком светло. Решил всё таки отрендерить с
+влиянием, пусть и жёлтая картинка :-/.
+
+.. class:: text-center
+
+|image0|
+
+А вот и сам исходный
+blend-\ ` <http://narod.ru/disk/9972558000/coin.blend.html>`__\ `файл <http://narod.ru/disk/10110689000/zao.blend.html>`__\ ` <http://narod.ru/disk/9972558000/coin.blend.html>`__.
+Если, кто осилит поправить материалы на моей модельке, то черкните в
+комментах.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3607/imdagger.1/0_ca7c_9483e9b1_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/51836/

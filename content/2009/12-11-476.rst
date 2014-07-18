@@ -1,0 +1,18 @@
+Удачи
+=====
+:date: 2009-12-11 18:12:48
+:modified: 2014-07-14 03:29
+:tags: blender, атом, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=476
+
+Удачи мегафизику (знает кто) на зачёте ;) Нарисовал тебе атом,
+кривоват…, но я же не физик :P не знаю как они у вас там выглядят…
+
+.. class:: text-center
+
+|Мирный атом|
+
+.. |Мирный атом| image:: http://img-fotki.yandex.ru/get/4001/imdagger.4/0_1a1a3_1e264abe_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/106915/

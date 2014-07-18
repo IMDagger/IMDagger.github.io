@@ -1,0 +1,43 @@
+pyOpenSSL
+=========
+:date: 2009-10-12 17:34:20
+:tags: python, ssl
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=321
+
+Что-то пока не вышло сделать нормальный HTTPS редиректор (это что-то
+типа моего самопального хитрого прокси :P). Почему-то SSL законючил и
+сказал:
+
+.. code-block:: pytb
+
+    … начало …
+      File "/usr/lib/python2.5/BaseHTTPServer.py", line 316, in handle
+      self.handle_one_request()
+      File "redirector.py", line 107, in handle_one_request
+      self.raw_requestline = self.rfile.readline()
+      File "/usr/lib/python2.5/socket.py", line 345, in readline
+      data = self._sock.recv(self._rbufsize)
+    Error: [('SSL routines', 'SSL23_GET_CLIENT_HELLO', 'https proxy request')]
+    ----------------------------------------
+
+Я  дорабатывал свой уже рабочит HTTP-код, затачивал для работы через
+SSL из pyOpenSSL:
+
+.. code-block:: python
+
+    # … это __init__ TCP-сервера …
+        if kwargs.get('ssl_option'):
+            del kwargs['ssl_option']
+            context = SSL.Context(SSL.SSLv23_METHOD)
+            context.use_privatekey_file('private.key')
+            context.use_certificate_file('local.cert')
+            self.socket = SSL.Connection(context,
+                   socket.socket(self.address_family,
+                                  self.socket_type))
+            self.server_bind()
+            self.server_activate()
+
+Но при попытке браузера отправить запрос через этот прокси,
+выпадает ошибка :(. Завтра забрерусь.

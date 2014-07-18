@@ -1,0 +1,10 @@
+Преальфа релиз
+==============
+:date: 2009-07-22 15:00:57
+:tags: triad_vesuvius, проект, программирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=110
+
+Готовимся к версии TriadVesuvius. Это будет эпохальное событие для меня.
+

@@ -1,0 +1,16 @@
+Билет
+=====
+:date: 2009-12-20 09:02:51
+:tags: номер, билет
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=526
+
+Чуть-чуть и был бы 23456 x-D
+
+.. class:: text-center
+
+|Билет232456|
+
+.. |Билет232456| image:: http://img-fotki.yandex.ru/get/4112/imdagger.5/0_1acfe_549e2735_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/109822/

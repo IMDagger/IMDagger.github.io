@@ -1,0 +1,12 @@
+cogen и ftplib
+==============
+:date: 2010-11-13 19:58:38
+:tags: python, ftplib, coro, cogen
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1175
+
+Пробую соединить обёртку сокета cogen с ftplib, т.к. даже после
+подмены сокета оно работает не так как нужно, нужно подобавлять :code:`@coro` а
+библиотеку. Чтобы сделать return из :code:`@coro` фунции нужно вызвать
+исключение :code:`StopIteration` с аргументом возврата.

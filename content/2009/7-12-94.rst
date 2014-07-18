@@ -1,0 +1,53 @@
+Копирование атрибутов
+=====================
+:date: 2009-07-12 16:39:34
+:tags: blender, атрибуты, копирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=94
+
+Мне нужно было скопировать игровую логику с одного объекта на другой
+(да, жаль, что в Blender 2.48 нету наследования логики объектов :S). Я
+вспомнил про сочетание :kbd:`Ctrl + C`, оно предложило копировать атрибуты,
+я выбрал **Logic Bricks**. Но тут возникла проблема, я не нашёл, как
+применить то, что скопировал. Тогда я понял (нагуглил), что это не
+копирование в некоторый буффер, а прямое копирование параметров одного
+объекта на другой.
+
+Так выглядел объект наследник:
+
+.. class:: text-center
+
+|image0|
+
+А так - объект родитель:
+
+.. class:: text-center
+
+|image1|
+
+Нужно было с родителя перенести логику к потомку. Для этого я выбрал
+сначала объект-потомок, а затем добавил к выделению объект-родитель (при
+помощи Shift+ЛКМ). После чего была нажато магическое сочетание клавиш
+:kbd:`Ctlr + C`:
+
+.. class:: text-center
+
+ |image2| |image3|
+
+И логические блоги продублировались, как раз то, что и требовалось мне.
+
+.. class:: text-center
+
+|image4|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3509/imdagger.2/0_e3b8_cf493eb5_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/58296/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3512/imdagger.2/0_e3b9_86d36654_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/58297/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3513/imdagger.2/0_e3bb_b35fcecc_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/58299/
+.. |image3| image:: http://img-fotki.yandex.ru/get/3610/imdagger.2/0_e3bd_7c3a66d1_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/58301/
+.. |image4| image:: http://img-fotki.yandex.ru/get/3508/imdagger.2/0_e3be_96655cdc_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/58302/

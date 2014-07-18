@@ -1,0 +1,14 @@
+
+
+:date: 2012-10-06 21:57:47
+:tags: DNS, удобство, DHCP
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1691
+:slug: urn:ya.ru:post/22199227/1691
+
+    Если есть желание прописать Google DNS или OpenDNS сервера перед
+DNS, который получен по DHCP от провайдера или модема, то удобно создать
+файлик /etc/resolve.conf.head со списком серверов, из него dhcpd будет
+брать информацию при регенерации основного resolv.conf.
+

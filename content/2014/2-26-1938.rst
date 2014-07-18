@@ -1,0 +1,11 @@
+Быстрая аппроксимация расстояния
+================================
+:date: 2014-02-26 22:24:14
+:tags: расстояние, быстрый, функция, аппроксимация
+:category: link
+:author: IMDagger
+:attached-url: http://www.flipcode.com/archives/Fast_Approximate_Distance_Functions.shtml
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1938
+
+Улучшенное Манхэттенское расстояние.
+

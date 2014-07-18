@@ -1,0 +1,37 @@
+Баг в Spyne
+===========
+:date: 2013-03-29 00:23:48
+:tags: python, spyne, JSON, работа, ошибка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1761
+
+Нашёл неприятную ошибку в последней версии
+`spyne <https://github.com/arskom/spyne>`__, из-за которой все протоколы
+опирающиеся на HierDictDocument класс, а это: JSON, YAML, MessagePack
+неправильно трактуют как десериализовать результат выполнения функции,
+если использовать внутренний клиентский модуль из пакета spryne:
+
+.. code-block:: python
+
+   import spyne.client.http
+   from services import main
+   x = spyne.client.http.HttpClient('http://localhost:7789', main.server)
+   print x.service.say_hello('Word', 5)
+
+   # ...
+   # где main.server это объект приложения с описанием сервисов:
+
+   server = Application([HelloServiceClass],
+       tns='example.hello',
+       in_protocol=JSONDocument(validator='soft'),
+       out_protocol=JSONDocument()
+   )
+
+В случае JSON print выведет просто None, хотя должен был вывести
+объект генератора. А всё потому, что библиотека пробует десериализовать
+свой собственный ответ тем же способом, что и входящие сообщения
+разбирает, а это не совсем корректно или там не дописан код. А вот
+протокол XMLDocument опирается на другой класс и не имеет такой
+проблемы. Поэтому пока буду использовать его, а позже попробую исправить
+ошибки библиотеки.

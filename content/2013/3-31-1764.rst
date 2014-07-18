@@ -1,0 +1,13 @@
+
+
+:date: 2013-03-31 22:04:31
+:modified: 2013-03-31 22:05:00
+:tags: соревнование, программирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1764
+:slug: urn:ya.ru:post/22199227/1764
+
+    Ну когда?! Когда уже назначат даты ICFP Programming Contest 2013? Я
+уже с нетерпением жду этого мероприятия и не хочу прозевать.
+

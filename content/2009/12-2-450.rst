@@ -1,0 +1,107 @@
+Картинки в Scripts Window
+=========================
+:date: 2009-12-02 11:55:03
+:tags: blender, bge, last_gateway_to_hell
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=450
+
+Сделал вспомогательный класс для возможности показа в редакторе
+изображений текстур с объектов. Это нужно для удобства добавки предметов
+в рюкзак воинов, т.к. весь Blender нам служит не только просто
+графическим редактором, но и игровым редактором. Переодическия дописываю
+в наше меню новые возможности, которые должны облегчить жизнь при
+создание игрового мира.
+
+.. code-block:: python
+
+    # -*- coding: utf-8 -*-
+    from Blender.BGL import glEnable, glBlendFunc,\
+        glRasterPos2f, glDrawPixels, glDisable
+    from Blender.BGL import GL_BLEND, GL_BYTE, GL_SRC_ALPHA,\
+        GL_ONE_MINUS_SRC_ALPHA, GL_UNSIGNED_BYTE, GL_RGBA
+    from Blender.BGL import Buffer
+    from Blender import Draw
+
+    class TextureImage(object):
+        '''
+        Класс, объекты которого могут отрисовывать изображения
+        текстур в окне для скриптов, при помощи которых они
+        инициализировались.
+
+        Свойства:
+        - Ширина
+        - Высота
+        Методы:
+        - Отображение в заданных координатах
+        '''
+
+        def __init__(self, texture):
+            '''
+            Инициализирует объект оболочку для отрисовки
+            текстуры в окне для скриптов.
+
+            :Parameters:
+            `texture` : Blender.Texture.Texture
+            '''
+            image = texture.getImage()
+            self.width, self.height = image.size
+            wh_rgba_size = image.size + [4]
+            self._buffer = Buffer(GL_BYTE, wh_rgba_size)
+            self._copy_from(image)
+
+        def _copy_from(self, image):
+            '''
+            Копирует RGBA-данные из исходного изображения
+            в специальный буффер попиксельно.
+
+            :Parameters:
+            `image` : Blender.Image.Image
+            Исходное изображение
+            '''
+            w, h = image.size
+            buffer = self._buffer
+            for y in xrange(h):
+                for x in xrange(w):
+                    buffer[y][x][:] = image.getPixelI(x, y)
+
+        def draw(self, x, y):
+            '''
+            Отображает в окне в заданных координатах
+            изображение, которым было сконструировано.
+
+            :Parameters:
+            `x` : int
+            Координата по оси X, задана в пикселях
+            `y` : int
+            Координата по оси Y, задана в пикселях
+            '''
+            glEnable(GL_BLEND)
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+            # правый нижний угол изобрадения
+            glRasterPos2f(x, y)
+            glDrawPixels(self.width, self.height, GL_RGBA,\
+            GL_UNSIGNED_BYTE, self._buffer)
+            glDisable(GL_BLEND)
+
+Теперь можно достаточно просто использовать этот класс.
+Инициализируется он объектом класса текстуры, поддерживает функционал
+вывода на экран этого изображения. Идея взята из класса luxImage. Можно
+сделать, например, так:
+
+
+.. code-block:: python
+
+   bow1_texture = bpy.data.textures['Bow1ItemImage']
+   bow1_image = TextureImage(bow1_texture)
+   def gui():
+       bow1_image.draw(510, 10)
+       bow1_image.draw(10, 10)
+   def event(evt, value):
+       if evt == Draw.ESCKEY:
+           Draw.Exit()
+           return
+       ...
+   Draw.Register(gui, event, None)
+
+Залил ревизию **166** :P, а в глобальном масштабе **265**.

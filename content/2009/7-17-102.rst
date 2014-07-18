@@ -1,0 +1,12 @@
+Откат
+=====
+:date: 2009-07-17 14:04:04
+:tags: xml schema, xsd
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=102
+
+Ладно, я погорячился. Возвращаюсь использовать XML Schema (W3C). Всё
+таки в xsd-схемах я хоть что-то понимаю. Да и утилиты для проверки
+валидности есть.
+

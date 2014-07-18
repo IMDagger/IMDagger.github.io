@@ -1,0 +1,12 @@
+Java 4-ever
+===========
+:date: 2010-06-26 16:34:50
+:tags: java, ролик
+:category: link
+:author: IMDagger
+:attached-url: http://www.youtube.com/watch?v=KrfpnbGXL70
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1011
+
+Порадовал промо-ролик про Java с JavaZone 2010 с
+http://jz10.java.no/java-4-ever-trailer.html
+

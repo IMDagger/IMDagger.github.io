@@ -1,0 +1,21 @@
+Radiosity
+=========
+:date: 2009-12-23 13:28:26
+:tags: blender, radio, radiosity
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=541
+
+Всё время интересовала эта иконка |image0| со значком радиации в
+Blender. Оказалось, что тут регулируются параметры Radiosity рендеринга.
+Т.е. можно заставить светиться объект, как лампу и излучать цветной свет
+с убывающей интенсивностью. Я сделал небольшую комнатку, как в примере,
+добавил меш-источник света. Жаль тени не вышли :( (буду думать).
+
+.. class:: text-center
+
+|image1|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4007/imdagger.5/0_1b1f5_34bfd90f_L
+.. |image1| image:: http://img-fotki.yandex.ru/get/4008/imdagger.5/0_1b1f6_b239f329_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/111094/

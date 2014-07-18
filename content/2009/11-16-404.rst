@@ -1,0 +1,76 @@
+Двойное высвобождение памяти
+============================
+:date: 2009-11-16 16:21:51
+:tags: blender, ошибка, bge, SDL, радость
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=404
+
+Эта небольшая проблема началась дома где-то 1-1,5 года назад. Т.к.
+это не единственная рабочая лошадка, то бага не тревожила. Ещё тогда
+после какого-то обновления часть программ стала выпадать с ошибкой (это
+были в основном игры), но меня это не огорчило. Потом обнаружил, что
+если собрать BGE-игру в отдельный файл и запустить, то выпадает ошибка:
+
+    | \*\*\* glibc detected \*\*\* double free or corruption (out):
+      0xbf9819c0 \*\*\*
+    | Аварийный останов
+
+И вот вчера почему-то уже и в самом Blender перестал работать
+нормально запуск по **P**. Я решил разобраться с проблемой. Раньше я уже
+как-то смотрел и выдвинул длся себя предположение об ошибке в SDL, я
+обновлял его до версии 1.2.11. Только я думал, что это связано со
+звуком.
+
+Но вчера я пошёл путём методичного поиска точки с ошибкой и
+бэктрэйсом стека:
+
+.. code-block:: console
+
+    # в одной консоли:
+    $ ./blender
+
+    # в другой:
+    $ gdb -pid `ps -e | grep blender | awk ' print {$1} '`
+    (gdb) bt
+
+    # … тут было про стек, free и… SDL_syscdrom.c …
+
+“Странно, отладчик показывает не в SDL\_mixer, значит это не звук”,
+- подумал я. Стал смотреть код и отлаживать (перед этим собраз SDL с
+**-g3**), нашёл неправильное высвобождение памяти в **CheckMounts**.
+Память под mnt\_dev и mnt\_type выделяла SDL\_stack\_alloc, а
+высвободить пытались при помощи SDL\_free. И это ж надо!.. у меня как
+раз supermount для cdrom и в этом коде ошибка. Я исправил исходник:
+
+.. code-block:: diff
+
+    diff -rupN SDL-1.2.11-orig/src/cdrom/linux/SDL_syscdrom.c
+    SDL-1.2.11/src/cdrom/linux/SDL_syscdrom.c
+    — SDL-1.2.11-orig/src/cdrom/linux/SDL_syscdrom.c 2009-11-16
+    01:13:05.000000000 +0200
+    +++ SDL-1.2.11/src/cdrom/linux/SDL_syscdrom.c 2009-11-16
+    01:04:07.000000000 +0200
+    @@ -218,7 +218,7 @@ static void CheckMounts(const char *mtab
+               if ( SDL_strcmp(mnt_type, MNTTYPE_SUPER) == 0 ) {
+                  tmp = SDL_strstr(mntent->mnt_opts, "fs=");
+                  if ( tmp ) {
+    -                SDL_free(mnt_type);
+    +                SDL_stack_free(mnt_type);
+                     mnt_type = SDL_strdup(tmp + SDL_strlen("fs="));
+                     if ( mnt_type ) {
+                         tmp = SDL_strchr(mnt_type, ',');
+    @@ -229,7 +229,7 @@ static void CheckMounts(const char *mtab
+                  }
+                  tmp = SDL_strstr(mntent->mnt_opts, "dev=");
+                  if ( tmp ) {
+    -                SDL_free(mnt_dev);
+    +                SDL_stack_free(mnt_dev);
+                     mnt_dev = SDL_strdup(tmp + SDL_strlen("dev="));
+                     if ( mnt_dev ) {
+                         tmp = SDL_strchr(mnt_dev, ',');
+
+А так, проблема эта уже давно решена в SDL версии выше 1.2.11.
+Просто у меня не было возможности обновится в прошлую ночь, да и
+прикольно решить несложную задачку по отлову баги за минут 20-30. После
+правки и пересборки BGE заработал, а в довесок и набор игр :).

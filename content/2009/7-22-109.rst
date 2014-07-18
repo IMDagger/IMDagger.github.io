@@ -1,0 +1,35 @@
+Активные объекты и контекст
+===========================
+:date: 2009-07-22 14:56:30
+:tags: python, bge
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=109
+
+Бывает нужно в скрипте в BGE пройтись по выделенным объектам. Если
+использовать такой код:
+
+    import bpy
+
+    active\_scene = bpy.data.scenes.active  # текущая сцена
+
+    objects = active\_scene.objects.selected
+
+    for warrior in objects:
+
+        pass
+
+Но возникает одна проблема: выбираются объекты и с других слоёв, даже
+если эти слои не активные, но на них выделены объекты. Чтобы этого не
+происходило, нужно работать только с текущим контекстом (выделенные
+объекты на текущем слое).
+
+    import bpy
+
+    active\_scene = bpy.data.scenes.active  # текущая сцена
+
+    objects = active\_scene.objects.\ **context**
+
+    for warrior in objects:
+
+        pass 

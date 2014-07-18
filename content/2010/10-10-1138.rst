@@ -1,0 +1,19 @@
+Проект снова обрёл силы
+=======================
+:date: 2010-10-10 16:33:40
+:tags: triad_vesuvius, проект, bge, launchpad, blender, python, last_gateway_to_hell
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1138
+
+После долгого отпуска и отсутствия времени проект снова обрёл силы.
+Теперь проблема обмена информацией решена и проект залит на
+Launchpad.net, вот `он <https://launchpad.net/manual-meat-grinder>`__.
+Спасибо O.din13 и Dima Kiva за Кожеголового персонажа для игры:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4900/imdagger.8/0_439b6_48f9907f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/276918/

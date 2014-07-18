@@ -1,0 +1,12 @@
+Переносы слов, UTF-8 и XeLaTeX
+==============================
+:date: 2013-12-26 00:41:21
+:tags: polyglossia, UTF-8, русский, babel, xelatex
+:category: link
+:author: IMDagger
+:attached-url: http://s.arboreus.com/2008/12/russian-bibtex-xelatex-babel-or.html
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1902
+
+Заметка о том, как подружить babel с UTF-8 или использовать вместо него
+polyglossia. Я выбрал второй вариант.
+

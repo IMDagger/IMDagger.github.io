@@ -1,0 +1,111 @@
+Hibernate
+=========
+:date: 2009-09-16 08:13:35
+:tags: ошибка, java, hibernate
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=234
+
+Вчера добрался снова до **Hibernate** и **Apache Tomcat**. Решил понять
+почему моё Java-приложение соединяется с базой, но при попытке загрузки
+объекта через ORM из базы данных выпадает ошибка вида, что не может
+найти мой класс :code:`results.Cell`; вот развёртка стека:
+
+.. code-block:: java
+
+    org.hibernate.MappingException: Unknown entity: results.Cell
+     at org.hibernate.impl.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:628)
+     at org.hibernate.event.def.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:91)
+     at org.hibernate.impl.SessionImpl.fireLoad(SessionImpl.java:906)
+     at org.hibernate.impl.SessionImpl.load(SessionImpl.java:823)
+     at org.hibernate.impl.SessionImpl.load(SessionImpl.java:816)
+     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+     at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+     at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+     at java.lang.reflect.Method.invoke(Method.java:597)
+     at org.hibernate.context.
+     ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:342)
+     at $Proxy0.load(Unknown Source)
+     at org.apache.jsp.index_jsp._jspService(index_jsp.java:63)
+     at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+     at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+     at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:374)
+     at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:342)
+     at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:267)
+     at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+     at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+     at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+     at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+     at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+     at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+     at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+     at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+     at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+     at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:849)
+     at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+     at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:454)
+     at java.lang.Thread.run(Thread.java:619)
+
+Класс Cell у меня очень простой и лежит как и положено в classes в
+пакете results. Единственное, что маппинг сделан не через XML, а через
+аннотации Java. Т.к. я не хотел делать через XML, то решил посмотреть,
+где выпадает это исключение (благо у меня есть исходники Hibernate).
+Нашёл эту строчку и понял, что всё дело в отсутсвии описания класса в
+XML-файле. Я не мог понять как же его описать, если в
+**hibernate.cfg.xml** описываются только ссылки на XML-мэппинги. Но
+погуглив и почитав документацию, я обратил внимание, что можно вместо
+названия XML-файла указывать название класса и Hibernate сам разберётся,
+что к чему. Поэтому я добавил строку между :code:`<session-factory>` и
+:code:`</session-factory>`:
+
+.. code-block:: xml
+
+   <mapping class="results.Cell">
+
+И всё почти заработало :). Только вот выпала снова ошибка, что оно не
+может произвести мэппинг класса:
+
+.. code-block:: java
+
+   org.hibernate.MappingException: An AnnotationConfiguration instance is required to use <mapping class="results.Cell"/>
+    at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:1648)
+    at org.hibernate.cfg.Configuration.parseSessionFactory(Configuration.java:1603)
+    at org.hibernate.cfg.Configuration.doConfigure(Configuration.java:1582)
+    at org.hibernate.cfg.Configuration.doConfigure(Configuration.java:1556)
+    at org.hibernate.cfg.Configuration.configure(Configuration.java:1476)
+    at org.hibernate.cfg.Configuration.configure(Configuration.java:1462)
+    at org.apache.jsp.index_jsp._jspService(index_jsp.java:64)
+    at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+    at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:374)
+    at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:342)
+    at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:267)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:849)
+    at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+    at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:454)
+    at java.lang.Thread.run(Thread.java:619)
+
+И снова я заглянул в код функции :code:`parseMappingElement`. И что же я
+увидел? Увидел то, что эта функция ничего не умеет кроме, как вызывать
+throw и гадить выбрасывать исключения. Тут-то до меня и дошло, что я
+создаю объект класса Configuration, а нужно AnnotationConfiguration (о
+чём оно мне гордо заявляло), потому что Configuration - это что-то типа
+базового «класса-пустышки». Поэтому я сделал:
+
+.. code-block:: java
+
+    // было:
+    SessionFactory sess = new AnnotationConfiguration().configure().buildSessionFactory();
+    // стало:
+    SessionFactory sess = new Configuration().configure().buildSessionFactory();
+
+После чего мой код заработал :) и я возрадовался.

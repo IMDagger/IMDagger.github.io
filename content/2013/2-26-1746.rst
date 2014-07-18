@@ -1,0 +1,26 @@
+djkombu и MySQL
+===============
+:date: 2013-02-26 22:53:22
+:modified: 2013-02-26 22:56:21
+:tags: Celery, python, задача, djkombu, зависает, MySQL, не работает, брокер
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1746
+
+Чтобы Celery нормально обрабатывал задачи из MySQL (да я знаю, что
+лучше использовать другой брокер для этой задачи и держать, например, их
+хотя бы в Redis) пришлось добавить пару строчек для инициализации MySQL:
+
+.. code-block:: python
+
+    DATABASES = {
+        'default': {
+            …
+            'OPTIONS': {
+                'init_command': 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;', # for the Celery
+            },
+        }
+    }
+
+После этого он стал получать задачи как положено, а не только после
+каждого перезапуска worker’а.

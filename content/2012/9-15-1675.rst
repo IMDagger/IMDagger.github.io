@@ -1,0 +1,23 @@
+Прилетело на офисе
+==================
+:date: 2012-09-15 12:15:04
+:tags: стрекоза, насекомое, офис
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1675
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6613/22199227.a/0_7f602_c7b7e48e_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/521730
+   :title: ALIM2444.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6412/22199227.a/0_7f603_49e3034a_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/521731
+   :title: ALIM2445.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6410/22199227.a/0_7f604_1b3e8cd1_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/521732
+   :title: ALIM2447.JPG
+
+Чистенькая, красивая стрекоза. Залетела случайно в комнату на офисе, я
+её сфоткал и отпустил.
+

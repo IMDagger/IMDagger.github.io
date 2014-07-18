@@ -1,0 +1,18 @@
+Пропеллер
+=========
+:date: 2010-06-20 17:23:54
+:tags: мини, bge, отдых, blender, игра, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=987
+
+Добавил самолётику пропеллер и теперь он почти завершён :D Даже
+попробовал покрутить его и вообразить, что я лечу. Главный герой
+мини-игры обретает форму! Тадааам!
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4303/imdagger.7/0_35752_a551bd43_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/218962/

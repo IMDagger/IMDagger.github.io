@@ -1,0 +1,21 @@
+PPPoE и Bridge
+==============
+:date: 2010-12-13 21:20:09
+:tags: bridge, мост, PPPoE, zyxel, модем
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1197
+
+Столкнулся с тем, что Zyxel не пропустил запросы сервера с режиме
+Bridge до провайдера для установки соединения. Немного поразмыслив я
+пришёл к выводу, что стоит заглянуть в раздел Advanced (кнопка в базовых
+WAN-настройках) и там нашёл не особо приметный пункт **PPPoE
+Passthrough**. По умолчанию онравен No, а нужно **Yes**, чтобы сервер
+смог сам пробросить запрос авторизации.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5900/imdagger.8/0_4b8d7_d00e4d72_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/309463/

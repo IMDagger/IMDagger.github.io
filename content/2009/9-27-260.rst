@@ -1,0 +1,12 @@
+Автоматическое тестирование
+===========================
+:date: 2009-09-27 16:41:46
+:tags: java, тестирование
+:category: link
+:author: IMDagger
+:attached-url: http://sourceforge.net/projects/jwebunit/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=260
+
+Для автотестирования Web-приложений из Java-кода.
+А ещё там есть ссылка на Selenium.
+

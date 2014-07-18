@@ -1,0 +1,15 @@
+Пропорциональная сетка в gnuplot
+================================
+:date: 2014-02-06 08:33:36
+:modified: 2014-02-06 08:36:33
+:tags: пропорция, построение, gnuplot, график
+:category: link
+:author: IMDagger
+:attached-url: http://stackoverflow.com/questions/5239294/how-to-set-equal-scales-length-in-gnuplot
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1924
+
+Всё время не доходили руки поискать, как заставить gnuplot отображать
+квадратные ячейки в сетке при построении графиков, чтобы всё было
+пропорционально.
+set size square и вуаля.
+

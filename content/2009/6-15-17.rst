@@ -1,0 +1,14 @@
+
+
+:date: 2009-06-15 15:35:23
+:tags: 
+:category: join
+:author: IMDagger
+:club-ya-ru-id: urn:ya.ru:club/4611686018427387967
+:club-name: Linux
+:attached-url: http://clubs.ya.ru/linux
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=17
+:slug: urn:ya.ru:post/22199227/17
+
+
+

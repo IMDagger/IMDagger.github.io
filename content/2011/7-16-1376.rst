@@ -1,0 +1,16 @@
+Hovercraft
+==========
+:date: 2011-07-16 18:19:48
+:tags: erlang, программирование, couchdb, hovercraft
+:category: link
+:author: IMDagger
+:attached-url: https://github.com/sendtopms/hovercraft/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1376
+
+    Нужно будет попробовать эту штукенцию, т.к. это прямой доступ из
+Erlang в CouchDB без HTTP API, для повышения производительности при
+работе с данной базой (она и сама написана на Erlang). Только он должен
+крутиться в том же beam, что и ChouchDB. Можно оставить HTTP API для
+частей системы написанной, на других языках, или не для критически
+важных операций. Т.е. оставить его не для массовых вставок и обновлений.
+

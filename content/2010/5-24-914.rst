@@ -1,0 +1,20 @@
+Закат
+=====
+:date: 2010-05-24 19:41:58
+:tags: природа, фотки, небо, закат
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=914
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4210/imdagger.7/0_31e0d_6cc48278_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/204301
+   :title: Закат, из окна
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4208/imdagger.7/0_31e0e_c7dca9b1_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/204302
+   :title: Панорамный вид из окна на закат
+
+Красивый был вид у неба. Жаль, что я не смог передать то, что видел.
+Попробовал даже панорамно захватить (фотку стоит смотреть в оригинальном
+размере, чтобы оценить панораму).
+

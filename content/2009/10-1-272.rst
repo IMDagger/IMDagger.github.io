@@ -1,0 +1,29 @@
+Тортик
+======
+:date: 2009-10-01 17:35:02
+:tags: торт
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=272
+
+Полторы недели назад кушал вкусный тортик, который сделала мама. Масса
+его была ~7кг. Цветок и лепестки сделаны из сахара.
+
+.. class:: text-center
+
+|Торт1|
+
+.. class:: text-center
+
+|Торт2|
+
+.. |Торт1| image:: http://img-fotki.yandex.ru/get/3802/imdagger.3/0_15138_951b13a1_XL
+   :target: http://fotki.yandex.ru/users/imdagger/view/86328/
+   :alt: Торт
+   :width: 400
+   :height: 300
+.. |Торт2| image:: http://img-fotki.yandex.ru/get/3714/imdagger.3/0_15137_40a6e763_XL
+   :target: http://fotki.yandex.ru/users/imdagger/view/86327/
+   :alt: Торт
+   :width: 400
+   :height: 300

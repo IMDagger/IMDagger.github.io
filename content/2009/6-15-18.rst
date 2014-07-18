@@ -1,0 +1,14 @@
+
+
+:date: 2009-06-15 15:37:59
+:tags: 
+:category: join
+:author: IMDagger
+:club-ya-ru-id: urn:ya.ru:club/4611686018427388118
+:club-name: Emacs
+:attached-url: http://clubs.ya.ru/4611686018427388118
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=18
+:slug: urn:ya.ru:post/22199227/18
+
+
+

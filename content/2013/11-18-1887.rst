@@ -1,0 +1,15 @@
+
+
+:date: 2013-11-18 23:57:23
+:tags: python, краулер, программирование, сайт, scrapy
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1887
+:slug: urn:ya.ru:post/22199227/1887
+
+    В следующий раз не буду тратить время на написание своего граббера,
+а возьму сразу
+`Scrapy <http://doc.scrapy.org/en/latest/intro/overview.html>`__, т.к.
+всё равно пришёл к нему. Ибо расширяется он легко, куча всяких опций и
+рычагов управления, и свистелок из коробки.
+

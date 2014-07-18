@@ -1,0 +1,14 @@
+Нужно
+=====
+:date: 2009-07-02 08:20:51
+:tags: python
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=70
+
+Нужно обязательно перечитать Python Library Reference, а то, кто же знал
+:D, что не бывает в Python ‘%lf’, буду теперь всегда стараться
+использовать ‘%s’.
+
+ 
+

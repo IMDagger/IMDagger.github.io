@@ -1,0 +1,26 @@
+Карты, деньги, два ствола
+=========================
+:date: 2011-03-11 21:34:09
+:tags: location, ошибка, favicon, window, firefox, hash
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1272
+
+Firefox, window.location.hash, favicon.ico. Эта комбинация имеет
+один досадный баг, при установке hash исчезает иконка сайта в Firefox, а
+в моём случае он ещё шёл в корень сайти и брал другой favicon. Но
+хорошо, что я нашёл в интернете ответ на мой вопрос, я и не думал, что
+это баг браузера. Вот
+`решение <http://kilianvalkhof.com/2010/javascript/the-case-of-the-disappearing-favicon/>`__
+проблемы. Только оно сломало IE8 :) поэтому лучше использовать вот так:
+
+.. code-block:: js
+
+    window.location.hash = my_mega_link_hash;
+    var agent = navigator.userAgent.toLowerCase();
+    if (agent.indexOf("firefox") != -1)
+        setFavicon();
+
+Я добавил проверку агента, т.е. для FF после присваивания якоря
+страницы вызываем setFavicon, а для других браузеров делаем как обычно:
+ничего :).

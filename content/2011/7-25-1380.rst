@@ -1,0 +1,11 @@
+IE7 и лишняя запятая
+====================
+:date: 2011-07-25 10:58:48
+:tags: ошибка, javascript, IE
+:category: link
+:author: IMDagger
+:attached-url: http://night-fairy-tales.com/2009/10/ie.html
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1380
+
+Ошибка в IE: “Предполагается наличие идентификатора, строки или числа”
+

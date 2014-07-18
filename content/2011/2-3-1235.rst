@@ -1,0 +1,32 @@
+Unix PID-файл
+=============
+:date: 2011-02-03 22:12:45
+:tags: file, lock, pid, блокировка, файл, python
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1235
+
+Дополнительная библиотека, которая легко ставится (даже через старый
+добрый easy\_install) lockfile позволяет делать блокировки на файлы и
+запросто проверять блокировку с учётом таймаута.
+
+    | [imdagger@killer ~]$ sudo easy\_install **lockfile**
+    | хохохо! тут скачивается яйцо
+    | …
+    | запускаем python
+
+    .. code-block:: python
+
+       import lockfile
+       from lockfile import pidlockfile
+       f = pidlockfile.PIDLockFile('/var/run/mydaemon.pid')
+       try:
+           f.acquire(1) # timeout в 1 секунду, попытка залочить файл
+       except lockfile.LockTimeout:
+           print 'Already running pid=%s...' % f.read_pid() # уже есть рабочая копия демона
+
+В пакете присутствуют ещё удобные моудли для директорий, симлинков и
+т.д. Вкусная и простая библиотека, к тому же кроссплатформенная. И не
+тянет за собой ничего лишнего, чистый Python, стандартные библиотеки.
+Класс :code:`PIDLockFile` создаёт pid файл в соответствии с требованиями
+спецификации *HFS 2.3*.

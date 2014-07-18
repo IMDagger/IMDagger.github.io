@@ -1,0 +1,306 @@
+Emacs и уведомления в трее
+==========================
+:date: 2009-09-14 15:06:52
+:tags: emacs, трей
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=224
+
+Т.к. **Emacs** не поддерживает загрузку динамических библиотек (а
+оно ему и не нужно), то иконку в трее и изменение её статуса будет
+отображать отдельное небольшое приложение, которое соединяется пайпами с
+Emacs. Я модифицировал существующее такое приложение (описывал его
+раньше),
+`tray\_daemon.c <http://narod.ru/disk/12630794000/tray_daemon.c.html>`__ - это
+версия, которая умеет:
+
+-  Отложенное создание иконки (полезно, если иконка нужна только по
+   время соединения)
+-  Скрытие/показ и мерцание в трее
+-  Установка изображения иконки (чтобы можно было передавать из файла
+   конфигурации Emacs’а, а не была вшита намертво)
+-  Уничтожение иконки
+-  Возможность отдельной иконки для каждого процесса Emacs, или
+   множество различных иконок для одного процесса Emacs, т.к. работает
+   через пайпы и только со своим родительским процессом
+
+Вот так оно выглядит:
+
+|Панель|
+
+Процесс, отображающий иконку в трее:
+
+#. Дублирует при помощи dup стандартный поток ввода (stdin)
+#. Устанавливает значение названия файла иконки по умолчанию равное
+   **“icon.png”**
+#. Переходит к считыванию команд
+#. Т.к. **stdin** находится в режиме блокировки, то **read** будет
+   ожидать хотя бы одного символа на входном потоке
+#. Ожидает символы либо **‘I’**, либо **‘s’**
+#. Если пришло сообщение **‘s’**, то следующие за ним символы — название
+   файла с изображением (эту команду возможно вызывать только до
+   инициализации и сколько угодно раз)
+#. Если пришла команда-символ **‘I’**, то вызывается инициализация
+   **Gtk** и разблокировка потока (добавляется *O\_NONBLOCK*)
+#. Если инициализация уже была произведена ранее, то в режиме
+   неблокирующего потока приложение ожидает команды **‘b’**, **‘B’**,
+   **‘v’**, **‘V’**, **‘Q’**, которыми и управляется
+
+Описание команд:
+
+-  **‘I’** — инициализация gtk и показ в трее
+-  **‘s’ символы\_однобайтные** — установка исходного изображения, название
+   не обязательно завершать терминирующим нулём
+-  **‘b’** — выключить мерцание
+-  **‘B’** — включить мерцание
+-  **‘v’** — спрятать иконку
+-  **‘V’** — показать иконку
+-  **‘Q’**  — завершение процесса, уничтожение иконки
+
+Затем для этого приложения был написан на Elisp’е код, который связал
+**ejabber.el** и «демона трея». Разберём по порядку. Функция
+:code:`my-tray-icon-send-command` умеет отправлять набор символов дочернему
+процессу tray\_daemon.
+
+.. code-block:: cl
+
+    (defun my-tray-icon-send-command (command)
+      (process-send-string my-tray-icon-process command)
+      (process-send-eof my-tray-icon-process))
+
+Функция :code:`process-send-string` отправляет строку command процессу
+:code:`my-tray-icon-process`, она встроенная в Emacs. А функция
+:code:`process-senf-eof` отправляет сигнал **EOF** во входной поток процесса,
+что позволяет процирующему потоку понять, что запись
+завершена. :code:`my-tray-icon-send-command` будет использована, как
+базовая для всех функций управления.
+
+.. code-block:: cl
+
+    (defun my-tray-icon-set (icon-path)
+      (my-tray-icon-send-command "s")
+      (my-tray-icon-send-command icon-path))
+
+Функция *my-tray-icon-set* устанавливает путь к изображению иконки.
+Для этого сначала посылается байт ‘s’, а затем строка байтов из
+icon-path.
+
+Далее показан код функций для управления демоном в трее и смысл их
+аналогичен посылаемому символьному коду:
+
+.. code-block:: cl
+
+    (defun my-tray-icon-init ()
+      (my-tray-icon-send-command "I"))
+
+    (defun my-tray-icon-destroy ()
+      (my-tray-icon-send-command "Q"))
+
+    (defun my-tray-icon-show ()
+      (my-tray-icon-send-command "V"))
+
+    (defun my-tray-icon-hide ()
+      (my-tray-icon-send-command "v"))
+
+    (defun my-tray-icon-blink ()
+      (my-tray-icon-send-command "B"))
+
+    (defun my-tray-icon-no-blink ()
+      (my-tray-icon-send-command "b"))
+
+Теперь потребуется описать функцию, которая создаст дочерний
+процесс, инициализирует и сконфигурирует демона и установит переменную
+*my-tray-icon-process* с названием процесса:
+
+.. code-block:: cl
+
+    (defun my-tray-icon-start ()
+      (setq my-tray-icon-process "*tray_icon*")
+      (if (get-process my-tray-icon-process)
+          ()
+         (start-process my-tray-icon-process nil "~/.emacs.d/tray_daemon")))
+
+Демон будет иметь уникальное имя \*tray\_icon\* в Emacs, а при
+помощи *get-process* проверяется, чтобы процесс не был уже запущен, т.к.
+нет смысла в двух одинаковых. Но если **\*tray\_icon\*** отсутствует, то
+при помощи встроенной функции *start-process* он запускается. Формат
+вызова *start-process*:
+
+.. code-block:: cl
+
+    (start-process имя-процесса-в-Emacs буфер-обмена "путь_к_файлу_на_диске")
+
+Т.к. обмен с процессом будет происходить последством каналов, то
+буфер нужно установить равным nil.
+
+Для того, чтобы обрабатывать прочитанные сообщения и выключать
+мерцание иконки в трее я создал функцию *my-tray-icon-mesagge-handler*:
+
+.. code-block:: cl
+
+    (defun my-tray-icon-mesagge-handler ()
+      (when (and (get-process my-tray-icon-process)
+      (equal jabber-activity-count-string "0"))
+      (my-tray-icon-no-blink)))
+
+В jabber.el написано, что переменная :code:`jabber-activity-count-string`
+содержит строковое значение текущего количества пользователей, сообщения
+которых ещё не прочитаны. Поэтому нужно её проверить на равество “0” и,
+если это так, то убрать мерцание. Этот обработчик вешается как хук на
+обновление активности:
+
+.. code-block:: cl
+
+    (add-hook 'jabber-activity-update-hook
+      'my-tray-icon-mesagge-handler)
+
+Функция обновления активности вызывается в случае, если число
+непрочитанных сообщений изменилось. Теперь как только наше приложение
+смогло не мерцать, то следует его научить мерцать:
+
+.. code-block:: cl
+
+    (defun my-show-notification (from buffer text proposed-alert)
+      (when (not (equal (get-buffer-window buffer 'visible)
+      (selected-window)))
+      (jabber-message-osd from buffer text proposed-alert)
+      (my-tray-icon-blink)))
+
+    (add-hook 'jabber-alert-message-hooks
+      'my-show-notification)
+
+Обязательно нужно, чтобы функция-обработчик пришедшего сообщения,
+которая применяется как хук к :code:`jabber-alert-message-hooks`, принимала 4
+параметра: от кого, буфер для общения с этим человеком, текст сообщения,
+тип сообщения (отошёл, текст, отключён и т.д.). Чтобы иконка не начинала
+мерцать в тот момент, когда пользователь и так видит окно чата с
+человеком, то вызывается :code:`(get-buffer-window buffer 'visible)`, с
+параметром visible она проверяет виден ли буфер (учитывает даже факт,
+что окно свёрнуто, но не учитывает множество рабочих
+столов). :code:`(jabber-message-osd from buffer text proposed-alert)` я
+использую, чтобы xosd (треубется скачать osd.el) отображал от кого
+пришло сообщение на экране:
+
+.. class:: text-center
+
+|Новое сообщение|
+
+Ну и на закуску мой полный jabber\_cfg.el:
+
+.. code-block:: cl
+
+    ;; а пароль вводить ручками при к каждом коннекте
+    ;; ну не доверяю я хранить его в открытов виде тут
+    (setq jabber-account-list
+     '(("имя@ya.ru/emacs"
+      (:network-server . "сервер")
+      (:connection-type . ssl))))
+
+    ;; раскомментировать, если будет говорить, что переменная
+    ;; my-tray-icon-process не объявлена
+    ;; (setq my-tray-icon-process "*tray_icon*")
+
+    (defun my-tray-icon-send-command (command)
+      (process-send-string my-tray-icon-process command)
+      (process-send-eof my-tray-icon-process))
+
+    (defun my-tray-icon-set (icon-path)
+      (my-tray-icon-send-command "s")
+      (my-tray-icon-send-command icon-path))
+
+    (defun my-tray-icon-init ()
+      (my-tray-icon-send-command "I"))
+
+    (defun my-tray-icon-destroy ()
+      (my-tray-icon-send-command "Q"))
+
+    (defun my-tray-icon-show ()
+      (my-tray-icon-send-command "V"))
+
+    (defun my-tray-icon-hide ()
+      (my-tray-icon-send-command "v"))
+
+    (defun my-tray-icon-blink ()
+      (my-tray-icon-send-command "B"))
+
+    (defun my-tray-icon-no-blink ()
+      (my-tray-icon-send-command "b"))
+
+    (defun my-tray-icon-start ()
+      (setq my-tray-icon-process "*tray_icon*")
+      (if (get-process my-tray-icon-process)
+          ()
+        (start-process my-tray-icon-process nil "~/.emacs.d/tray_daemon")))
+
+    ;; подключение скачанной библиотеки
+    (require 'osd)
+
+    ;; настройки для xosd
+    (setq osd-program-args
+      '("--pos" "bottom"
+      "--offset" "7"
+      "--align" "left"
+      "--indent" "18"
+      "--delay" "3"
+      "--color" "red"
+      "--shadow" "2"
+      "--shadowcolour" "#1e2320"
+      "--lines" "3"
+      "--font"
+      "-*-times new roman-medium-r-*-*-24-*-*-*-*-*-*-*"))
+
+    (require 'jabber-autoloads)
+
+    (defun my-tray-icon-mesagge-handler ()
+      (when (and (get-process my-tray-icon-process)
+      (equal jabber-activity-count-string "0"))
+      (my-tray-icon-no-blink)))
+
+    (add-hook 'jabber-activity-update-hook
+      'my-tray-icon-mesagge-handler)
+
+    (add-hook 'jabber-post-connect-hooks
+      (lambda (connection)
+      (my-tray-icon-start)
+      (my-tray-icon-set "/home/imdagger/.emacs.d/icon.png")
+      (my-tray-icon-init)
+      (my-tray-icon-show)))
+
+    (add-hook 'jabber-post-disconnect-hook
+      (lambda ()
+      (my-tray-icon-hide)
+      (my-tray-icon-destroy)))
+
+    (defun my-show-notification (from buffer text proposed-alert)
+      (when (not (equal (get-buffer-window buffer 'visible)
+      (selected-window)))
+      (jabber-message-osd from buffer text proposed-alert)
+      (my-tray-icon-blink)))
+
+    (add-hook 'jabber-alert-message-hooks
+      'my-show-notification)
+
+    ;; хуки на изменение статуса и отображение через xosd
+    (add-hook 'jabber-alert-muc-hooks 'jabber-muc-osd)
+    (add-hook 'jabber-alert-presence-hooks 'jabber-presence-osd)
+
+    ;; нам не нужная отладочная информация
+    ;; включим, когда будем что-то дорабатывать в jabber.el
+    (setq fsm-debug nil)
+
+    ;; параметры для истории, вида и др.
+    (setq jabber-history-enabled t
+      jabber-use-global-history nil
+      jabber-history-dir "~/.emacs.d/jabber/"
+      jabber-chatstates-confirm t
+      jabber-events-confirm-composing t
+      jabber-chat-time-format "%a %d %b %H:%M:%S"
+      jabber-backlog-number 50)
+
+    ;; быстрое переключение к буфферу с сообщением
+    (global-set-key [S-f12] 'jabber-activity-switch-to)
+
+.. |Панель| image:: http://img-fotki.yandex.ru/get/3707/imdagger.3/0_13a2e_da2dfe6b_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/80430/
+.. |Новое сообщение| image:: http://img-fotki.yandex.ru/get/3711/imdagger.3/0_13a30_8fd4035a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/80432/

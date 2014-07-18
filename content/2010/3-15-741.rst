@@ -1,0 +1,27 @@
+Схемы
+=====
+:date: 2010-03-15 11:50:21
+:tags: схема, симуляция, qucs
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=741
+
+Вот схемы Qucs, который вчера никак не удалялась загрузить на Я.ру.
+Сама схема мультивибратора:
+
+.. class:: text-center
+
+|image0|
+
+А вот её странный график симуляции. Похоже, что сигнал пульсирует,
+но он немного странный. Когда я пытаюсь выставить правильное
+сопротивление резисторов, то симуляция в Qucs прерывается.
+
+.. class:: text-center
+
+|image1|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3912/imdagger.6/0_26a07_fa5cbe72_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/158215/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3813/imdagger.6/0_26a08_864d290a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/158216/

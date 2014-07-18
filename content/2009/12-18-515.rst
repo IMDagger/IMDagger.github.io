@@ -1,0 +1,33 @@
+Lazy fetch
+==========
+:date: 2009-12-18 14:15:28
+:tags: диплом, hibernate, lazy
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=515
+
+Поборол проблему, что сессия была закрыта уже перед тем, как мне
+нужно было в JSTL-шаблоне получить данные. Я извлекал целую коллекцию
+объектов, но подробная информация нужна была только о первом. Поэтому
+пытался побороть HibernateTemplate.initialize, который принудительно
+инициализирует объект. Но у меня постоянно выпадало исключение, что
+**org.hibernate.LazyInitializationException could not initialize proxy -
+no Session**. Всё это происходило внутри метода в потомке
+**HibernateDaoSupport** и пришлось сделать манёвр по получению новой
+сессии и привязке объекта к ней с последующим принудительным
+обновлением:
+
+.. code-block:: java
+
+    ...
+    Session inCurrentSession = getSession();
+    inCurrentSession.refresh(rootNode.getInfo());
+    getHibernateTemplate().initialize(rootNode.getInfo());
+    ...
+
+Исключение перестало выпадать и всё заработало. rootNode —
+объект-узел, который мне нужен для отображения его даты, getInfo
+возвращает объект с описанием узла. Информация привязана при помощи
+**@OneToOne** и **FetchType.LAZY**. Поэтому refresh обновляет и
+привязывает прокси объекта к новой сессии, а initialize вынуждает
+принудительно вызвать *SELECT* и достать данные из базы.

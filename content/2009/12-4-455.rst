@@ -1,0 +1,43 @@
+Мой кривоэскюэль
+================
+:date: 2009-12-04 18:41:09
+:tags: диплом, sql
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=455
+
+Сваял когда-то черновой native-запрос для базы, на который мэппится
+класс при помощи Hibernate. Работал запрос медленно, я сразу
+почувствовал, т.к. скорость приложения вцелом упала в десятки, а то и
+сотни раз. Тогда отлаживать времени не было. И при том упала на запросе
+с небольшим объёмом выборки данных. Был запрос с двумя **JOIN**
+(структуру базы я менять не могу и функцию сильно тоже):
+
+.. code-block:: sql
+
+    -- тестовый запрос 1:
+    select tree.itemId, tree.deep, b.rusTitle as title,
+    itemIndex as childId, (count(*) - 1) as childrenCount
+    from dl2ResultsHeaderItemSubTree(11608, 5, 0, 1, '2009-11-21') as tree
+    join dl2ResultsHeaderItem as b on tree.itemId = b.itemId
+    left join dl2ResultsHeaderItem as c on b.itemId = c.parentItemId or b.itemid = c.itemid
+    group by tree.itemid, tree.deep, b.rusTitle, itemIndex
+
+Пришлось на днях ускорить, а то уже не возможно было нормально
+отлаживать. Один тормозной запрос превратился в быстрый кривозапрос с
+одним **JOIN** и одним подзапросом:
+
+.. code-block:: sql
+
+    -- тестовый запрос 2:
+    select tree.itemId, tree.deep, b.rusTitle as title,
+    itemIndex as childId,
+      (select count(*) - 1 from dl2ResultsHeaderItem as c
+      where tree.itemId = c.parentItemId or tree.itemid = c.itemid) as childrenCount
+    from dl2ResultsHeaderItemSubTree(11608, 5, 0, 1, '2009-11-21') as tree
+    join dl2ResultsHeaderItem as b on tree.itemId = b.itemId
+    group by tree.itemid, tree.deep, b.rusTitle, itemIndex
+
+На моих данных стало работать в :underline:`100 раз` быстрее. Думаю от того, что
+пересечение было очень большое, а в случае подзапроса — мало вызовов
+(такая специфика хранимой информации).

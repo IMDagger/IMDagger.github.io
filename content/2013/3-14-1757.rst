@@ -1,0 +1,11 @@
+Восстановление операций по матрице Левенштейна
+==============================================
+:date: 2013-03-14 13:41:04
+:tags: последовательность, дистанция, Левеншнейн, преобразование, операции, модификация
+:category: link
+:author: IMDagger
+:attached-url: http://stackoverflow.com/questions/5849139/levenshtein-distance-inferring-the-edit-operations-from-the-matrix
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1757
+
+Хорошо с примером разъяснено в ответе по ссылке, как это сделать.
+

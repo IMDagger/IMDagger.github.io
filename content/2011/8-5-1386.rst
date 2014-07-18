@@ -1,0 +1,17 @@
+Greasemonkey и onclick
+======================
+:date: 2011-08-05 20:34:58
+:tags: Greasemonkey, javascript, программирование, скрипт
+:category: link
+:author: IMDagger
+:attached-url: http://commons.oreilly.com/wiki/index.php/Greasemonkey_Hacks/Getting_Started#Pitfall_.232:_Event_Handlers
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1386
+
+    Пытаясь помочь человеку с скриптом, который использовал традиционную
+модель DOM, узнал, что установить onclick из Greasemonkey не выйдет и
+это нужно делать при помощи addEventListener из DOM2. Т.к. вариант с
+установкой строки в onclick теряет область видимости скрипта. После
+правки решил ещё взглянуть зачем этой функции 3-ий параметр (заодно
+узнал про войну двух гигантов оттуда)
+http://www.quirksmode.org/js/events_advanced.html
+

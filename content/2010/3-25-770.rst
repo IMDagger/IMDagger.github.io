@@ -1,0 +1,51 @@
+Снег
+====
+:date: 2010-03-25 19:09:03
+:tags: blender, материал, снег
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=770
+
+Заглянул в нутро снега с blender-materials.org, тот снег, что
+замёрзший. Похож на то, что делаю я, но чуть интереснее и сложнее. Я
+делаю снег белый, и добавляю шум, а тут аж два слоя текстуры против
+моего одного.
+
+.. class:: text-center
+
+|image0|
+
+Цвет чисто белый, но Spec отражение 0.8, 0.9, 1.0 (числа хорошие,
+запомнить легко):
+
+.. class:: text-center
+
+|image1|
+
+Первый слой, это сильный шум при помощи **Clouds** с **Noise Size**
+равным 0.0 и **Voronoi** **Crackle**. Она применяется с цветом *0.83,
+0.9, 1.0*. При этом для неравномерного отражения включен **Csp**, чтобы
+текстура регулировала блики света. Nor не большой, всего 0.5, т.к.
+бугорки нужны маленькие.
+
+.. class:: text-center
+
+|image2|
+
+Вторая текстура для небольшого плавного смещения, как например,
+когда катаешь комы снега. Включён только Nor и достаточно сильный *2.2*.
+Для облаков (вторая текстура) включена высокая глубина и размер
+побольше, чтобы не выглядело как шум.
+
+.. class:: text-center
+
+|image3|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4314/imdagger.6/0_28e19_507f875a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/167449/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4308/imdagger.6/0_28e1a_b993bdb5_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/167450/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3812/imdagger.6/0_28e1b_d4003db3_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/167451/
+.. |image3| image:: http://img-fotki.yandex.ru/get/3809/imdagger.6/0_28e1c_2ff1388e_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/167452/

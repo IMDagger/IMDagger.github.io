@@ -1,0 +1,19 @@
+Поздравляю
+==========
+:date: 2010-02-08 11:19:50
+:tags: blender, Я, день рождения
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=662
+
+22 года назад в этот день был тоже понедельник, и приблизительно в
+13:54 я родился. Ну что же… поздравляю я тебя IMDagger, расти большой,
+кушай много, но не толстей, много всяких девайсов себе желаю. Вот сделал
+себе небольшой подарок по-быстрому.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3912/imdagger.5/0_2118e_fdf5216f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/135566/

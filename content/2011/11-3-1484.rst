@@ -1,0 +1,21 @@
+Подключение библиотек в JAR-архив
+=================================
+:date: 2011-11-03 20:24:18
+:tags: подключение, zipfileset, программирование, JAR
+:category: link
+:author: IMDagger
+:attached-url: http://stackoverflow.com/questions/81260/java-easiest-way-to-merge-a-release-into-one-jar-file
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1484
+
+Сначала я пробовал замутить с Class-Path, но решение оказалось проще,
+достаточно было использовать zipfileset, чтобы впихнуть содержимое из
+libGDX **jar**-ов в проект.
+
+.. code-block:: xml
+
+   <jar destfile="${build.file}">
+       ...
+       <zipfileset src="${external.libs}/gdx.jar" includes="**/*"/>
+       <zipfileset src="${external.libs}/gdx-natives.jar" includes="**/*"/>
+       ...
+   </jar>

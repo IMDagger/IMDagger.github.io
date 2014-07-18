@@ -1,0 +1,35 @@
+Изменение меша прямо из BGE
+===========================
+:date: 2009-06-15 09:29:05
+:tags: blender, python, bge
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=12
+
+Попробовал сегодня изменить положении точек в прострастве для меша
+кубика прямо из BGE. Не знаю зачем мне пока это нужно, но всё же
+прикольно :) Написал такой Python скрипт для актуатора:
+
+::
+
+    cc = GameLogic.getCurrentController()
+    obj = cc.getOwner()
+    mesh = obj.getMesh()
+    v = mesh.getVertex(0, 2)
+    v.setXYZ([-1.0, -1.0, 5.0])
+
+.. class:: text-center
+
+|image0|
+
+Получилась вот такая вот штука, нужно только не забывать, что будут
+изменены все объекты в BGE, которые опираются на данный меш:
+
+.. class:: text-center
+
+|image1|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3603/imdagger.0/0_c57c_68396e5b_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/50556/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3505/imdagger.0/0_c57e_36a2edd7_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/50558/

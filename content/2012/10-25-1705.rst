@@ -1,0 +1,25 @@
+Опциональная библиотека
+=======================
+:date: 2012-10-25 10:32:09
+:modified: 2012-10-25 10:32:28
+:tags: сборка, файл, Android, ant, выборочный, библиотека
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1705
+
+Для выборочного включения
+`fileset <http://ant.apache.org/manual/Types/fileset.html>`__ в path
+правиле можно воспользоваться параметром erroronmissingdir, это
+позволяет объединить сборку под несколько платформ, когда всего на 1 из
+платформ есть дополнительный набор библиотек. Например, при сборке под
+PC и Android:
+
+.. code-block:: xml
+
+   <path id="compiling-env">
+       ...
+       <fileset id="path.internal.android-libs" dir="${sdk.dir}/platforms/${target}/"
+               erroronmissingdir="false">
+           <filename name="android.jar" />
+       </fileset>
+   </path>

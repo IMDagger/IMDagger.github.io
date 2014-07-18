@@ -1,0 +1,94 @@
+Пример использования
+====================
+:date: 2010-05-16 18:04:11
+:tags: python, openid
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=874
+
+Допустим приложение создано с использованием mod\_python. Требуется
+сделать OpenID авторизацию с AJAX интерфейсом. При работе с OpenID в
+качестве клиента самыми основными функциями являются begin и complete.
+Метод begin объекта класса Consumer возвращает объект класса
+RequestAuth. Если OpenID сервер не обнаружен, то будет выброшено
+соответствующее исключение. У объекта класса RequestAuth есть метод
+redirectURL, первый параметр — имя серсива, который требует OpenID (т.е.
+это мы, информация будет отображена при переходе к OpenID сервису) ,
+второй — адрес возврата назад на наш сервер. Дополнительно можно
+добавить параметр, чтобы различать один запрос от другого, если их
+обслуживает один обработчик.
+
+.. code-block:: python
+
+    ...
+    from mod_python import apache, util, Session
+    import cjson as json
+    import openid.consumer.discover as dsc
+    import openid.consumer.consumer as c
+    import openid.store.filestore as m
+    import openid.extensions.sreg as sreg
+
+    # пусть файловое хранилище будет, но есть и другие виды
+    openid_store = m.FileOpenIDStore('/tmp/openid/')
+
+    def some_handler(form, req): # параметр form - это обработанные через mod_python
+        # параметры GET и POST, req — запрос от mod_python
+        req.content_type = 'application/json' # данные JSON
+        answer = {}
+        status = 'TRYAUTH'
+        thesession = Session.Session(req)
+        auth = c.Consumer(thesession, openid_store)
+
+        if ...: # проверка какой это заход
+            try:
+                response = auth.begin(userid)
+                # нужны дополнительно: почта, имя, полное имя, пол
+                response.addExtension(sreg.SRegRequest(
+                        required=['email', 'nickname', 'gender', 'fullname']))
+                return_to = ... # адрес_возврата
+
+                answer['endpoint'] = response.redirectURL(
+                             ..., return_to, True) # тут_имя_сервера
+                answer['redirect_to'] = response.redirectURL(
+                             ..., return_to, False) # тут_имя_сервера
+            except dsc.DiscoveryFailure: # сервер не найден
+                status = 'FAILURE'
+        else:
+            form_info = ... #form_преобразованная_в_dict
+            url = req.construct_url(req.uri)
+            # завершить запрос
+            response = auth.complete(form_info, url)
+
+            if type(response) is c.SuccessResponse:
+                status = 'SUCCESS'
+                info = sreg.SRegResponse.fromSuccessResponse(response)
+                # получить поля
+                try:
+                    answer['email'] = info['email']
+                    answer['gender'] = info['gender']
+                    answer['nickname'] = info['nickname']
+                    answer['fullname'] = info['fullname']
+                except:
+                    pass
+            elif type(response) is c.CancelResponse:
+                    status = 'NO'
+            elif type(response) is c.FailureResponse:
+                    status = 'EPICFAIL'
+
+        answer['status'] = status
+        req.write(json.encode(answer))
+
+        return apache.OK
+
+Модуль sreg помогает получить дополнительные данные о пользователе,
+например, для регистрации ему аккаунта. Consumer требует dict-like
+объекта для сессии, для этой цели подходит Session из mod\_python :).
+Метод redirectURL вызывается для immediate режима и для простого.
+Мгновенный режим нужен для проверки в AJAX логина сразу после нажатия
+кнопки авторизации.
+
+Т.к. XDR (кросс-доменные) запросы из Javascript не разрешены по
+соображениям безопасности, то придётся выкручиваться через IFRAME, для
+мгновенной проверки авторизации без перенаправления видимого
+пользователю. В IFRAME приложение должно выводить специальный Javascript
+код, который ответит хорошо всё или нет.

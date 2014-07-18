@@ -1,0 +1,14 @@
+Ага! Попался!
+=============
+:date: 2011-08-06 22:56:07
+:tags: Я, google, slide
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1388
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5409/22199227.a/0_625fc_e780ccc7_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/402940
+   :title: Попался
+
+Аааа!!.. они меня нашли и поймали, задержание прошло быстро
+

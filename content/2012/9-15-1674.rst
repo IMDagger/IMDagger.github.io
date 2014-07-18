@@ -1,0 +1,15 @@
+Вот это, я понимаю, урожай
+==========================
+:date: 2012-09-15 11:55:48
+:tags: урожай, морковь
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1674
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6513/22199227.a/0_7f601_4023d61e_-1-L
+   :link: http://fotki.yandex.ru/users/imdagger/view/521729
+   :title: Вот это, я понимаю, урожай
+
+Ничем не поливалась, не удобрялась, хорошо прореживалась; почти все
+морковки в этом году такие, наверное, из-за тёплого лета.
+

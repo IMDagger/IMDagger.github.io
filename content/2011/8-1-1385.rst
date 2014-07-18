@@ -1,0 +1,42 @@
+Сборка Riak 0.14.2 на Erlang OTP 14B03
+======================================
+:date: 2011-08-01 23:26:37
+:tags: решение, ошибка, сборка, riak, erlang
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1385
+
+Если взять исходники **не из master**, а просто со страницы
+скачивании от Basho, то с новым Erlang есть несколько проблем при сборке
+Riak. Чтобы не выпадало **src/riakc\_pb\_socket.erl:62: type
+ip\_address() undefined** нужно применить патч из
+`этого <https://github.com/basho/riak-erlang-client/commit/6d3bafd8322270113a9401ba30ad35ec4c7ce95f>`__
+коммита к 0.14.2 (либо вытянуть просто текущую версию из master). Также
+выпадает ошибка при сборке ebloom фильтра::
+
+    ==> ebloom (compile)
+    Compiling c_src/ebloom_nifs.cpp
+    c_src/ebloom_nifs.cpp: In function 'ERL_NIF_TERM ebloom_new_filter(ErlNifEnv*, int, const ERL_NIF_TERM*)':
+    c_src/ebloom_nifs.cpp:85: ошибка: нет декларации 'enif_alloc_resource_compat' в этой области видимости
+    c_src/ebloom_nifs.cpp:90: ошибка: нет декларации 'enif_release_resource_compat' в этой области видимости
+    c_src/ebloom_nifs.cpp: In function 'ERL_NIF_TERM ebloom_serialize(ErlNifEnv*, int, const ERL_NIF_TERM*)':
+    c_src/ebloom_nifs.cpp:247: ошибка: нет декларации 'enif_alloc_binary_compat' в этой области видимости
+    c_src/ebloom_nifs.cpp: In function 'ERL_NIF_TERM ebloom_deserialize(ErlNifEnv*, int, const ERL_NIF_TERM*)':
+    c_src/ebloom_nifs.cpp:263: ошибка: нет декларации 'enif_alloc_resource_compat' в этой области видимости
+    c_src/ebloom_nifs.cpp:266: ошибка: нет декларации 'enif_release_resource_compat' в этой области видимости
+    c_src/ebloom_nifs.cpp: In function 'int on_load(ErlNifEnv*, void**, ERL_NIF_TERM)':
+    c_src/ebloom_nifs.cpp:287: ошибка: нет декларации 'enif_open_resource_type_compat' в этой области видимости
+    ERROR: $CXX -c $CXXFLAGS $DRV_CFLAGS c_src/ebloom_nifs.cpp -o c_src/ebloom_nifs.o failed with error: 1
+    make: *** [all] Ошибка 1
+
+Но и это связано тоже с неточностью в erl\_nif\_compat.h из ebloom
+модуля. Которая исправлена в master вот `этим
+коммитом <https://github.com/basho/ebloom/commit/b72cc51041ab6ee4e9317e0451d18e70e6722b14>`__.
+Его тоже легко применить даже руками, просто заменить == на >= для
+проверки минорной версии Erlang NIF.
+
+P.S. Заинтересовавшись, что это за модуль узнал про такую структуру
+данных как `фильтр
+Блума <http://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%91%D0%BB%D1%83%D0%BC%D0%B0>`__.
+Думаю стоит пополнить свои пробелы знаний в теории не детерминированных
+структур данных.

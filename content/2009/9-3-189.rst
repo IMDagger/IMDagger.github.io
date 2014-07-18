@@ -1,0 +1,16 @@
+Неведомое
+=========
+:date: 2009-09-03 13:35:03
+:tags: создание
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=189
+
+Не знаю, что это такое, но думаю просто малораспространённое создание
+для наших мест. Но всё же забавно, что это поймали у нас в реке :).
+
+.. class:: text-center
+
+.. yavideo:: 9f69imbjtt.1204
+   :width: 450
+   :height: 338

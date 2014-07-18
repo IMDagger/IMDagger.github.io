@@ -1,0 +1,19 @@
+Хэндгам
+=======
+:date: 2010-05-10 09:40:03
+:tags: радость, жизнь, хэндгам
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=869
+
+Ура! Он прибыл ко мне из далёкой-далёкой страны :). Теперь я могу
+его жмякать, крутить, рвать, собирать снова и он не липнет ни к чему
+кроме себя самого. Его можно скатать в шар и ударить об стол и он
+подпрыгнет. А в темноте он должен светиться ярко синим цветом.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/8/imdagger.7/0_2f4bf_7bd1445e_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/193727/

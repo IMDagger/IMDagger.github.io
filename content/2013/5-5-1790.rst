@@ -1,0 +1,35 @@
+
+
+:date: 2013-05-05 20:04:41
+:modified: 2013-05-05 20:05:15
+:tags: broadcom, wifi, проблема, ubuntu, linux
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1790
+:slug: urn:ya.ru:post/22199227/1790
+
+Что-то последнее обновление сломало WiFi для Broadcom чипов (хотя
+драйверы броадкомовцы ещё те глюкавые пишут, так что может это просто
+драйверу изменения не понравились, но… увы какой стоит):
+
+.. code-block:: console
+
+    # lspci
+    ...
+    03:00.0 Network controller: Broadcom Corporation BCM4313 802.11b/g/n Wireless LAN Controller (rev 01)
+    ...
+
+
+
+Пришлось при загрузке вызвать GRUB и выбрать более старое ядро (с
+предыдущего обновления, благо Ubuntu их всех оставляет):
+
+.. code-block:: console
+
+    $ cat /proc/version
+    Linux version 3.2.0-38-generic (buildd@akateko) (gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) ) #61-Ubuntu SMP Tue Feb 19 12:18:21 UTC 2013
+
+На 3.2.0-38 всё работает отлично, на 39 вроде тоже, а вот на сборке
+3.2.0-40 что-то не так с WiFi. Попробую разобраться попозже, если это
+имеет смысл :) Т.к. может придёт скоро новое обновление, ведь 3.2.x это уже
+довольно старая ветка.

@@ -1,0 +1,19 @@
+Яндекс Почта
+============
+:date: 2010-03-30 14:32:47
+:tags: почта, Яндекс, ошибка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=777
+
+Вот только что отказала. Из чего я узнал, что у них есть сервер с
+nginx и Fedora :)
+
+.. class:: text-center
+
+|image0|
+
+UPD. Они более-менее быстро ожили.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3800/imdagger.6/0_2965f_af1c0e0b_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/169567/

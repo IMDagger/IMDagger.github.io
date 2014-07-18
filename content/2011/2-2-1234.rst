@@ -1,0 +1,30 @@
+Сборка Octave
+=============
+:date: 2011-02-02 18:17:20
+:tags: octave, сборка, GCC, as, компиляция
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1234
+
+При сборке из исходников возникли небольшие проблемы, GCC я
+установил новый, был у меня 3.4.6 и я им доволен, но поставил и 4.3.3,
+чтобы не мучаться на всякий случай. Ещё Octave потребовал Fortran 77, ну
+а раз я ставил G77 версии 4.3.3, то и GCC тоже поставил такой. А потом
+выпала вот такая ошибка от GNU As::
+
+        /tmp/cccPYg3d.s: Assembler messages:
+        /tmp/cccPYg3d.s:312: Error: unknown pseudo-op: `.weakref'
+
+Виновник сразу же себя выдал, конечно же это **as** из **binutils**. И
+т.к. он не понимает .weakref, то я сразу побежал смотреть какой у меня
+версии::
+
+        $ as --version
+        GNU assembler 2.15.92.0.2 20040927
+        Copyright 2002 Free Software Foundation, Inc.
+        This program is free software; you may redistribute it under the terms of
+        the GNU General Public License.  This program has absolutely no warranty.
+        This assembler was configured for a target of `i486-slackware-linux'.
+
+Мда.. староват, пора и его обновить. Обновление до
+2.18.50.0.9.20080822 помогло решить проблему :).

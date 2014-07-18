@@ -1,0 +1,15 @@
+Мои лёгкие
+==========
+:date: 2010-05-01 06:27:57
+:tags: здоровье, лёгкие
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=856
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4311/imdagger.7/0_2e02d_438452b7_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/188461
+   :title: Мои лёгкие
+
+Снимок перевёрнут, т.к. плёнка не плоская, а немного выгнутая. Удобнее
+было прижимать.
+

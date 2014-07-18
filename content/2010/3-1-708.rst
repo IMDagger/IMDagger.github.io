@@ -1,0 +1,47 @@
+Три разбойника
+==============
+:date: 2010-03-01 15:27:11
+:tags: радость, мультфильм
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=708
+
+Посмотрел этот забавный немного психоделический рисованный мультик.
+Главная злая героиня переварилась в торт, прыгнув с сироп, при этом сама
+это сделала :). Вот немного кадров из мультика:
+
+.. class:: text-center
+
+|image0|
+
+А вот и порождения психоделического разума:
+
+.. class:: text-center
+
+|image1|
+
+А вот это полицейский в лесу увидел и сам сказал, что это всего лишь
+порождение его разума
+
+.. class:: text-center
+
+|image2|
+
+“Что ж, господа.. То чем вы здесь занимаетесь является.. эхмм..кхмм…
+нарушением норм общественного порядка и … э!! алё!”, - сказал
+полицейский эти милым кроликам и выписал штраф :)
+
+.. class:: text-center
+
+|image3|
+
+Забавный мультфильм, настроение поднял :)
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3814/imdagger.5/0_2339d_12177448_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144285/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3811/imdagger.5/0_233a6_ba7ef5ad_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144294/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3810/imdagger.5/0_233a7_29c39a0f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144295/
+.. |image3| image:: http://img-fotki.yandex.ru/get/3814/imdagger.5/0_233a8_6ba20220_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144296/

@@ -1,0 +1,37 @@
+Странно
+=======
+:date: 2009-10-01 18:26:13
+:tags: python, HTTP
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=273
+
+Странно, что при передаче POST-запроса при помощи httplib (из
+стандартной поставки Python), данные формы отправляются как-то позже,
+только после уничтожения объекта соединения, а не во время вызова
+*request*:
+
+.. code-block:: python
+
+   conn = httplib.HTTPConnection('localhost', 8080)
+   params = urllib.urlencode({'name', 'а тут данные много-много'})
+   headers = {'Content'-type : 'application/x-www-form-urlencoded', 'Accept' : 'text'/plain}
+   conn.request('POST', '/test/test.jsp', params, headers)
+   response = conn.getresponse()
+   data = response.read()
+
+Но read возвращает данные от скрипта будто параметры и не
+передавались при помощи POST. Методом проб и ошибок я понял, что тело
+HTTP запроса не отправляется. И заменил на другой код с использованием
+urllib, который к счастью заработал:
+
+.. code-block:: python
+
+   params = urllib.urlencode({'name', 'а тут данные много-много'})
+   response = urllib.urlopen('http://localhost:8080/test/test.jsp', params)
+   data = response.read()
+
+И оп! Он смог переслать тело запроса через сокет. А почему с httplib
+не получилось я даже пока не знаю.
+
+P.S. Давно что-то я про Python не писал :)

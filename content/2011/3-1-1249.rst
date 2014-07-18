@@ -1,0 +1,36 @@
+OpenAL, Blender 2.49b и GCC 4.3.3 сборка
+========================================
+:date: 2011-03-01 16:05:45
+:tags: blender, OpenAL, сборка, GCC
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1249
+
+При сборке Blender 2.49b уже обновлённым у меня компилятором GCC
+4.3.3 выскочила ошибка SND\_OpenALDevice.cpp:
+
+   | In file included from
+   | intern/SoundSystem/openal/SND\_OpenALDevice.cpp:48:
+   | /usr/include/AL/alc.h:190: ошибка: ‘<anonymous>’ has incomplete type
+   | /usr/include/AL/alc.h:190: ошибка: invalid use of ‘ALCvoid’
+   | /usr/include/AL/alc.h:251: ошибка: ‘<anonymous>’ has incomplete type
+   | /usr/include/AL/alc.h:251: ошибка: invalid use of ‘ALCvoid’
+   | scons: \*\*\*
+     [/home/imdagger/new\_blender/build/build/linux2/intern/SoundSystem/openal/SND\_OpenALDevice.o]
+     Error 1
+   | scons: building terminated because of errors.
+
+Т.к. у меня всё же не самый свежайший компилятор и не самая новая
+OpenAL, то сообщение об ошибке не очень внятно звучит для меня. Я
+заглянул внутрь и увидел использование :code:`ALCvoid`, затем я отправился в
+/usr/include и нашёл AL/alc.h, там был объявлен тип :code:`typedef void
+ALCvoid;` это обычный :code:`void`. Я уже подзабыл стандарт C++, и поэтому
+ошибка мне казалась необычной, я даже подумал, что это проблема GCC (ибо
+я уже встречался с таким). Но быстрое гугление дало
+`результат <http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33101>`__.
+
+Я уже успешно забыл, что для C++ объявление функции с указанием
+:code:`void` можно только делать так (нельзя заменить :code:`void` на другой тип,
+который получен через :code:`typedef`)
+
+    тип имя\_функции\ **(void)**

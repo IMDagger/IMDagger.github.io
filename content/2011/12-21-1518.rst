@@ -1,0 +1,24 @@
+Удаление табуляции
+==================
+:date: 2011-12-21 20:59:32
+:modified: 2011-12-21 21:00:05
+:tags: python, emacs, работа, табуляция, backspace
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1518
+
+Так вышло, что code style convention проекта, где я работаю требует
+выравнивания **табуляцией**. А в Emacs, когда я нажимаю :kbd:`Backspace`, чтобы
+удалить один уровень выравнивания в Python-коде, преобразует его в
+smart-табуляцию, что мне не подходит, т.к. появляются пробелы. Проблема
+решилась установкой локальной комбинации клавиш на хук в Python-режиме:
+
+    из ~/.emacs файла:
+
+    .. code-block:: cl
+
+       ...
+       ;; в python-mode хуке
+       ...
+       (local-set-key (kbd "DEL") 'backward-delete-char)
+       ...

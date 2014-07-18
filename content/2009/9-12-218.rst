@@ -1,0 +1,11 @@
+Hibernate
+=========
+:date: 2009-09-12 15:48:33
+:tags: java, hibernate
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=218
+
+Чтобы промэппировать в Hibernate тип базы данных **TIMESTAMP**, то
+следует использовать аннотацию **@Version**.
+

@@ -1,0 +1,14 @@
+Отображение ячеек
+=================
+:date: 2009-07-31 18:10:09
+:tags: blender, triad_vesuvius, ячейки
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=120
+
+Ура! Сделал автоматическое отображение ячеек карты прямо в редакторе.
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3508/imdagger.2/0_1005b_eca3575a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/65627/

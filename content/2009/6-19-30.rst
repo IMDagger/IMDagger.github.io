@@ -1,0 +1,17 @@
+Характер
+========
+:date: 2009-06-19 18:00:34
+:tags: Я
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=30
+
+Когда возможности человека оказываются меньше, чем его желания, то он
+становится очень вредным, особенно, если чётко осознаёт несбыточность
+мечты, … вот такой и я.
+
+.. class:: text-center
+
+|Вредина|
+
+.. |Вредина| image:: http://img-fotki.yandex.ru/get/3507/imdagger.1/0_c9da_aaf5556c_XL

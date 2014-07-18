@@ -1,0 +1,32 @@
+Апельсин vs Помидор
+===================
+:date: 2009-09-09 16:47:00
+:tags: помидор, апельсин, еда
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=206
+
+Они: "Ну и кто из нас помидор, а кто :del:`огурец` апельсин?"
+
+Я: “Тише, тише… всё равно я вас скоро съем! Тут один умный кабачок уже
+договорился, сейчас расправлюсь с ним и займусь вами ;)”
+
+
+.. class:: text-center
+
+|Померяемся|
+
+.. class:: text-center
+
+|Друг на дружке|
+
+Это реально помидор, сорт просто такой — оранжевый.
+
+.. |Померяемся| image:: http://img-fotki.yandex.ru/get/3703/imdagger.3/0_13292_e5488bf7_XL.jpg
+   :target: http://fotki.yandex.ru/users/imdagger/view/78482/
+   :width: 400
+   :height: 300
+.. |Друг на дружке| image:: http://img-fotki.yandex.ru/get/3009/imdagger.3/0_13294_b9d942cd_XL.jpg
+   :target: http://fotki.yandex.ru/users/imdagger/view/78484/
+   :width: 400
+   :height: 300

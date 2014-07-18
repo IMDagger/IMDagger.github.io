@@ -1,0 +1,35 @@
+Рендеринг старой работы
+=======================
+:date: 2009-11-16 13:23:43
+:tags: blender, luxrender
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=403
+
+    Решил посмотреть, как будет выглядеть старая моя blend-модель, если
+ничего не модифицировать, но включить рендеринг при помощи LuxRender.
+Рендерил **20 часов** на Celeron 2Ghz. Вышло довольно забавно, правда
+пропали некоторые текстуры и объекты, но это из-за того, что они были
+разбросаны по сценам и слоям, а я ничего не настраивал для LuxRender.
+Теперь сложилось такое впечатление, что это пластиковая игрушка.
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+**Стало**
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+Было
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4100/imdagger.4/0_18ae7_6f4e51f5_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/101095/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3700/imdagger.3/0_11b2e_cbcada7b_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/101095/

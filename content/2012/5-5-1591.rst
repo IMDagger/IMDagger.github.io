@@ -1,0 +1,27 @@
+Новый FFmpeg
+============
+:date: 2012-05-05 22:41:48
+:tags: blender, сборка, программирование, ffmpeg, компиляция
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1591
+
+Разобрался как в коде Blender 2.63 из trunk модифицировать ImBuf под
+новую версию FFmpeg из trunk. Ибо функция av\_set\_parameters уже давно
+устарела и была удалена. Теперь чтобы создать параметры и установить (а
+затем передать в запись заголовка) необходимо проделать шаги с
+использованием av\_dict\_set (данный пример для переменной типа int):
+
+    | из **source/blender/imbuf/intern/indexer.c**
+    | ...
+    | int ffmpeg\_quality;
+    | AVDictionary \*opts = NULL;
+    | uint8\_t buf[32];
+    | ...
+    | ffmpeg\_quality = (int)(1.0f + 30.0f \* (1.0f - (float)quality / 100.0f) + 0.5f);
+    | **snprintf(buf, sizeof(buf), “%d”, ffmpeg\_quality);**
+    | **av\_dict\_set**\ (&opts, “qmin”, buf, 0);
+    | **av\_dict\_set**\ (&opts, “qmax”, buf, 0);
+    | ...
+    | **avformat\_write\_header**\ (rv->of, **&opts**
+    | **av\_dict\_free**\ (&opts);

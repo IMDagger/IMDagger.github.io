@@ -1,0 +1,29 @@
+Срез
+====
+:date: 2011-05-01 11:53:47
+:tags: домик, жизнь, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1316
+
+Это просто пару рендеров до правки плана, т.к. я в нескольких местах
+ошибся, в одном сделал стены по 100, а в другом дверь не там прорезал.
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+|image2|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4513/imdagger.9/0_5a449_b0103a77_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/369737/
+.. |image1| image:: http://img-fotki.yandex.ru/get/5503/imdagger.9/0_5a44a_eca928b9_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/369738/
+.. |image2| image:: http://img-fotki.yandex.ru/get/5303/imdagger.9/0_5a44c_c802ebab_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/369740/

@@ -1,0 +1,12 @@
+Туториал
+========
+:date: 2010-07-11 18:36:54
+:tags: erlang, туториал, программирование
+:category: link
+:author: IMDagger
+:attached-url: http://www.tryerlang.org
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1022
+
+Забавно проходить туториал сразу в реальном времени. Эффективнее, чем
+просто читать книжку, но конечно же не замена.
+

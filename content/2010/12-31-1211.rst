@@ -1,0 +1,23 @@
+Всех с наступающим Новым Годом
+==============================
+:date: 2010-12-31 17:18:24
+:tags: праздник, новый, открытка, год
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1211
+
+В этот раз я был слишком загружен на работе, поэтому свою открытку
+замоделить не успел :-/ поздравляю всех готовой открыткой :)
+
+|С годом кролика!|
+
+|Яндекс.Открытки|
+
+Больше из `подборки открыток «Год кота или
+кролика» <http://cards.yandex.ru/theme.xml?tags=2206>`__ на
+`Яндекс.Открытках <http://cards.yandex.ru>`__
+
+.. |С годом кролика!| image:: http://cards2.yandex.net/get/5406/4990/lori-0001840601-ynd.jpg
+   :target: http://cards.yandex.ru/card.xml?crd=1&card_id=4990
+.. |Яндекс.Открытки| image:: http://cards.yandex.ru/i/ya-logo.gif
+   :target: http://cards.yandex.ru

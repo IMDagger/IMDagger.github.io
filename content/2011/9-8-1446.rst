@@ -1,0 +1,16 @@
+auto-complete
+=============
+:date: 2011-09-08 12:16:46
+:tags: emacs, автодополнение
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1446
+
+Попробую эту штучку, давно её видел, но как-то привык к простому
+дополнению по :code:`Alt+/` Выглядит прикольно.
+
+.. class:: text-center
+
+.. youtube:: rGVVnDxwJYE
+   :width: 425
+   :height: 350

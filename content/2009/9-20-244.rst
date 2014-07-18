@@ -1,0 +1,12 @@
+Spring
+======
+:date: 2009-09-20 15:07:50
+:tags: tomcat, java
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=244
+
+Мой ущербный мозг забыл, где находится пакет :code:`javax.servlet`. Я
+поискал быстренько в гугле, и он мне напомнил про каталог lib в моём
+apache-tomcat-6.0.20. Там лежал файл :underline:`servlet-api.jar`, который и
+поставлял необходимый функционал.

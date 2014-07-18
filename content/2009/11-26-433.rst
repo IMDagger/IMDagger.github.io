@@ -1,0 +1,24 @@
+Сани-сусани: сетка
+==================
+:date: 2009-11-26 19:12:04
+:tags: blender, сани
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=433
+
+Странно, что если я включаю **Subdivision** в LuxBlend’е для
+деревяшек, то зелёные (2 и 4-я планки) съезжают в центр. Хотя я для них
+применял :kbd:`Ctrl+A`. Нужно будет подумать, где я просчитался. Вот так
+выглядит сетка саней (выложу и поставлю рендериться в LuxRender, т.к.
+лениво в Blender Internal настраивать метал):
+
+.. class:: text-center
+
+|Санки|
+
+Потихоньку стал разбираться в LuxRender и осознавать, как его
+ускорить. Раньше мне казалось, что он работает медленно, но я понял:
+просто не умею его варить.
+
+.. |Санки| image:: http://img-fotki.yandex.ru/get/3900/imdagger.4/0_19664_997cb7f3_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/104036/

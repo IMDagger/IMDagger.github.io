@@ -1,0 +1,17 @@
+После работы
+============
+:date: 2011-02-23 20:07:08
+:tags: пейзаж, Я, работа, фото
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1244
+
+Вот такой пейзаж я наблюдаю каждый раз после работы, обычно где-то
+около 00:30-01:00 на троллейбусной остановке:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4403/imdagger.9/0_53579_7c72169c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/341369/

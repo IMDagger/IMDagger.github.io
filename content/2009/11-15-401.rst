@@ -1,0 +1,35 @@
+Вопросики
+=========
+:date: 2009-11-15 10:45:44
+:modified: 2014-07-14 04:24
+:tags: диплом, java, mssql, hibernate, буквы, кодировка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=401
+
+Вместо букв при выводе информации из базы данных отображались
+вопросики. Приложение у меня на Java, работает с базой данных через
+Hibernate, сама база крутится на MS SQL Server. Плюс само приложение я
+пишу и отлаживаю под Linux. Но кодировка в базе данных :code:`cp1251`, отчего у
+меня возникло немного проблем, т.к. в Java кодировка по умолчанию UTF-8.
+Вместо русских букв были одни вопросики, но поразмыслив я добавил в URL
+дополнительную информацию (конфигурация происходит через Spring
+посредством IoC):
+
+.. code-block:: xml
+
+    <bean id="dataSource" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource"
+        destroy-method="close">
+        ...
+        <property name="url" value="jdbc:jtds:sqlserver://dl-test:1030/dldb;charset=cp1251" />
+        ...
+    </bean>
+
+А ещё я заметил, что на JSP-странице я забыл тег с указанием
+кодировки вывода из Java, что и было ключевой проблемой:
+
+.. code-block:: jsp
+
+    <%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8" %>
+
+После этого русские буквы отобразились.

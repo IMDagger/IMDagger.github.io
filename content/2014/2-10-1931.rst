@@ -1,0 +1,12 @@
+Sentry для Scrapy
+=================
+:date: 2014-02-10 20:00:30
+:tags: sentry, логгирование, scrapy
+:category: link
+:author: IMDagger
+:attached-url: https://pypi.python.org/pypi/scrapy-sentry
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1931
+
+О, есть уже готовая связка для пауков на Scrapy с отправкой логов в
+Sentry.
+

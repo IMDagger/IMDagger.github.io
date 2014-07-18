@@ -1,0 +1,41 @@
+Проблемы при наследование
+=========================
+:date: 2010-01-17 17:57:24
+:tags: java, hibernate
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=603
+
+Сегодня утром я долго тупил над тем, почему у меня выпадает такое
+исключение при попытке получения данных. У меня есть две таблицы, каждую
+нужно проецировать на отдельный класс, но при этом у них должен быть
+общий предок, который спроецирован на UNION этих таблиц.
+
+.. code-block:: java
+
+    org.hibernate.WrongClassException: Object with id: 100105 was not of the
+                          specified subclass: users.User (Discriminator: pupil)
+     org.hibernate.loader.Loader.getInstanceClass(Loader.java:1477)
+     org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1308)
+     org.hibernate.loader.Loader.getRow(Loader.java:1230)
+    org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:603)
+     org.hibernate.loader.Loader.doQuery(Loader.java:724)
+    ...
+
+Я заглянул в исходники Hibenate и увидел, что оно ищет это название
+в списке уже зарегистрированных. Тогда я жадно набросился на
+документацию по EJB3 и нашёл аннотацию :code:`@DiscriminatorValue`, которое
+стоило применить к классам наследникам, в качестве параметра передаётся
+строка, которая является синонимом для определения класса.
+
+На этом мои приключение не закончились. Я стал писать HQL запрос,
+который пересекал базовый User класс с другим Subscriptions классом.
+Долго мучался с JOIN, но плюнул и сделал декартовым произведением. Чтобы
+User класс являлся UNION двух таблиц, т.е. таблиц своих потомков нужно
+применить такую стратегию: базовый User класс должен быть :code:`@Entity`, а
+стратегия выборки :code:`@Inheritance(strategy =
+InheritanceType.TABLE\_PER\_CLASS)`.
+
+После этого мои NativeSQL запросы заработали и смогли извлекать
+join-поля не ленивым способом, а так же заработал мой HQL, который
+выбирал пользователей по определённому критерию.

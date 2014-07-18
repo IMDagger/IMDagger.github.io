@@ -1,0 +1,32 @@
+Магия русалок
+=============
+:date: 2009-09-20 16:44:21
+:tags: java, spring
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=246
+
+Недавно начал настраивать Spring Framework 3 в связке с Apache
+Tomcat 6 и столкнулся с проблемой, что вроде все мэппинги правильно
+указал, а страница никак не открывается. И в логе видно предупреждение:
+:code:`[http-8080-1] WARN org.springframework.web.servlet.PageNotFound - No
+mapping found for HTTP request with URI [/dl/index] in DisptcherServlet
+with name ‘dl’`. Порыскав на просторах Великого и Могучего, я нашёл
+ответ на свой вопрос на
+`stackoverflow <http://stackoverflow.com/questions/1266303/no-mapping-found-for-http-request-with-uri-web-inf-pages-apiform-jsp>`__.
+Оказалось, что стоит сменить в моём **web.xml**:
+
+.. code-block:: xml
+
+   строки с:
+   <servlet-mapping>
+       <servlet-name>dl</servlet-name>
+       <url-pattern>/*<url-pattern>
+   </servlet-mapping>
+   на:
+   <servlet-mapping>
+       <servlet-name>dl</servlet-name>
+       <url-pattern>/<url-pattern>
+   </servlet-mapping>
+
+И ссылка http://localhost:8080/dl/index стала открываться ;).

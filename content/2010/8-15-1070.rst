@@ -1,0 +1,47 @@
+Apache и LDAP
+=============
+:date: 2010-08-15 17:11:48
+:tags: apache, работа, ldap, авторизация
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1070
+
+    Часть дня промучался с тем, что пытался сделать NTLM авторизацию для
+Apache. Попробовал mod\_ntlm, mod\_ntlm\_auth\_winbind, порпобовал
+версии с патчами mod\_ntlm (т.к. оригинальный слишком стар), но всё это
+не сильно помогло. Там какая-то проблема, что в запросе от Apache в
+user, password и domain значения NULL. Я не стал дальше мучаться, т.к.
+мне подходит вариант с авторизацией и через LDAP, благо AD на Samba4
+работает.
+
+ 
+
+    <Location ~ “/control/\*” >
+
+        AuthName “Auth to control center”
+
+        AuthType Basic
+
+        AuthBasicProvider ldap
+
+        AuthLDAPURL "ldap://**сервер**:389/OU=**Особая
+    группа**,OU=\ **ещё**,DC=GRL,DC=unibel,DC=by?\ **sAMAccountName**"
+
+        AuthzLDAPAuthoritative on
+
+        AuthLDAPBindDN "CN=**Специальный но простой
+    пользователь**,OU=\ **ещё**,OU=\ **ещё**,DC=grl,DC=unibel,DC=by"
+
+    |     AuthLDAPBindPassword **пароль**
+    |     Require valid-user
+    | </Location>
+
+ 
+
+    Снова меня подстерегали проблемы. Сначала я забыл ввести имя
+пользователя в кавычках, т.к. оно у меня содержало пробел. Затем я
+вспомнил, что нужно после сервер:389/ добавить узел, в котором будет
+произведёт поиск пользователя. потом я обнаружил, что нужно добавить
+sAMAccountName в категорию поиска, т.к. мне же хочется вводить логин в
+окошко, а не весь путь в LDAP дереве.
+

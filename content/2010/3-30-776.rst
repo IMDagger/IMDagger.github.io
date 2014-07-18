@@ -1,0 +1,20 @@
+Толстый эльф
+============
+:date: 2010-03-30 11:34:25
+:tags: blender, эльф, толстый, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=776
+
+Odin.13 одолжил ступни моему эльфу. Получился такой толстенький
+голый эльф :) Возможно это беременная эльфийка… Нужно будет сегодня
+поработать над глазами. т.к. я их вчера сделал на скорую руку. Добавка
+нескольких источников света заметно всё замедлило, т.к. кожа рендерится
+во много проходов с SSS.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3803/imdagger.6/0_295f3_9d98d7b6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/169459/

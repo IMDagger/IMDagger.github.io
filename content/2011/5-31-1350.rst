@@ -1,0 +1,24 @@
+Прилетело, посидело
+===================
+:date: 2011-05-31 20:40:21
+:tags: большой, залетел, живность, мотылёк, работа
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1350
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5908/imdagger.9/0_5daac_e52815ea_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/383660
+   :title: alim2084.jpg
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5304/imdagger.9/0_5daad_4269b182_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/383661
+   :title: Прилетело, посидело
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5906/imdagger.9/0_5daae_36a5fb39_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/383662
+   :title: Прилетело, посидело
+
+Опять большая живность сегодня залетела через открытое окно, ещё до
+этого жук большой залез. Чуть прогнал :) А то мне жалко смотреть как они
+в лампочку долбятся.
+

@@ -1,0 +1,21 @@
+Emacs и ссылки
+==============
+:date: 2009-08-22 17:10:02
+:tags: emacs, opera, web
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=157
+
+Сделал, чтобы открывался из Emacs не браузер **lynx** при :kbd:`M-x
+browse-url`, а мой браузер **Opera**. А остальные утилиты пусть всё же
+используют lynx и поэтому я не стал трогать переменную среды.
+
+
+.. code-block:: common-lisp
+
+      (setq browse-url-generic-program (executable-find "opera")
+              browse-url-browser-function 'browse-url-generic)
+
+А вообще на
+`EmacsWiki <http://www.emacswiki.org/cgi-bin/wiki/BrowseUrl>`__ всё
+хорошо расписано на английском :).

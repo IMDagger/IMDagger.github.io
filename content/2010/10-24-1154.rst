@@ -1,0 +1,42 @@
+Каша собирается назад в кости
+=============================
+:date: 2010-10-24 19:07:41
+:tags: blender, кинематика, риггинг, кость, инверсная, Pole, IK, человек, Floor, скелет
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1154
+
+Каша в моей голове стала «крепчать» :). Я понял как заставить
+приседать скелет. Нужно было лишь сделать ступни Target для ног в IK
+Solver, а ещё добавить объект для Pole в том же IK. Это позволило
+коленям смотреть в определённом направлении и не давать ногам гнутся
+лишь бы куда. Прочитал вот этот старый
+`анонс <http://www.blender.org/development/release-logs/blender-246/inverse-kinematics/>`__
+ещё для Blender 2.46 про новую фичу в инверсной кинематике. Теперь
+достаточно потянуть за кость спины и Кожеголовый приседает, правда без
+ограничителя Floor не обошлось (не забываем, что он проверяет не хвост
+кости, а голову):
+
+.. class:: text-center
+
+|image0|
+
+Вот пример уже с мешем (позу не изменял):
+
+.. class:: text-center
+
+|image1|
+
+А вот для голени прописан ориентир полена, чтобы вся цепь гнулась в
+нужном направлении:
+
+.. class:: text-center
+
+|image2|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4606/imdagger.8/0_44bf0_c61b0617_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/281584/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4509/imdagger.8/0_44bf1_26607599_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/281585/
+.. |image2| image:: http://img-fotki.yandex.ru/get/4603/imdagger.8/0_44bf3_195c8ac1_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/281587/

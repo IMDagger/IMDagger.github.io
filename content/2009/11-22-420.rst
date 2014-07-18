@@ -1,0 +1,35 @@
+Мэппинг
+=======
+:date: 2009-11-22 17:46:57
+:tags: диплом, java, spring, web
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=420
+
+Стал добавлять ссылки на картинки и CSS в HTML, т.е. различные
+статические данные в отличие от JSP. И вдруг обнаружил, что они не хотят
+отображаться. Почесав затылок вспомнил, что в web.xml прописан мэппинг
+на сервлет от Spring.
+
+    | <servlet-mapping>
+    |     <servlet-name>dl</servlet-name>
+    |     **<url-pattern>/<url-pattern>**
+    | </servlet-mapping>
+
+Получалось, что запрос http://localhost:8080/dl/results?obid=11038,
+обрабатывался сервлетом и передавался контроллеру, который
+зарегистрирован как results. Изображения я положил в каталог images
+внутри dl — директории приложения, но запрос
+http://localhost:8080/dl/images/dlb.gif ругался 404. Тогда меня
+посетила идея вынести скрипты в отдельный «виртуальный каталог» scripts:
+
+    | <servlet-mapping>
+    |     <servlet-name>dl</servlet-name>
+    |     **<url-pattern>/scripts/\*<url-pattern>**
+    | </servlet-mapping>
+
+Затем поправил в описании бина SimpleUrlHandlerMapping свойство
+mappings, изменил **results** на **/results**. После этого все каталоги
+в директории проекта (dl) стали «видны». Заодно сегодня успел пересадить
+стили, вынести в отдельный файл и использовать в шаблоне, таблица
+результатов стала человечнее.

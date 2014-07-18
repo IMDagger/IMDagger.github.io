@@ -1,0 +1,71 @@
+Разреженная таблица
+===================
+:date: 2009-11-07 10:54:36
+:tags: диплом, javascript, таблица
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=382
+
+Возможно это какой-то велосипед, но я ничего подходящего в интернете
+не нашёл. У меня есть очень большая таблица, но она в некоторых местах
+сильно разрежена. Из-за этого веб-сервер передаёт множество
+:code:`<td>&nbsp;</td>` для того, чтобы ячейки были пустыми. Я решил, что можно
+вместо целого ряда таких пустых ячеек передавать :code:`<td size="число" />`, а
+затем мой JavaScript на клиентской стороне расширит их до группы
+«настоящих ячеек». Черновой скрипт, который ищет в DOM узел с
+идентификатором **results**, таблица которую нужно перестроить:
+
+.. code-block:: js
+
+   function expander() {
+       var table = document.getElementById("results");
+
+       var rows = table.rows;
+
+       for (var i = 0; i < rows.length; i++) {
+           var row = rows[i];
+           var cells = row.cells;
+
+           for (var j = 0; j < cells.length; j++) {
+               var cell = cells[j];
+               var size = cell.getAttribute("size");
+
+               if (size) {
+                   var mustAdd = parseInt(size);
+
+                   while (mustAdd > 0) {
+                       var emptyCell = document.createElement("td");
+                       emptyCell.innerHTML = "&nbsp;";
+
+                       row.insertBefore(emptyCell, cell);
+                       mustAdd--;
+                   }
+
+                   row.removeChild(cell);
+               }
+           }
+       }
+   }
+
+
+
+И простейшая таблица в 6 колонок и 2 ряда:
+
+.. code-block:: html
+
+    <body onload="javascript:expander();">
+    <table id="results" border="1">
+    <tr><td>Text</td><td size="4"/><td>Text2</td></tr>
+    <tr><td size="2"/><td>Text</td><td>Text2</td><td size="2"/></tr>
+    </table>
+    </body>
+
+Была расширена при помощи вставки insertBefore пустых ячеек до
+ячейки :code:`<td size="число" />`, а затем удаления «расширяемой» ячейки из
+ряда.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3903/imdagger.4/0_181b4_fb5c8ab2_L

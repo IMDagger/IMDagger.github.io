@@ -1,0 +1,16 @@
+Мысли в слух
+============
+:date: 2009-10-20 18:55:14
+:tags: Я, заметка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=357
+
+**На заметку себе:**
+
+Стоит ввести интерфейс IVersioned с методом getVersion(), т.к.
+сейчас и Cell и SubCell, BaseSubCell, Row, RowsTable данный метод
+реализуют, но как бы ничего общего не имеют. Из-за отсутствия такого
+интерфейса существует проблема, что при наличии CellDao и CellService
+класс Row всё же завязан чуть-чуть на методе класса Cell, что является
+не очень хорошей практикой.

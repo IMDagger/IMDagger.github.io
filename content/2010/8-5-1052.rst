@@ -1,0 +1,14 @@
+Возможно нас купят
+==================
+:date: 2010-08-05 20:16:51
+:tags: Я, google, slide, работа, python
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1052
+
+    Не знаю настоящая
+`новость <http://techcrunch.com/2010/08/04/google-buys-slide-for-182-million-getting-more-serious-about-social-games/>`__
+или слухи. Надеюсь, что поглощение нас компанией Google не отразится
+отрицательно на Slide. Хотя, думаю как простого программера меня не
+сильно заденет.
+

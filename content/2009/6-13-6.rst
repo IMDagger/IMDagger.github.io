@@ -1,0 +1,15 @@
+Вот
+===
+:date: 2009-06-13 16:43:21
+:modified: 2014-04-19 11:58:25
+:tags: 
+:category: description
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=6
+
+Попробую переодически писать немного про blender и python, может силы
+воли хватит написать что-нибудь интересное.
+
+Когда-то даже работал контрактором на **Google** в подразделении **Slide
+Inc**.
+

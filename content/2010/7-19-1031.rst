@@ -1,0 +1,19 @@
+Я снова дома
+============
+:date: 2010-07-19 19:53:35
+:tags: Я, Москва, площадь
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1031
+
+.. class:: text-center
+
+|На Красной площади|
+
+.. class:: text-center
+
+`На Красной площади`_
+
+.. |На Красной площади| image:: http://img-fotki.yandex.ru/get/5400/imdagger.7/0_39728_85aae32d_L
+   :target: `На Красной площади`_
+.. _`На Красной площади`: http://fotki.yandex.ru/users/imdagger/view/235304/

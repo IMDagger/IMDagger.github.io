@@ -1,0 +1,37 @@
+Парсер
+======
+:date: 2009-07-19 15:52:13
+:tags: python, xml, ElementTree
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=106
+
+Пишу парсер диалогов на Python. Выбирал между SAX2 и ElementTree
+модулями, всё таки ElementTree мне больше подходит, хотя ИМХО он не
+поддерживает сущности, которые мне будут нужны. Но не беда, выкручусь,
+т.к. при работе с SAX2 у меня получается вообще не код, а спагетти, т.к.
+мне нужно обязательно состояние. Да и с ElementTree можно делать всякие
+приятные штуки, т.к. узлы одновременно и списки и словари:
+
+.. code-block:: pycon
+
+    >>> from xml.etree.ElementTree import parse
+    >>> document = parse('test.xml')
+    >>> dialog_root = document.getroot()
+    >>> print dialog_root[0]
+    <Element define at 403554484c>
+    >>> print dialog_root.attrib
+    {'{http://www.w3.org/2001/XMLSchema-instance}noNamespaceSchemaLocation': 'dialog.xsd'}
+    >>> print dialog_root[0].get('pattern')
+    Test '${name}'
+
+А test.xml выглядит следующим образом:
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <dialog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation=“dialog.xsd”>
+      <define pattern="Test '${name}'" name="name_mutable" />
+      <filter name="test_filt" function="test_filt_f" from="filtmodule" />
+    …

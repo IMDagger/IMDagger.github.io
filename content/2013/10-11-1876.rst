@@ -1,0 +1,25 @@
+Полёт тела вдоль двух окружностей и отрезка
+===========================================
+:date: 2013-10-11 23:27:54
+:tags: программирование, окружность, вычисление, отрезок, путь, racket, полёт
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1876
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9516/22199227.b/0_943a8_5fee51e1_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/607144
+   :title: [0;0],110,[7;7],-30.png
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9349/22199227.b/0_943a9_6db0a451_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/607145
+   :title: [0;0],240,[3;-5],260.png
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6703/22199227.b/0_943aa_9d7878a1_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/607146
+   :title: [0;0],240,[9;-5],260.png
+
+Подправил ошибку в инвертировании диапазона в ranges.rkt. Теперь
+вроде полёт стал вычисляться без проблем, по крайней мере для всех
+комбинаций от 0° до 360° алгоритм находит хотя бы один путь (я проверил
+это экспериментально). Использовать стандартный plot-file с parametric
+рендером очень приятно :).

@@ -1,0 +1,17 @@
+Обои рабочего стола
+===================
+:date: 2009-06-15 09:43:48
+:tags: blender, обои, slackware, linux, wallpaper
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=13
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3607/imdagger.0/0_c583_20453d28_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/50563
+   :title: Slackware.png
+
+Делал давно, тогда почти ничего не умел, это одна из самых первых
+черновых работ. Использую как обою рабочего стола. Может кому
+понравится, сильно не пинать за качество. Есть идея нарисовать новую, но
+уже не такую.
+

@@ -1,0 +1,19 @@
+Птичка
+======
+:date: 2010-04-26 09:56:38
+:tags: природа, птицы, дерево
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=851
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4214/imdagger.6/0_2db85_2eac3213_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/187269
+   :title: ALIM1417.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/10/imdagger.6/0_2db88_1f8082ab_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/187272
+   :title: Заголовок
+
+Поселилась маленькая птичка у меня на втором участке. Скоро посмотрю
+птенчиков :) если не прозеваю.
+

@@ -1,0 +1,24 @@
+Текст и узлы
+============
+:date: 2009-07-18 10:31:40
+:tags: xml schema, xsd
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=105
+
+Нашёл, как сделать
+`так <http://www.w3schools.com/schema/schema_complex_mixed.asp>`__,
+чтобы внутри узла можно было писать текст вперемешку с дочерними узлами.
+Оказалось, что достаточно к *xsd:complexType* добавить параметр *mixed*
+равный *true*.
+
+.. code-block:: xml
+
+   <xsd:complexType name="AnswerTextType" mixed="true">
+     <xsd:sequence>
+       <xsd:choice minOccurs="0" maxOccurs="unbounded">
+         <xsd:element name="use" type="UseStringType" />
+         <xsd:element name="use-file" type="UseFileType" />
+       </xsd:choice>
+     </xsd:sequence>
+   </xsd:complexType>

@@ -1,0 +1,15 @@
+
+
+:date: 2013-05-17 23:11:07
+:tags: солнце, чай, свет, лимон, ложка
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1797
+:slug: urn:ya.ru:post/22199227/1797
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6802/22199227.b/0_8cec3_a7c8e5be_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/577219
+   :title: ALIM3027.JPG
+
+
+

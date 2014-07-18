@@ -1,0 +1,24 @@
+Кнопочки
+========
+:date: 2009-08-06 17:07:43
+:tags: blender, проект, программирование, triad_vesuvius
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=128
+
+Добавил кнопочки для редактирования воинов, установки диалогов,
+удаления. До этого эти операции производились при помощи нажатия
+некоторых комбинаций клавиш. А ещё есть такая полезная штука, как
+Interactive Python Console в Blender (**Scripts Window → System →
+Interactive Python Console**). :del:`Всё время забываю, что в HTML стрелочка
+вправо — &rarr; а не &rarrow;` При помощи этой консоли можно отладить
+некоторые участки скриптов. Чтобы не отвекало и не отбирало ресурсы всё
+лишее было убрано (т.е. карта и воины), вместо этого кубики и часть
+кары:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3608/imdagger.3/0_10720_8e217a0a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/67360/

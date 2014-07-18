@@ -1,0 +1,24 @@
+Я компилирую еду
+================
+:date: 2009-10-03 06:03:27
+:tags: яблочный, пирог, еда, кухня
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=277
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3709/imdagger.3/0_153fa_421f48a4_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/87034
+   :title: Компилирую еду
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3714/imdagger.3/0_153fb_4929183b_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/87035
+   :title: Компилирую еду
+
+Вот приготовил яблочный пирог по рецепту. Получилось вкусно, только
+пришлось применить не 3 стакана муки (как в рецепте), а 5 стаканов,
+наверное, в рецепте не гранёными меряли :).
+Заметка:
+В следующий раз отжать сок из яблок, т.к. они пустили сок на противень,
+и он потом грелся и булькал, а в конце превратился в нечто среднее между
+джемом и мармеладом :P.
+

@@ -1,0 +1,11 @@
+MAC фильтр
+==========
+:date: 2011-10-12 09:57:58
+:tags: arp, фильтрация, работа, squid
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1472
+
+Нужно будет попробовать собрать новый SQUID с опцией
+--enable-arp-acl, чтобы фильтровать на нём не по статическим IP-адресам,
+а по MAC-адресам некоторые особые машины.

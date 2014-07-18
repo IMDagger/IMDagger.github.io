@@ -1,0 +1,18 @@
+Жук
+===
+:date: 2009-07-10 10:15:02
+:tags: жук-носорог, жук
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=90
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3510/imdagger.2/0_e2d1_da547556_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/58065
+   :title: Жук-носорог
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3508/imdagger.2/0_e2d2_aba99ed2_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/58066
+   :title: Жук-носорог
+
+Это жук-носорог, он живой.
+

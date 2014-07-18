@@ -1,0 +1,26 @@
+Детский телефон: возвращение
+============================
+:date: 2009-11-22 09:18:44
+:tags: blender, luxrender, телефончик
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=419
+
+За ночь рендеринга шум потихонечку стал исчезать. Заметил странное
+поведение экспортёра в Luxrender. Если я включаю subdivide для объекта,
+то он сбрасывается в начальное положение, даже если я применял :kbd:`Ctrl+A` …
+хотя … видимо нужно было применить **Visual Transform to Objects
+Loc/Scale/Rot**, а я только Scale и Rotation применил. Когда буду
+добавлять текстуры кнопок и небольшую картинку на панель, то испытаю
+этот вариант. Добавил выступ под трубкой телефона, поправил «промахи»:
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+«Телефон с апгрейдом :)»
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3903/imdagger.4/0_1922e_5142afd8_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/102958/

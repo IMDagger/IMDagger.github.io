@@ -1,0 +1,27 @@
+Добавлено описание по некромантам
+=================================
+:date: 2011-05-22 19:03:22
+:tags: проект, документация, некромант, некроманхер, дизайн, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1337
+
+В
+`imdagger@yandex.ru-20110522183215-lp3is0tp8cmpgl89 <http://bazaar.launchpad.net/~sim-game-group/+junk/main/revision/211>`__
+ревизии добавлено описании некроманхеров. Ранее *прескульпт* уже делал  
+(описания с примерами ещё тогда не было) обычного некроманхера для
+главного персонажа игрока. Те примеры ,что я добавил учитывают уже
+сделанные наработки в прескульпте и не расходятся с ними в идее.
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+|image1|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5706/imdagger.9/0_5cfa7_429beda7_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/380839/
+.. |image1| image:: http://img-fotki.yandex.ru/get/5906/imdagger.9/0_5cfa8_dd7bde4c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/380840/

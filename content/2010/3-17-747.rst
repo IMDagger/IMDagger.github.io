@@ -1,0 +1,89 @@
+Размял мозги
+============
+:date: 2010-03-17 16:04:15
+:tags: головоломка, отдых, кубики, сома
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=747
+
+Для разминки мозга решил пару головоломок класса кубики сома. Цитата
+из Википедии про данную головоломку:
+
+    **Кубики сома** (англ. Soma cube) — это головоломка, являющаяся по
+    сути трёхмерным аналогом китайской головоломки пентамино. Придумал
+    кубики сома **Пит Хейн** во время лекции известного учёного
+    **Вернера Гейзенберга** по квантовой механике.
+    Набор состоит из 7 фигур: из них одна фигура состоит из трёх
+    кубиков, а остальные из четырёх кубиков. Из всех 7 фигур можно
+    сложить один большой куб размером 3x3x3 кубика.
+
+В Blender пользователь форума belnder3d.org.ua *Remeslennik* сделал
+все необходимые кубики. Поэтому мне не пришлось самому делать :) мне бы
+было слишком лениво делать кубики для головоломки, чтобы самому себе
+встряхнуть мозг.
+
+.. class:: text-center
+
+|image0|
+
+Дан замок, нужно используя все фигуры построить его:
+
+.. class:: text-center
+
+|image1|
+
+Моё решение:
+
+    Легко догадаться, что 3 детали из набора никак не уложить в
+    плоскость, поэтому их нужно в углы загнать, ну и помнить, что
+    вращать можно по всем осям, а то я так затормозил, как L повернуть.
+
+.. class:: text-center
+
+|image2|
+
+Головоломка «последовательность 3-4-5» (я её так прозвал) и моё
+решение данной головоломки:
+
+.. class:: text-center
+
+|image3|
+
+.. class:: text-center
+
+|image4|
+
+    Вторая головоломка тоже простая:
+    Фигуры всего три, выбросить стоит те, которые не ложатся в
+    плоскость: остаются только 4 фигуры: 3-и по 4 клетки и 1-а по 3. Но
+    в задании 12 кубиков, и сложить их нужно тремя фигурами, простая
+    математика подсказывает, что нужно выбросить уголок из трёх кубиков
+    и далее быстренько составить результат: 3-4-5.
+
+Немного посложнее головоломки из книги со всеми кубиками:
+
+.. class:: text-center
+
+|image5|
+
+Я решил составить змейку (этот вариант я рендерил с использованием
+скрипта Wired Overlay, поэтому видна сетка кубиков):
+
+.. class:: text-center
+
+|image6|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3811/imdagger.6/0_2724c_c494d550_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/160332/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3911/imdagger.6/0_27241_dc0521e3_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/160321/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3807/imdagger.6/0_27242_3d7908e4_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/160322/
+.. |image3| image:: http://img-fotki.yandex.ru/get/3910/imdagger.6/0_27244_260c538e_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/160324/
+.. |image4| image:: http://img-fotki.yandex.ru/get/3812/imdagger.6/0_27245_87e5dde8_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/160325/
+.. |image5| image:: http://img-fotki.yandex.ru/get/3807/imdagger.6/0_27248_20f6292c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/160328/
+.. |image6| image:: http://img-fotki.yandex.ru/get/3812/imdagger.6/0_27249_8c219779_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/160329/

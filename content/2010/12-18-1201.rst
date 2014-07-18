@@ -1,0 +1,18 @@
+Transmission uptime
+===================
+:date: 2010-12-18 17:09:42
+:tags: часы, uptime, 1285, transmission
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1201
+
+1285 часов **процессорного** времени! И это всё transmission —
+торрент демон. Всем радует, только на больших файлах долго хеши
+пересчитывает.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5700/imdagger.9/0_4bf7a_cb513039_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/311162/

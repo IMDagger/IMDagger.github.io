@@ -1,0 +1,12 @@
+
+
+:date: 2013-07-16 00:28:58
+:tags: apache, запись, права, корень
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1833
+:slug: urn:ya.ru:post/22199227/1833
+
+    Проверил почти 500 разнородных сайтов с Apache и PHP, нигде нет
+доступа на запись в корень для веб сервера. Это хорошо…
+

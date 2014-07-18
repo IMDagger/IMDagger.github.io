@@ -1,0 +1,21 @@
+Небольшой секрет
+================
+:date: 2010-09-19 16:35:35
+:tags: blender, изображение, риггинг
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1120
+
+Сделал одно изображение, но пока выкладывать не буду, выложу через
+несколько дней. Вот один скрин из процесса создания:
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+Остальное потом… :)
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5201/imdagger.8/0_41003_c8614fcb_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/266243/

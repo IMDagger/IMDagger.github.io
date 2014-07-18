@@ -1,0 +1,26 @@
+Папины арбузы
+=============
+:date: 2011-08-10 10:23:50
+:tags: выросло, отец, бахча, арбуз
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1394
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4410/22199227.a/0_629b7_ad4a4638_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/403895
+   :title: Арбуз
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5306/22199227.a/0_629b8_174a4cf7_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/403896
+   :title: Арбузы с другой стороны
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5306/22199227.a/0_629b9_fbef79b7_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/403897
+   :title: Арбуз
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5012/22199227.a/0_629ba_1cd21914_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/403898
+   :title: Бахча
+
+Мой папа садовод
+

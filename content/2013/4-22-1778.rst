@@ -1,0 +1,13 @@
+ICFP Programming Contest 2013
+=============================
+:date: 2013-04-22 22:40:39
+:tags: соревнование, радость, 2013, программирование, icfpc
+:category: link
+:author: IMDagger
+:attached-url: http://research.microsoft.com/en-us/events/icfpcontest2013/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1778
+
+    Если сайт Microsoft Research не обманывает, то соревнование будет с
+8 августа (видимо в ночь с 8 на 9, т.к. соревнование всегда проходит 3
+дня: пт, сб, вс) по 11 августа.
+

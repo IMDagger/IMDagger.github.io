@@ -1,0 +1,20 @@
+Мегаулитко
+==========
+:date: 2009-08-13 13:30:47
+:tags: улитка
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=138
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3613/imdagger.3/0_10d92_23aff49d_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/69010
+   :title: Улитка
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3614/imdagger.3/0_10d93_a0d4992b_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/69011
+   :title: Улитка II
+
+Найдена была большущая улитка. Никого не трогала, :) ползла себе
+спокойно, решила попозировать. Эх.. люблю я этих червячков.
+
+P.S. Знаю, что горизонт завален :).

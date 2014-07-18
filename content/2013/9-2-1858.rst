@@ -1,0 +1,20 @@
+Пауки возвращаются
+==================
+:date: 2013-09-02 14:02:03
+:modified: 2013-09-02 14:02:56
+:tags: арахниды, природа, крестовик, паук, деревня
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1858
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6715/22199227.b/0_91e66_f605a3c5_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/597606
+   :title: Пауки возвращаются
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6718/22199227.b/0_91e67_d49d7d64_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/597607
+   :title: Пауки возвращаются
+
+    В добавок к паукам-осам вернулись в деревне на наш участок старые
+соседи пауки-крестовики.
+

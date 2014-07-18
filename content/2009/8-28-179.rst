@@ -1,0 +1,25 @@
+Камасутра на Python
+===================
+:date: 2009-08-28 17:21:04
+:tags: python, камасутра
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=179
+
+Воспалённый больной мозг придумал начало Камасутры для программиста на
+Python:
+
+    | >>> **oo** = "**(.)**\ ", "\ **(.)**"
+    | >>> def touch\_by\_hands(left\_right):
+    | . . .      **(o)** = 'it' is True
+    | . . .      for nipple in [left\_right][**(o)**:**(o)**]:
+    | . . .          gently\_bite(nipple)
+    | >>> touch\_by\_hands(\ **oo**)
+    | >>> **Y** = **"censored"**
+    | >>> dir(\ **(Y)**)
+    | ['join', 'strip', 'isspace', 'zfill']
+    | >>> def enter\_to\ **(\_)**:
+    | . . .       her = **{\_:\_}**
+    | . . .       her.get('for pleasure')
+    | >>> **\_**, **\_** = **"buttocks"**, **2**
+    | >>> enter\_to\ **(\_\*\_)** 

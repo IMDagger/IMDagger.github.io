@@ -1,0 +1,38 @@
+Запуск celery для нескольких очередей
+=====================================
+:date: 2013-03-01 00:57:10
+:modified: 2013-03-01 00:57:59
+:tags: Celery, удобство, запуск, один, конкуренция, очереди
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1747
+
+Оказывается можно запустить удобным способом различные celery узлы
+всего одной командой и с указанием очередей и конкуренции воркеров для
+этой очереди:
+
+    | celeryd\_multi start **global** **single** -Q:**global** default
+      -Q:**single** import -c:**single** 1 --loglevel=INFO
+      --pidfile=/var/run/celery/${USER}-%n.pid
+      --logfile=/var/log/celery/${USER}-%n.log
+
+    | и вариант для Django:
+
+    | **./manage.py** celeryd\_multi start global single -Q:global default
+      -Q:single import -c:single 1 --loglevel=INFO
+      --pidfile=/var/run/celery/${USER}-%n.pid
+      --logfile=/var/log/celery/${USER}-%n.log
+
+start global single указывает, что мне нужны два узла Celery с
+именами *global* и *single* (Celery сам добавит доменную часть, эти
+имена лишь поддомены). Затем *-Q:global default* указывает, что global
+узел будет обрабатывать все события по умолчанию (т.е. для которых не
+была указана очередь явно). А вот для узла *single* прописано *-Q:single
+import -c:single 1*, и это значит, что очередь будет для него
+специфическая (у меня она называется *import*, но можно любое имя
+использовать) и что самое важное: уровень конкуренции для этого узла
+всего 1, т.е. никакие 2 комманды не будут выполняться параллельно, что
+мне и требовалось для заданий импорта в базу данных.
+
+    Всё честно взято и адаптировано под мои нужды
+`отсюда <http://stackoverflow.com/a/5477095>`__.

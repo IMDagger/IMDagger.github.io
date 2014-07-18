@@ -1,0 +1,26 @@
+Богомол
+=======
+:date: 2010-08-17 08:08:39
+:tags: насекомое, богомол
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1073
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4804/imdagger.7/0_3c8e4_573bf0d3_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/248036
+   :title: alim1744.jpg
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5404/imdagger.7/0_3c8e5_e88bf06f_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/248037
+   :title: Заголовок
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5408/imdagger.7/0_3c8e6_7bbb2b02_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/248038
+   :title: Заголовок
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5407/imdagger.7/0_3c8e7_7aeb2d0b_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/248039
+   :title: Заголовок
+
+Обожаю всех животинок на Земле!
+

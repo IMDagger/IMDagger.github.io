@@ -1,0 +1,23 @@
+
+
+:date: 2009-06-30 08:01:41
+:tags:
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=65
+:slug: urn:ya.ru:post/22199227/65
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3501/imdagger.1/0_d630_3a5febd4_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/54832
+   :title: s1.jpg
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3507/imdagger.1/0_d631_e6d85165_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/54833
+   :title: s2.jpg
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3606/imdagger.1/0_d632_d5149d6_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/54834
+   :title: s3.jpg
+
+Вот, что-то типа такого… это я сделал при помощи :kbd:`Alt+D`. Я правильно
+понял, это нужно ?

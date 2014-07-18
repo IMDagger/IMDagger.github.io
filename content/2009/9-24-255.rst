@@ -1,0 +1,28 @@
+Пусть земля будет пухом
+=======================
+:date: 2009-09-24 11:52:35
+:tags: пожар, винчестер
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=255
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3804/imdagger.3/0_14731_11fe5928_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/83761
+   :title: Пусть земля будет пухом
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3806/imdagger.3/0_14732_ac9656b_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/83762
+   :title: Пусть земля будет пухом
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3714/imdagger.3/0_14733_ed6c586a_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/83763
+   :title: Пусть земля будет пухом
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3709/imdagger.3/0_14734_8f97da7e_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/83764
+   :title: Пусть земля будет пухом
+
+Покойся с миром славный сын из рода Samsung, пусть земля будет тебе
+пухом. Твои 80Gb принесли много радости и счастья, тебя и твоих битов
+нам ничто не заменит…
+

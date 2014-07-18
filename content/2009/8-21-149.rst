@@ -1,0 +1,34 @@
+Emacs и Jabber
+==============
+:date: 2009-08-21 17:33:15
+:tags: jabber, emacs
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=149
+
+Почти доделал поддержку Jabber в Emacs путём тюнинга jabber.el.
+Теперь иконка моргает, когда пришло новое сообщение, **xosd** напоминает
+сообщением на экране. Заодно я запустил **Emacs** в **--daemon** режиме,
+что позволило оставлять соединения даже после закрытия всех клиентов
+Emacs.
+
+Пришлось кое-что добавить, чтобы сообщение **xosd** появлялось
+только, если я не общаюсь на данный момент с этим человеком. А то
+обработчик вызывался на каждое событие даже тогда, когда я уже в этом
+буффере. Пришлось сменить обработчик на такой:
+
+.. code-block:: cl
+
+    (defun my-show-notification (from buffer text proposed-alert)
+      (when (not (equal (get-buffer-window buffer 'visible)
+                          (selected-window)))
+         (jabber-message-osd from buffer text proposed-alert)
+         (my-tray-icon-blink)))
+
+    (add-hook 'jabber-alert-message-hooks
+                    'my-show-notification)
+
+Функция :code:`my-tray-icon-blink` вызывает мерциние иконки, чтобы я
+обратил внимание, а то я бывает, когда не пишу код, а страдаю ерундой,
+то могу не обратить внимание на сообщение (а оно может быть для меня
+очень срочным).

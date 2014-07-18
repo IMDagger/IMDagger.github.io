@@ -1,0 +1,176 @@
+МаТан
+=====
+:date: 2010-09-21 20:14:13
+:tags: blender, радость, изображение, МаТан
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1124
+
+Мои поздравления :) Я сделал изображение и чашку с ним.
+Это изображение новой идеи для логотипа группы МаТан. Чашечку я не успел
+зафоткать, но вот картинка:
+
+.. class:: text-center
+
+|image0|
+
+Немного о процессе создания (просто изображения):
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+|image2|
+
+.. class:: text-center
+
+Пианино без модификаторов
+
+.. class:: text-center
+
+|image3|
+
+.. class:: text-center
+
+|image4|
+
+.. class:: text-center
+
+|image5|
+
+.. class:: text-center
+
+|image6|
+
+.. class:: text-center
+
+Пробные рендеры
+
+.. class:: text-center
+
+|image7|
+
+.. class:: text-center
+
+|image8|
+
+.. class:: text-center
+
+|image9|
+
+.. class:: text-center
+
+|image10|
+
+.. class:: text-center
+
+С микрофоном
+
+.. class:: text-center
+
+|image11|
+
+.. class:: text-center
+
+|image12|
+
+.. class:: text-center
+
+|image13|
+
+.. class:: text-center
+
+А вот так делал туфельки
+
+.. class:: text-center
+
+|image14|
+
+.. class:: text-center
+
+|image15|
+
+.. class:: text-center
+
+|image16|
+
+.. class:: text-center
+
+|image17|
+
+.. class:: text-center
+
+|image18|
+
+.. class:: text-center
+
+Каблучки доделал можно и риггить
+
+.. class:: text-center
+
+|image19|
+
+.. class:: text-center
+
+|image20|
+
+.. class:: text-center
+
+Добавлены скелеты, сделал риггинг
+
+.. class:: text-center
+
+|image21|
+
+.. class:: text-center
+
+|image22|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4603/imdagger.8/0_41507_2a74b2a7_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267527/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4505/imdagger.8/0_41508_1af44343_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267528/
+.. |image2| image:: http://img-fotki.yandex.ru/get/4601/imdagger.8/0_41509_114635bc_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267529/
+.. |image3| image:: http://img-fotki.yandex.ru/get/4508/imdagger.8/0_4150a_26dbc116_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267530/
+.. |image4| image:: http://img-fotki.yandex.ru/get/4604/imdagger.8/0_4150b_81d7469f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267531/
+.. |image5| image:: http://img-fotki.yandex.ru/get/4603/imdagger.8/0_4150c_cbdb7b3_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267532/
+.. |image6| image:: http://img-fotki.yandex.ru/get/4604/imdagger.8/0_4150d_df582009_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267533/
+.. |image7| image:: http://img-fotki.yandex.ru/get/4601/imdagger.8/0_4150e_561e69e7_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267534/
+.. |image8| image:: http://img-fotki.yandex.ru/get/4609/imdagger.8/0_4150f_12866170_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267535/
+.. |image9| image:: http://img-fotki.yandex.ru/get/5200/imdagger.8/0_41510_b2321d9d_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267536/
+.. |image10| image:: http://img-fotki.yandex.ru/get/4605/imdagger.8/0_41511_c6312c55_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267537/
+.. |image11| image:: http://img-fotki.yandex.ru/get/4605/imdagger.8/0_41512_8770feca_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267538/
+.. |image12| image:: http://img-fotki.yandex.ru/get/5203/imdagger.8/0_41513_d7c7e748_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267539/
+.. |image13| image:: http://img-fotki.yandex.ru/get/4505/imdagger.8/0_41514_80f15aa_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267540/
+.. |image14| image:: http://img-fotki.yandex.ru/get/4603/imdagger.8/0_41519_fadd0749_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267545/
+.. |image15| image:: http://img-fotki.yandex.ru/get/5205/imdagger.8/0_4151a_6b97aeb0_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267546/
+.. |image16| image:: http://img-fotki.yandex.ru/get/5205/imdagger.8/0_41526_95656f29_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267558/
+.. |image17| image:: http://img-fotki.yandex.ru/get/4506/imdagger.8/0_41528_72d95d50_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267560/
+.. |image18| image:: http://img-fotki.yandex.ru/get/4604/imdagger.8/0_41529_a196b754_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267561/
+.. |image19| image:: http://img-fotki.yandex.ru/get/4508/imdagger.8/0_4152a_13f23e43_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267562/
+.. |image20| image:: http://img-fotki.yandex.ru/get/4604/imdagger.8/0_4152c_7904ae_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267564/
+.. |image21| image:: http://img-fotki.yandex.ru/get/5202/imdagger.8/0_4152d_d83ccb8e_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267565/
+.. |image22| image:: http://img-fotki.yandex.ru/get/4609/imdagger.8/0_4152e_b8a1ccc2_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/267566/

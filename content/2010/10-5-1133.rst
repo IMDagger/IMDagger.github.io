@@ -1,0 +1,18 @@
+Диалог бананов
+==============
+:date: 2010-10-05 19:44:47
+:tags: работа, коллекции
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1133
+
+Нужно за сегодня успеть перенести похожий диалог на MySpace SPPRanch
+с Facebook SPPRanch, только весь код придётся переделать, т.к. Facebook
+не OpenSocial. Хочу машину времени :(
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4508/imdagger.8/0_43133_4147db03_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/274739/

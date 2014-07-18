@@ -1,0 +1,25 @@
+
+
+:date: 2012-08-21 22:15:51
+:tags: Минск, нетбук, ремонт
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1666
+:slug: urn:ya.ru:post/22199227/1666
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6604/22199227.a/0_7c4aa_e9e40408_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/509098
+   :title: ALIM2424.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6408/22199227.a/0_7c4ab_3c879561_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/509099
+   :title: ALIM2425.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6408/22199227.a/0_7c4ac_4e61462_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/509100
+   :title: ALIM2426.JPG
+
+Несколько фотографий (случайных, сделанных на скорую руку) из Минска,
+когда ездил отдавать нетбук в ремонт. Забыл их выложить сразу по
+приезду, т.к. тогда приболел достаточно сильно и работы ещё привалило.
+

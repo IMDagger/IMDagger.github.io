@@ -1,0 +1,20 @@
+Субактуатор Overlay Mode
+========================
+:date: 2010-01-27 19:23:29
+:tags: blender, bge
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=637
+
+Написал код, который обрабатывает оверлеи и отрисовывает их. Но пока
+ещё не тестировал из-за не созданного типа актуатора. Только недавно
+добавил новый субактуатор в интерфейс Blender. Ещё завтра предстоит
+написать новый класс для этого актатора, который будет сконвертирован из
+Blender-структуры. Вот как выглядит ещё не доработанный интерфейс:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4111/imdagger.5/0_1f7d0_b400103c_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/128976/

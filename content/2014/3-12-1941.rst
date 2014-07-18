@@ -1,0 +1,17 @@
+Синтаксическая параметризация
+=============================
+:date: 2014-03-12 00:05:07
+:modified: 2014-03-12 00:06:10
+:tags: racket, splicing-syntax-parameterize, struct
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1941
+
+Если использовать обычный syntax-parameterize, то внутри него ни
+объявить структуру, ни переменные. Но зато есть
+`splicing-syntax-parameterize <http://docs.racket-lang.org/reference/splicing.html?q=splicing-synax-parameterize&q=syntax-parameterize#%28form._%28%28lib._racket%2Fsplicing..rkt%29._splicing-syntax-parameterize%29%29>`__,
+который как раз все объявления пробрасывает на уровень выше — в
+родительскую конструкцию. Только обязательно следует импортировать
+:code:`(require racket/splicing)`, т.к. конструкция описана в этом модуле и без
+подключения может казаться, что сплайсинг не работает, а не то, что
+идентификатор не объявлен.

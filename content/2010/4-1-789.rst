@@ -1,0 +1,19 @@
+Забавно
+=======
+:date: 2010-04-01 17:47:58
+:tags: шутит, Яндекс
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=789
+
+Показало, что у меня рейтинг -1 :D. Хорошая шутка от Яндекс :).
+Сначала подумал: «Это почему моя карма так сильно упала, что я
+предпоследний стал», а потом вспомнил, что тут нет кармы :), а потом я
+всмотрелся и понял, что это не минус, а тире и я 1-ый \*YAHOO\*.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4312/imdagger.6/0_29933_7fbd6ea9_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/170291/

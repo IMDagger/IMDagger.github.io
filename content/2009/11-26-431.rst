@@ -1,0 +1,35 @@
+Бага с 2.42 по 2.5
+==================
+:date: 2009-11-26 18:20:08
+:tags: blender, ошибка, bge
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=431
+
+При поиске ошибки перерыл исходники в svn за различные года (да… в
+те года я уже использовал Blender, но даже не знал зачем этот
+«фиолетовый человечек из пакмана» по F4). Выяснил, что в 2.40 пришёл на
+смену Sumo движок Bullet, до версии 2.42 в Blender не было у Bulltet
+Rigid Body, только в Sumo. Потом появился Rigid Body, но метод
+переключения setRigidBody забыли поправить. В версии 2.5 таже проблема
+(это я изучал исходники trunk из svn). Вот как выглядит сейчас trunk:
+
+.. code-block:: c++
+
+    void KX_BulletPhysicsController::setRigidBody(bool rigid)
+     {
+     }
+
+А мне кажется, что должно быть:
+
+.. code-block:: c++
+
+    void KX_BulletPhysicsController::setRigidBody(bool rigid)
+     {
+        BulletPhysicsController::setRigidBody(rigid);
+     }
+
+Чёрт! Знаю, где ошибка, знаю как исправить ошибку, но не хочу
+регистрироваться в трекере на blender.org, не хочу качать тонну
+исходников из svn и компилировать :(. Надеюсь мне помогут и кто-нибудь,
+уже зарегистрированный там и выкачавший svn, поможет отпостить патч.

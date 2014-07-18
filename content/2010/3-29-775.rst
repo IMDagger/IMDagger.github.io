@@ -1,0 +1,22 @@
+Беременный эльф
+===============
+:date: 2010-03-29 16:55:38
+:tags: blender, эльф, 80, толстый
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=775
+
+Вообще на самом деле это толстый эльф 80 левела, просто я рендер
+сзади не делал, где видно его попу.
+`Кожу <http://matrep.parastudios.de/index.php?action=view&material=584-skin&fc=6>`__
+я взял из репозитория материалов с SSS и пигментными пятнами. Надеюсь
+успею доделать сегодня, очень бы хотелось. Осталось вставить глаза,
+кости, сделать пятки, окружение и меч в руки… да ..многовато, нужно
+работать быстрее :).
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4313/imdagger.6/0_29539_150db597_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/169273/

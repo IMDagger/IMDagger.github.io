@@ -1,0 +1,19 @@
+Скоро появится
+==============
+:date: 2010-07-13 19:46:59
+:tags: facebook, myspace, работа
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1026
+
+Скоро у игроков на MySpace появится такая же возможность, как и у
+игроков на Facebook поместить найденное животное в коробку с сувенирами,
+если нет пока места на ранчо. Осталось совсем немного, проверят
+портированный код и фича будет введена в строй.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3417/imdagger.7/0_37ca1_ecd733d6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/228513/

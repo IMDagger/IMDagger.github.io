@@ -1,0 +1,115 @@
+Bigloo и Kawa
+=============
+:date: 2012-08-09 09:03:32
+:modified: 2012-08-09 09:04:21
+:tags: ошибка, программирование, Scheme, kawa, компилятор, улучшение, разработка, размышления, bigloo
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1656
+
+Почему же я решил променять Bigloo на Kawa? Я очень доволен Bigloo,
+он работает достаточно стабильно, ошибки выводит внятные и трэйсы
+программ и под Native и под JVM понятные. В нём можно использовать Java
+классы и интерфейсы, но… но нельзя экспортировать свой класс как JVM
+класс.
+
+Я смог дописать этот функционал (хотя он скорее в состоянии хака),
+но он у меня работает не так как я хотел бы, да и куча подводных камней.
+Поэтому я решил пока не тратить драгоценное время на ковыряние самого
+компилятора (хотя код в нём оказался достаточно понятный для меня и весь
+написан на Scheme).
+
+С другой стороны Kawa имеет кучу плюшек на платформе JVM, она для
+неё родная. А мне как раз сейчас и нужна только JVM. Для нэйтив я буду
+юзать Bigloo если что. Kawa на мой взгляд по качеству самого компилятора
+чуть более сырая, чем Bigloo и написана по большей части на Java.
+Поэтому поправить код Kawa для меня намного труднее, ибо Java мне даётся
+сложнее, чем Scheme.
+
+Так вот пару дней назад наткнулся, что Kawa просто выпадает на моём
+коде, вот выжимка из него:
+
+.. code-block:: scheme
+
+   (define-class FailClass ()
+     (x ::float access: 'private init: 0.0)
+
+   ((wrap-x) (lambda () x))
+   ((calculate-position)
+     (letrec ( (wrap-func (lambda () (wrap-x))) )
+        (wrap-func))))
+
+При чём, если заменить **x** на **(this):x**, то всё отлично
+срабатывает. Kawa 1.12.1 (revision 7282) и стабильная 1.12 просто падали
+с ошибкой NullPointerException:
+
+.. code-block:: java
+
+        (compiling test.scm to test)
+        test.scm:4: internal error while compiling test.scm
+        java.lang.NullPointerException
+            at gnu.expr.LambdaExp.setCallersNeedStaticLink(LambdaExp.java:209)
+            at gnu.expr.LambdaExp.setNeedsStaticLink(LambdaExp.java:199)
+            at gnu.expr.FindCapturedVars.capture(FindCapturedVars.java:419)
+            at gnu.expr.FindCapturedVars.capture(FindCapturedVars.java:509)
+            at gnu.expr.FindCapturedVars.visitReferenceExp(FindCapturedVars.java:484)
+            at gnu.expr.FindCapturedVars.visitReferenceExp(FindCapturedVars.java:11)
+            at gnu.expr.ReferenceExp.visit(ReferenceExp.java:183)
+            at gnu.expr.ExpVisitor.visit(ExpVisitor.java:53)
+            at gnu.expr.LambdaExp.visitChildrenOnly(LambdaExp.java:1716)
+            at gnu.expr.LambdaExp.visitChildren(LambdaExp.java:1703)
+            at gnu.expr.ExpVisitor.visitExpression(ExpVisitor.java:29)
+            at gnu.expr.ExpVisitor.visitScopeExp(ExpVisitor.java:98)
+            at gnu.expr.ExpVisitor.visitLambdaExp(ExpVisitor.java:102)
+            at gnu.expr.FindCapturedVars.visitLambdaExp(FindCapturedVars.java:297)
+            at gnu.expr.FindCapturedVars.visitLambdaExp(FindCapturedVars.java:11)
+            at gnu.expr.LambdaExp.visit(LambdaExp.java:1692)
+            at gnu.expr.ExpVisitor.visit(ExpVisitor.java:53)
+            at gnu.expr.LambdaExp.visitChildrenOnly(LambdaExp.java:1716)
+            at gnu.expr.LambdaExp.visitChildren(LambdaExp.java:1703)
+            at gnu.expr.ExpVisitor.visitExpression(ExpVisitor.java:29)
+            at gnu.expr.ExpVisitor.visitScopeExp(ExpVisitor.java:98)
+            at gnu.expr.ExpVisitor.visitLambdaExp(ExpVisitor.java:102)
+            at gnu.expr.FindCapturedVars.visitLambdaExp(FindCapturedVars.java:297)
+            at gnu.expr.FindCapturedVars.visitLambdaExp(FindCapturedVars.java:11)
+            at gnu.expr.ClassExp.visitChildren(ClassExp.java:787)
+            at gnu.expr.ExpVisitor.visitExpression(ExpVisitor.java:29)
+            at gnu.expr.ExpVisitor.visitScopeExp(ExpVisitor.java:98)
+            at gnu.expr.ExpVisitor.visitLambdaExp(ExpVisitor.java:102)
+            at gnu.expr.FindCapturedVars.visitLambdaExp(FindCapturedVars.java:297)
+            at gnu.expr.FindCapturedVars.visitLambdaExp(FindCapturedVars.java:11)
+            at gnu.expr.ExpVisitor.visitClassExp(ExpVisitor.java:103)
+            at gnu.expr.FindCapturedVars.visitClassExp(FindCapturedVars.java:125)
+            at gnu.expr.FindCapturedVars.visitClassExp(FindCapturedVars.java:11)
+            at gnu.expr.ClassExp.visit(ClassExp.java:762)
+            at gnu.expr.ExpVisitor.visit(ExpVisitor.java:57)
+            at gnu.expr.ExpVisitor.visitAndUpdate(ExpVisitor.java:143)
+            at gnu.expr.ExpVisitor.visitSetExp(ExpVisitor.java:109)
+            at gnu.expr.FindCapturedVars.visitSetExp(FindCapturedVars.java:541)
+            at gnu.expr.FindCapturedVars.visitSetExp(FindCapturedVars.java:11)
+            at gnu.expr.SetExp.visit(SetExp.java:432)
+            at gnu.expr.ExpVisitor.visit(ExpVisitor.java:53)
+            at gnu.expr.LambdaExp.visitChildrenOnly(LambdaExp.java:1716)
+            at gnu.expr.LambdaExp.visitChildren(LambdaExp.java:1703)
+            at gnu.expr.ExpVisitor.visitExpression(ExpVisitor.java:29)
+            at gnu.expr.ExpVisitor.visitScopeExp(ExpVisitor.java:98)
+            at gnu.expr.ExpVisitor.visitLambdaExp(ExpVisitor.java:102)
+            at gnu.expr.FindCapturedVars.visitLambdaExp(FindCapturedVars.java:297)
+            at gnu.expr.FindCapturedVars.visitModuleExp(FindCapturedVars.java:152)
+            at gnu.expr.FindCapturedVars.visitModuleExp(FindCapturedVars.java:11)
+            at gnu.expr.ModuleExp.visit(ModuleExp.java:472)
+            at gnu.expr.FindCapturedVars.findCapturedVars(FindCapturedVars.java:17)
+            at gnu.expr.Compilation.process(Compilation.java:1940)
+            at gnu.expr.ModuleInfo.loadByStages(ModuleInfo.java:305)
+            at gnu.expr.ModuleInfo.loadByStages(ModuleInfo.java:290)
+            at gnu.expr.ModuleInfo.loadByStages(ModuleInfo.java:290)
+            at kawa.repl.compileFiles(repl.java:824)
+            at kawa.repl.processArgs(repl.java:444)
+            at kawa.repl.main(repl.java:870)
+
+Я решил не ковыряться и не тратить время, а попытать счастья и
+написать в список рассылки о проблеме, т.к. сообщество выглядит живым и
+активным. И о чудо через пару часов основной разработчик откликнулся, а
+уже спустя меньше, чем 24 часа баг был исправлен и я смог продолжить.
+Так что теперь больше такой проблемы нет. Хотя по ощущениям, ещё раз
+повторюсь, Kawa выглядит чуть более сырой, чем Bigloo.

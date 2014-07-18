@@ -1,0 +1,20 @@
+Кнопочки
+========
+:date: 2009-11-18 18:37:38
+:tags: blender, luxrender, кнопочки, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=405
+
+Поставил рендериться при помощи LuxRender небольшой игрушечный
+телефончик. Посмотрю утром уже, как он выглядит. Рендеринг запустил на
+двух компьютерах (на одном **luxconsole –server**). Сейчас прошло только
+всего минут 5, вот что успело сделать за это время на максимальных
+настройках, но я забыл включить источник освещения x-D, ыы :
+
+.. class:: text-center
+
+|Детский телефон|
+
+.. |Детский телефон| image:: http://img-fotki.yandex.ru/get/4004/imdagger.4/0_18cc7_6c2857e0_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/101575/

@@ -1,0 +1,80 @@
+Resistance
+==========
+:date: 2009-10-30 19:33:16
+:tags: blender, bge, 3d
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=372
+
+Хочу сделать в BGE небольшую программку, где игрок будет управлять
+переключателем, который ездит вверх и вниз, а на него по плате движутся
+различные враги. Движутся они разными способами, но карта разделена на
+слоты, т.е. все враги движутся только по слотам. Переключатель отделён
+барикадой микросхем от основного поля, он ездит туда-сюда и подаёт
+напряжение на некоторые контакты. От этого враги погибают. Если ещё всё
+это завуалировать и над каждым врагом приделать маленькую тыквочку, то
+тогда можно объяснить, что на материской плате в Хэллоуин все резисторы,
+диоды, конденсаторы, микроконтроллеры вышли из под контроля и теперь
+процессор в опасности и его защищает простой переключатель. Так они
+выглядят увеличенные в игровом режиме BGE:
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+«Мистер-резистор» (у него ещё будет собрат поОмнее)
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+Конденсатор. Может заряжаться и перелетать несколько позиций
+
+.. class:: text-center
+
+|image2|
+
+.. class:: text-center
+
+Микросхема. Нужно уничтожить все ножки
+
+.. class:: text-center
+
+|image3|
+
+.. class:: text-center
+
+А это рендер микросхемы
+
+.. class:: text-center
+
+|image4|
+
+.. class:: text-center
+
+Светодиод. Стреляет «лучами смерти»
+
+Даже, если не сделаю (а то времени нынче мало), то хоть модельки
+низкополигональные поучусь делать для BGE. Хочу ещё запечь завтра
+текстуры с высокополигональных и одеть на эти. Особенно на светодиод :),
+а то шероховатый он.
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4001/imdagger.3/0_17918_afa194eb_L
+   :alt: Резистор
+   :target: http://fotki.yandex.ru/users/imdagger/view/96536/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4006/imdagger.3/0_17919_5b5054b7_L
+   :alt: Конденсатор
+   :target: http://fotki.yandex.ru/users/imdagger/view/96537/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3804/imdagger.3/0_1791a_8e9345a9_L
+   :alt: Микросхема
+   :target: http://fotki.yandex.ru/users/imdagger/view/96538/
+.. |image3| image:: http://img-fotki.yandex.ru/get/4003/imdagger.3/0_1791b_f4583791_L
+   :alt: Рендер микросхемы
+   :target: http://fotki.yandex.ru/users/imdagger/view/96539/
+.. |image4| image:: http://img-fotki.yandex.ru/get/3906/imdagger.3/0_1791c_e709f896_L
+   :alt: Светодиод
+   :target: http://fotki.yandex.ru/users/imdagger/view/96540/

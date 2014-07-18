@@ -1,0 +1,13 @@
+IMDagger v.s. gibbzy
+====================
+:date: 2010-11-28 18:06:36
+:tags: сражение, игра, Galcon, python, запись, бот, ai
+:category: link
+:author: IMDagger
+:attached-url: http://ai-contest.com/visualizer.php?game_id=8915242
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1188
+
+Неплохо и лавинообразно мой бот атаковал, тут он красиво орудовал,
+просто перехахватов было мало и пенальти не вырос, чтобы понизить
+агрессивность бота. Но всё же заметно, что к концу игры бот стал вялым.
+

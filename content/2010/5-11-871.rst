@@ -1,0 +1,18 @@
+Девайс
+======
+:date: 2010-05-11 16:00:09
+:tags: время, kp500, виджет
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=871
+
+Приятно, что я могу на своём новом девайсе закинуть на рабочий стол
+(а он на нём не один) виджет мирового времени, чтобы ориентироваться
+сразу в нескольких местах:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/9/imdagger.7/0_2f708_95a05901_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/194312/

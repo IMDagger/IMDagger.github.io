@@ -1,0 +1,17 @@
+Для сравнения после 50 минут
+============================
+:date: 2011-03-07 19:58:31
+:tags: luxrender, производительность, рендер, сервер, шум, сравнение, blender, волк
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1266
+
+После 50 минут рендеринга, хотя изменения не сильно большие, они
+обычно видны хорошо в начале, а уже к финалу сложнее заметить отличия:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/6003/imdagger.9/0_544e8_ba665055_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/345320/

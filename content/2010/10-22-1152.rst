@@ -1,0 +1,17 @@
+Stretch To
+==========
+:date: 2010-10-22 19:43:02
+:tags: blender, кость, stretch, растягивание
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1152
+
+Прикольно, ни разу его ещё не юзал и раньше думал, что кости мне не
+удастся растягивать. А этот констрейнт позволяет «растянуть кость»:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5801/imdagger.8/0_448c4_16163923_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/280772/

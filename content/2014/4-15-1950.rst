@@ -1,0 +1,26 @@
+Потокобезопасность
+==================
+:date: 2014-04-15 00:53:22
+:tags: блокировка, ScalaPlayer, scala, поток, python, безопасность
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1950
+
+Похоже,
+что \ `ScalaPlayer <http://license.scala.com/readme/ScriptingAutomation.html>`__
+не дружит с попыткой дёргать его метод Log из разных нитей из Python.
+Как-то это всё заканчивается плачевно — тихим падением. Поэтому лучше
+завернуть ScalaPlayer.Log в родной python-овский обработчик из модуля
+logging:
+
+.. code-block:: python
+
+    import logging
+
+    class ScalaLogHandler(logging.Handler):
+
+        def emit(self, record):
+            ScalaPlayer.Log(self.format(record))
+    ...
+
+Т.к. logging.Handler потокобезопасный и весь модуль logging тоже.

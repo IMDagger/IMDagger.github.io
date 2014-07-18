@@ -1,0 +1,28 @@
+ASUS Eeepc 1215N в разобранном состоянии
+========================================
+:date: 2013-07-27 12:27:20
+:tags: чистка, asus, разбор, eeepc
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1838
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9480/22199227.b/0_902cf_1c35827c_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/590543
+   :title: ALIM3225.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9554/22199227.b/0_902d0_6d691371_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/590544
+   :title: ALIM3226.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6715/22199227.b/0_902d1_ff7cf429_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/590545
+   :title: Заголовок
+
+    Не знаю как большой кусочек пыли смог попасть между экраном
+(фильтром) и ЖК-матрицей, но чтобы его достать пришлось разобрать
+множество деталей, чтобы снять дисплей, разобрать его камеру и отделить
+поверхностный фильтр от собственно ЖК-дисплея. Только снимать
+алюминиевую нужно оправу нужно осторожно, а не как я, что чуть не
+разорвал алюминиевый корпус, соединяющий матрицу и фильтр. Да, вот “то
+серое” и есть ЖК-матрица, а не “то, что чёрное”.
+

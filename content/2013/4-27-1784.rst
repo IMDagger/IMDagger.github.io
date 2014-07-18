@@ -1,0 +1,19 @@
+Пару находок
+============
+:date: 2013-04-27 20:21:24
+:tags: кости, жизнь, огород, деревня
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1784
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5645/22199227.a/0_8b8b6_535a73fc_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/571574
+   :title: Пару находок
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5627/22199227.a/0_8b8b7_26281209_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/571575
+   :title: Пару находок
+
+Такого добра на огороде валом, просто это уже почти последнее, что
+осталось, большую часть за годы вычистили.
+

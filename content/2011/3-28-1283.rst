@@ -1,0 +1,20 @@
+extglob Bash
+============
+:date: 2011-03-28 19:28:54
+:tags: bash, исключение, extglob, маска
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1283
+
+Хм… не было времени раньше разбираться почему на моей офисной машине
+паттерны вида **/!(tmp\|var)** не работают. Случайно :) в разделе
+Pattern Matching обнаружил указание на **shopt**, проверил на другой
+рабочей машинке:
+
+    | $ shopt extglob
+    | extglob            on
+    | а у меня:
+    | extglob            **off**
+
+После включения: ***shopt -s extglob*** заработали в текущей сессии
+Bash паттерны с возможностью исключения.

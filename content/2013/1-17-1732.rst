@@ -1,0 +1,37 @@
+Удобная надстройка (и замена) для urllib2
+=========================================
+:date: 2013-01-17 00:11:51
+:tags: программирование, чтение, библиотека, requests, HTTP, python
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1732
+
+Если использовать библиотеку urllib2, то можно открыть соединение,
+проверить заголовки, а затем начать считывать содержимое, которое
+возвращает сервер. Но urllib2 не настолько удобная и наглядная как
+библиотека requests:
+
+
+.. code-block:: python
+
+        import requests
+        answer = requests.get('http://some...url', cookies={'mycookie': 'value'},
+                              headers={'x-additional-header': 'value'})
+        print(answer.text)
+
+Но как, допустим, проверить тип содержимого и если он не подходящий
+сразу закрыть соединение? Достаточно передать параметр :code:`stream=True`:
+
+.. code-block:: python
+
+        import requests
+        answer = requests.get('http://some...url', cookies={'mycookie': 'value'},
+                              stream=True,
+                              headers={'x-additional-header': 'value'})
+        if answer.headers.get('content-type', '').startswith('text/html'):
+           pass # в этот момент ещё не началось получение данных самой страницы
+        # а вот тут уже, после обращения к text, содержимое будет готово
+        print(answer.text)
+        # .text обращается к .content, который производит считывание только 1 раз,
+        # так что всё хорошо даже второй раз
+        print(answer.text)

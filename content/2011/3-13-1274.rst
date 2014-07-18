@@ -1,0 +1,23 @@
+UBlenderJS 0.0.5
+================
+:date: 2011-03-13 13:11:18
+:tags: userjs, форум, javascript, улучшение, blender, UBlenderJS
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1274
+
+Выпустил новую версию JS-дополнения для форума
+`BlenderУкраина <http://blender3d.org.ua>`__ по имени **UBlenderJS
+0.0.5**. Нашёл одну ошибку, что Firefox не изменял текст ссылки на
+«показать форму» для страниц без формы, а это очень удобно, когда хочешь
+обратится к кому-нибудь или прокомментировать. Добавил возможность
+дополнения смайлами. Можно скачать `новую
+версию <http://blender3d.org.ua/forum/bu/8-9999.html#556>`__ со страницы
+форума.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/6004/imdagger.9/0_54ce6_829864c1_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/347366/

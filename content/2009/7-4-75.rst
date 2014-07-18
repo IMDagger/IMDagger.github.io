@@ -1,0 +1,22 @@
+Работа не волк, ...
+===================
+:date: 2009-07-04 09:42:21
+:tags: деревня
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=75
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3507/imdagger.2/0_da75_76b5b6ac_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/55925
+   :title: Закат
+
+.. photo-block:: http://img-fotki.yandex.ru/get/5/imdagger.2/0_da79_de3c51c4_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/55929
+   :title: Дорога в небо
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3502/imdagger.2/0_dc16_83fc429f_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/56342
+   :title: Hacker 2
+
+Съездил поработал, поел, загорел :P
+

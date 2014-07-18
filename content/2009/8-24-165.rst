@@ -1,0 +1,21 @@
+TriadVesuvius
+=============
+:date: 2009-08-24 17:53:20
+:tags: triad_vesuvius, проект, программирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=165
+
+О великий **Bazaar**, кланяюсь тебе, проставь тег triad\_vesuvius в наш
+репозиторий:
+
+.. code-block:: console
+
+    $ bzr tag triad_vesuvius
+    Created tag triad_vesuvius.
+    $ bzr tags
+    triad_vesuvius 130
+
+Это 130 ревизия и 220 *bzr*-коммит. А ещё 150 *git*-коммитов до этого и
+где-то 500 без репозитория x-D. Всё, что было запланировано — выполнено.
+Где-то в ноябре будет альфа версия.

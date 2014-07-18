@@ -1,0 +1,62 @@
+Racket и Android NDK r8e
+========================
+:date: 2013-04-18 01:00:29
+:modified: 2013-04-18 01:03:37
+:tags: libdl, arm-linux-androideabi, NDK, ARM, ffi, CGC, dynamic, racket, Android
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1776
+
+Удалось собрать динамическую (dynamic) версию Racket при помощи
+arm-linux-androideabi из поставки Android NDK. Заодно увидел, что
+оказывается есть Android и под MIPS, как-то я пропустил эту новость в
+прошлом году, только по набору компиляторов обнаружил. Предыдущий
+вариант со статической (static) сборкой работал, но т.к. он был собран с
+библиотеками из GNU, то возникла проблема с libdl, которая в NDK
+отличается. Из-за чего статическая версия не могла нормально обработать
+ffi загрузку .so библиотеки и падала с SIGSEGV.
+
+Над сборкой из поставки NDK пришлось поколдовать немного, т.к.
+CGC-сборщик не хотел компилироваться в нескольких местах. Сначала я
+пытался собрать Racket с улучшенным точным (precise) сборщиком мусора,
+но эта версия падала с ошибкой, которую мне не удалось отладить. Тогда я
+попробовал такой вариант (перед этим конечно при помощи
+build/tools/make-standalone-toolchain.sh создал все необходимые
+директории для сборки):
+
+
+    ./configure --host=arm-linux-androideabi
+    --target=arm-linux-androideabi --enable-cgcdefault
+
+И (ура!!) он заработал как надо без падения при вызове ffi-lib (хотя
+я опустил описание того, как долго я искал разные пути и решения, с
+ручной линковкой и прописыванием линкера, с попыткой совместить NDK и
+GNU и много другое):
+
+    | shell@android:/data/data/\*\*.\*\*\*\*.\*\*\*\* $ ./racket -I racket/base
+      --collects=/sdcard/racket/.racket/5.3.4.3/collects/
+    | **Welcome to Racket v5.3.4.3 [cgc].**
+    | > (require ffi/unsafe)
+    | > (ffi-lib “libGLESv2”)
+    | **#<ffi-lib>**
+
+Коллекции я поместил на SD-карту (всё как в прошлый раз, когда
+собирал статическую версию). Забыл только сказать, что возникла
+небольшая проблема с тем, что в busybox в android shell не установлена
+никакая локаль, поэтому пришлось исправить вот этот кусок с ошибкой:
+
+.. code-block:: diff
+
+    diff --git a/src/racket/src/string.c b/src/racket/src/string.c
+    index 63b5898..dc27372 100644
+    --- a/src/racket/src/string.c
+    +++ b/src/racket/src/string.c
+    @@ -3841,7 +3841,7 @@ char *scheme_push_c_numeric_locale()
+     #ifndef DONT_USE_LOCALE
+       GC_CAN_IGNORE char *prev;
+       prev = setlocale(LC_NUMERIC, NULL);
+    -  if (!strcmp(prev, "C"))
+    +  if (prev && !strcmp(prev, "C"))
+         return NULL;
+       else
+         return setlocale(LC_NUMERIC, "C");

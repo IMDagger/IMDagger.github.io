@@ -1,0 +1,25 @@
+<java> задача из Ant
+====================
+:date: 2011-11-04 00:25:18
+:tags: ant, запуск, java, программирование, класс
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1485
+
+Добавил в build.xml правило для сборки и последующего запуска
+приложения, без формирования релизного JAR-архива. Мне для этой цели
+подошла задача java из Ant. Правда пришлось её исполнять с опцией
+:code:`fork="true"`, иначе выпадала странная ошибка, видимо приложению не
+понравилась JVM от Ant. Главное, что в официальной
+`документации <http://ant.apache.org/manual/Tasks/java.html>`__ есть
+понятное описание, зачем нужна опция fork. Ещё я использовал
+classpathref и classpath одновременно, т.к. в classpathref мне не
+требовалась директория сборки.
+
+.. code-block:: xml
+
+        <target name="run" description="Compile and execute build" depends="compile">
+            <echo>Run project ...</echo>
+            <java classpathref="gdx-libraries" classpath="${build.dir}"
+                  classname="${project.mainclass}" fork="true" />
+        </target>

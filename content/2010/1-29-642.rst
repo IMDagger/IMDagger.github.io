@@ -1,0 +1,19 @@
+Оверлейные объекты
+==================
+:date: 2010-01-29 18:50:30
+:tags: blender, возможности, bge
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=642
+
+Добавил обработку, чтобы индекс и непрозрачность можно было
+установить из свойства объекта. Оверлей заработал, но пока он как-то
+странно реагирует на всё. Т.е. игнорирует всех и выводится всегда поверх
+всех.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3912/imdagger.5/0_1fa92_1caba2b4_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/129682/

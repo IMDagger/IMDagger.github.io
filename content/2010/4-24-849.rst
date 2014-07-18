@@ -1,0 +1,17 @@
+Трёхпалая рука эльфа
+====================
+:date: 2010-04-24 15:49:01
+:tags: blender, эльф, рука, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=849
+
+Сделал рендер руки, добавил кривые ногтики ему на руку. Материал
+ногтей нужно будет позже подобрать.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4210/imdagger.6/0_2d8ae_33e30ab6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/186542/

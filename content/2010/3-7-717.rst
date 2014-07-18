@@ -1,0 +1,14 @@
+Решил сменить фотку, старая уже "затёрлась до дыр"
+==================================================
+:date: 2010-03-07 15:07:39
+:tags: Я
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=717
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3811/imdagger.6/0_2435a_ee1f36ff_-2-L
+   :link: http://fotki.yandex.ru/users/imdagger/view/148314
+   :title: alim0629.jpg
+
+Фотографировал меня Many. Это на аллее недалеко от гаражей.
+

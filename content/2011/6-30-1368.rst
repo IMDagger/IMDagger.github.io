@@ -1,0 +1,11 @@
+Stacktrace на лету
+==================
+:date: 2011-06-30 15:56:09
+:tags: отладка, python, stack, рабочий, процесс
+:category: link
+:author: IMDagger
+:attached-url: http://stackoverflow.com/questions/132058/getting-stack-trace-from-a-running-python-application
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1368
+
+Не знал, что можно так красиво повесить обработчик на SIGUSR1
+

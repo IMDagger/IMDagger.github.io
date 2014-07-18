@@ -1,0 +1,17 @@
+Ошибка при установке через checkinstall
+=======================================
+:date: 2012-06-06 23:25:36
+:tags: ошибка, checkinstall, установка, решение
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1613
+
+    При установке некоторых пакетов через checkinstall бывает выпадает
+вот такая ошибка:
+
+    ranlib: could not create temporary file whilst writing archive: No
+    more archived files
+
+    Её удаётся победить, если перед этим сделать sudo make install,
+тогда последующий sudo checkinstall отработает без проблем.
+

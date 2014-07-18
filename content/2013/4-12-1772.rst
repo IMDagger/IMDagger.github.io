@@ -1,0 +1,85 @@
+Genius EasyPen M406XE
+=====================
+:date: 2013-04-12 02:05:03
+:tags: графика, сила, перо, udev, genius, нажатие, планшет, m406xe, Xorg, давление
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1772
+
+Теперь у меня есть чем рисовать и делать наброски. Достаточно
+компактный планшет, мне нравится. Думаю в большем я не нуждаюсь, т.к.
+мои навыки рисования очень далеки от идеала. Чтобы завести данный девайс
+под Ubuntu Linux 12.04 пришлось немного полазать в интернете, а вот,
+чтобы заставить не на самом топовом ядре обрабатывать силу нажатия
+пришлось хорошо поискать решение. Но на ЛОРе много чего полезного и вот
+этот \ `комментарий <http://www.linux.org.ru/forum/linux-hardware/6929804#comment-7624274>`__
+решил все вопросы. Только нужно не забыть установить перед этим драйвер
+`Wizardpen <https://launchpad.net/wizardpen>`__.
+Утилиту \ `init-tablet <https://github.com/Marisa-Chan/init-tablet>`__
+пришлось чуть подправить, чтобы она собралась без проблем, но зато её
+магическая последовательность байт :code:`0x5,0x12,0x10,0x11,0x12,0,0,0`
+отправленная в устройство планшета сразу же включает отправку силы
+нажатия:
+
+   | $ xinput list
+   | ⎡ Virtual core pointer                        id=2    [master
+   | pointer  (3)]
+   | ⎜   ↳ Virtual core XTEST pointer                  id=4    [slave 
+   | pointer  (2)]
+   | ⎜   ↳ A4Tech PS/2+USB Mouse                       id=11    [slave 
+   | pointer  (2)]
+   | ⎜   ↳ SynPS/2 Synaptics TouchPad                  id=15    [slave 
+   | pointer  (2)]
+   | ⎜   ↳ **Genius Tablet**                               id=16   
+   | [slave  pointer  (2)]
+   | ...
+   | $ xinput test ‘Genius Tablet’
+   | ...
+   | motion a[0]=6439 a[1]=4816 **a[2]=905**
+   | $ lsusb
+   | ...
+   | Bus 006 Device 003: ID 0458:5019 KYE Systems Corp. (Mouse Systems)
+
+Потребовалось ещё создать
+**/usr/share/X11/xorg.conf.d/70-wizardpen.conf**:
+
+   | Section “InputClass”
+   |    Identifier “wizardpen”
+   |    MatchIsTablet “on”
+   |    MatchDevicePath “/dev/input/event\*”
+   |    MatchProduct “KYE Systems\|Genius\|M460XE”
+   |    Driver “wizardpen”
+   |    Option        “TopX”        “0”
+   |    Option        “TopY”        “0”
+   |    Option        “BottomX”    “15360” # нужно откалибровать при
+   | помощи **wizardpen-calibrate**
+   |    Option        “BottomY”    “10240”
+   |    Option        “TopZ”        “1”
+   |    Option        “BottomZ”    “400” # можно прописать и 1023
+   |    Option        “TPCButton”    “off” # даже если не касаться
+   | планшета, то работают кнопки на пере
+   |    #Option        “DebugLevel”    “10”
+   | EndSection
+   | Section “InputClass”
+   |    Identifier “wizardpen ignore mouse dev”
+   |    MatchIsTablet “on”
+   |    MatchDevicePath “/dev/input/mouse\*”
+   |    MatchProduct “KYE Systems\|Genius\|M460XE”
+   |    Driver “”
+   | EndSection
+
+И для udevd я добавил ещё автоматический запуск инициализации
+планшета, чтобы глубина всегда работала после подключения (в созданном
+файле /etc/udev/rules.d/68-xorg-wizardpen.rules):
+
+    ENV{ID\_VENDOR\_ID}==“0458”,  ENV{ID\_MODEL\_ID}==“5019”,
+    RUN+=“/usr/local/bin/init-tablets”
+
+А в /etc/udev/rules.d/67-xorg-wizardpen.rules ещё добавил:
+
+    | # KYE Systems Corp (Genius M406XE)
+    | ENV{ID\_VENDOR\_ID}==“0458”,  ENV{ID\_MODEL\_ID}==“5019”,
+      ENV{x11\_driver}=“wizardpen”
+
+Но это всё общеизвестная информация. В основном много сил ушло на
+определение силы нажатия.

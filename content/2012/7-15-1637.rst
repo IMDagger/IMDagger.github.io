@@ -1,0 +1,15 @@
+Вот почему у меня борода
+========================
+:date: 2012-07-15 11:24:05
+:tags: борода, ролик, смешно, beard
+:category: video
+:author: IMDagger
+:attached-url: http://flv.video.yandex.ru/lite/4611686020402480420/v64qk3efcn.4829/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1637
+
+.. youtube:: JOVBA3QI_rY
+   :width: 450
+   :height: 370
+
+На аватарке я для приличия выбрит Если кто не знает английского, то
+beard [биэрд] это борода.

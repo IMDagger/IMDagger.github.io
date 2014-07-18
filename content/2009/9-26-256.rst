@@ -1,0 +1,102 @@
+Как я покорял табличные функции
+===============================
+:date: 2009-09-26 14:35:17
+:tags: spring, hibernate, аннотации
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=256
+
+Во-первых, я хотел постараться проделать всю работу через аннотации
+**JPA** и **Hibernate**. Но мне требовалось промэппить пробный класс
+*HeaderItem* не только на таблицу *dl2ResultsHeaderItem*, но и на
+результат функции из базы данных. А функция
+*dl2ResultsHeaderItemSubTree* требует 5 параметров и возвращает таблицу
+из 3 параметров, у которой не все названия совпадают с
+dl2ResultsHeaderItem.
+
+Поискав во «всемирной паутине» ответ на свой вопрос, как сделать
+такую операцию, я нашёл ответ только для хранимых процедур, а мне нужна
+была хранимая функция. Причём всё, что я находил похожее для моих нужд,
+оно почему-то у меня не работало.
+
+Поэтому я нашёл способ реализовать задуманное через аннотацию
+NamedNativeQuery из javax.persistence, я его переделал из примера для
+хранимых процедур:
+
+.. code-block:: java
+
+    package results;
+    import java.io.Serializable;
+    import javax.persistence.*;
+    @Entity
+    @NamedNativeQuery (name = "headerItem.forSubTree",
+            resultClass = HeaderItem.class,
+            query = "select itemId, itemIndex as childIndex, deep from dl2ResultsHeaderItemSubTree
+                      (:rootId, :deep, :leavesOnly, :includeRoot, :date)",
+            hints = {@QueryHint (name = "org.hibernate.callable", value = "true"), *// Бага!!!*
+                     @QueryHint (name = "org.hibernate.readOnly", value = "true")
+            }
+    )
+    @Table (name="dl2ResultsHeaderItem")
+    public class HeaderItem implements Serializable {
+        private Long id;
+        private Long index;
+        private int deep;
+
+        public HeaderItem() {
+        };
+
+        @Id
+        @Column(name="itemId")
+        public Long getId() {
+            return id;
+        };
+
+        public void setId(Long id) {
+            this.id = id;
+        };
+
+        @Column(name="childIndex")
+        public Long getIndex() {
+            return index;
+        };
+
+        public void setIndex(Long index) {
+            this.index = index;
+        };
+
+        @Column(name="deep")
+        public int getDeep() {
+            return deep;
+        };
+
+        public void setDeep(int id) {
+            this.deep = deep;
+        };
+    };
+
+Запрос *select itemId, itemIndex as childIndex, deep ...* \ выбирает
+данные таким образом, чтобы поля возвращаемой таблицы совпадали с
+указанным в классе мэппингом.
+
+Жаль, но таблицу и хранимую функцию делал не я, а за долго до
+меня. Поэтому их ломать нельзя (слишком много эксплуатируемого кода на
+них висит). Я довольно долго боролся с Hibernate, т.к. выпадало
+исколючение в jTDS вида: :code:`11410 [http-8080-1] INFO
+org.hibernate.type.CalendarType - could not bind value ‘2009-09-26
+16:30:13’ to parameter: 5; Invalid parameter index 5`. Я долго думал, как
+так может быть, что параметров вроде 5, передаю 5 такой конструкцией
+(:del:`собранной на скорую руку`):
+
+.. code-block:: java
+
+    List result =
+    getHibernateTemplate().findByNamedQueryAndNamedParam("headerItem.forSubTree",
+        new String[] {"rootId", "deep", "leavesOnly", "includeRoot", "date"},
+        new Object[] {rootId, deep, leavesOnly, (includeRoot ? 1 : 0), date}); // date типа java.util.Calendar
+
+Но потом до меня дошло, что мешает :code:`@QueryHint(name =
+"org.hibernate.callable", value = "true")`, который предполагает, что это
+процедура и первый параметр забирает под её нужды.
+
+Проблема решилась банально — я убрал эту запись и всё заработало.

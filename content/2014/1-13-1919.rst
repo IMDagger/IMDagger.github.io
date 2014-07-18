@@ -1,0 +1,15 @@
+Прошлогодний огонёк
+===================
+:date: 2014-01-13 22:40:05
+:modified: 2014-01-13 22:40:19
+:tags: напряжение, сборка, генератор, Маркс, электроника
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1919
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9061/22199227.b/0_97039_39569d29_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/618553
+   :title: ALIM3434.JPG
+
+Версия собранная на плате.
+

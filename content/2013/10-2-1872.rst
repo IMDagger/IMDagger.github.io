@@ -1,0 +1,13 @@
+Бананы
+======
+:date: 2013-10-02 21:38:56
+:tags: бананы, еда
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1872
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9499/22199227.b/0_93c4f_2b5827ec_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/605263
+   :title: ALIM3247.JPG
+
+Если это мама негра, то кто же папа? :/

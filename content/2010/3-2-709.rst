@@ -1,0 +1,76 @@
+Ретопология
+===========
+:date: 2010-03-02 12:27:47
+:tags: blender, ретопология
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=709
+
+Оказывается функция Retopo в режиме редактирования достаточно
+полезная для меня вещь. Бывает мне нужно вырезать фигуру некоторой
+правильной формы на поверхности другого объекта, или просто переработать
+частично сетку, если кривая (она у меня часто кривая x-D). Например,
+чтобы вырезать круг на голове R2D2 (знаю, что для такой фигуры есть
+скрипт, но мне не только круги приходится вырезать) под линзу я бы по
+старинке сделал так: создал круг, спроецировал при помощи Shinkwrap
+модификатора на поверхность объекта, применил модификатор и объединил
+объекты, затем убрал лишнее и соединил. Теперь можно сделать так:
+
+Верхняя часть меша робота
+
+.. class:: text-center
+
+|image0|
+
+.. class:: text-center
+
+Добавление нового пустого меша
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+Включение режима Retopo при редактировании пустого меша
+
+.. class:: text-center
+
+|image2|
+
+.. class:: text-center
+
+Добавка окружности
+
+.. class:: text-center
+
+|image3|
+
+.. class:: text-center
+
+Правая половина убрана, т.к. меш робота уже имеет  модификатор Mirror
+
+.. class:: text-center
+
+|image4|
+
+.. class:: text-center
+
+Видно, что окружность «легла» на поверхность робота
+
+.. class:: text-center
+
+|image5|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3807/imdagger.6/0_235e5_a6b4b091_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144869/
+.. |image1| image:: http://img-fotki.yandex.ru/get/3813/imdagger.6/0_235e6_1007e7c7_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144870/
+.. |image2| image:: http://img-fotki.yandex.ru/get/3911/imdagger.6/0_235ea_1484b9f1_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144874/
+.. |image3| image:: http://img-fotki.yandex.ru/get/3814/imdagger.6/0_235eb_b4c1cd8e_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144875/
+.. |image4| image:: http://img-fotki.yandex.ru/get/3907/imdagger.6/0_235ec_c20ac303_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144876/
+.. |image5| image:: http://img-fotki.yandex.ru/get/3807/imdagger.6/0_235ed_a22f0a5a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/144877/

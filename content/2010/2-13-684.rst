@@ -1,0 +1,26 @@
+Функция escape
+==============
+:date: 2010-02-13 18:22:10
+:tags: ошибка, java, кодировка, работа, tomcat
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=684
+
+Достался мне JavaScript код по наследству, а там использовалась
+функция escape для передачи аргументов этому же сервлету, но с
+параметрами фильтрации. Я вдруг обнаружил, что Tomcat пропускает
+параметры, в которых я пытаюсь передать русские буквы. В старом коде
+использовалась кодировка CP1251, а в новом я использую UTF-8. В логах я
+нашёл трэйс с ошибкой:
+
+    | 13.02.2010 17:28:05 org.apache.tomcat.util.http.Parameters
+      processParameters
+    | WARNING: Parameters: Character decoding failed. Parameter skipped.
+    | java.io.CharConversionException: isHexDigit
+    | at org.apache.tomcat.util.buf.UDecoder.convert(UDecoder.java:88)
+
+Ничего не выпадает, всё работает, но такие параметры игнорируются.
+Оказалось, что функции escape не стоит использовать для передачи данных
+в URI. А нужно пользоваться функцией :code:`encodeURIComponent`. Она
+кодирует строку подругому, в правильном для URI формате, Tomcat её
+понимает.

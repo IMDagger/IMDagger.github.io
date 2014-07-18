@@ -1,0 +1,71 @@
+Контроллеры
+===========
+:date: 2009-07-23 14:42:44
+:modified: 2014-07-13 17:53
+:tags: python, bge, контроллер
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=111
+
+Требовалось наконец разрешить проблему двух контроллеров. Нужно, чтобы
+Blender в одном режиме пользовался одним контроллером, а в другом режиме
+(BGE) вторым контроллером. Много классов, которые наследуются от
+Controller, поэтому нужно, чтобы после вызова переключения режима, все
+новые создавались уже на базе нового контроллера и без релоадинга
+модулей. Решил проблему копированием всех аттрибутов и методов в класс
+Controller из заданного.
+
+.. code-block:: python
+
+     # -*- coding: utf-8 -*-
+     from controller_editmode import ControllerEditMode
+
+     class Controller(ControllerEditMode):
+         pass
+
+     def __copy(FromClass, ToClass):
+         '''
+         Копирует содержимое одного класса в другой. Не
+         копирует неизменяемые аттрибуты: __doc__ и
+         __dict__.
+
+         :Parameters:
+         `FromClass` : class
+         Класс аттрибуты, которого нужно скопировать
+         `ToClass` : class
+         Класс приёмник
+         '''
+         for with_name in FromClass.__dict__:
+             # некоторые аттрибуты не возможно перезаписать
+             if with_name not in ('__doc__', '__dict__'):
+                 value = getattr(FromClass, with_name)
+                 try:
+                     func = value.im_func # это метод, если есть im_func
+                     # копируется только функция от метода класса
+                     setattr(ToClass, with_name, func)
+                 except AttributeError: # нет это был не метод
+                     setattr(ToClass, with_name, value)
+
+     def switch_to_gamemode():
+         '''
+         Переключает модуль в игровой режим. После этой
+         операции все действия по десериализации будут
+         проводится с классом ControllerGameMode.
+         '''
+         from controller_gamemode import ControllerGameMode
+         __copy(ControllerGameMode, Controller)
+
+     def switch_to_editmode():
+         '''
+         Переключает модуль в режим редактора. После этой
+         операции все действия по десериализации будут
+         проводится с классом ControllerEditMode.
+         '''
+         __copy(ControllerEditMode, Controller)
+
+Главное только не копировать \_\_doc\_\_ и \_\_dict\_\_, т.к. они не
+желают перезаписываться. Если копируемый аттрибут - переменная, то она
+переносится простым setattr. А если - это метод, но встаёт небольшая
+проблема, что он уже забинден в другой класс. Поэтому нужно получить не
+метод, а функцию, которая за ним “прячется”. Это свойство im\_func, если
+оно присутствует, то можно быть уверенным, что value - метод.

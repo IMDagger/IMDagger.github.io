@@ -1,0 +1,18 @@
+IPCS
+====
+:date: 2010-04-27 18:56:17
+:tags: chroot, apache, семафор
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=854
+
+Когда запускаешь Apache в chroot случается, что заканчиваются
+свободные семафоры. Но оно невнятно говорит, про **space left on
+device**. Можно поднять их число в /proc/sys/kernel/sem. А ещё есть
+скрипт, который удаляет семафоры (нашёл в Интернет):
+
+.. code-block:: sh
+
+        for i in $(ipcs -s | grep apache | awk '{print $2}'); do ipcrm sem $i; done
+
+У меня пользователь называется apache.

@@ -1,0 +1,15 @@
+Ещё раз
+=======
+:date: 2010-03-07 17:12:55
+:tags: Я
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=722
+
+.. photo-block:: http://img-fotki.yandex.ru/get/3811/imdagger.6/0_24a58_8eb657ba_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/150104
+   :title: Ещё раз
+
+Т.к. предыдущая фотка горизонтальная, то пришлось обрезать вручную,
+чтобы Я.ру сам не пытался абы куда смещать фокус.
+

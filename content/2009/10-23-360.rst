@@ -1,0 +1,40 @@
+Чтение данных
+=============
+:date: 2009-10-23 18:58:59
+:tags: python, HTTP
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=360
+
+Да пожалуй не стоит внутри BaseHTTPRequestHandler делать вот так:
+
+.. code-block:: python
+
+    class ...
+        def ... (...):
+            ...
+            answer = urllib.urlopen('тут http путь')
+            answer_data = answer.read()
+            self.wfile.write(answer_data)
+
+Чревато тем, что функция read пытается прочитать всё  из ответа сервера,
+а это может быть очень много, и весь этот промежуток времени HTTP-прокси
+сервер не отвечает своему клиенту, сам считывая данные. Нужно поменять
+такой код, например на:
+
+
+.. code-block:: python
+
+    class ...
+        def ... (...):
+            ...
+            answer = urllib.urlopen('тут http путь')
+            answer_data = True
+
+            while answer_data:
+                answer_data = answer.read(4096)
+                self.wfile.write(answer_data)
+
+Таким образом получается блочное чтение и сервер «не замерзает». Python
+считает **’’** при проверке на истинность ложью, а read возвращает
+**’’**, если ничего не считал (это две кавычки, т.е. пустая строка).

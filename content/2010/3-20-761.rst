@@ -1,0 +1,19 @@
+100тки
+======
+:date: 2010-03-20 18:25:00
+:tags: blender, сотка, гвозди, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=761
+
+Рендерил мало, дык ещё и с фоном облажался … тут стоило брать тёмный
+цвет, чтобы подчеркнуть яркость гвоздей. Потом пытался «замылить» все
+артефакты x-D и погасить сильный шум. Вышло так, что могут глаза
+выпасть!
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3810/imdagger.6/0_27fb1_fb236f37_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/163761/

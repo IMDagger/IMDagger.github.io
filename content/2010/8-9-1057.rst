@@ -1,0 +1,17 @@
+Подсчёт
+=======
+:date: 2010-08-09 20:09:45
+:tags: google, павлин, коллекции, slide, Я, работа
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1057
+
+Хорошо, когда павлины правильно считаются и добавляются на ранчо.
+Нужно сделать ещё один рывок и портировать до конца эту фичу:
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5402/imdagger.7/0_3beaf_f9172ef8_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/245423/

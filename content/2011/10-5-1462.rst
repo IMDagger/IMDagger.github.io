@@ -1,0 +1,46 @@
+Git post-receive хук
+====================
+:date: 2011-10-05 11:12:31
+:tags: python, push, git, хук, post-receive, работа
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1462
+
+Я создал shared bare-репозиторий в git, из которого данные уже
+направляются в основной репозиторий, где нужно выполнить некоторый набор
+действий по сборке и деплою проекта. Т.к. было желание со своей машины,
+где развёрнут похожий pg, при заливки через git push сразу на стороне
+сервера инициализировать необходимые процедуры, то я создал
+shared/hooks/post-receive хук:
+
+.. code-block:: sh
+
+   WEB_PROJECT=полный_путь_к_проекту
+   CURRENT=`pwd`
+   LOG_NAME=$WEB_PROJECT/logs/pushes/`date +'%F-%X'`-`whoami`
+
+   echo 'Start pushing ...' >"$LOG_NAME"
+
+   cd $WEB_PROJECT
+   echo "Pulling from $CURRENT to $WEB_PROJECT" >>"$LOG_NAME" 2>>"$LOG_NAME"
+
+   unset GIT_DIR
+
+   git pull $CURRENT >>"$LOG_NAME" 2>>"$LOG_NAME"
+   gmake >>"$LOG_NAME" 2>>"$LOG_NAME"
+   ./uwsgi_reload.sh >>"$LOG_NAME" 2>>"$LOG_NAME"
+
+   echo 'Finish pushing, done!' >>"$LOG_NAME"
+
+Самое основное для меня было это unset GIT\_DIR, т.к. без него git
+выдавал ошибку такого вида:
+
+    fatal: Not a git repository: '.'
+
+Нужно ещё добавить в этот хук проверку логов от одной ревизии до
+другой и выполнение дополнительных команд, в зависимости от флагов в
+сообщениях коммитов. Тогда можно будет перезапускать дополнительные
+сервисы.
+
+P.S. Вообще решение с unset нашёл в
+`здесь <http://stackoverflow.com/questions/4043609/getting-fatal-not-a-git-repository-when-using-post-update-hook-to-execute>`__.

@@ -1,0 +1,15 @@
+Racket на Android
+=================
+:date: 2013-04-14 01:30:28
+:tags: racket, Android, компиляция
+:category: link
+:author: IMDagger
+:attached-url: http://www.wedesoft.de/racket-on-android.html
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1774
+
+    Я тоже смог произвести кросс-компиляцию (просто ради интереса)
+Racket Scheme, прочитав, что делал человек по ссылке. Только я делал
+чуть по-другому, т.к. у меня уже установлен racket в системе. Если
+собрать .zo файлы и выставить на них правильное время, то стартует
+достаточно быстро, а работает racket вообще быстро (собирал с jit).
+

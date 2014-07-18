@@ -1,0 +1,19 @@
+Набросок
+========
+:date: 2009-06-20 17:37:47
+:modified: 2014-07-14 17:01
+:tags: blender, здание, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=32
+:slug: urn:ya.ru:post/22199227/32
+
+Делаю небольшую модельку предприятия. Пока что, вот как выглядит
+черновой вариант, это всего лишь кусочек работы.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3603/imdagger.1/0_ca42_7fb2f99a_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/51778/

@@ -1,0 +1,74 @@
+Ошибка обработки фильтрации отправителя сигнала в Celery
+========================================================
+:date: 2013-09-25 20:38:34
+:tags: Celery, ошибка, обработчик, отправка, python, сигнал
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1869
+
+Похоже на то, что в обработчике сигналов в Celery есть проблемное
+место. Код для сигналов :code:`celery.utils.dispatch.signals` взят из Django,
+но в Django в роли sender выступает обычно класс, при чём этот класс в
+единственном экземпляре. Т.к. веб сервер довольно таки самодостаточный
+процесс. А вот в Celery явно выделяется обработчик запроса и
+отправитель. При чём это могут быть два разных процесса, которые
+естественно не разделяют интерпретатор, память и могут быть на разных
+узлах.
+
+Так вот обработчик для сигналов :code:`task\_sent` вызывается на стороне
+отправителя, а некоторые другие сигналы на принимающей стороне. Видимо
+это стало причиной, что *sender* в Celery содержит строку — название
+отправителя. Только вот две одинаковые строки не обязаны иметь
+одинаковый **id**, особенно если они из разных модулей или получены
+разными путями, ведь это два разных объекта. Но в документации к Celery
+есть смутное
+`упоминание <http://docs.celeryproject.org/en/latest/userguide/signals.html#basics>`__,
+что можно включить фильтр по sender при регистрации обработчика сигнала,
+что в принципе не работает:
+
+    Some signals also have a sender which you can filter by. For example
+    the
+    `task_sent <http://docs.celeryproject.org/en/latest/userguide/signals.html#std:signal-task_sent>`__
+    signal uses the task name as a sender, so you can connect your
+    handler to be called only when tasks with name “tasks.add” has been
+    sent by providing the sender argument to
+    `connect <http://docs.celeryproject.org/en/latest/internals/reference/celery.utils.dispatch.signal.html#celery.utils.dispatch.signal.Signal.connect>`__:
+
+    .. code-block:: python
+
+        @task_sent.connect(sender='tasks.add')
+        def task_sent_handler(sender=None, task_id=None, task=None, args=None,
+                              kwargs=None, **kwds):
+            print('Got signal task_sent for task id %s' % (task_id, ))
+
+
+
+А не работает потому, что код диспетчера преобразует отправителя в
+идентификатор, который затем и сравнивает:
+
+.. code-block:: python
+
+        def _make_id(target):  # pragma: no cover
+            if hasattr(target, 'im_func'):
+                return (id(target.im_self), id(target.im_func))
+            return id(target)
+
+
+
+Эта функция используется для трансляции вида: отправитель →
+уникальное число; только вот так нельзя делать из-за того, что для строк
+это не очень работает. Для классов да, неплохо работает. Но Celery всё
+же отправляет строку. Поэтому до решения проблемы лучше писать
+обработчик вида:
+
+
+
+.. code-block:: python
+
+        @task_success.connect
+        def ...
+            if sender == '...':
+                ...
+
+Или похакать модуль и добавить туда hash вместо id, но это только
+если тип хешируемый.

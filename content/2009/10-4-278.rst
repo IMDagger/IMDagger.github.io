@@ -1,0 +1,16 @@
+Глюки
+=====
+:date: 2009-10-04 15:19:05
+:tags: slang, ncurses, midnight commander
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=278
+
+Собрал Midnight Commander с Ncurses, но появились проблемы: после
+выполнения команды **reset** прямо из mc, в нём исчезала вся
+псевдографика (т.е. вертикальные, горизонтальные линии и т.д.) и
+появлялись вместо них буквы «x», а вторая проблема заключалась в
+зависании Midnight Commander’а и загрузке процессора на 100% при
+закрытии терминала, :underline:`а не выхода по` :kbd:`F10`. Решились они обе установкой
+S-Lang и сборкой с ним (по умолчанию с libslang и собирается, но я
+принудительно задавал **--with-screen=ncurses**).

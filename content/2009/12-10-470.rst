@@ -1,0 +1,30 @@
+С первым снегом
+===============
+:date: 2009-12-10 11:11:07
+:tags: радость, жизнь, снег
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=470
+
+Ура! Выпал снег, температура около нуля. На улице посветлело!
+
+.. class:: text-center
+
+|image0|
+
+А пузатики надулись от того, что холодно:
+
+.. class:: text-center
+
+|image1|
+
+.. class:: text-center
+
+|image2|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3905/imdagger.4/0_1a070_6fe0978f_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/106608/
+.. |image1| image:: http://img-fotki.yandex.ru/get/4105/imdagger.4/0_1a071_b3914b0d_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/106609/
+.. |image2| image:: http://img-fotki.yandex.ru/get/4102/imdagger.4/0_1a072_6fae5d32_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/106610/

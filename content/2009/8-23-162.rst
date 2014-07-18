@@ -1,0 +1,11 @@
+
+
+:date: 2009-08-23 14:10:08
+:tags: 
+:category: mood
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=162
+:slug: urn:ya.ru:post/22199227/162
+
+Обновился до Emacs 23.1
+

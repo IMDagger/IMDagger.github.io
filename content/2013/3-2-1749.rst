@@ -1,0 +1,14 @@
+Бюджетный VPS
+=============
+:date: 2013-03-02 23:37:19
+:modified: 2013-03-02 23:42:04
+:tags: дёшево, vps
+:category: link
+:author: IMDagger
+:attached-url: https://www.budgetvm.com
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1749
+
+Обзавёлся тут для своих целей машинкой с 128Mib RAM всего за $15 в год.
+Там можно взять и 1Gib за $5 месяц, что неплохо, если требуется держать
+несколько средних сервисов для внутренних нужд.
+

@@ -1,0 +1,18 @@
+В инете
+=======
+:date: 2010-08-22 18:18:50
+:tags: Я, интернет, Минск, wifi, работа
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1085
+
+Хорошо, что добрый ресторанчик снизу любезно предоставил нам бесплатный
+Wifi интернет. Мне только не хватает столика, хм.. может стоит пойти на
+кухню в интернет :) Но вдруг там соединение меньше, тут у меня хоть 45%.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5401/imdagger.7/0_3ceae_a91f38a6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/249518/

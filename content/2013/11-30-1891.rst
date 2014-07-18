@@ -1,0 +1,23 @@
+struct*
+=======
+:date: 2013-11-30 12:14:55
+:modified: 2013-11-30 12:15:18
+:tags: struct*, pattern, программирование, matching, racket, структура, шаблон
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1891
+
+Было приятно то, что в Racket в библиотеке пэттерн мэтчинга ко всему
+множеству, что там есть, присутствует возможность задать шаблон
+`частичной
+структурой <http://docs.racket-lang.org/reference/match.html#%28form._%28%28lib._racket/match..rkt%29._struct*%29%29>`__,
+т.е. не требуя от структуры наличия всех полей, а только тех, что
+необходимы:
+
+.. code-block:: racket
+
+        (struct s (a b c))
+        (define data (list (s 1 2 3) 4))
+        (match-define (list (struct* s {[a av] [b bv]}) _)
+                        data)
+        ;; теперь в av и bv соответственно 1 и 2

@@ -1,0 +1,16 @@
+ICFPC 2012
+==========
+:date: 2012-04-03 22:32:20
+:tags: соревнование, радость, жизнь, программирование, icfpc
+:category: link
+:author: IMDagger
+:attached-url: http://icfpconference.org/icfp2012/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1574
+
+    Ура! Организаторы ICFP Programming Contest определились с датой
+проведения, надеюсь, что с 13 по 16 июля я смогу принять участие в
+соревновании, нужно будет ещё подготовиться к этому мероприятию, как
+только появится более подробная информация по требованиям.
+The ICFP Programming Contest dates have been announced. The contest will
+run from Friday 13 July 12:00 GMT to Monday 16 July 12:00 GMT.
+

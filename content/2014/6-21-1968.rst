@@ -1,0 +1,20 @@
+Малина в корпусе
+================
+:date: 2014-06-21 13:19:31
+:tags: компьютер, pi, корпус, устройство, raspberry
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1968
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9666/22199227.b/0_9d0d1_706b1fc6_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/643281
+   :title: Малина в корпусе
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9489/22199227.b/0_9d0d2_44287593_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/643282
+   :title: Малина в корпусе
+
+Корпус добротный, утяжелённый, на силиконовой подложке, чтобы не
+скользил; хотя сама плата во много раз меньше корпуса (размером с
+кредитную карту).
+

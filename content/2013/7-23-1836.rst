@@ -1,0 +1,13 @@
+Bootstrap кнопка ON/OFF
+=======================
+:date: 2013-07-23 21:59:58
+:modified: 2013-07-25 22:18:15
+:tags: кнопка, слайдер, переключатель, bootstrap
+:category: link
+:author: IMDagger
+:attached-url: http://www.larentis.eu/switch/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1836
+
+    Настраиваемый слайдер с двумя состояниями, основан на Bootstrap,
+удобный, расширяемый.
+

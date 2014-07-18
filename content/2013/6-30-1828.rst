@@ -1,0 +1,203 @@
+Переход из точки в точку
+========================
+:date: 2013-06-30 00:02:13
+:modified: 2013-06-30 00:03:37
+:tags: окружность, вычисление, би-дуги, переход, точка, математика
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1828
+
+Если задано две точки (p\ :sub:`1x`; p\ :sub:`1y`) с начальным
+единичным вектором (t\ :sub:`1x`; t\ :sub:`1y`) и конечная точка
+(p\ :sub:`2x`; p\ :sub:`2y`) с единичным вектором (t\ :sub:`2x`;
+t\ :sub:`2y`), то возможен набор переходов при помощи двух окружностей и
+отрезка из начальной точки в конечную. Отрезок расположен коллинеарно
+конечному единичному вектору и заканчивается в точке (p\ :sub:`2x`;
+p\ :sub:`2y`). Нужно вычислить его длину и ограничения для радиусов
+окружностей R\ :sub:`1` и R\ :sub:`2` таких, что единичные вектора в
+заданных точках касаются полученных окружностей. Касание может
+происходить слева от вектора и справа, поэтому есть два параметра
+k\ :sub:`1` и k\ :sub:`2`, которые могут принимать значения k\ :sub:`i`
+∈ {-1, 1}. В Maxima я смог свести поиск и решение уравнения к такой
+последовательности::
+
+        (%i1) p1: [p1x, p1y];
+        (%o1)                             [p1x, p1y]
+        (%i2) p2: [p2x, p2y];
+        (%o2)                             [p2x, p2y]
+        (%i3) t1: [t1x, t1y];
+        (%o3)                             [t1x, t1y]
+        (%i4) t2: [t2x, t2y];
+        (%o4)                             [t2x, t2y]
+        (%i5) load("vect");
+
+        (%o5)           /usr/share/maxima/5.24.0/share/vector/vect.mac
+        (%i6)
+        Tt1: [-t1y, t1x];
+        (%o6)                            [- t1y, t1x]
+        (%i7) Tt2: [-t2y, t2x];
+        (%o7)                            [- t2y, t2x]
+        (%i8)
+        f: p2 - delta * t1 + k1 * R2 * Tt2 - p1 - k2 * R1 * Tt1;
+        (%o8) [- k1 t2y R2 + k2 t1y R1 - delta t1x + p2x - p1x,
+                                         k1 t2x R2 - k2 t1x R1 - delta t1y + p2y - p1y]
+        (%i9) res: solve([(f . f) = (R1 + R2)^2], R2), ratsimp;
+                                2     2   2    2     2
+        (%o9) [R2 = - (sqrt(((k1  - k1  k2  t1x ) t2y
+                2   2                                     2     2   2    2     2
+         + (2 k1  k2  t1x t1y t2x + 2 k1 k2 t1y) t2y + (k1  - k1  k2  t1y ) t2x
+                               2    2     2    2    2
+         + 2 k1 k2 t1x t2x + k2  t1y  + k2  t1x ) R1
+                  2              2                         2                2
+         + (((2 k1  k2 p2y - 2 k1  k2 p1y) t1x - 2 delta k1  k2 t1x t1y) t2y
+                       2       2        2              2
+         + ((2 delta k1  k2 t1y  + (2 k1  k2 p1y - 2 k1  k2 p2y) t1y
+                     2       2        2              2
+         - 2 delta k1  k2 t1x  + (2 k1  k2 p2x - 2 k1  k2 p1x) t1x) t2x
+         - 2 delta k1 t1x + 2 k1 p2x - 2 k1 p1x) t2y
+                      2              2              2                2
+         + (2 delta k1  k2 t1x - 2 k1  k2 p2x + 2 k1  k2 p1x) t1y t2x
+         + (2 delta k1 t1y - 2 k1 p2y + 2 k1 p1y) t2x + (2 k2 p2x - 2 k2 p1x) t1y
+                                                   2   2    2
+         + (2 k2 p1y - 2 k2 p2y) t1x) R1 + (- delta  k1  t1y
+                      2                 2              2    2       2
+         + (2 delta k1  p2y - 2 delta k1  p1y) t1y - k1  p2y  + 2 k1  p1y p2y
+             2    2     2              2   2                 2                 2
+         - k1  p1y ) t2y  + ((- 2 delta  k1  t1x + 2 delta k1  p2x - 2 delta k1  p1x)
+                          2                 2                 2           2
+         t1y + (2 delta k1  p2y - 2 delta k1  p1y) t1x + (2 k1  p1x - 2 k1  p2x) p2y
+               2               2
+         + 2 k1  p1y p2x - 2 k1  p1x p1y) t2x t2y
+                   2   2    2              2                 2              2    2
+         + (- delta  k1  t1x  + (2 delta k1  p2x - 2 delta k1  p1x) t1x - k1  p2x
+               2             2    2     2        2    2
+         + 2 k1  p1x p2x - k1  p1x ) t2x  + delta  t1y
+                                                  2    2
+         + (2 delta p1y - 2 delta p2y) t1y + delta  t1x
+                                                2                  2                  2
+         + (2 delta p1x - 2 delta p2x) t1x + p2y  - 2 p1y p2y + p2x  - 2 p1x p2x + p1y
+              2
+         + p1x ) + (- k1 k2 t1y t2y - k1 k2 t1x t2x - 1) R1
+         + (delta k1 t1x - k1 p2x + k1 p1x) t2y
+                                                      2    2     2    2
+         + (- delta k1 t1y + k1 p2y - k1 p1y) t2x)/(k1  t2y  + k1  t2x  - 1),
+                       2     2   2    2     2        2   2
+        R2 = (sqrt(((k1  - k1  k2  t1x ) t2y  + (2 k1  k2  t1x t1y t2x + 2 k1 k2 t1y)
+                  2     2   2    2     2                       2    2     2    2    2
+         t2y + (k1  - k1  k2  t1y ) t2x  + 2 k1 k2 t1x t2x + k2  t1y  + k2  t1x ) R1
+                  2              2                         2                2
+         + (((2 k1  k2 p2y - 2 k1  k2 p1y) t1x - 2 delta k1  k2 t1x t1y) t2y
+                       2       2        2              2
+         + ((2 delta k1  k2 t1y  + (2 k1  k2 p1y - 2 k1  k2 p2y) t1y
+                     2       2        2              2
+         - 2 delta k1  k2 t1x  + (2 k1  k2 p2x - 2 k1  k2 p1x) t1x) t2x
+         - 2 delta k1 t1x + 2 k1 p2x - 2 k1 p1x) t2y
+                      2              2              2                2
+         + (2 delta k1  k2 t1x - 2 k1  k2 p2x + 2 k1  k2 p1x) t1y t2x
+         + (2 delta k1 t1y - 2 k1 p2y + 2 k1 p1y) t2x + (2 k2 p2x - 2 k2 p1x) t1y
+                                                   2   2    2
+         + (2 k2 p1y - 2 k2 p2y) t1x) R1 + (- delta  k1  t1y
+                      2                 2              2    2       2
+         + (2 delta k1  p2y - 2 delta k1  p1y) t1y - k1  p2y  + 2 k1  p1y p2y
+             2    2     2              2   2                 2                 2
+         - k1  p1y ) t2y  + ((- 2 delta  k1  t1x + 2 delta k1  p2x - 2 delta k1  p1x)
+                          2                 2                 2           2
+         t1y + (2 delta k1  p2y - 2 delta k1  p1y) t1x + (2 k1  p1x - 2 k1  p2x) p2y
+               2               2
+         + 2 k1  p1y p2x - 2 k1  p1x p1y) t2x t2y
+                   2   2    2              2                 2              2    2
+         + (- delta  k1  t1x  + (2 delta k1  p2x - 2 delta k1  p1x) t1x - k1  p2x
+               2             2    2     2        2    2
+         + 2 k1  p1x p2x - k1  p1x ) t2x  + delta  t1y
+                                                  2    2
+         + (2 delta p1y - 2 delta p2y) t1y + delta  t1x
+                                                2                  2                  2
+         + (2 delta p1x - 2 delta p2x) t1x + p2y  - 2 p1y p2y + p2x  - 2 p1x p2x + p1y
+              2
+         + p1x ) + (k1 k2 t1y t2y + k1 k2 t1x t2x + 1) R1
+         + (- delta k1 t1x + k1 p2x - k1 p1x) t2y
+                                                    2    2     2    2
+         + (delta k1 t1y - k1 p2y + k1 p1y) t2x)/(k1  t2y  + k1  t2x  - 1)]
+        (%i10) factor(ev(res, [k1^2=1, k2^2=1, 1 - t1x^2 = t1y^2,
+         1 - t1y^2 = t1x^2, 1 - t2x^2=t2y^2, 1 - t2y^2 = t2x^2,
+         t1y^2 + t1x^2 = 1, t2y^2 + t2x^2 = 1]));
+                                 2    2                                          2    2
+        (%o10) [R2 = - (sqrt((t1y  t2y  + (2 t1x t1y t2x + 2 k1 k2 t1y) t2y + t1x  t2x
+                                2      2    2
+         + 2 k1 k2 t1x t2x + t1y  + t1x ) R1  + (((2 k2 p2y - 2 k2 p1y) t1x
+                                  2                   2
+         - 2 delta k2 t1x t1y) t2y  + ((2 delta k2 t1y  + (2 k2 p1y - 2 k2 p2y) t1y
+                         2
+         - 2 delta k2 t1x  + (2 k2 p2x - 2 k2 p1x) t1x) t2x - 2 delta k1 t1x + 2 k1 p2x
+                                                                         2
+         - 2 k1 p1x) t2y + (2 delta k2 t1x - 2 k2 p2x + 2 k2 p1x) t1y t2x
+         + (2 delta k1 t1y - 2 k1 p2y + 2 k1 p1y) t2x + (2 k2 p2x - 2 k2 p1x) t1y
+                                                   2    2
+         + (2 k2 p1y - 2 k2 p2y) t1x) R1 + (- delta  t1y
+                                                2                  2     2
+         + (2 delta p2y - 2 delta p1y) t1y - p2y  + 2 p1y p2y - p1y ) t2y
+                      2
+         + ((- 2 delta  t1x + 2 delta p2x - 2 delta p1x) t1y
+         + (2 delta p2y - 2 delta p1y) t1x + (2 p1x - 2 p2x) p2y + 2 p1y p2x
+                                        2    2                                        2
+         - 2 p1x p1y) t2x t2y + (- delta  t1x  + (2 delta p2x - 2 delta p1x) t1x - p2x
+                          2     2        2    2
+         + 2 p1x p2x - p1x ) t2x  + delta  t1y  + (2 delta p1y - 2 delta p2y) t1y
+                2    2                                        2                  2
+         + delta  t1x  + (2 delta p1x - 2 delta p2x) t1x + p2y  - 2 p1y p2y + p2x
+                          2      2
+         - 2 p1x p2x + p1y  + p1x ) - k1 k2 t1y t2y R1 - k1 k2 t1x t2x R1 - R1
+         + delta k1 t1x t2y - k1 p2x t2y + k1 p1x t2y - delta k1 t1y t2x + k1 p2y t2x
+                           2      2
+         - k1 p1y t2x)/(t2y  + t2x  - 1), R2 =
+                  2    2                                          2    2
+        (sqrt((t1y  t2y  + (2 t1x t1y t2x + 2 k1 k2 t1y) t2y + t1x  t2x
+                                2      2    2
+         + 2 k1 k2 t1x t2x + t1y  + t1x ) R1  + (((2 k2 p2y - 2 k2 p1y) t1x
+                                  2                   2
+         - 2 delta k2 t1x t1y) t2y  + ((2 delta k2 t1y  + (2 k2 p1y - 2 k2 p2y) t1y
+                         2
+         - 2 delta k2 t1x  + (2 k2 p2x - 2 k2 p1x) t1x) t2x - 2 delta k1 t1x + 2 k1 p2x
+                                                                         2
+         - 2 k1 p1x) t2y + (2 delta k2 t1x - 2 k2 p2x + 2 k2 p1x) t1y t2x
+         + (2 delta k1 t1y - 2 k1 p2y + 2 k1 p1y) t2x + (2 k2 p2x - 2 k2 p1x) t1y
+                                                   2    2
+         + (2 k2 p1y - 2 k2 p2y) t1x) R1 + (- delta  t1y
+                                                2                  2     2
+         + (2 delta p2y - 2 delta p1y) t1y - p2y  + 2 p1y p2y - p1y ) t2y
+                      2
+         + ((- 2 delta  t1x + 2 delta p2x - 2 delta p1x) t1y
+         + (2 delta p2y - 2 delta p1y) t1x + (2 p1x - 2 p2x) p2y + 2 p1y p2x
+                                        2    2                                        2
+         - 2 p1x p1y) t2x t2y + (- delta  t1x  + (2 delta p2x - 2 delta p1x) t1x - p2x
+                          2     2        2    2
+         + 2 p1x p2x - p1x ) t2x  + delta  t1y  + (2 delta p1y - 2 delta p2y) t1y
+                2    2                                        2                  2
+         + delta  t1x  + (2 delta p1x - 2 delta p2x) t1x + p2y  - 2 p1y p2y + p2x
+                          2      2
+         - 2 p1x p2x + p1y  + p1x ) + k1 k2 t1y t2y R1 + k1 k2 t1x t2x R1 + R1
+         - delta k1 t1x t2y + k1 p2x t2y - k1 p1x t2y + delta k1 t1y t2x - k1 p2y t2x
+                           2      2
+         + k1 p1y t2x)/(t2y  + t2x  - 1)]
+
+Затем я немного пошаманил руками и смог упростить уравнения до
+скалярных и векторных произведений и других более удобноваримых
+операций, чем работа с векторами в сыром виде:
+
+    | St: t1y \* t2y + t1x \* t2x;
+    | Vt: t1x \* t2y-t1y \* t2x;
+    | Vpt: (p2x - p1x) \* t1y - (p2y - p1y) \* t1x;
+    | Spt: (p2y - p1y) \* t1y + (p2x - p1x) \* t1x;
+    |
+    | L: (1 - St^2) \* R2^2 + 2 \* R2 \* (R1 \* (k1 \* k2 \* St + 1) + k1 \* Vpt \* St) -2 \*k2 \* Vpt \* R1 - Vpt^2;
+    |
+    | delta1: sqrt(L) + k1 \* R2 \* Vt + Spt;
+    | delta2: k1 \* R2 \* Vt + Spt - sqrt(L);
+
+Кажется всё посчитано верно (два варианта решения delta1 и delta2),
+я исхожу из того, что к начальной точке можно подвести одну окружность
+некоторого заданного радиуса R1, а затем уже нужно построить другую
+радиуса R2 так, чтобы касалась она луча исходящего в противонаправленно
+конечному вектору.
+
+Я смогу вывести ограничения на R1, R2, но об этом уже потом.

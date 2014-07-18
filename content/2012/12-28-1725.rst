@@ -1,0 +1,15 @@
+Получение информации о приложении
+=================================
+:date: 2012-12-28 17:23:13
+:tags: token, facebook, приложение
+:category: link
+:author: IMDagger
+:attached-url: http://stackoverflow.com/questions/8141037/get-application-id-from-user-access-token-or-verify-the-source-application-for
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1725
+
+    Как получить информацию о Facebook-приложении по user access\_token?
+Достаточно отправить запрос вида:
+`https://graph.facebook.com/app/?access\_token=[user\_access\_token] <https://graph.facebook.com/app/?access_token=[user_access_token]>`__
+    А затем по id из словаря можно убедится, что токен принадлежит
+нашему приложению, а из /me можно узнать какому пользователю конкретно.
+

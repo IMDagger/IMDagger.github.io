@@ -1,0 +1,18 @@
+Закат
+=====
+:date: 2013-03-26 17:39:28
+:tags: солнце, панорама, закат, небо, Гомель
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1760
+
+.. photo-block:: http://img-fotki.yandex.ru/get/4135/22199227.a/0_89fd6_89978746_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/565206
+   :title: ALIM2646.JPG
+
+.. photo-block:: http://img-fotki.yandex.ru/get/6433/22199227.a/0_89fd9_74dff457_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/565209
+   :title: Заголовок
+
+Вид в сторону старинных конюшен и заводов.
+

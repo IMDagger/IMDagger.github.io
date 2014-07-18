@@ -1,0 +1,74 @@
+Подружил TextureAtlas, AssetManager и мультизагрузку
+====================================================
+:date: 2012-04-13 22:48:43
+:modified: 2012-04-13 22:49:28
+:tags: программирование, libGDX, менеджер, ресурсы, платформы, унификация, атлас
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1577
+
+Одним из преимуществ libGDX является то, что реально писать
+приложение на PC, отлаживать большую часть приложения на PC без
+эмулятора смартфона. Но есть особенность в том, где ищет библиотека
+ресурсы на PC платформе и на Android. :code:`Gdx.files.internal` для PC ищет
+данные начиная с корня приложения, а на платформе Android начиная с
+директории assets.
+
+Это создаёт небольшие неудобства для унификации и отладки. Хотелось
+бы свободно заливать, запускать и не думать сильно о платформе. А ещё
+управлять удобно загруженными ресурсами, поддерживать связи между ними,
+выгружать. Со всем этим помогает объект класса AssetManager.
+
+Поэтому удобно немного расширить его поведение и указать, где
+искать необходимые файлы. Когда я попытался создать свой резолвер и
+просто добавлять assets/ для случая PC-платформу, то наткнулся на
+проблему с загрузкой TextureAtlas. Сам pack-файл загружался прекрасно, а
+вот уже изображения указанные в нём загружались как assets/assets/\*,
+что было некорректно и не приемлемо. Поэтому пришла простая мысль
+проверять начинается ли путь с assets/ и, если это так, то не добавлять
+префикс ещё раз:
+
+.. code-block:: java
+
+    ...
+        protected class MultiResolver extends InternalFileHandleResolver
+    {
+            public FileHandle resolve (String fileName) {
+                if (Gdx.app.getType() != Application.ApplicationType.Android) {
+                    if (!fileName.startsWith("assets/"))
+                        fileName = "assets/" + fileName;
+                }
+                return super.resolve(fileName);
+            }
+        }
+
+        public void error(String fileName, Class type, Throwable throwable) {
+            Gdx.app.error("RESOURCE", "Problem with file " + fileName + " class " + type + " " + throwable);
+        }
+
+        public MediaLoader() {
+            manager = new AssetManager();
+            manager.setErrorListener(this);
+            manager.setLoader(BitmapFont.class, new BitmapFontLoader(new MultiResolver())
+            manager.setLoader(Music.class, new MusicLoader(new MultiResolver())
+            manager.setLoader(Pixmap.class, new PixmapLoader(new MultiResolver())
+            manager.setLoader(Sound.class, new SoundLoader(new MultiResolver())
+            manager.setLoader(TextureAtlas.class, new TextureAtlasLoader(new MultiResolver())
+            manager.setLoader(Texture.class, new TextureLoader(new MultiResolver())
+            manager.setLoader(Skin.class, new SkinLoader(new MultiResolver())
+            manager.setLoader(TileMapRenderer.class, new TileMapRendererLoader(new MultiResolver())
+        }
+    ...
+
+Возможно есть более красивые и грамотные решения, но меня и это
+вполне устраивает. Тем более, что я не собираюсь создавать вложенные
+assets директории. В примерах от libGDX перед pack-файлом принудительно
+указывают требование на загрузку изображения от этого pack-файла, но
+видимо там это сделано лишь для примера, т.к. реальной необходимости в
+этом нет.
+
+.. code-block:: java
+
+   manager.load("planet/pack", TextureAtlas.class);
+   // ... когда всё загрузилось и готово
+   atlas = manager.get("planet/pack", TextureAtlas.class);

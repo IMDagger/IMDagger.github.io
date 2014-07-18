@@ -1,0 +1,48 @@
+Работа с Tweepy
+===============
+:date: 2010-12-30 14:43:27
+:tags: python, twitter, работа, tweepy
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1208
+
+Для работы с Twitter API мне приглянулась библиотека Tweepy.
+Достаточно простая, обновляется периодически. API у самой библиотеки
+тоже удобный, например если нужно получить объект-текущий пользователь,
+то достаточно вызвать метод .me(). Поддерживаются различные схемы
+авторизации, но мне нужна была OAuth 1.0 (Twitter не умеет пока 2.0).
+dev\_api\_key, dev\_secret нужно получить на странице
+http://dev.twitter.com/apps, зарегистрировав своё приложение. Получить
+токен для Twitter-коннекта можно не хитрыми операциями:
+
+.. code-block:: python
+
+    import tweepy
+    auth_handler = util.tweepy.auth.OAuthHandler(dev_api_key, dev_secret,\
+           callback='тут можно написать наш url, если не указать, то будет взят и настроек приложения')
+    url = auth.get_authorization_url()
+    # обязательно сохраняем request-параметры и передаём браузеру пользователя url для перехода
+    request_info = (auth.request_token.key, auth.request_token.secret)
+
+Параметры пригодятся, когда наш callback получит управление и два
+токена для offline доступа. Эти два ключа вместе с полученными
+параметрами (хватит даже oauth\_verifier) позволяют запросить у сервера
+без помощи пользователя ключи, при помощи которых и можно работать с
+персональными данными, т.к. права доступа подтверждены. Сохранённые
+ключи нужно установить вручную в объект авторизации:
+
+.. code-block:: python
+
+    import tweepy
+    auth_handler = tweepy.auth.OAuthHandler(dev_api_key, dev_secret)
+    auth_handler.set_request_token(request_key, request_secret)
+    try:
+        # запрашиваем ключи offline доступа
+        auth_handler.get_access_token(verifier=oauth_verifier)
+        # сохраняем
+        store_offline_keys = auth_handler.access_token
+    except util.tweepy.error.TweepError:
+        # случилось нечто ужасное :) не выдан ключ, а пользователь подтвердил наши права
+    else:
+        # API готов к работе
+        api = tweepy.API(auth_handler)

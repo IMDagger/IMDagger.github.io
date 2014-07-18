@@ -1,0 +1,18 @@
+
+
+:date: 2011-08-22 10:11:55
+:tags: bge, CEGUI, программирование, улучшение, blender, актуатор
+:category: video
+:author: IMDagger
+:attached-url: http://flv.video.yandex.ru/lite/4611686020242885618/7tuan4jaju.4005/
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1426
+:slug: urn:ya.ru:post/22199227/1426
+
+Ура! Моё видео на Vimeo сконвертировалось. Теперь можно смотреть.
+Дополнительный курсор, который всегда виден – это от ffmpeg.
+
+.. class:: text-center
+
+.. vimeo:: 27969738
+   :width: 450
+   :height: 370

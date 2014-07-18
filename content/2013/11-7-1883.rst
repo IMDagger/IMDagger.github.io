@@ -1,0 +1,16 @@
+
+
+:date: 2013-11-07 00:35:00
+:tags: 2.6, python, десереализация, pickle, ошибка
+:category: link
+:author: IMDagger
+:attached-url: http://stackoverflow.com/questions/6331901/pickling-error-in-python
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1883
+:slug: urn:ya.ru:post/22199227/1883
+
+Если Python 2.6 (хотя он уже двумя ногами покоится с миром, ибо 2.7
+одной ногой там уже тоже, но всё же) выдаёт нечто вот такое :code:`KeyError:
+'\\x00'` при :code:`pickle.loads`. То видимо в loads попала unicode строка,
+например, если строка взята из результата запроса библиотеки requests.
+Стоит тогда сконвертировать в str эту строку и всё будет хорошо, либо
+сервису, который отдаёт данные стоит завернуть всё это дело в base64.

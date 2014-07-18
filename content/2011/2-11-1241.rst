@@ -1,0 +1,43 @@
+Подводный камень с Tweepy при работе в Python 2.4
+=================================================
+:date: 2011-02-11 21:48:02
+:tags: python, tweepy, twitter, ошибка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1241
+
+Объект класса TweepError не содержит свойства args, хотя должен, это
+видно из примера с Exception:
+
+.. code-block:: pycon
+
+    Python 2.4.6 (#1, May 13 2009, 12:55:36)
+    [GCC 4.2.4 (Ubuntu 4.2.4-1ubuntu3)] on linux2
+    Type "help"”, "copyright", "credits" or "license" for more information.
+    >>> import tweepy
+    >>> tweepy.error.TweepError('test', 'test')
+    <util.tweepy.error.TweepError instance at 0x7f2bf9c0dd88>
+    >>> tweepy.error.TweepError('test', 'test').args
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in ?
+    AttributeError: TweepError instance has no attribute 'args'
+    >>> Exception('test', 'test').args
+    ('test', 'test')
+
+Открываем код модуля и видим \_\_init\_\_ класса:
+
+.. code-block:: python
+
+    ...
+    class TweepError(Exception):
+        """Tweepy exception"""
+        def __init__(self, reason, response=None):
+            self.reason = str(reason)
+            self.response = response
+    ...
+
+И не вижу никакого вызова конструктора родительского класса.
+Достаточно добавить для 2.4 в \_\_init\_\_ вызов
+Exception.\_\_init\_\_(self, reason, response) и свойство args у объекта
+появится. Для 2.4 не проходит **super** с Exception, т.к. он не из новых
+классов ещё, а в 2.5 уже на ура :).

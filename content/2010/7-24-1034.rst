@@ -1,0 +1,19 @@
+Няшка
+=====
+:date: 2010-07-24 16:12:23
+:tags: blender, котёнок, идеи, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1034
+
+Хотел сделать небольшого симпатичного котёнка, на подушечке.
+Попытался набросать идею на листок. Сошёлся на позе йоги, но вот при
+реализации всё вышло немного не так, но в целом идею передал надеюсь. Я
+хотел сделать акцент на глаза :)
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/4800/imdagger.7/0_3a0cd_231dec48_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/237773/

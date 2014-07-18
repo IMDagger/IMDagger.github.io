@@ -1,0 +1,35 @@
+Менеджер по умолчанию и исключение в .save()
+============================================
+:date: 2014-01-03 00:58:41
+:tags: django-polymorphic, IntegrityError, дубликат, исключение, модель, менеджер
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1910
+
+Если при использовании модели из django-polymorphic возникает ошибка
+подобного вида при вызове :code:`.save`:
+
+.. code-block:: pytb
+
+        (8 additional frame(s) were not displayed)
+        ...
+          File "staff/views.py", line 236, in edit_result
+            result.save()
+          File "polymorphic/polymorphic_model.py", line 89, in save
+            return super(PolymorphicModel, self).save(*args, **kwargs)
+
+
+        IntegrityError: (1062, "Duplicate entry '72' for key 'PRIMARY'")
+
+Причём, после всех проверок видно, что дубликата, ну никак, не может
+быть. То высока вероятность, что просто, пропущено явное указание
+менеджера objects по умолчанию и подхватился какой-то другой из
+менеджеров (конечно, если используется пропатченная версия
+polymorphic-django). Тогда достаточно объявить недостающий обработчик:
+
+.. code-block:: python
+
+        class ...
+            ...
+            objects = CommonManager() # простая надстройка над PolymorphicManager
+            ready_articles = FinalsManager() # свой особенный менеджер

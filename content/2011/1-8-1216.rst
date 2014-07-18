@@ -1,0 +1,44 @@
+Ядро 2.6.37 и GCC 3
+===================
+:date: 2011-01-08 20:12:27
+:tags: 2.6.37, GCC, nouveau, сборка, 3, linux, проблема
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1216
+
+Сначала при сборке 2.6.37-rc3 ядра выпало типа такого (у меня не
+очень новый binutils)::
+
+        AS      arch/x86/kernel/entry_32.o
+        arch/x86/kernel/entry_32.S: Assembler messages:
+        arch/x86/kernel/entry_32.S:398: Error: too many positional arguments
+        make[2]: *** [arch/x86/kernel/entry_32.o] Error 1
+        make[1]: *** [arch/x86/kernel] Error 2
+        make: *** [arch/x86] Error 2
+
+Я собираю ядро с Nouveau модулем, брал ядро из их репозитория,
+поэтому версия такая. Хорошо, что нашёл
+`фикс <https://patchwork.kernel.org/patch/303952/>`__ для этой проблемы.
+Патч очень маленький, я даже просто руками его применил без создания
+.diff файла.
+
+Затем меня ждала проблема с GCC, т.к. он у меня 3-ей версии (я пока
+не хочу обновлять его до 4). У меня версия 3.4.6. В ней есть какой-то
+косят, что для некоторых модулей ядра при сборке создаётся лишняя метка
+вида .Lxxx и её не удаётся разрезолвить. На форуме я нашёл, что это
+проблема оптимизатора, поэтому я просто пересобрал модули ядра, на
+которые ругалось с опцией -O1. Я запускал make O=директория\_сборки V=1
+и смотрел, как оно собирает проблемный файл, затем оно падало с ошибкой,
+я выполнял команду сборки но с опцией -O1::
+
+        gcc -Wp,-MD,drivers/tty/vt/.vt.o.d  -nostdinc -isystem /usr/lib/gcc/i486-slackware-linux/3.4.6/include -I/home/imdagger/linux-nouveau/linux-2.6/arch/x86/include -Iinclude  -I/home/imdagger/linux-nouveau/linux-2.6/include -include include/generated/autoconf.h  -I/home/imdagger/linux-nouveau/linux-2.6/drivers/tty/vt -Idrivers/tty/vt -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O1 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -fno-unit-at-a-time -march=i686 -mtune=pentium4 -mtune=i686 -ffreestanding -DCONFIG_AS_CFI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -fno-omit-frame-pointer -fno-optimize-sibling-calls -Wdeclaration-after-statement    -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(vt)"  -D"KBUILD_MODNAME=KBUILD_STR(vt)" -c -o drivers/tty/vt/vt.o /home/imdagger/linux-nouveau/linux-2.6/drivers/tty/vt/vt.c
+
+Если ошибка выпадала в конце, как в случае с vt.c::
+
+    drivers/built-in.o(.init.text+0x3bad): In function `con_init':
+    …где-нибудь… undefined reference to `.L1452'
+
+То я удалял соответствующий файл в директории build и собирал его
+вручную, затем снова запускал make. Он обнаруживал .o файл и не пытался
+его собрать с неверными флагами. Ядро собралось и работает, появился
+модуль nouveau.

@@ -1,0 +1,37 @@
+Поиск ссылок на странице
+========================
+:date: 2013-01-16 00:40:29
+:modified: 2013-01-16 00:41:03
+:tags: ссылки, HTML, XPath, программирование, страницы, разбор
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1731
+
+Выбрать все ссылки со страницы можно, например, вот так:
+
+.. code-block:: python
+
+        import lxml.html
+        ...
+
+        class SomeClass(object):
+            ...
+            def _parse_urls(self, content):
+                document = lxml.html.fromstring(content)
+                if document.xpath('//meta[@content="noindex"]'):
+                    # don't parse links from this page
+                    return
+
+                for atag in document.xpath('//a[not(starts-with(@href, "#"))]'):
+                    rel = atag.get('rel', '')
+                    if all(attr_value not in rel for attr_value in ['noindex', 'nofollow']):
+                        yield atag.get('href')
+
+Выражение :code:`//meta[@content="noindex"]` выбирает все теги meta, у
+которых атрибут content указывает, что индексация страницы нежелательна
+(равен строке noindex). Можно было указать, что meta находится в head в
+html, но мне было лениво .
+
+А вот `XPath <http://ru.wikipedia.org/wiki/XPath>`__-выражение
+:code:`//a[not(starts-with(@href, "#"))]` использует функции not и starts-with;
+и выбирает только теги :code:`<a>`, у которых атрибут href не начинается на #.

@@ -1,0 +1,20 @@
+
+
+:date: 2013-04-02 11:59:23
+:modified: 2013-04-02 12:00:46
+:tags: демотиватор
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1769
+:slug: urn:ya.ru:post/22199227/1769
+
+Добавили
+мой \ `демотиватор <http://demotivators.to/p/750214/magazin-dlya-odinokih-lyudej.htm>`__
+:) Сделал фотку у нас в городе. Забавное название у магазина.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/6437/22199227.a/0_8a37d_715a5afc_L
+   :target: http://demotivators.to/p/750214/magazin-dlya-odinokih-lyudej.htm

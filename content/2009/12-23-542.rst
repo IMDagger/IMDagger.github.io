@@ -1,0 +1,20 @@
+Пряники
+=======
+:date: 2009-12-23 14:57:52
+:tags: blender, пряник, набросок
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=542
+
+Сделал модельки пряников (полусфера, которая сжата и её край
+экструдирован), одел текстуру пряника, уменьшил **Specularity**,
+сфотографировал стол и текстуру разместил на меше. Поставил Area лампу,
+но чтобы не засвечивала, а цвет тени сделал коричневым. Делал десяток
+минут, т.е. не очень долго. Соответственно и результат такой x-D:
+
+.. class:: text-center
+
+|Пряники|
+
+.. |Пряники| image:: http://img-fotki.yandex.ru/get/4013/imdagger.5/0_1b1f7_5aa8c9b2_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/111095/

@@ -1,0 +1,18 @@
+Они меня любят
+==============
+:date: 2010-04-03 05:24:22
+:tags: любовь, Я, голуби, птицы
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=791
+
+Они такие мягенькие и гладкие. Лапки у них немного грязные, но не
+сильно, чище чем, если бы человек голыми ступнями походил по земле.
+Когда клюют, то совсем не чувствуешь, делают это нежно.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/3803/imdagger.6/0_29a2f_25ef4764_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/170543/

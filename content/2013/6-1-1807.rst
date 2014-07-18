@@ -1,0 +1,23 @@
+JIRA и автостарт
+================
+:date: 2013-06-01 22:25:16
+:modified: 2013-06-01 22:25:36
+:tags: linux, скрипт, старт, запуск, MySQL, jira, автозагрузка
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1807
+
+Добавил в скрипт для запуска JIRA зависимости от MySQL и Nginx. Т.к.
+похоже, что у меня JIRA сервис часто успевает запуститься раньше, чем
+база данных и от этого просто драйвер БД не может подключиться и вся
+трэкинговая система тихо валится при загрузке:
+
+.. code-block:: sh
+
+    ### BEGIN INIT INFO
+    # Provides:          jira
+    # Required-Start:    $local_fs $remote_fs $network $syslog nginx mysql
+    # Required-Stop:     $local_fs $remote_fs $network $syslog nginx mysql
+    …
+
+Надеюсь, что копаю в правильном направлении :/

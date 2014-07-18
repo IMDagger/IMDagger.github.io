@@ -1,0 +1,97 @@
+Маршрутизация определённых MAC-адресов в заданный VPN
+=====================================================
+:date: 2011-10-26 01:02:59
+:tags: iptables, MAC, маршрут, VPN, rp_filter, fwmark, iproute2, метка, Я, работа, администрирование
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1478
+
+На сервере имеется два интернет канала и через один из них
+поднимается VPN соединение по pptp до другого сервера, который
+маршрутизирует пакеты дальше во внешний мир используя SNAT. На нашем
+сервере необходимо было настроить правила для iproute2 и iptables, так
+чтобы только машины с указанными MAC’ами полностью проходили через VPN,
+а все остальные через обычные интернет каналы провайдера.
+
+Задача выглядит достаточно просто, но заставила меня изрядно
+помучаться. Я создал правила в iptables в mangle таблице, которое
+помечает пакеты при помощи специального маркера, если пакет уходит с
+определённого MAC-адреса. Затем iptables при помощи SNAT заворачивает
+все такие пакеты с маркером. И далее iproute2 при помощи правила с
+проверкой маркера отправляет в необходимое ppp соединение наш пакет.
+
+Вылазит небольшая проблема, называется она rp\_filter, т.к. ядро не
+находит явного маршрута для пакетов, то из VPN они не возвращаются. И
+получается, что я вижу пир помощи tcpdump пакеты, которые попали в
+интерфейс VPN и вернулись ответы, но к клиенту из локальной подсети
+(192.168.1.0/24) они не доходят.
+
+Пришлось сделать (:code:`$PPP\_IFACE` это название интерфейса VPN, например
+ppp2):
+
+.. code-block:: sh
+
+    echo 0 >/proc/sys/net/ipv4/conf/all/rp_filter
+    echo 0 >/proc/sys/net/ipv4/conf/$PPP_IFACE/rp_filter
+    # остальные устройства можно не трогать они будут с флагом 1
+    # пусть так и остаются
+
+Я создал ip-up.d скрипт для pppd, который, когда поднимается vpn
+соединение, автоматически исполняется и настраивает маршруты и правила.
+
+    для Ubuntu этот файл будет лежать здесь /etc/ppp/ip-up.d/usa
+    ещё нужно не забыть создать таблицу usa\_vpn для iproute2 в его
+    конфигурационном файле в rt\_tables
+
+    .. code-block:: sh
+
+       #!/bin/sh
+       USA_VPN="15"
+       USA_TABLE="usa_vpn"
+       USA_CHAIN="USA_VPN"
+
+       sync_mac_sources() {
+           # чистим таблицу, которая содержит маркировку MAC адресов
+           /sbin/iptables -t mangle -F $USA_CHAIN
+
+           # в отдельном скрипте храним список MAC-адресов
+           MACHINE_MAC_LIST=`/etc/ppp/usa_vpn_macs`
+           for MACHINE_MAC in $MACHINE_MAC_LIST; do
+               # если пакет содержит подходящий исходный MAC-адрес, то
+               # маркируем его числом 15
+               /sbin/iptables -t mangle -I $USA_CHAIN -m mac --mac-source "$MACHINE_MAC" -j MARK --set-mark $USA_VPN
+           done;
+       }
+
+       # а это, чтобы можно было легко синхронизировать уже рабочие iptables
+       # правила и файл с MAC-адресами
+       if [ "$1" = "sync" ]; then
+           sync_mac_sources;
+       fi
+
+       # это проверка, чтобы скрипт просто так не запускался дальше
+       [ "$LINKNAME" != "usa" ] && exit 0
+
+       # выключаем rp_filter для VPN, т.к. он мешает в нашем случае
+       echo 0 >/proc/sys/net/ipv4/conf/all/rp_filter
+       echo 0 >/proc/sys/net/ipv4/conf/$PPP_IFACE/rp_filter
+
+       # создаём свою цепочку USA_VPN и синхронизируем файл и правила
+       /sbin/iptables -t mangle -N $USA_CHAIN
+       sync_mac_sources;
+
+       # добавляем её как PREROUTING правило
+       # т.к. с меткой нужно определится до iproute2 правил
+       /sbin/iptables -t mangle -I PREROUTING -j $USA_CHAIN
+
+       # когда уже определились с маршрутом, то нужно подменить
+       # оригинальный IP-адрес на локальный VPN-адрес, что-то типа
+       # 192.168.5.24 (зависит от того, что выдал VPN-сервер)
+       /sbin/iptables --table nat -I POSTROUTING -m mark --mark $USA_VPN --jump SNAT --to-source $IPLOCAL
+
+       # локальная сеть
+       /sbin/ip route add 192.168.1.0/24 dev eth0 table $USA_TABLE
+       # теперь добавляем в таблицу usa_vpn маршрут по умолчанию в VPN
+       /sbin/ip route add default dev $PPP_IFACE table $USA_TABLE
+       # все пакеты с маркером 15 отправляем в таблицу usa_vpn
+       /sbin/ip rule add fwmark $USA_VPN lookup $USA_TABLE

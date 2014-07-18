@@ -1,0 +1,14 @@
+
+
+:date: 2009-06-18 11:12:37
+:tags: 
+:category: join
+:author: IMDagger
+:club-ya-ru-id: urn:ya.ru:club/4611686018427390692
+:club-name: TeX
+:attached-url: http://clubs.ya.ru/4611686018427390692
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=27
+:slug: urn:ya.ru:post/22199227/27
+
+Делаю курсовые в LaTeX, делаю документацию для наших программ в LaTeX.
+

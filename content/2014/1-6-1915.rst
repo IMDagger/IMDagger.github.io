@@ -1,0 +1,16 @@
+
+
+:date: 2014-01-06 23:19:14
+:tags: конденсатор, жизнь, пайка
+:category: photo
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1915
+:slug: urn:ya.ru:post/22199227/1915
+
+.. photo-block:: http://img-fotki.yandex.ru/get/9058/22199227.b/0_96dbf_85f580c2_L
+   :link: http://fotki.yandex.ru/users/imdagger/view/617919
+   :title: ALIM3341.JPG
+
+Из неудачной версии генератора Маркса. Потом пришлось всё равно
+перенести на плату.
+

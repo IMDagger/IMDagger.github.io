@@ -1,0 +1,18 @@
+Санки-катанки
+=============
+:date: 2009-11-27 19:50:43
+:tags: blender, luxrender, набросок
+:category: text
+:author: IMDagger
+:slug: sanki
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=439
+
+После одного часа рендеринга и небольших поправок с прошлого раза.
+Думаю шум ичезнет ещё через пару часов рендеринга.
+
+.. class:: text-center
+
+|Сани пререндер|
+
+.. |Сани пререндер| image:: http://img-fotki.yandex.ru/get/3902/imdagger.4/0_197c2_f2295db8_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/104386/

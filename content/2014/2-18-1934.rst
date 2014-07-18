@@ -1,0 +1,20 @@
+Удаление строки
+===============
+:date: 2014-02-18 00:28:08
+:tags: запоминание, функция, строка, emacs, ring, удаление
+:category: link
+:author: IMDagger
+:attached-url: http://unix.stackexchange.com/questions/26360/emacs-deleting-a-line-without-sending-it-to-the-kill-ring
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1934
+
+Функция удаление строки в Emacs без запоминания в kill ring буфер, а
+то бывает нужно в своём плагине или конфиге удалить строчку, но не
+запоминать её в буфер:
+
+.. code-block:: cl
+
+    (defun delete-line (&optional arg)
+      (interactive "P")
+      (flet ((kill-region (begin end)
+                          (delete-region begin end)))
+        (kill-line arg)))

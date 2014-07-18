@@ -1,0 +1,19 @@
+Визуализатор вселенной
+======================
+:date: 2011-01-02 19:33:21
+:tags: blender, python, визуализация, генератор, планета
+:category: text
+:author: IMDagger
+:yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1214
+
+Сделал рекурсивную визуализацию того, что делает генератор.
+Вселенная большая, поэтому планеты трудно рассмотреть. Небольшие
+фиолетовые скопления это целые планетарные системы. Есть ещё недоработки
+в генераторе, но чуть позже исправлю.
+
+.. class:: text-center
+
+|image0|
+
+.. |image0| image:: http://img-fotki.yandex.ru/get/5802/imdagger.9/0_4df07_915373a6_L
+   :target: http://fotki.yandex.ru/users/imdagger/view/319239/
