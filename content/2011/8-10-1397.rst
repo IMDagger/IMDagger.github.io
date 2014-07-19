@@ -6,6 +6,7 @@
 :category: text
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1397
+:slug: birthday-paradox
 
 .. role:: bold-math(math)
    :class: strong-1

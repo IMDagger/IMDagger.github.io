@@ -5,6 +5,7 @@
 :category: text
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=789
+:slug: rating-fun
 
 Показало, что у меня рейтинг -1 :D. Хорошая шутка от Яндекс :).
 Сначала подумал: «Это почему моя карма так сильно упала, что я

@@ -5,6 +5,7 @@
 :category: text
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=420
+:slug: mapping-static
 
 Стал добавлять ссылки на картинки и CSS в HTML, т.е. различные
 статические данные в отличие от JSP. И вдруг обнаружил, что они не хотят

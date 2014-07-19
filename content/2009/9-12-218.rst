@@ -5,7 +5,7 @@ Hibernate
 :category: text
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=218
+:slug: hibernate-timestamp
 
-Чтобы промэппировать в Hibernate тип базы данных **TIMESTAMP**, то
-следует использовать аннотацию **@Version**.
-
+Чтобы промэппировать в Hibernate тип базы данных :code:`TIMESTAMP`, то
+следует использовать аннотацию :code:`@Version`.

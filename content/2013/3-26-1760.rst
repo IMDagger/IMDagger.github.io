@@ -4,6 +4,7 @@
 :tags: солнце, панорама, закат, небо, Гомель
 :category: photo
 :author: IMDagger
+:slug: sundown-prudok
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1760
 
 .. photo-block:: http://img-fotki.yandex.ru/get/4135/22199227.a/0_89fd6_89978746_L
@@ -15,4 +16,3 @@
    :title: Заголовок
 
 Вид в сторону старинных конюшен и заводов.
-

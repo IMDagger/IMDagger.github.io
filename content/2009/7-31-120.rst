@@ -5,6 +5,7 @@
 :category: text
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=120
+:slug: game-cells-display
 
 Ура! Сделал автоматическое отображение ячеек карты прямо в редакторе.
 

@@ -5,8 +5,8 @@
 :category: text
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=762
+:slug: concurrent-programming-skills
 
-    Нужно будет подкачаться в конкурентном программировании. Получше
+Нужно будет подкачаться в конкурентном программировании. Получше
 осознать все плюсы и минусы библиотеку **greenlet** для Python. А то я
 знаю, умею, но чувствую опыта у меня не столько сколько я хочу.
-
