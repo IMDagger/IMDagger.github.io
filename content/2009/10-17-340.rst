@@ -1,6 +1,6 @@
 Мочкинизм
 =========
-:date: 2009-10-17 17:35:32
+:date: 2009-10-17 20:35:32
 :tags: Яндекс
 :category: text
 :author: IMDagger

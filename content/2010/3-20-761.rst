@@ -1,6 +1,6 @@
 100тки
 ======
-:date: 2010-03-20 18:25:00
+:date: 2010-03-20 20:25:00
 :tags: blender, сотка, гвозди, набросок
 :category: text
 :author: IMDagger

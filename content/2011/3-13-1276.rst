@@ -1,6 +1,6 @@
 UBlenderJS версии 0.0.6
 =======================
-:date: 2011-03-13 16:05:51
+:date: 2011-03-13 18:05:51
 :tags: исправление, доработка, javascript, blender, UBlenderJS, форум, дополнительно
 :category: text
 :author: IMDagger

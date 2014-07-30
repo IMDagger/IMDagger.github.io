@@ -1,6 +1,6 @@
 
 
-:date: 2012-10-06 21:57:47
+:date: 2012-10-07 00:57:47
 :tags: DNS, удобство, DHCP
 :category: text
 :author: IMDagger

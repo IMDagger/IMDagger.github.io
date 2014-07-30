@@ -1,6 +1,6 @@
 ICFPC 2011 и образ
 ==================
-:date: 2011-05-30 19:42:13
+:date: 2011-05-30 22:42:13
 :tags: готовимся, NoobTeam, 2011, icfpc
 :category: text
 :author: IMDagger

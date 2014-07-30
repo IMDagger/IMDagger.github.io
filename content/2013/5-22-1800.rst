@@ -1,6 +1,6 @@
 
 
-:date: 2013-05-22 00:06:34
+:date: 2013-05-22 03:06:34
 :tags: вывод, SDL, geiser, перенаправление, racket, SDL2
 :category: text
 :author: IMDagger

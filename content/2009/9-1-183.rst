@@ -1,6 +1,6 @@
 Python и сокеты
 ===============
-:date: 2009-09-01 16:44:23
+:date: 2009-09-01 19:44:23
 :tags: python, сокет
 :category: text
 :author: IMDagger

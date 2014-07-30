@@ -1,6 +1,6 @@
 Sentry для Scrapy
 =================
-:date: 2014-02-10 20:00:30
+:date: 2014-02-10 23:00:30
 :tags: sentry, логгирование, scrapy
 :category: link
 :author: IMDagger

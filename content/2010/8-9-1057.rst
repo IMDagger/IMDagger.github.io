@@ -1,6 +1,6 @@
 Подсчёт
 =======
-:date: 2010-08-09 20:09:45
+:date: 2010-08-09 23:09:45
 :tags: google, павлин, коллекции, slide, Я, работа
 :category: text
 :author: IMDagger

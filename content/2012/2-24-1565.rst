@@ -1,6 +1,6 @@
 Facebook и scrolling="yes"
 ==========================
-:date: 2012-02-24 21:05:10
+:date: 2012-02-25 00:05:10
 :tags: скролл, проблема, facebook, решение, fluid, scrolling, высота, браузеры, горизонтальный, iframe
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Цаца
 ====
-:date: 2010-08-19 18:38:29
+:date: 2010-08-19 21:38:29
 :tags: работа, ноутбук
 :category: text
 :author: IMDagger

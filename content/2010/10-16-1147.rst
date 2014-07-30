@@ -1,6 +1,6 @@
 Я хочу 
 =======
-:date: 2010-10-16 18:22:26
+:date: 2010-10-16 21:22:26
 :category: wishlist
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1147

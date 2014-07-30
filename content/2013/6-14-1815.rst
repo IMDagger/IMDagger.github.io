@@ -1,6 +1,6 @@
 Noty
 ====
-:date: 2013-06-14 11:40:32
+:date: 2013-06-14 14:40:32
 :tags: jquery, сообщение, noty, всплывающий, javascript, показ, плагин
 :category: link
 :author: IMDagger

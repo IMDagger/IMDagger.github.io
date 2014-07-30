@@ -1,6 +1,6 @@
 Adb devices
 ===========
-:date: 2011-11-05 23:53:57
+:date: 2011-11-06 02:53:57
 :tags: udev, devices, радость, USB, Samsung, устройство, Android, adb
 :category: text
 :author: IMDagger

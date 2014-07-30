@@ -1,6 +1,6 @@
 Emacs и ссылки
 ==============
-:date: 2009-08-22 17:10:02
+:date: 2009-08-22 20:10:02
 :tags: emacs, opera, web
 :category: text
 :author: IMDagger

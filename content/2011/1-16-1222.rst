@@ -1,6 +1,6 @@
 OpenVPN сервер
 ==============
-:date: 2011-01-16 18:32:16
+:date: 2011-01-16 20:32:16
 :tags: сеть, сервер, openvpn, форвардинг
 :category: text
 :author: IMDagger

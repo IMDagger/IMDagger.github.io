@@ -1,6 +1,6 @@
 Извещения в трее от Emacs
 =========================
-:date: 2009-08-19 15:11:16
+:date: 2009-08-19 18:11:16
 :tags: emacs, трей
 :category: link
 :author: IMDagger

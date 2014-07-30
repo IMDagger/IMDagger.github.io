@@ -1,6 +1,6 @@
 Черновой вариант X-Ray
 ======================
-:date: 2010-02-05 11:44:19
+:date: 2010-02-05 13:44:19
 :tags: blender, скринкастинг, bge, x-ray, возможности
 :category: video
 :author: IMDagger

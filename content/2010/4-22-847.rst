@@ -1,6 +1,6 @@
 Печально
 ========
-:date: 2010-04-22 16:54:48
+:date: 2010-04-22 19:54:48
 :tags: emacs, tramp, печаль
 :category: text
 :author: IMDagger

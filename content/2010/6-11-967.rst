@@ -1,6 +1,6 @@
 Разминка
 ========
-:date: 2010-06-11 18:55:09
+:date: 2010-06-11 21:55:09
 :tags: blender, Я, bge, для души
 :category: text
 :author: IMDagger

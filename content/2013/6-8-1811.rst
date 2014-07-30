@@ -1,6 +1,6 @@
 
 
-:date: 2013-06-08 23:59:14
+:date: 2013-06-09 02:59:14
 :tags: racket, процесс, ffi, текущий
 :category: text
 :author: IMDagger

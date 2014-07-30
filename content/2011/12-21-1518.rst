@@ -1,7 +1,7 @@
 Удаление табуляции
 ==================
-:date: 2011-12-21 20:59:32
-:modified: 2011-12-21 21:00:05
+:date: 2011-12-21 23:59:32
+:modified: 2011-12-21 24:00:05
 :tags: python, emacs, работа, табуляция, backspace
 :category: text
 :author: IMDagger

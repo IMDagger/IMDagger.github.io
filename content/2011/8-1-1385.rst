@@ -1,6 +1,6 @@
 Сборка Riak 0.14.2 на Erlang OTP 14B03
 ======================================
-:date: 2011-08-01 23:26:37
+:date: 2011-08-02 02:26:37
 :tags: решение, ошибка, сборка, riak, erlang
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Ура завтра PyWeek!
 ==================
-:date: 2010-08-21 14:33:00
+:date: 2010-08-21 17:33:00
 :tags: Я, pyweek, участие, конкурс
 :category: text
 :author: IMDagger

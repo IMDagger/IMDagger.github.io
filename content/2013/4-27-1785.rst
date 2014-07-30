@@ -1,6 +1,6 @@
 ВТ3
 ===
-:date: 2013-04-27 22:12:38
+:date: 2013-04-28 01:12:38
 :tags: находка, гильза
 :category: text
 :author: IMDagger

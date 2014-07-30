@@ -1,6 +1,6 @@
 Skype не умер :)
 ================
-:date: 2011-05-26 11:56:30
+:date: 2011-05-26 14:56:30
 :tags: умер, skype
 :category: text
 :author: IMDagger

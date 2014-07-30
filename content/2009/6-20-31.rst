@@ -1,6 +1,6 @@
 
 
-:date: 2009-06-20 12:59:11
+:date: 2009-06-20 15:59:11
 :category: photo
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=31

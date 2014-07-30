@@ -1,6 +1,6 @@
 RequireJS модули
 ================
-:date: 2011-12-29 00:55:53
+:date: 2011-12-29 03:55:53
 :tags: загрузка, ошибка, программирование, радость, javascript, undefined, модуль, RequireJS, зависимость, работа
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 cogen и BGE
 ===========
-:date: 2010-11-14 20:06:29
+:date: 2010-11-14 22:06:29
 :tags: bge, сокет, неблокирующийся, сопрограмма, coro, cogen
 :category: text
 :author: IMDagger

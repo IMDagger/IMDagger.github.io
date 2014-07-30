@@ -1,6 +1,6 @@
 emacs -nw в удалённом терминале
 ===============================
-:date: 2010-12-26 14:31:43
+:date: 2010-12-26 16:31:43
 :tags: терминал, emacs, клавиша, backspace
 :category: text
 :author: IMDagger

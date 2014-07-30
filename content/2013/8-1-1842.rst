@@ -1,6 +1,6 @@
 
 
-:date: 2013-08-01 00:01:00
+:date: 2013-08-01 03:01:00
 :tags: почта, карта, банк, отчёт
 :category: text
 :author: IMDagger

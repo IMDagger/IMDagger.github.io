@@ -1,6 +1,6 @@
 Поздравляю
 ==========
-:date: 2010-02-08 11:19:50
+:date: 2010-02-08 13:19:50
 :tags: blender, Я, день рождения
 :category: text
 :author: IMDagger

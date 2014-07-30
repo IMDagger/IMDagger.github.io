@@ -1,7 +1,7 @@
 struct*
 =======
-:date: 2013-11-30 12:14:55
-:modified: 2013-11-30 12:15:18
+:date: 2013-11-30 15:14:55
+:modified: 2013-11-30 15:15:18
 :tags: struct*, pattern, программирование, matching, racket, структура, шаблон
 :category: text
 :author: IMDagger

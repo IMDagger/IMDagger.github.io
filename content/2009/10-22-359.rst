@@ -1,6 +1,6 @@
 Размял мозг
 ===========
-:date: 2009-10-22 17:01:06
+:date: 2009-10-22 20:01:06
 :tags: патч, тикет, midnight commander, копирование
 :category: text
 :author: IMDagger

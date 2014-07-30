@@ -1,6 +1,6 @@
 Слои и BGE
 ==========
-:date: 2009-06-15 15:17:30
+:date: 2009-06-15 18:17:30
 :tags: blender, bge
 :category: text
 :author: IMDagger

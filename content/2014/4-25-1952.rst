@@ -1,6 +1,6 @@
 Pygame и MP3
 ============
-:date: 2014-04-25 14:35:01
+:date: 2014-04-25 17:35:01
 :tags: музыка, ubuntu, звук, pygame, vorbis, mp3, flac, ogg
 :category: text
 :author: IMDagger

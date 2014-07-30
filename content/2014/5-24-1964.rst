@@ -1,6 +1,6 @@
 
 
-:date: 2014-05-24 22:01:28
+:date: 2014-05-25 01:01:28
 :tags: Я, опасность, жизнь
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Не забывать
 ===========
-:date: 2010-04-06 13:40:30
+:date: 2010-04-06 16:40:30
 :tags: python
 :category: text
 :author: IMDagger

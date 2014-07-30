@@ -1,6 +1,6 @@
 Скриншоты меню
 ==============
-:date: 2009-08-05 17:05:44
+:date: 2009-08-05 20:05:44
 :tags: triad_vesuvius, проект, bge
 :category: text
 :author: IMDagger

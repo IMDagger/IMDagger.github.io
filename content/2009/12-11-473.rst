@@ -1,6 +1,6 @@
 Мэппинг дерева
 ==============
-:date: 2009-12-11 14:16:51
+:date: 2009-12-11 16:16:51
 :tags: hibernate, дерево
 :category: text
 :author: IMDagger

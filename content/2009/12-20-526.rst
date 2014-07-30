@@ -1,6 +1,6 @@
 Билет
 =====
-:date: 2009-12-20 09:02:51
+:date: 2009-12-20 11:02:51
 :tags: номер, билет
 :category: text
 :author: IMDagger

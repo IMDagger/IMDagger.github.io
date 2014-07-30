@@ -1,6 +1,6 @@
 Недоработки
 ===========
-:date: 2009-12-03 15:56:27
+:date: 2009-12-03 17:56:27
 :tags: диплом, javascript
 :category: text
 :author: IMDagger

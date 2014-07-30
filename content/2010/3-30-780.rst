@@ -1,6 +1,6 @@
 HTTP и BGE
 ==========
-:date: 2010-03-30 18:54:12
+:date: 2010-03-30 21:54:12
 :tags: bge, HTTP, пример
 :category: text
 :author: IMDagger

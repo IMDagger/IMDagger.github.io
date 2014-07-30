@@ -1,7 +1,7 @@
 Авторизация для нескольких сайтов на Django
 ===========================================
-:date: 2013-10-19 22:57:45
-:modified: 2013-10-19 23:02:48
+:date: 2013-10-20 01:57:45
+:modified: 2013-10-20 01:02:48
 :tags: сервис, Django, сайт, авторизация, python, разделение, django-oauth2-provider, django-social-auth, OAuth2, пользователь
 :category: text
 :author: IMDagger

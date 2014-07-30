@@ -1,6 +1,6 @@
 Скрипты или модули
 ==================
-:date: 2009-08-18 17:42:24
+:date: 2009-08-18 20:42:24
 :tags: blender, python, bge, triad_vesuvius
 :category: text
 :author: IMDagger

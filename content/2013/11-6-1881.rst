@@ -1,6 +1,6 @@
 
 
-:date: 2013-11-06 00:41:11
+:date: 2013-11-06 03:41:11
 :tags: почта, жизнь, посылка
 :category: text
 :author: IMDagger

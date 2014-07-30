@@ -1,6 +1,6 @@
 Старый комп
 ===========
-:date: 2012-11-02 13:56:36
+:date: 2012-11-02 16:56:36
 :tags: nouveau, отображение, nvidia, компьютер, Xorg, dpi, видеокарта, старый
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Подсветка скобочек
 ==================
-:date: 2012-07-04 22:39:33
+:date: 2012-07-05 01:39:33
 :tags: цвет, Scheme, emacs, режим, скобки, удобство, parentheses, highlight
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Amazon EC2
 ==========
-:date: 2012-06-28 13:21:20
+:date: 2012-06-28 16:21:20
 :tags: ec2, aws, amazon, micro, instance
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Сфера
 =====
-:date: 2009-11-03 17:38:06
+:date: 2009-11-03 19:38:06
 :tags: python, задача, spoj
 :category: text
 :author: IMDagger

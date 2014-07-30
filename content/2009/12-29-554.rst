@@ -1,6 +1,6 @@
 Функционал Blender
 ==================
-:date: 2009-12-29 15:18:08
+:date: 2009-12-29 17:18:08
 :tags: blender, возможности, дополнительно
 :category: text
 :author: IMDagger

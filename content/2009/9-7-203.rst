@@ -1,6 +1,6 @@
 Samba4-alpha6 в alpha9
 ======================
-:date: 2009-09-07 18:55:38
+:date: 2009-09-07 21:55:38
 :tags: samba4, ошибка, обновление
 :category: text
 :author: IMDagger

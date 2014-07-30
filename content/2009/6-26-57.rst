@@ -1,6 +1,6 @@
 Началось
 ========
-:date: 2009-06-26 18:26:41
+:date: 2009-06-26 21:26:41
 :tags: начало, icfpc
 :category: text
 :author: IMDagger

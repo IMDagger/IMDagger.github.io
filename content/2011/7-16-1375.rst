@@ -1,6 +1,6 @@
 Popup
 =====
-:date: 2011-07-16 13:27:10
+:date: 2011-07-16 16:27:10
 :tags: javascript, окно, popup
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Дни идут как сон
 ================
-:date: 2010-01-11 19:43:21
+:date: 2010-01-11 21:43:21
 :tags: blender, возможности, bge
 :category: text
 :author: IMDagger

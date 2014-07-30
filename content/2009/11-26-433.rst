@@ -1,6 +1,6 @@
 Сани-сусани: сетка
 ==================
-:date: 2009-11-26 19:12:04
+:date: 2009-11-26 21:12:04
 :tags: blender, сани
 :category: text
 :author: IMDagger

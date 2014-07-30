@@ -1,6 +1,6 @@
 Unix PID-файл
 =============
-:date: 2011-02-03 22:12:45
+:date: 2011-02-04 00:12:45
 :tags: file, lock, pid, блокировка, файл, python
 :category: text
 :author: IMDagger

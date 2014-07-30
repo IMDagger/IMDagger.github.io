@@ -1,6 +1,6 @@
 Правка Firefox
 ==============
-:date: 2011-08-08 19:07:45
+:date: 2011-08-08 22:07:45
 :tags: firefox, javascript, программирование, доработка
 :category: text
 :author: IMDagger

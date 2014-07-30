@@ -1,6 +1,6 @@
 Thread и загрузка из BGE
 ========================
-:date: 2010-11-20 20:01:45
+:date: 2010-11-20 22:01:45
 :tags: python, bge, thread
 :category: text
 :author: IMDagger

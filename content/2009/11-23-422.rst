@@ -1,6 +1,6 @@
 Полочка
 =======
-:date: 2009-11-23 16:36:37
+:date: 2009-11-23 18:36:37
 :tags: проект, bazaar, shelve
 :category: text
 :author: IMDagger

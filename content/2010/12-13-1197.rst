@@ -1,6 +1,6 @@
 PPPoE и Bridge
 ==============
-:date: 2010-12-13 21:20:09
+:date: 2010-12-13 23:20:09
 :tags: bridge, мост, PPPoE, zyxel, модем
 :category: text
 :author: IMDagger

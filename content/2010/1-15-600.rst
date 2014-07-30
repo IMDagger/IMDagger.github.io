@@ -1,6 +1,6 @@
 Перехват событий
 ================
-:date: 2010-01-15 18:08:00
+:date: 2010-01-15 20:08:00
 :tags: blender, возможности, bge, last_gateway_to_hell
 :category: text
 :author: IMDagger

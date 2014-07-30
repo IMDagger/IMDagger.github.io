@@ -1,6 +1,6 @@
 Небольшая проблема с MyPaint
 ============================
-:date: 2013-04-12 02:20:12
+:date: 2013-04-12 05:20:12
 :tags: отладка, master, mypaint, отставание
 :category: text
 :author: IMDagger

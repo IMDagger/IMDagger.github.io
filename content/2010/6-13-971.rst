@@ -1,6 +1,6 @@
 Концепт
 =======
-:date: 2010-06-13 16:04:36
+:date: 2010-06-13 19:04:36
 :tags: мини, bge, blender, игра, идеи, конкурс
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Проект
 ======
-:date: 2009-11-12 17:53:15
+:date: 2009-11-12 19:53:15
 :tags: blender, проект, bge, last_gateway_to_hell
 :category: text
 :author: IMDagger

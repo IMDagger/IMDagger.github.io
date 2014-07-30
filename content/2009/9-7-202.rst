@@ -1,6 +1,6 @@
 Лолз
 ====
-:date: 2009-09-07 17:10:11
+:date: 2009-09-07 20:10:11
 :tags: перлы, лол
 :category: text
 :author: IMDagger

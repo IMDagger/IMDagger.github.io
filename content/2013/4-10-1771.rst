@@ -1,6 +1,6 @@
 Сюрприз с replace
 =================
-:date: 2013-04-10 01:23:36
+:date: 2013-04-10 04:23:36
 :tags: проблема, замена, строка, javascript, python, регулярное, выражение, replace
 :category: text
 :author: IMDagger

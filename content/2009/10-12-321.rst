@@ -1,6 +1,6 @@
 pyOpenSSL
 =========
-:date: 2009-10-12 17:34:20
+:date: 2009-10-12 20:34:20
 :tags: python, ssl
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Странно
 =======
-:date: 2009-10-01 18:26:13
+:date: 2009-10-01 21:26:13
 :tags: python, HTTP
 :category: text
 :author: IMDagger

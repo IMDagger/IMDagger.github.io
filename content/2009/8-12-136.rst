@@ -1,6 +1,6 @@
 Ещё патчик
 ==========
-:date: 2009-08-12 15:31:49
+:date: 2009-08-12 18:31:49
 :tags: патч, midnight commander
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 MyGUI OpenGLPlatform
 ====================
-:date: 2011-03-02 20:46:21
+:date: 2011-03-02 22:46:21
 :tags: ошибка, bge, линковщик, ld, сборка, MyGUI, blender
 :category: text
 :author: IMDagger

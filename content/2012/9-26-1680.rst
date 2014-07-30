@@ -1,7 +1,7 @@
 
 
-:date: 2012-09-26 00:09:27
-:modified: 2012-09-26 00:09:47
+:date: 2012-09-26 03:09:27
+:modified: 2012-09-26 03:09:47
 :tags: жизнь, еда, бредни
 :category: text
 :author: IMDagger

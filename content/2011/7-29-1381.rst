@@ -1,6 +1,6 @@
 Riak
 ====
-:date: 2011-07-29 01:26:05
+:date: 2011-07-29 04:26:05
 :tags: ссылка, размышления, riak, couchdb
 :category: text
 :author: IMDagger

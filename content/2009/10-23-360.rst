@@ -1,6 +1,6 @@
 Чтение данных
 =============
-:date: 2009-10-23 18:58:59
+:date: 2009-10-23 21:58:59
 :tags: python, HTTP
 :category: text
 :author: IMDagger

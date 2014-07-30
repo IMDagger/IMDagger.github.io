@@ -1,6 +1,6 @@
 Замыкания
 =========
-:date: 2009-08-17 16:45:35
+:date: 2009-08-17 19:45:35
 :tags: python
 :category: text
 :author: IMDagger

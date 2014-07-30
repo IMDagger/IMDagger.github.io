@@ -1,6 +1,6 @@
 Tweening
 ========
-:date: 2012-05-19 23:31:25
+:date: 2012-05-20 02:31:25
 :tags: мысли, tweening, анимация, игра
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 cogen и ftplib
 ==============
-:date: 2010-11-13 19:58:38
+:date: 2010-11-13 21:58:38
 :tags: python, ftplib, coro, cogen
 :category: text
 :author: IMDagger

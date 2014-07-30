@@ -1,6 +1,6 @@
 Ubuntu и wl.ko
 ==============
-:date: 2013-05-09 20:41:51
+:date: 2013-05-09 23:41:51
 :tags: сеть, ошибка, беспроводная, ubuntu, broadcom, модуль, linux, DKMS, wl.ko
 :category: text
 :author: IMDagger

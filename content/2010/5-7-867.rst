@@ -1,6 +1,6 @@
 Копирование узла
 ================
-:date: 2010-05-07 18:16:04
+:date: 2010-05-07 21:16:04
 :tags: javascript, yui, клонирование
 :category: text
 :author: IMDagger

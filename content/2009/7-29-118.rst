@@ -1,6 +1,6 @@
 Актуаторы в BGE
 ===============
-:date: 2009-07-29 11:53:19
+:date: 2009-07-29 14:53:19
 :tags: python, bge, action, актуатор
 :category: text
 :author: IMDagger

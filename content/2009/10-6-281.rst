@@ -1,6 +1,6 @@
 Ошибка в моей ДНК-цепочке
 ==========================
-:date: 2009-10-06 15:52:08
+:date: 2009-10-06 18:52:08
 :tags: python, jython, SSPI, jtds
 :category: text
 :author: IMDagger

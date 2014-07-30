@@ -1,6 +1,6 @@
 Тема
 ====
-:date: 2010-01-20 18:46:51
+:date: 2010-01-20 20:46:51
 :tags: blender, тема
 :category: text
 :author: IMDagger

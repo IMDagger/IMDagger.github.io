@@ -1,6 +1,6 @@
 
 
-:date: 2014-01-13 23:55:13
+:date: 2014-01-14 02:55:13
 :tags: экспорт, фильтрация, tangle, org-babel
 :category: text
 :author: IMDagger

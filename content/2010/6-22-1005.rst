@@ -1,6 +1,6 @@
 Закрылки
 ========
-:date: 2010-06-22 18:53:47
+:date: 2010-06-22 21:53:47
 :tags: blender, игра, самолётик, набросок
 :category: text
 :author: IMDagger

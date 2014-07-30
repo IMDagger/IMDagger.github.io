@@ -1,6 +1,6 @@
 Hovercraft
 ==========
-:date: 2011-07-16 18:19:48
+:date: 2011-07-16 21:19:48
 :tags: erlang, программирование, couchdb, hovercraft
 :category: link
 :author: IMDagger

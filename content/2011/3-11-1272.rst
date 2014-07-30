@@ -1,6 +1,6 @@
 Карты, деньги, два ствола
 =========================
-:date: 2011-03-11 21:34:09
+:date: 2011-03-11 23:34:09
 :tags: location, ошибка, favicon, window, firefox, hash
 :category: text
 :author: IMDagger

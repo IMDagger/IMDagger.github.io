@@ -1,6 +1,6 @@
 Кнопки 2
 ========
-:date: 2009-11-19 16:50:43
+:date: 2009-11-19 18:50:43
 :tags: blender, luxrender, кнопочки, набросок
 :category: text
 :author: IMDagger

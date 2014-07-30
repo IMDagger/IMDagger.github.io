@@ -1,6 +1,6 @@
 UBlenderJS
 ==========
-:date: 2009-11-25 16:32:39
+:date: 2009-11-25 18:32:39
 :tags: blender, userjs, форум
 :category: text
 :author: IMDagger

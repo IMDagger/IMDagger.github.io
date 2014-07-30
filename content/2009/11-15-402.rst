@@ -1,6 +1,6 @@
 ШурупЪ
 ======
-:date: 2009-11-15 13:33:34
+:date: 2009-11-15 15:33:34
 :tags: blender, набросок
 :category: text
 :author: IMDagger

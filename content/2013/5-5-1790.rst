@@ -1,7 +1,7 @@
 
 
-:date: 2013-05-05 20:04:41
-:modified: 2013-05-05 20:05:15
+:date: 2013-05-05 23:04:41
+:modified: 2013-05-05 23:05:15
 :tags: broadcom, wifi, проблема, ubuntu, linux
 :category: text
 :author: IMDagger

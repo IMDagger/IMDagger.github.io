@@ -1,6 +1,6 @@
 
 
-:date: 2014-05-21 22:59:40
+:date: 2014-05-22 01:59:40
 :tags: радость, жизнь, еда, мороженое
 :category: text
 :author: IMDagger

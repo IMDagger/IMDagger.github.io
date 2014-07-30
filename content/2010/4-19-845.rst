@@ -1,6 +1,6 @@
 Emacs и Tramp
 =============
-:date: 2010-04-19 18:31:58
+:date: 2010-04-19 21:31:58
 :tags: emacs, tramp, желание
 :category: text
 :author: IMDagger

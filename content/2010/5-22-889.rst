@@ -1,6 +1,6 @@
 ПМК
 ===
-:date: 2010-05-22 08:26:50
+:date: 2010-05-22 11:26:50
 :tags: здоровье, Я
 :category: text
 :author: IMDagger

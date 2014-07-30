@@ -1,6 +1,6 @@
 Бенчмарк
 ========
-:date: 2011-10-01 02:33:46
+:date: 2011-10-01 05:33:46
 :tags: python, сравнение, javascript, программирование
 :category: text
 :author: IMDagger

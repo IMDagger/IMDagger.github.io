@@ -1,6 +1,6 @@
 Подводный камень с Tweepy при работе в Python 2.4
 =================================================
-:date: 2011-02-11 21:48:02
+:date: 2011-02-11 23:48:02
 :tags: python, tweepy, twitter, ошибка
 :category: text
 :author: IMDagger

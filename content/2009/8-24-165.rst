@@ -1,6 +1,6 @@
 TriadVesuvius
 =============
-:date: 2009-08-24 17:53:20
+:date: 2009-08-24 20:53:20
 :tags: triad_vesuvius, проект, программирование
 :category: text
 :author: IMDagger

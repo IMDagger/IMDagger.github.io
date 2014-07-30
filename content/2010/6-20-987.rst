@@ -1,6 +1,6 @@
 Пропеллер
 =========
-:date: 2010-06-20 17:23:54
+:date: 2010-06-20 20:23:54
 :tags: мини, bge, отдых, blender, игра, набросок
 :category: text
 :author: IMDagger

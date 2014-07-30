@@ -1,6 +1,6 @@
 Текст и узлы
 ============
-:date: 2009-07-18 10:31:40
+:date: 2009-07-18 13:31:40
 :tags: xml schema, xsd
 :category: text
 :author: IMDagger

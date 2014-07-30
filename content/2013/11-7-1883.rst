@@ -1,6 +1,6 @@
 
 
-:date: 2013-11-07 00:35:00
+:date: 2013-11-07 03:35:00
 :tags: 2.6, python, десереализация, pickle, ошибка
 :category: link
 :author: IMDagger

@@ -1,6 +1,6 @@
 Ураганы
 =======
-:date: 2009-06-14 15:14:23
+:date: 2009-06-14 18:14:23
 :tags: Гомель, буря
 :category: text
 :author: IMDagger

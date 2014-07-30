@@ -1,6 +1,6 @@
 Лолз Delphi vs Java
 ===================
-:date: 2009-09-09 17:07:41
+:date: 2009-09-09 20:07:41
 :tags: java, delphi, перлы, лол
 :category: text
 :author: IMDagger

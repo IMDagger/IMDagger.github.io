@@ -1,6 +1,6 @@
 Майка от Google
 ===============
-:date: 2011-07-07 20:43:13
+:date: 2011-07-07 23:43:13
 :tags: slide, майка, работа, google
 :category: text
 :author: IMDagger

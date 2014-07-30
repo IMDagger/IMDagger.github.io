@@ -1,6 +1,6 @@
 Ууупс...
 ========
-:date: 2009-10-07 14:39:31
+:date: 2009-10-07 17:39:31
 :tags: blender, обои, робот
 :category: text
 :author: IMDagger

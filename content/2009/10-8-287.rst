@@ -1,6 +1,6 @@
 Я брежу
 =======
-:date: 2009-10-08 17:22:39
+:date: 2009-10-08 20:22:39
 :tags: бредни
 :category: text
 :author: IMDagger

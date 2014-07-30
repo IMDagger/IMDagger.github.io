@@ -1,6 +1,6 @@
 Заметка
 =======
-:date: 2010-02-28 18:10:01
+:date: 2010-02-28 20:10:01
 :tags: blender, жизнь, заметка
 :category: text
 :author: IMDagger

@@ -1,7 +1,7 @@
 JIRA и автостарт
 ================
-:date: 2013-06-01 22:25:16
-:modified: 2013-06-01 22:25:36
+:date: 2013-06-02 01:25:16
+:modified: 2013-06-02 01:25:36
 :tags: linux, скрипт, старт, запуск, MySQL, jira, автозагрузка
 :category: text
 :author: IMDagger

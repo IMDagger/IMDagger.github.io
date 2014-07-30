@@ -1,6 +1,6 @@
 Клонирование образов
 ====================
-:date: 2009-09-28 11:16:11
+:date: 2009-09-28 14:16:11
 :tags: clonezilla, samba4, восстановление, boot, drbl
 :category: text
 :author: IMDagger

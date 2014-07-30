@@ -1,7 +1,7 @@
 Racket и Android NDK r8e
 ========================
-:date: 2013-04-18 01:00:29
-:modified: 2013-04-18 01:03:37
+:date: 2013-04-18 04:00:29
+:modified: 2013-04-18 04:03:37
 :tags: libdl, arm-linux-androideabi, NDK, ARM, ffi, CGC, dynamic, racket, Android
 :category: text
 :author: IMDagger

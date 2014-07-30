@@ -1,6 +1,6 @@
 Военкомат
 =========
-:date: 2010-05-17 17:37:01
+:date: 2010-05-17 20:37:01
 :tags: Я, жизнь
 :category: text
 :author: IMDagger

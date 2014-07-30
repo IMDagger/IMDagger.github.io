@@ -1,6 +1,6 @@
 "Поля невидимки"
 ================
-:date: 2009-11-28 13:13:38
+:date: 2009-11-28 15:13:38
 :tags: hibernate, аннотации
 :category: text
 :author: IMDagger

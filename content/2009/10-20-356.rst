@@ -1,6 +1,6 @@
 Наследование, Hibernate и NativeSQL
 ===================================
-:date: 2009-10-20 17:38:55
+:date: 2009-10-20 20:38:55
 :tags: наследование, hibernate
 :category: text
 :author: IMDagger

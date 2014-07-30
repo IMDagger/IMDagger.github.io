@@ -1,6 +1,6 @@
 Bazaar fast forward
 ===================
-:date: 2011-05-23 20:23:41
+:date: 2011-05-23 23:23:41
 :tags: fast, forward, bazaar, merge
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Переносы слов, UTF-8 и XeLaTeX
 ==============================
-:date: 2013-12-26 00:41:21
+:date: 2013-12-26 03:41:21
 :tags: polyglossia, UTF-8, русский, babel, xelatex
 :category: link
 :author: IMDagger

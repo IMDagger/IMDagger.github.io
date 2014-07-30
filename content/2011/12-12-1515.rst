@@ -1,6 +1,6 @@
 $where в MongoDB
 ================
-:date: 2011-12-12 00:55:54
+:date: 2011-12-12 03:55:54
 :tags: Я, невнимательность, $where, документация, MongoDB
 :category: text
 :author: IMDagger

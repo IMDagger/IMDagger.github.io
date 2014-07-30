@@ -1,6 +1,6 @@
 Сокровища
 =========
-:date: 2010-07-28 19:14:09
+:date: 2010-07-28 22:14:09
 :tags: Я, myspace, работа, клад
 :category: text
 :author: IMDagger

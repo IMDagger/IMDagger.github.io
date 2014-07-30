@@ -1,6 +1,6 @@
 Golden Axe
 ==========
-:date: 2012-07-03 21:30:21
+:date: 2012-07-04 00:30:21
 :tags: играл, жизнь, забавно, детство
 :category: text
 :author: IMDagger

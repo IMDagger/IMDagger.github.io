@@ -1,7 +1,7 @@
 Скрещивание ужа и ежа
 =====================
-:date: 2014-02-26 19:50:18
-:modified: 2014-02-26 19:51:56
+:date: 2014-02-26 22:50:18
+:modified: 2014-02-26 22:51:56
 :tags: django-xadmin, Django, преобразование, XAdmin, трасляция, переходник
 :category: text
 :author: IMDagger

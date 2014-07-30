@@ -1,6 +1,6 @@
 Заливка кода
 ============
-:date: 2011-01-19 22:19:28
+:date: 2011-01-20 00:19:28
 :tags: python, slide, работа, google
 :category: text
 :author: IMDagger

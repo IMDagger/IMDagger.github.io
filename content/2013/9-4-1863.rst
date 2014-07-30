@@ -1,6 +1,6 @@
 
 
-:date: 2013-09-04 22:52:32
+:date: 2013-09-05 01:52:32
 :tags: Я, жизнь, еда, мысль
 :category: text
 :author: IMDagger

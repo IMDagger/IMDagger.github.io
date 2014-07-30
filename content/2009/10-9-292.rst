@@ -1,6 +1,6 @@
 Пользовательские типы
 =====================
-:date: 2009-10-09 16:37:10
+:date: 2009-10-09 19:37:10
 :tags: hibernate
 :category: link
 :author: IMDagger

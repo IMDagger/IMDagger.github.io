@@ -1,6 +1,6 @@
 Вспомнил XML Schema
 ===================
-:date: 2011-09-03 18:51:17
+:date: 2011-09-03 21:51:17
 :tags: xml, программирование, xsd, схема, отдых, Я
 :category: text
 :author: IMDagger

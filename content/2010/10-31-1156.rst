@@ -1,6 +1,6 @@
 Финальная версия
 ================
-:date: 2010-10-31 16:46:09
+:date: 2010-10-31 18:46:09
 :tags: blender, кролик, анимация, fbx
 :category: text
 :author: IMDagger

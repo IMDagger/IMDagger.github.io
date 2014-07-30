@@ -1,6 +1,6 @@
 PPPoE и byfly
 =============
-:date: 2012-01-12 20:24:02
+:date: 2012-01-12 23:24:02
 :tags: ошибка, PPPoE, соединение, авторизация, интернет, byfly, плагин, работа
 :category: text
 :author: IMDagger

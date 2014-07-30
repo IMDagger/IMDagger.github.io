@@ -1,6 +1,6 @@
 
 
-:date: 2012-11-21 18:45:46
+:date: 2012-11-21 21:45:46
 :tags: вывод, python, UTF-8
 :category: link
 :author: IMDagger

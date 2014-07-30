@@ -1,6 +1,6 @@
 Изменение меша прямо из BGE
 ===========================
-:date: 2009-06-15 09:29:05
+:date: 2009-06-15 12:29:05
 :tags: blender, python, bge
 :category: text
 :author: IMDagger

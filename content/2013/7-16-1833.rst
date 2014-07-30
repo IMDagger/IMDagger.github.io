@@ -1,6 +1,6 @@
 
 
-:date: 2013-07-16 00:28:58
+:date: 2013-07-16 03:28:58
 :tags: apache, запись, права, корень
 :category: text
 :author: IMDagger

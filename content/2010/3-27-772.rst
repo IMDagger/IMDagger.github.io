@@ -1,6 +1,6 @@
 Час Земли
 =========
-:date: 2010-03-27 18:30:56
+:date: 2010-03-27 20:30:56
 :tags: жизнь
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Мучаюсь
 =======
-:date: 2009-10-05 17:41:47
+:date: 2009-10-05 20:41:47
 :tags: java, hibernate
 :category: text
 :author: IMDagger

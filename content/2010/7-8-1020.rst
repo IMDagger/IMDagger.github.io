@@ -1,6 +1,6 @@
 Флеш
 ====
-:date: 2010-07-08 19:08:41
+:date: 2010-07-08 22:08:41
 :tags: Я, мысли
 :category: text
 :author: IMDagger

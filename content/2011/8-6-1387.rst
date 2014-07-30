@@ -1,6 +1,6 @@
 С IT happens
 ============
-:date: 2011-08-06 18:13:38
+:date: 2011-08-06 21:13:38
 :tags: сисадмин, жизнь
 :category: text
 :author: IMDagger

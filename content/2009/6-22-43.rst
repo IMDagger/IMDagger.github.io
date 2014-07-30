@@ -1,6 +1,6 @@
 Blender и освещение
 ===================
-:date: 2009-06-22 09:58:23
+:date: 2009-06-22 12:58:23
 :tags: blender, свет
 :category: link
 :author: IMDagger

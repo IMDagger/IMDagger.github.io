@@ -1,6 +1,6 @@
 PUT и POST
 ==========
-:date: 2009-09-05 17:13:23
+:date: 2009-09-05 20:13:23
 :tags: REST, dl, PUT, HTTP, POST
 :category: link
 :author: IMDagger

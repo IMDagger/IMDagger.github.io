@@ -1,6 +1,6 @@
 ru_comicstrip
 =============
-:date: 2009-09-15 13:16:44
+:date: 2009-09-15 16:16:44
 :tags: комиксы
 :category: text
 :author: IMDagger

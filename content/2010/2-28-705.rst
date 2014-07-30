@@ -1,6 +1,6 @@
 4000 samples/pix
 ================
-:date: 2010-02-28 09:30:24
+:date: 2010-02-28 11:30:24
 :tags: blender, luxrender, r2d2, набросок
 :category: text
 :author: IMDagger

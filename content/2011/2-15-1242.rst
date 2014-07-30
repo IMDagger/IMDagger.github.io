@@ -1,6 +1,6 @@
 Canon i-SENSYS MF4018 и Ubuntu x64
 ==================================
-:date: 2011-02-15 21:07:55
+:date: 2011-02-15 23:07:55
 :modified: 2013-03-01 01:05:14
 :tags: alien, deb, rpm, драйвер, x64, canon, cups, linux
 :category: text

@@ -1,6 +1,6 @@
 Twitter oauth_token
 ===================
-:date: 2011-01-05 22:06:37
+:date: 2011-01-06 00:06:37
 :tags: python, кеш, ключ, tweepy
 :category: text
 :author: IMDagger

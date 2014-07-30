@@ -1,6 +1,6 @@
 
 
-:date: 2013-08-12 00:04:53
+:date: 2013-08-12 03:04:53
 :tags: соревнование, радость, программирование, icfpc
 :category: text
 :author: IMDagger

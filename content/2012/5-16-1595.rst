@@ -1,6 +1,6 @@
 Долго собирался Cycles
 ======================
-:date: 2012-05-16 01:49:42
+:date: 2012-05-16 04:49:42
 :tags: CUDA, сборка, blender, 1.2, nvidia, ironhide
 :category: text
 :author: IMDagger

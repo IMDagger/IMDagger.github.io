@@ -1,7 +1,7 @@
 djkombu и MySQL
 ===============
-:date: 2013-02-26 22:53:22
-:modified: 2013-02-26 22:56:21
+:date: 2013-02-27 01:53:22
+:modified: 2013-02-27 01:56:21
 :tags: Celery, python, задача, djkombu, зависает, MySQL, не работает, брокер
 :category: text
 :author: IMDagger

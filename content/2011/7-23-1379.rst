@@ -1,6 +1,6 @@
 Popup и callback
 ================
-:date: 2011-07-23 17:32:27
+:date: 2011-07-23 20:32:27
 :tags: блокировка, javascript, окно, popup, пробел, IE, space, вызов
 :category: text
 :author: IMDagger

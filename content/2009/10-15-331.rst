@@ -1,6 +1,6 @@
 Обновился
 =========
-:date: 2009-10-15 12:27:53
+:date: 2009-10-15 15:27:53
 :tags: обновление, opera
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Genius EasyPen M406XE
 =====================
-:date: 2013-04-12 02:05:03
+:date: 2013-04-12 05:05:03
 :tags: графика, сила, перо, udev, genius, нажатие, планшет, m406xe, Xorg, давление
 :category: text
 :author: IMDagger

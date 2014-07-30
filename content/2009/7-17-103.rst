@@ -1,6 +1,6 @@
 Франкенштейн оживает!
 =====================
-:date: 2009-07-17 15:50:47
+:date: 2009-07-17 18:50:47
 :tags: xml schema, xsd
 :category: text
 :author: IMDagger

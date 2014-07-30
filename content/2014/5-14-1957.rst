@@ -1,7 +1,7 @@
 
 
-:date: 2014-05-14 15:34:08
-:modified: 2014-05-14 15:35:17
+:date: 2014-05-14 18:34:08
+:modified: 2014-05-14 18:35:17
 :tags: gimp, цвет, colormgr, профиль, srgb
 :category: text
 :author: IMDagger

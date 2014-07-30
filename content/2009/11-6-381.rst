@@ -1,6 +1,6 @@
 Кости
 =====
-:date: 2009-11-06 18:58:01
+:date: 2009-11-06 20:58:01
 :tags: blender, скринкастинг, bge, кость
 :category: text
 :author: IMDagger

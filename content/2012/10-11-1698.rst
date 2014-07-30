@@ -1,6 +1,6 @@
 TexturePacker разбор полётов
 ============================
-:date: 2012-10-11 22:26:53
+:date: 2012-10-12 01:26:53
 :tags: упаковка, текстура, libGDX, TexturePacker
 :category: text
 :author: IMDagger

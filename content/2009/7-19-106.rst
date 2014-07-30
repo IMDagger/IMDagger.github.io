@@ -1,6 +1,6 @@
 Парсер
 ======
-:date: 2009-07-19 15:52:13
+:date: 2009-07-19 18:52:13
 :tags: python, xml, ElementTree
 :category: text
 :author: IMDagger

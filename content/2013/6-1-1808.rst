@@ -1,6 +1,6 @@
 
 
-:date: 2013-06-01 22:30:27
+:date: 2013-06-02 01:30:27
 :category: friend
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1808

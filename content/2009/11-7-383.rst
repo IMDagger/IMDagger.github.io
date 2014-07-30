@@ -1,6 +1,6 @@
 Небольшой провал
 ================
-:date: 2009-11-07 19:42:20
+:date: 2009-11-07 21:42:20
 :tags: диплом, javascript, облом
 :category: text
 :author: IMDagger

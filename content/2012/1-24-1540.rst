@@ -1,7 +1,7 @@
 Opera, jQuery и POST
 ====================
-:date: 2012-01-24 20:28:53
-:modified: 2012-01-24 20:33:18
+:date: 2012-01-24 23:28:53
+:modified: 2012-01-24 23:33:18
 :tags: ошибка, xml, jquery, opera, POST, python, CGI
 :category: text
 :author: IMDagger

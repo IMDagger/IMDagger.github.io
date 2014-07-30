@@ -1,6 +1,6 @@
 
 
-:date: 2013-07-18 22:57:52
+:date: 2013-07-19 01:57:52
 :tags: проблема, emacs, установка, ido, ido-yes-or-no, пакет
 :category: text
 :author: IMDagger

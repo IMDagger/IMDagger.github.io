@@ -1,6 +1,6 @@
 django-polymorphic
 ==================
-:date: 2013-12-24 22:42:09
+:date: 2013-12-25 01:42:09
 :tags: менеджер, ошибка, библиотека, django-polymorphic, модель
 :category: text
 :author: IMDagger

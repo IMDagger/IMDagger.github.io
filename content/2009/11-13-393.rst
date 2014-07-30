@@ -1,6 +1,6 @@
 Смены статуса в Jabber
 ======================
-:date: 2009-11-13 14:40:29
+:date: 2009-11-13 16:40:29
 :tags: jabber, emacs
 :category: text
 :author: IMDagger

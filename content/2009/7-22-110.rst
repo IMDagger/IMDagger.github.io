@@ -1,6 +1,6 @@
 Преальфа релиз
 ==============
-:date: 2009-07-22 15:00:57
+:date: 2009-07-22 18:00:57
 :tags: triad_vesuvius, проект, программирование
 :category: text
 :author: IMDagger

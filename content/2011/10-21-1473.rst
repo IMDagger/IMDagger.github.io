@@ -1,6 +1,6 @@
 Стоило хорошо подумать
 ======================
-:date: 2011-10-21 00:37:26
+:date: 2011-10-21 03:37:26
 :tags: python, pymongo, MongoDB
 :category: text
 :author: IMDagger

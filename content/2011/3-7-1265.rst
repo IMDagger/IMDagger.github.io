@@ -1,6 +1,6 @@
 Проба LuxRender 0.7.1 на сервере
 ================================
-:date: 2011-03-07 19:29:55
+:date: 2011-03-07 21:29:55
 :tags: luxrender, рендер, сервер, радость, blender, волк
 :category: text
 :author: IMDagger

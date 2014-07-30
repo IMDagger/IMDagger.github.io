@@ -1,6 +1,6 @@
 Камасутра на Python
 ===================
-:date: 2009-08-28 17:21:04
+:date: 2009-08-28 20:21:04
 :tags: python, камасутра
 :category: text
 :author: IMDagger

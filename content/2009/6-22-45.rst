@@ -1,6 +1,6 @@
 Житель огорода
 ==============
-:date: 2009-06-22 13:17:42
+:date: 2009-06-22 16:17:42
 :category: photo
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=45

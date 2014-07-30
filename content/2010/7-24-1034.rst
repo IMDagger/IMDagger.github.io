@@ -1,6 +1,6 @@
 Няшка
 =====
-:date: 2010-07-24 16:12:23
+:date: 2010-07-24 19:12:23
 :tags: blender, котёнок, идеи, набросок
 :category: text
 :author: IMDagger

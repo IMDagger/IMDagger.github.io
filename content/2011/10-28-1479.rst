@@ -1,6 +1,6 @@
 Fossil SCM
 ==========
-:date: 2011-10-28 23:52:47
+:date: 2011-10-29 02:52:47
 :tags: SCM, fossil, контроль, версия, разработка
 :category: link
 :author: IMDagger

@@ -1,6 +1,6 @@
 
 
-:date: 2012-09-07 23:48:32
+:date: 2012-09-08 02:48:32
 :tags: column, свойства, нотация, getter, kawa, вызов
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 День программиста
 =================
-:date: 2009-09-13 15:36:15
+:date: 2009-09-13 18:36:15
 :tags: blender, праздник
 :category: text
 :author: IMDagger

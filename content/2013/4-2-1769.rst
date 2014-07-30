@@ -1,7 +1,7 @@
 
 
-:date: 2013-04-02 11:59:23
-:modified: 2013-04-02 12:00:46
+:date: 2013-04-02 14:59:23
+:modified: 2013-04-02 14:00:46
 :tags: демотиватор
 :category: text
 :author: IMDagger

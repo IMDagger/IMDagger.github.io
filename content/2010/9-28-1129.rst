@@ -1,6 +1,6 @@
 Капчи
 =====
-:date: 2010-09-28 20:26:51
+:date: 2010-09-28 23:26:51
 :tags: мысли
 :category: text
 :author: IMDagger

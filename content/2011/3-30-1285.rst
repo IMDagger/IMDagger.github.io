@@ -1,6 +1,6 @@
 MinGW
 =====
-:date: 2011-03-30 20:09:00
+:date: 2011-03-30 23:09:00
 :tags: blender, кросскомпиляция, сборка, MinGW
 :category: text
 :author: IMDagger

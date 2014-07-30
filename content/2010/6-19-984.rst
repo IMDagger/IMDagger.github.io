@@ -1,6 +1,6 @@
 Небольшая доработка
 ===================
-:date: 2010-06-19 11:54:15
+:date: 2010-06-19 14:54:15
 :tags: blender, игра, implaner, мини, изображение
 :category: text
 :author: IMDagger

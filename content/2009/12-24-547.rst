@@ -1,6 +1,6 @@
 Samba4 и копирование ACL
 ========================
-:date: 2009-12-24 18:10:32
+:date: 2009-12-24 20:10:32
 :tags: samba4, acl, копирование
 :category: text
 :author: IMDagger

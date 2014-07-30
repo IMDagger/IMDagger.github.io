@@ -1,6 +1,6 @@
 КУ
 ==
-:date: 2009-10-18 11:40:26
+:date: 2009-10-18 14:40:26
 :tags: Яндекс, бредни
 :category: text
 :author: IMDagger

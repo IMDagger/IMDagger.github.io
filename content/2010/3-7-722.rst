@@ -1,6 +1,6 @@
 Ещё раз
 =======
-:date: 2010-03-07 17:12:55
+:date: 2010-03-07 19:12:55
 :tags: Я
 :category: photo
 :author: IMDagger

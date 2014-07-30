@@ -1,6 +1,6 @@
 Игры
 ====
-:date: 2009-12-07 18:31:38
+:date: 2009-12-07 20:31:38
 :tags: радость, circuslinux, linux, играл
 :category: text
 :author: IMDagger

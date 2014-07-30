@@ -1,6 +1,6 @@
 Дюк и Java
 ==========
-:date: 2009-12-16 17:51:19
+:date: 2009-12-16 19:51:19
 :tags: blender, обои, дюк
 :category: text
 :author: IMDagger

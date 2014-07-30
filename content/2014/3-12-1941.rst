@@ -1,7 +1,7 @@
 Синтаксическая параметризация
 =============================
-:date: 2014-03-12 00:05:07
-:modified: 2014-03-12 00:06:10
+:date: 2014-03-12 03:05:07
+:modified: 2014-03-12 03:06:10
 :tags: racket, splicing-syntax-parameterize, struct
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 
 
-:date: 2013-11-27 11:05:54
+:date: 2013-11-27 14:05:54
 :tags: dura lex, жизнь, бредни
 :category: text
 :author: IMDagger

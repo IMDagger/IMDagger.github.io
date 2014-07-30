@@ -1,6 +1,6 @@
 LDAP
 ====
-:date: 2009-10-12 09:39:26
+:date: 2009-10-12 12:39:26
 :tags: samba4, ldap
 :category: text
 :author: IMDagger

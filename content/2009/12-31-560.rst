@@ -1,6 +1,6 @@
 2010
 ====
-:date: 2009-12-31 15:02:58
+:date: 2009-12-31 17:02:58
 :tags: праздник
 :category: text
 :author: IMDagger

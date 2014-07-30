@@ -1,6 +1,6 @@
 Track to
 ========
-:date: 2009-11-24 16:01:15
+:date: 2009-11-24 18:01:15
 :tags: blender, python, bge, track to
 :category: text
 :author: IMDagger

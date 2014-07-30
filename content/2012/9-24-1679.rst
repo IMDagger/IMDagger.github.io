@@ -1,6 +1,6 @@
 Jinja2
 ======
-:date: 2012-09-24 11:43:19
+:date: 2012-09-24 14:43:19
 :tags: шаблон, Jinja2, программирование, Cheetah, работа
 :category: text
 :author: IMDagger

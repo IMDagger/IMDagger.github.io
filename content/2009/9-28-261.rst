@@ -1,6 +1,6 @@
 Мозг
 ====
-:date: 2009-09-28 03:38:26
+:date: 2009-09-28 06:38:26
 :tags: работа
 :category: text
 :author: IMDagger

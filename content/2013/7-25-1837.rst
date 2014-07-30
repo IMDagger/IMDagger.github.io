@@ -1,6 +1,6 @@
 mate-maximus
 ============
-:date: 2013-07-25 22:17:50
+:date: 2013-07-26 01:17:50
 :tags: mate, удобство, окно, mate-maximus
 :category: text
 :author: IMDagger

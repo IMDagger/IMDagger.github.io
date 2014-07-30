@@ -1,6 +1,6 @@
 dict-set vs hash-set
 ====================
-:date: 2013-12-16 11:46:15
+:date: 2013-12-16 14:46:15
 :tags: hash, проблема, производительность, сравнение, dict, racket, generics, словарь
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Сцены
 =====
-:date: 2009-11-09 18:19:27
+:date: 2009-11-09 20:19:27
 :tags: blender, сцены
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Код
 ===
-:date: 2010-06-09 19:03:37
+:date: 2010-06-09 22:03:37
 :tags: Я, работа, python
 :category: text
 :author: IMDagger

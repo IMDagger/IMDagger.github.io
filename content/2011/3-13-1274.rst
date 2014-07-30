@@ -1,6 +1,6 @@
 UBlenderJS 0.0.5
 ================
-:date: 2011-03-13 13:11:18
+:date: 2011-03-13 15:11:18
 :tags: userjs, форум, javascript, улучшение, blender, UBlenderJS
 :category: text
 :author: IMDagger

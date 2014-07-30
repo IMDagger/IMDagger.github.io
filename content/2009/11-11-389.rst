@@ -1,6 +1,6 @@
 Волна
 =====
-:date: 2009-11-11 18:39:00
+:date: 2009-11-11 20:39:00
 :tags: волна, bge
 :category: text
 :author: IMDagger

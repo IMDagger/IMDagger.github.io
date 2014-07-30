@@ -1,6 +1,6 @@
 Магия русалок
 =============
-:date: 2009-09-20 16:44:21
+:date: 2009-09-20 19:44:21
 :tags: java, spring
 :category: text
 :author: IMDagger

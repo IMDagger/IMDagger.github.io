@@ -1,6 +1,6 @@
 Правило по жизни
 ================
-:date: 2009-11-11 14:46:57
+:date: 2009-11-11 16:46:57
 :tags: blender, жизнь, форум
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Сани-сусани II
 ==============
-:date: 2009-11-27 12:21:31
+:date: 2009-11-27 14:21:31
 :tags: blender, luxrender, набросок
 :category: text
 :author: IMDagger

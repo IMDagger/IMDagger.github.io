@@ -1,6 +1,6 @@
 Мелкий тест для CouchDB
 =======================
-:date: 2011-07-22 10:49:13
+:date: 2011-07-22 13:49:13
 :tags: база, тест, couchdb
 :category: text
 :author: IMDagger

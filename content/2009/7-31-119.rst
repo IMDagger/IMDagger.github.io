@@ -1,6 +1,6 @@
 Работа с BGL в Blender
 ======================
-:date: 2009-07-31 09:41:07
+:date: 2009-07-31 12:41:07
 :tags: spacehandler, opengl, треугольник, обработчик, triangle, matrix, blender, python
 :category: text
 :author: IMDagger

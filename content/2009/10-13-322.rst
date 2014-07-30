@@ -1,6 +1,6 @@
 Бедный мой ДНК
 ==============
-:date: 2009-10-13 17:27:15
+:date: 2009-10-13 20:27:15
 :tags: python, ssl
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Характер
 ========
-:date: 2009-06-19 18:00:34
+:date: 2009-06-19 21:00:34
 :tags: Я
 :category: text
 :author: IMDagger

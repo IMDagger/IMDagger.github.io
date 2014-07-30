@@ -1,6 +1,6 @@
 Симуляция в Qucs
 ================
-:date: 2010-03-14 18:03:43
+:date: 2010-03-14 20:03:43
 :tags: симуляция, qucs
 :category: text
 :author: IMDagger

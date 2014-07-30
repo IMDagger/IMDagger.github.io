@@ -1,7 +1,7 @@
 Celery для игрового мира
 ========================
-:date: 2012-04-18 21:07:39
-:modified: 2012-04-18 21:08:06
+:date: 2012-04-19 00:07:39
+:modified: 2012-04-19 00:08:06
 :tags: Celery, игра, мультиплеер, gevent, микропоток, python
 :category: text
 :author: IMDagger

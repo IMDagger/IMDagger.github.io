@@ -1,6 +1,6 @@
 
 
-:date: 2011-08-16 08:58:02
+:date: 2011-08-16 11:58:02
 :tags: blender, bge, CEGUI, улучшение
 :category: video
 :author: IMDagger

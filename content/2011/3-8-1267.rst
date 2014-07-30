@@ -1,6 +1,6 @@
 20 часов спустя
 ===============
-:date: 2011-03-08 11:47:05
+:date: 2011-03-08 13:47:05
 :tags: blender, luxrender, lowpoly
 :category: text
 :author: IMDagger

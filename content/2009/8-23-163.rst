@@ -1,6 +1,6 @@
 Emacs, шрифты и тормоза
 =======================
-:date: 2009-08-23 14:26:45
+:date: 2009-08-23 17:26:45
 :tags: emacs, fontconfig
 :category: text
 :author: IMDagger

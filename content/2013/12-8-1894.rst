@@ -1,6 +1,6 @@
 Обновление
 ==========
-:date: 2013-12-08 23:18:57
+:date: 2013-12-09 02:18:57
 :tags: ошибка, программирование, demodularize, racket, обновление, demod
 :category: text
 :author: IMDagger

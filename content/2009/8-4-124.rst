@@ -1,6 +1,6 @@
 Автоматическое определение режима в 2.49a
 =========================================
-:date: 2009-08-04 15:29:17
+:date: 2009-08-04 18:29:17
 :tags: blender, python, bge, triad_vesuvius, pickle
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Проект снова обрёл силы
 =======================
-:date: 2010-10-10 16:33:40
+:date: 2010-10-10 19:33:40
 :tags: triad_vesuvius, проект, bge, launchpad, blender, python, last_gateway_to_hell
 :category: text
 :author: IMDagger

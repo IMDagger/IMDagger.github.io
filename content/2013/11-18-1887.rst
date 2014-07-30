@@ -1,6 +1,6 @@
 
 
-:date: 2013-11-18 23:57:23
+:date: 2013-11-19 02:57:23
 :tags: python, краулер, программирование, сайт, scrapy
 :category: text
 :author: IMDagger

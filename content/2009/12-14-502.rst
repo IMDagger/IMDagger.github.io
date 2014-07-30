@@ -1,6 +1,6 @@
 Мясорубка
 =========
-:date: 2009-12-14 17:44:28
+:date: 2009-12-14 19:44:28
 :tags: проект, last_gateway_to_hell
 :category: text
 :author: IMDagger

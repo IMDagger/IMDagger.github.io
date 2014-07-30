@@ -1,6 +1,6 @@
 Сериализация
 ============
-:date: 2009-07-24 10:28:37
+:date: 2009-07-24 13:28:37
 :tags: python, сериализация
 :category: text
 :author: IMDagger

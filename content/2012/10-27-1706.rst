@@ -1,6 +1,6 @@
 TexturePacker и тайлы
 =====================
-:date: 2012-10-27 22:22:46
+:date: 2012-10-28 01:22:46
 :tags: упаковка, текстура, libGDX, TexturePacker, тайлы
 :category: text
 :author: IMDagger

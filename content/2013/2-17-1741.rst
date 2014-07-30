@@ -1,6 +1,6 @@
 Steam и Linux
 =============
-:date: 2013-02-17 00:13:56
+:date: 2013-02-17 03:13:56
 :tags: primus, steam, linux, optimus, радость, игры
 :category: text
 :author: IMDagger

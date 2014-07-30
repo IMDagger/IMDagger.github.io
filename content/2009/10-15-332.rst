@@ -1,6 +1,6 @@
 Прокол
 ======
-:date: 2009-10-15 17:00:23
+:date: 2009-10-15 20:00:23
 :tags: java
 :category: text
 :author: IMDagger

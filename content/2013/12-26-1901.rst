@@ -1,6 +1,6 @@
 Красота LaTeX
 =============
-:date: 2013-12-26 00:37:38
+:date: 2013-12-26 03:37:38
 :tags: красота, latex
 :category: link
 :author: IMDagger

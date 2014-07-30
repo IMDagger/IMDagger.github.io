@@ -1,6 +1,6 @@
 Детский телефон
 ===============
-:date: 2009-11-21 18:47:01
+:date: 2009-11-21 20:47:01
 :tags: blender, набросок
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Картинки в Scripts Window
 =========================
-:date: 2009-12-02 11:55:03
+:date: 2009-12-02 13:55:03
 :tags: blender, bge, last_gateway_to_hell
 :category: text
 :author: IMDagger

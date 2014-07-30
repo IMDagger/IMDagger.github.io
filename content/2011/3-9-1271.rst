@@ -1,6 +1,6 @@
 Список, кому пользователь отправил app invite
 =============================================
-:date: 2011-03-09 16:54:48
+:date: 2011-03-09 18:54:48
 :tags: facebook, javascript, диалог, инвайт, GraphAPI, туплю, request_ids
 :category: text
 :author: IMDagger

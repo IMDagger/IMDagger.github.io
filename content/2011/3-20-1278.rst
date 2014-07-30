@@ -1,6 +1,6 @@
 CEGUI Blender
 =============
-:date: 2011-03-20 20:13:02
+:date: 2011-03-20 22:13:02
 :tags: blender, bge, CEGUI, улучшение, доработка
 :category: video
 :author: IMDagger

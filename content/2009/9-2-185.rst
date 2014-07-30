@@ -1,6 +1,6 @@
 Баги
 ====
-:date: 2009-09-02 18:30:16
+:date: 2009-09-02 21:30:16
 :tags: samba4, домен
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Функция escape
 ==============
-:date: 2010-02-13 18:22:10
+:date: 2010-02-13 20:22:10
 :tags: ошибка, java, кодировка, работа, tomcat
 :category: text
 :author: IMDagger

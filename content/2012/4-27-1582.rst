@@ -1,6 +1,6 @@
 Фикс для PyAMF
 ==============
-:date: 2012-04-27 22:34:21
+:date: 2012-04-28 01:34:21
 :tags: __amf__, synonym, исправление, python, ошибка, pyamf
 :category: text
 :author: IMDagger

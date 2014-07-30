@@ -1,6 +1,6 @@
 Geiser и Emacs
 ==============
-:date: 2013-04-25 00:01:13
+:date: 2013-04-25 03:01:13
 :tags: сервер, TCP, emacs, racket, remote, geiser, удалённый
 :category: text
 :author: IMDagger

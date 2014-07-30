@@ -1,6 +1,6 @@
 Первые шаги
 ===========
-:date: 2010-04-03 14:16:31
+:date: 2010-04-03 17:16:31
 :tags: python, facebook
 :category: text
 :author: IMDagger

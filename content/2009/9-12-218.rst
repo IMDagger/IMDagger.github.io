@@ -1,6 +1,6 @@
 Hibernate
 =========
-:date: 2009-09-12 15:48:33
+:date: 2009-09-12 18:48:33
 :tags: java, hibernate
 :category: text
 :author: IMDagger

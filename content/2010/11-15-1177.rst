@@ -1,6 +1,6 @@
 999
 ===
-:date: 2010-11-15 19:17:46
+:date: 2010-11-15 21:17:46
 :tags: blender, форум
 :category: text
 :author: IMDagger

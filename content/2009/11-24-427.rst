@@ -1,6 +1,6 @@
 Моя дурная голова
 =================
-:date: 2009-11-24 18:40:32
+:date: 2009-11-24 20:40:32
 :tags: загрузка, userjs, opera
 :category: text
 :author: IMDagger

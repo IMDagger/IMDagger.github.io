@@ -1,6 +1,6 @@
 Ядро
 ====
-:date: 2010-02-09 19:33:47
+:date: 2010-02-09 21:33:47
 :tags: ядро, linux
 :category: text
 :author: IMDagger

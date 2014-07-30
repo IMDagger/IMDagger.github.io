@@ -1,6 +1,6 @@
 Octave 3.2.3 и 3.2.4
 ====================
-:date: 2011-02-06 18:24:20
+:date: 2011-02-06 20:24:20
 :tags: octave, gplab
 :category: text
 :author: IMDagger

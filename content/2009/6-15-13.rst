@@ -1,6 +1,6 @@
 Обои рабочего стола
 ===================
-:date: 2009-06-15 09:43:48
+:date: 2009-06-15 12:43:48
 :tags: blender, обои, slackware, linux, wallpaper
 :category: photo
 :author: IMDagger

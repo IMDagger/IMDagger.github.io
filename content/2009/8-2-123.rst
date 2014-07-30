@@ -1,6 +1,6 @@
 Привет 2.49a
 ============
-:date: 2009-08-02 14:10:05
+:date: 2009-08-02 17:10:05
 :tags: blender, triad_vesuvius, 2.49a
 :category: text
 :author: IMDagger

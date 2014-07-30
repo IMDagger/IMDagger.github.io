@@ -1,6 +1,6 @@
 Сражение Galcon
 ===============
-:date: 2010-11-28 17:58:33
+:date: 2010-11-28 19:58:33
 :tags: игра, соревнование, Galcon, python, ai, конкурс
 :category: text
 :author: IMDagger

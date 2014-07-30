@@ -1,6 +1,6 @@
 Ширина
 ======
-:date: 2009-11-28 13:08:21
+:date: 2009-11-28 15:08:21
 :tags: диплом, ошибка
 :category: text
 :author: IMDagger

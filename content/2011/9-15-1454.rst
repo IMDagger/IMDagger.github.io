@@ -1,6 +1,6 @@
 Сохранение функций из PyMongo
 =============================
-:date: 2011-09-15 20:29:39
+:date: 2011-09-15 23:29:39
 :category: link
 :author: IMDagger
 :attached-url: http://blog.schmichael.com/2010/01/11/making-server-side-mongodb-functions-less-awkward/

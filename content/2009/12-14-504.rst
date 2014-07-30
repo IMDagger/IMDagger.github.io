@@ -1,6 +1,6 @@
 Демотиватор
 ===========
-:date: 2009-12-14 17:54:59
+:date: 2009-12-14 19:54:59
 :tags: ссылка, демотиватор, hotlink
 :category: text
 :author: IMDagger

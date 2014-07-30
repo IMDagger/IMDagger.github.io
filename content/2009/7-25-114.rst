@@ -1,6 +1,6 @@
 Мультяшный глаз
 ===============
-:date: 2009-07-25 17:20:03
+:date: 2009-07-25 20:20:03
 :tags: blender, глаз
 :category: text
 :author: IMDagger

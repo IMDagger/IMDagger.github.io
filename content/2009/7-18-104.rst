@@ -1,6 +1,6 @@
 Схема для диалога
 =================
-:date: 2009-07-18 08:39:58
+:date: 2009-07-18 11:39:58
 :tags: xml schema, xsd
 :category: text
 :author: IMDagger

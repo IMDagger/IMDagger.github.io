@@ -1,6 +1,6 @@
 Буфер обмена
 ============
-:date: 2009-09-20 12:18:46
+:date: 2009-09-20 15:18:46
 :tags: emacs, буфер
 :category: link
 :author: IMDagger

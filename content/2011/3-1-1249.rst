@@ -1,6 +1,6 @@
 OpenAL, Blender 2.49b и GCC 4.3.3 сборка
 ========================================
-:date: 2011-03-01 16:05:45
+:date: 2011-03-01 18:05:45
 :tags: blender, OpenAL, сборка, GCC
 :category: text
 :author: IMDagger

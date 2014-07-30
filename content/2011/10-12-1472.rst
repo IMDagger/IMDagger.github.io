@@ -1,6 +1,6 @@
 MAC фильтр
 ==========
-:date: 2011-10-12 09:57:58
+:date: 2011-10-12 12:57:58
 :tags: arp, фильтрация, работа, squid
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Дудлы гугла
 ===========
-:date: 2012-08-08 14:11:47
+:date: 2012-08-08 17:11:47
 :tags: дудл, doodle, поиск, google
 :category: text
 :author: IMDagger

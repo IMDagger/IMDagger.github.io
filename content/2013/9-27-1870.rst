@@ -1,6 +1,6 @@
 
 
-:date: 2013-09-27 13:22:01
+:date: 2013-09-27 16:22:01
 :tags: параметры, python, gunicorn, форма, CGI
 :category: text
 :author: IMDagger

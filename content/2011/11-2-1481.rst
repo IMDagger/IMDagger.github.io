@@ -1,6 +1,6 @@
 Headphones
 ==========
-:date: 2011-11-02 00:13:10
+:date: 2011-11-02 03:13:10
 :tags: починил, жизнь, радость, наушники, ухо, Я
 :category: text
 :author: IMDagger

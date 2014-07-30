@@ -1,6 +1,6 @@
 Прокололся
 ==========
-:date: 2009-08-15 17:12:43
+:date: 2009-08-15 20:12:43
 :tags: python, генератор
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 Место для линзы
 ===============
-:date: 2010-03-05 19:59:42
+:date: 2010-03-05 21:59:42
 :tags: blender, r2d2
 :category: text
 :author: IMDagger

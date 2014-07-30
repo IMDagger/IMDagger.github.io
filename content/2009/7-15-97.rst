@@ -1,6 +1,6 @@
 Система диалогов
 ================
-:date: 2009-07-15 14:07:43
+:date: 2009-07-15 17:07:43
 :tags: python
 :category: text
 :author: IMDagger

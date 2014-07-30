@@ -1,6 +1,6 @@
 Midnight Commander
 ==================
-:date: 2009-08-04 16:31:11
+:date: 2009-08-04 19:31:11
 :tags: midnight commander, баг
 :category: text
 :author: IMDagger

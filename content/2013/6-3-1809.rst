@@ -1,6 +1,6 @@
 
 
-:date: 2013-06-03 01:26:12
+:date: 2013-06-03 04:26:12
 :tags: текст, сканирование, tesseract
 :category: text
 :author: IMDagger

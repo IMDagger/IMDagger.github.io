@@ -1,6 +1,6 @@
 
 
-:date: 2013-10-10 23:27:09
+:date: 2013-10-11 02:27:09
 :tags: проблема, Django, транзакция, 1.4, MyISAM, python, MySQL, InnoDB
 :category: text
 :author: IMDagger

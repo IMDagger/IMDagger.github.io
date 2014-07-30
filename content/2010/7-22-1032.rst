@@ -1,6 +1,6 @@
 Клады
 =====
-:date: 2010-07-22 20:11:07
+:date: 2010-07-22 23:11:07
 :tags: Я, ранчо, myspace, работа
 :category: text
 :author: IMDagger

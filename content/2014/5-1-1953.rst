@@ -1,6 +1,6 @@
 
 
-:date: 2014-05-01 23:06:14
+:date: 2014-05-02 02:06:14
 :tags: игра, нямстеры
 :category: text
 :author: IMDagger

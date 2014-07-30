@@ -1,6 +1,6 @@
 Ironehide и ASUS EeePC 1215N
 ============================
-:date: 2012-01-11 14:27:39
+:date: 2012-01-11 17:27:39
 :tags: asus, linux, optimus, nvidia, ironhide, blumblebee, eeepc
 :category: text
 :author: IMDagger

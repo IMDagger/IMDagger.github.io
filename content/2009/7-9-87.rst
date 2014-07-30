@@ -1,6 +1,6 @@
 Побаловался с DupliFrames
 =========================
-:date: 2009-07-09 11:59:48
+:date: 2009-07-09 14:59:48
 :tags: blender, dupliframes, цепь, набросок
 :category: text
 :author: IMDagger

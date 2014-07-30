@@ -1,6 +1,6 @@
 atan2
 =====
-:date: 2014-04-19 13:22:37
+:date: 2014-04-19 16:22:37
 :tags: внимательность, аргументы, atan2, python, racket, параметры
 :category: text
 :author: IMDagger

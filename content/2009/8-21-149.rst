@@ -1,6 +1,6 @@
 Emacs и Jabber
 ==============
-:date: 2009-08-21 17:33:15
+:date: 2009-08-21 20:33:15
 :tags: jabber, emacs
 :category: text
 :author: IMDagger

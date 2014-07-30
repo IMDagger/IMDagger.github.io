@@ -1,6 +1,6 @@
 Hibernate
 =========
-:date: 2009-09-16 08:13:35
+:date: 2009-09-16 11:13:35
 :tags: ошибка, java, hibernate
 :category: text
 :author: IMDagger

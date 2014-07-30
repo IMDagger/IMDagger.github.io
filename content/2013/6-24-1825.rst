@@ -1,6 +1,6 @@
 USB-фонарик с dx.com
 ====================
-:date: 2013-06-24 21:45:42
+:date: 2013-06-25 00:45:42
 :tags: dx.com, USB, покупка, фонарик
 :category: text
 :author: IMDagger

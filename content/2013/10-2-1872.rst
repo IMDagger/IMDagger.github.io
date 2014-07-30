@@ -1,6 +1,6 @@
 Бананы
 ======
-:date: 2013-10-02 21:38:56
+:date: 2013-10-03 00:38:56
 :tags: бананы, еда
 :category: photo
 :author: IMDagger

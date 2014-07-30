@@ -1,6 +1,6 @@
 Рендеринг старой работы
 =======================
-:date: 2009-11-16 13:23:43
+:date: 2009-11-16 15:23:43
 :tags: blender, luxrender
 :category: text
 :author: IMDagger

@@ -1,7 +1,7 @@
 
 
-:date: 2014-01-23 00:51:25
-:modified: 2014-01-23 00:51:45
+:date: 2014-01-23 03:51:25
+:modified: 2014-01-23 03:51:45
 :tags: python, django-xadmin, кнопки
 :category: text
 :author: IMDagger

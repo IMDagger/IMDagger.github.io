@@ -1,6 +1,6 @@
 Потокобезопасность
 ==================
-:date: 2014-04-15 00:53:22
+:date: 2014-04-15 03:53:22
 :tags: блокировка, ScalaPlayer, scala, поток, python, безопасность
 :category: text
 :author: IMDagger

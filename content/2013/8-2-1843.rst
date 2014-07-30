@@ -1,6 +1,6 @@
 Падение Redis 2.4.10
 ====================
-:date: 2013-08-02 13:07:57
+:date: 2013-08-02 16:07:57
 :tags: redis, ошибка, sentry
 :category: text
 :author: IMDagger

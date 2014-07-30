@@ -1,6 +1,6 @@
 Девайс
 ======
-:date: 2010-05-11 16:00:09
+:date: 2010-05-11 19:00:09
 :tags: время, kp500, виджет
 :category: text
 :author: IMDagger

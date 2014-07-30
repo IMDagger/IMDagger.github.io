@@ -1,6 +1,6 @@
 Lazy fetch
 ==========
-:date: 2009-12-18 14:15:28
+:date: 2009-12-18 16:15:28
 :tags: диплом, hibernate, lazy
 :category: text
 :author: IMDagger

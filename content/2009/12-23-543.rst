@@ -1,6 +1,6 @@
 
 
-:date: 2009-12-23 16:30:36
+:date: 2009-12-23 18:30:36
 :tags: радость
 :category: mood
 :author: IMDagger

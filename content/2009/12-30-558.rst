@@ -1,6 +1,6 @@
 Обои II: реинкарнация
 =====================
-:date: 2009-12-30 18:04:43
+:date: 2009-12-30 20:04:43
 :tags: blender, обои, slackware, linux
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 R2D2
 ====
-:date: 2010-02-27 19:25:39
+:date: 2010-02-27 21:25:39
 :tags: blender, r2d2, робот, 3d, моделирование
 :category: text
 :author: IMDagger

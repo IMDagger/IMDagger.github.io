@@ -1,6 +1,6 @@
 Загрузка соседей в MS SPP Ranch
 ===============================
-:date: 2010-09-30 19:06:31
+:date: 2010-09-30 22:06:31
 :tags: ранчо, исправление, slide, работа, google
 :category: text
 :author: IMDagger

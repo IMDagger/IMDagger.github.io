@@ -1,6 +1,6 @@
 Clanbomber
 ==========
-:date: 2009-12-11 16:04:36
+:date: 2009-12-11 18:04:36
 :tags: играл, clanbomber
 :category: text
 :author: IMDagger

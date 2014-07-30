@@ -1,6 +1,6 @@
 Баг в Spyne
 ===========
-:date: 2013-03-29 00:23:48
+:date: 2013-03-29 03:23:48
 :tags: python, spyne, JSON, работа, ошибка
 :category: text
 :author: IMDagger

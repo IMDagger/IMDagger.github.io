@@ -1,6 +1,6 @@
 FB Видео
 ========
-:date: 2010-11-17 20:08:19
+:date: 2010-11-17 22:08:19
 :tags: граф, facebook, video, duration
 :category: text
 :author: IMDagger

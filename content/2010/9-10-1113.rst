@@ -1,6 +1,6 @@
 Настроение
 ==========
-:date: 2010-09-10 18:59:25
+:date: 2010-09-10 21:59:25
 :tags: бредни
 :category: text
 :author: IMDagger

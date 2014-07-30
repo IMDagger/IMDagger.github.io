@@ -1,6 +1,6 @@
 
 
-:date: 2013-08-14 23:15:33
+:date: 2013-08-15 02:15:33
 :tags: avira, лицензия, подорожание
 :category: text
 :author: IMDagger

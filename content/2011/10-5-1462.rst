@@ -1,6 +1,6 @@
 Git post-receive хук
 ====================
-:date: 2011-10-05 11:12:31
+:date: 2011-10-05 14:12:31
 :tags: python, push, git, хук, post-receive, работа
 :category: text
 :author: IMDagger

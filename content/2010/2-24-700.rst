@@ -1,6 +1,6 @@
 Скролл
 ======
-:date: 2010-02-24 19:28:14
+:date: 2010-02-24 21:28:14
 :tags: blender, bge, last_gateway_to_hell, скролл
 :category: text
 :author: IMDagger

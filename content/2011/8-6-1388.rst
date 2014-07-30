@@ -1,6 +1,6 @@
 Ага! Попался!
 =============
-:date: 2011-08-06 22:56:07
+:date: 2011-08-07 01:56:07
 :tags: Я, google, slide
 :category: photo
 :author: IMDagger

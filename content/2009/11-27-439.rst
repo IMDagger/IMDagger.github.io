@@ -1,6 +1,6 @@
 Санки-катанки
 =============
-:date: 2009-11-27 19:50:43
+:date: 2009-11-27 21:50:43
 :tags: blender, luxrender, набросок
 :category: text
 :author: IMDagger

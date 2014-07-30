@@ -1,6 +1,6 @@
 Resistance
 ==========
-:date: 2009-10-30 19:33:16
+:date: 2009-10-30 21:33:16
 :tags: blender, bge, 3d
 :category: text
 :author: IMDagger

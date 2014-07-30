@@ -1,6 +1,6 @@
 Правка ошибки в Midnight Commander
 ==================================
-:date: 2009-08-08 17:18:32
+:date: 2009-08-08 20:18:32
 :tags: midnight commander
 :category: text
 :author: IMDagger

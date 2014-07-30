@@ -1,6 +1,6 @@
 VPN
 ===
-:date: 2010-04-16 13:20:59
+:date: 2010-04-16 16:20:59
 :tags: проброс, forward, routing, openvpn, iptables
 :category: text
 :author: IMDagger

@@ -1,6 +1,6 @@
 CEGUI и BGE Ketsji
 ==================
-:date: 2011-03-08 12:05:15
+:date: 2011-03-08 14:05:15
 :tags: bge, CEGUI, интерфейс, улучшение, разработка, возможности, добавка
 :category: text
 :author: IMDagger

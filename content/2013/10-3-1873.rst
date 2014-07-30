@@ -1,6 +1,6 @@
 
 
-:date: 2013-10-03 01:34:59
+:date: 2013-10-03 04:34:59
 :tags: encoding, сайт, gzip, identity, requests, HTTP, python, особенность
 :category: text
 :author: IMDagger

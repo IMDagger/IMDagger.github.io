@@ -1,7 +1,7 @@
 Соединение Flash <-> Python, AMF и другие товарищи
 ==================================================
-:date: 2012-03-29 21:25:48
-:modified: 2012-03-29 21:26:26
+:date: 2012-03-30 00:25:48
+:modified: 2012-03-30 00:26:26
 :tags: HTTP, python, flash, работа, chunked, wsgi
 :category: text
 :author: IMDagger

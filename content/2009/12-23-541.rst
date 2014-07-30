@@ -1,6 +1,6 @@
 Radiosity
 =========
-:date: 2009-12-23 13:28:26
+:date: 2009-12-23 15:28:26
 :tags: blender, radio, radiosity
 :category: text
 :author: IMDagger

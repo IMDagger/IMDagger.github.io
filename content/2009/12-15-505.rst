@@ -1,6 +1,6 @@
 Нужен волшебный пендель
 =======================
-:date: 2009-12-15 18:46:17
+:date: 2009-12-15 20:46:17
 :tags: last_gateway_to_hell
 :category: text
 :author: IMDagger

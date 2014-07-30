@@ -1,6 +1,6 @@
 Редактор
 ========
-:date: 2010-03-28 17:25:08
+:date: 2010-03-28 20:25:08
 :tags: gimp, обновление
 :category: text
 :author: IMDagger

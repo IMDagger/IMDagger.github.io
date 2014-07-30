@@ -1,6 +1,6 @@
 extglob Bash
 ============
-:date: 2011-03-28 19:28:54
+:date: 2011-03-28 22:28:54
 :tags: bash, исключение, extglob, маска
 :category: text
 :author: IMDagger

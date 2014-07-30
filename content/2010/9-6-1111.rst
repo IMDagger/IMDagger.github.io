@@ -1,6 +1,6 @@
 Stream posting
 ==============
-:date: 2010-09-06 16:31:37
+:date: 2010-09-06 19:31:37
 :tags: stream, myspace, javascript, права, activity
 :category: text
 :author: IMDagger

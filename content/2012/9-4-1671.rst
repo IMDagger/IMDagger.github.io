@@ -1,7 +1,7 @@
 Истина где-то рядом
 ===================
-:date: 2012-09-04 21:28:28
-:modified: 2012-09-04 21:28:59
+:date: 2012-09-05 00:28:28
+:modified: 2012-09-05 00:28:59
 :tags: audio, hdmi, nvidia, pulseaudio, звук
 :category: text
 :author: IMDagger

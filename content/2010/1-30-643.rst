@@ -1,6 +1,6 @@
 Обновил X-ы
 ===========
-:date: 2010-01-30 17:54:27
+:date: 2010-01-30 19:54:27
 :tags: обновление, Xorg
 :category: text
 :author: IMDagger

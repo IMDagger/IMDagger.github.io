@@ -1,6 +1,6 @@
 Война с Timestamp
 =================
-:date: 2009-09-17 18:17:33
+:date: 2009-09-17 21:17:33
 :tags: msssql, hibernate
 :category: text
 :author: IMDagger

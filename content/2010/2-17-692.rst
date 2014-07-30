@@ -1,6 +1,6 @@
 Выкроил время
 =============
-:date: 2010-02-17 18:42:46
+:date: 2010-02-17 20:42:46
 :tags: blender, bge, x-ray
 :category: text
 :author: IMDagger

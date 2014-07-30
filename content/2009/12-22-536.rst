@@ -1,6 +1,6 @@
 Редактор рюкзака
 ================
-:date: 2009-12-22 18:36:49
+:date: 2009-12-22 20:36:49
 :tags: blender, рюкзак, last_gateway_to_hell
 :category: text
 :author: IMDagger

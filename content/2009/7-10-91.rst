@@ -1,6 +1,6 @@
 Кавер
 =====
-:date: 2009-07-10 16:01:49
+:date: 2009-07-10 19:01:49
 :tags: butterfly temple, программирование, текст, кавер
 :category: text
 :author: IMDagger

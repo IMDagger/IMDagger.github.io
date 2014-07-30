@@ -1,6 +1,6 @@
 DLink AP
 ========
-:date: 2010-11-05 18:53:25
+:date: 2010-11-05 20:53:25
 :tags: dlink, настройки, сброс, wifi
 :category: text
 :author: IMDagger

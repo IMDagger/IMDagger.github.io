@@ -1,6 +1,6 @@
 Мэппинг
 =======
-:date: 2009-12-12 07:57:56
+:date: 2009-12-12 09:57:56
 :tags: hibernate
 :category: link
 :author: IMDagger

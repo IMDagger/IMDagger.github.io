@@ -1,6 +1,6 @@
 Новый фильм
 ===========
-:date: 2012-12-28 23:33:11
+:date: 2012-12-29 02:33:11
 :tags: фильм, minecraft, paypal, visa, indie, купил, оплата
 :category: text
 :author: IMDagger
