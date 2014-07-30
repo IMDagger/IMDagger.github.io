@@ -1,0 +1,39 @@
+<div class="panel panel-{{ article.category|default('text') }}">
+    <div class="panel-heading b-post-type b-post-type-{{ article.category|default('text') }}">
+        {% set author_name = article.author|string %}
+        {% block author_prefix %}
+        <b class="b-user">
+            <a class="b-user__link" href="{{ article.author.url }}"><b class="b-user__first-letter">{{ author_name|first }}</b>{{ author_name[1:] }}</a>
+        </b>
+        {% endblock %}
+        {% block operation %}{% endblock %}
+        <span class="pull-right b-date">
+            <a class="h-link" href="/{{ article.url }}" {% if article.modified %}title="изменено {{ article.modified.day }} {{ ALT_MONTHES[article.modified.month] }} {{ article.modified.year }} года в {{ article.modified.strftime('%H:%M') }}"{% endif %}>
+            {% if article.date.year != NOW.year %}
+                {{ article.date.day }} {{ ALT_MONTHES[article.date.month] }} {{ article.date.year }} года, {{ article.date.strftime('%H:%M') }}
+            {% else %}
+                {{ article.date.day }} {{ ALT_MONTHES[article.date.month] }}, {{ article.date.strftime('%H:%M') }}
+            {% endif %}
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="{{ article.author.url }}"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+            {% include 'includes/taglist.html' %}
+            <div class="post-title">
+                {% block post_title %}{{ article.title }}{% endblock %}
+            </div>
+            <div class="row post-body">
+                <div class="b-text">
+                    {% block post_content %}{{ article.content }}{% endblock %}
+                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div>

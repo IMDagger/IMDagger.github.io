@@ -1,0 +1,9 @@
+{% extends 'includes/post.html' %}
+
+{% block operation %}поделился ссылкой{% endblock %}
+
+{% block post_title %}
+<a class="h-link" href="{{ article.attached_url }}">
+    <img class="b-ico" src="http://favicon.yandex.ru/favicon/{{ article.attached_url|domain }}?default=yaru-external">{% if article.title %}{{ article.title }}{% else %}{{ article.attached_url }}{% endif %}
+</a>
+{% endblock %}

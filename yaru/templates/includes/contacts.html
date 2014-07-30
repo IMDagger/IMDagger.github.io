@@ -1,0 +1,24 @@
+<div class="row widget">
+    <div class="widget-content b-user-info">
+        <div class="widget__body">
+            <div class="widget-user-info__age">
+                <i class="widget-user-info__sex widget-user-info__sex_type_{{ SEXTYPE }}"></i> {{ ME.AGE }}&nbsp;лет
+            </div>
+            <div class="widget-user-info__place">
+                {% for subloc in ME.LOCATION %}
+                <a href="#">{{ subloc }}</a>{% if not loop.last %},{% endif %}
+                {% endfor %}
+            </div>
+            <ul class="contacts">
+                {% for type, link in SOCIAL %}
+                {% set tuned_type = type|replace(' ', '-') %}
+                {% if link.special_address %}
+                <li class="contact contact-type-{{ tuned_type }}"><i></i><a href="{{ link.special_address }}">{{ link }}</a></li>
+                {% else %}
+                <li class="contact contact-type-{{ tuned_type }}"><i></i>{{ link }}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ article.title|default('Без названия', true) }}{% endblock %}
+
+{% block content %}
+<div class="col-sm-2 page-left">
+    {% include 'includes/hot.html' %}
+</div>
+
+<div class="col-sm-10 all-posts">
+    {% include 'includes/posts-filter.html' %}
+    <div class="row b-post">
+        {% include 'includes/post-{}.html'.format(article.category) %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% extends 'includes/post.html' %}
+
+{% set club_name = article.club_name|string %}
+
+{% block operation %}подружился с <a class="b-club__link" href="{{ article.attached_url }}"><b class="b-club__first-letter">{{ club_name|first }}</b>{{ club_name[1:] }}</a>{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-sm-2 page-left">
+    {% include 'includes/photo.html' %}
+    {% include 'includes/contacts.html' %}
+
+
+    {% include 'includes/hot.html' %}
+</div>
+
+<div class="col-sm-10 all-posts">
+    {% include 'includes/posts-filter.html' %}
+
+    <div class="row b-post">
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+            {% include 'includes/post-{}.html'.format(article.category) %}
+        {% endfor %}
+        {% if articles_page.has_previous() or articles_page.has_next() %}
+        <div class="panel panel-default">
+            <div class="panel-body more">
+                {% if articles_page.has_previous() %}
+                <span class="less-prev"><a class="h-link" href="{{ articles_previous_page.url }}">Назад</a></span>
+                {% endif %}
+                {% if articles_page.has_next() %}
+                <span class="more-next"><a class="h-link" href="{{ articles_next_page.url }}">Ещё записи</a></span>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

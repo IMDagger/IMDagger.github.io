@@ -1,0 +1,32 @@
+<div class="row b-post-filter">
+    <span class="pull-right">
+        записи по
+        <div class="btn-group">
+            <span type="button" class="pseudo-link" data-toggle="dropdown">месяцам</span>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="#" class="h-link">Нулябрь</a><li>
+                <li><a href="#" class="h-link">Первябрь</a><li>
+            </ul>
+        </div> ·
+        <div class="btn-group">
+            <span type="button" class="pseudo-link" data-toggle="dropdown">меткам</span>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                {%- for row in tag_cloud|batch(5) %}
+                <li>
+                {%- for tag, t_style in row %}
+                    <a class="tag-{{ t_style }}" href="/{{ tag.url }}" class="h-link">{{ tag }}</a>
+                {%- endfor %}
+                </li>
+                {%- endfor %}
+            </ul>
+        </div> ·
+        <div class="btn-group">
+            <span type="button" class="pseudo-link" data-toggle="dropdown">типам</span>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                {% for category, articles in categories %}
+                <li><a href="/{{ category.url }}" class="h-link">{{ POST_TYPE_NAMES[category.name] }}</a><li>
+                {% endfor %}
+            </ul>
+        </div>
+    </span>
+</div>
