@@ -29,44 +29,47 @@ Blender, поэтому создал его вида *#SPACEHANDLER.VIEW3D.DRAW*
 немного подправил, т.к. можно это сделать проще, чем у **Crouch**.
 Вот, что получилось:
 
-.. code-block:: python
+.. cut:: посмотреть
+  :paragraph: yes
 
-    #SPACEHANDLER.VIEW3D.DRAW
-    from Blender import BGL, Window
+  .. code-block:: python
 
-    viewMatrix = Window.GetPerspMatrix()
-    viewBuff = BGL.Buffer(BGL.GL_FLOAT, [4, 4], viewMatrix)
-    BGL.glLoadIdentity()
-    BGL.glMatrixMode(BGL.GL_PROJECTION)
-    BGL.glLoadMatrixf(viewBuff)
-    BGL.glEnable(BGL.GL_BLEND)  # без этого не будет прозрачности
-    BGL.glColor4f(0.0, 1.0, 0.0, 0.2)
-    BGL.glBegin(BGL.GL_TRIANGLES)  # чертит треугольник
-    BGL.glVertex3f(0.0, 0.0, 0.0)
-    BGL.glVertex3f(0.0, 1.0, 0.0)
-    BGL.glVertex3f(1.0, 0.0, 0.0)
-    BGL.glEnd()
+      #SPACEHANDLER.VIEW3D.DRAW
+      from Blender import BGL, Window
 
-**BGL.Buffer** — это объект, первым параметром которого является тип
-данных, второй — размерность (для **glLoadMatrix** требуется 4x4),
-последний параметр — список инициализации, должен быть указанного
-размера (т.е. двумерный список 4x4).
+      viewMatrix = Window.GetPerspMatrix()
+      viewBuff = BGL.Buffer(BGL.GL_FLOAT, [4, 4], viewMatrix)
+      BGL.glLoadIdentity()
+      BGL.glMatrixMode(BGL.GL_PROJECTION)
+      BGL.glLoadMatrixf(viewBuff)
+      BGL.glEnable(BGL.GL_BLEND)  # без этого не будет прозрачности
+      BGL.glColor4f(0.0, 1.0, 0.0, 0.2)
+      BGL.glBegin(BGL.GL_TRIANGLES)  # чертит треугольник
+      BGL.glVertex3f(0.0, 0.0, 0.0)
+      BGL.glVertex3f(0.0, 1.0, 0.0)
+      BGL.glVertex3f(1.0, 0.0, 0.0)
+      BGL.glEnd()
 
-Главное в этом скрипте, что его отличает от других — комментарий в
-первой строке, этот комментарий говорит Blender’у, что это не простой
-сценарий, а обработчик события перерисовки в режиме просмотра 3D. Но по
-умолчанию скрипт выполнятся не будет, для этого его нужно включить.
+  **BGL.Buffer** — это объект, первым параметром которого является тип
+  данных, второй — размерность (для **glLoadMatrix** требуется 4x4),
+  последний параметр — список инициализации, должен быть указанного
+  размера (т.е. двумерный список 4x4).
 
-.. class:: text-center
+  Главное в этом скрипте, что его отличает от других — комментарий в
+  первой строке, этот комментарий говорит Blender’у, что это не простой
+  сценарий, а обработчик события перерисовки в режиме просмотра 3D. Но по
+  умолчанию скрипт выполнятся не будет, для этого его нужно включить.
 
-|image0|
+  .. class:: text-center
 
-Нужно установить галочку напротив имени сценария. После этого
-появится треугольник:
+  |image0|
 
-.. class:: text-center
+  Нужно установить галочку напротив имени сценария. После этого
+  появится треугольник:
 
-|image1|
+  .. class:: text-center
+
+  |image1|
 
 .. |image0| image:: http://img-fotki.yandex.ru/get/3612/imdagger.2/0_ffa9_44eb7a60_L
    :target: http://fotki.yandex.ru/users/imdagger/view/65449/

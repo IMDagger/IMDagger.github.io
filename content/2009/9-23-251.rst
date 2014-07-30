@@ -19,145 +19,148 @@ Spring, то вышло, что часть настроек из конфиго�
 драйвер **jTDS**. Настройки web.xml в WEB-INF стали выглядеть таким
 образом:
 
-.. code-block:: xml
+.. cut:: а как?
+   :paragraph: yes
 
-    **…**
-    <web-app xmlns="http://java.sun.com/xml/ns/javaee\ "
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
-      xsi:schemaLocation="\ http://java.sun.com/xml/ns/javaee
+   .. code-block:: xml
 
-     http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-                      version=“2.5”>
-      <servlet>
-      <servlet-name>dl</servlet-name>
-      <servlet-class>
-    **          org.springframework.web.servlet.DispatcherServlet**
-      </servlet-class>
-      <load-on-startup>1</load-on-startup>
-      </servlet>
-      <servlet-mapping>
-      <servlet-name>dl</servlet-name>
-      **<url-pattern>/</url-pattern>**
-      </servlet-mapping>
-      <context-param>
-      <param-name>contextConfigLocation</param-name>
-      **<param-value>/WEB-INF/dl-servlet.xml</param-value>**
-      </context-param>
-      <listener>
-      <listener-class>
-    **        org.springframework.web.context.ContextLoaderListener**
-      </listener-class>
-      </listener>
-    **…**
-    </web-app>
+       ...
+       <web-app xmlns="http://java.sun.com/xml/ns/javaee\ "
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
+         xsi:schemaLocation="\ http://java.sun.com/xml/ns/javaee
 
-Тег servlet указывает Apache Tomcat, что нужно загрузить сервлет
-**org.springframework.web.servlet.DispatcherServlet** для обработки
-запросов. В директории WEB-INFнаходится файл dl-servlet.xml, который
-описывает настройки сервлета:
+        http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+                         version=“2.5”>
+         <servlet>
+         <servlet-name>dl</servlet-name>
+         <servlet-class>
+                 org.springframework.web.servlet.DispatcherServlet
+         </servlet-class>
+         <load-on-startup>1</load-on-startup>
+         </servlet>
+         <servlet-mapping>
+         <servlet-name>dl</servlet-name>
+         **<url-pattern>/</url-pattern>**
+         </servlet-mapping>
+         <context-param>
+         <param-name>contextConfigLocation</param-name>
+         **<param-value>/WEB-INF/dl-servlet.xml</param-value>**
+         </context-param>
+         <listener>
+         <listener-class>
+       **        org.springframework.web.context.ContextLoaderListener**
+         </listener-class>
+         </listener>
+       **…**
+       </web-app>
 
-.. code-block:: xml
+   Тег servlet указывает Apache Tomcat, что нужно загрузить сервлет
+   **org.springframework.web.servlet.DispatcherServlet** для обработки
+   запросов. В директории WEB-INFнаходится файл dl-servlet.xml, который
+   описывает настройки сервлета:
 
-    <?xml version=“1.0” encoding=“UTF-8”?>
-    <beans xmlns="http://www.springframework.org/schema/beans\ "
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
-      xmlns:aop="http://www.springframework.org/schema/aop\ "
-      xsi:schemaLocation="\ http://www.springframework.org/schema/beans
-      http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
-      **<import resource=“/dl-context/main-context.xml” />**
-    </beans>
+   .. code-block:: xml
 
-Он подключает из каталога dl-context различные параметры настройки. Пока
-у меня всего один файл, но скоро я разобью опции на несколько файлов по
-типам. Настройка основного контекста описана в main-context.xml:
+       <?xml version=“1.0” encoding=“UTF-8”?>
+       <beans xmlns="http://www.springframework.org/schema/beans\ "
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
+         xmlns:aop="http://www.springframework.org/schema/aop\ "
+         xsi:schemaLocation="\ http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+         **<import resource=“/dl-context/main-context.xml” />**
+       </beans>
 
-.. code-block:: xml
+   Он подключает из каталога dl-context различные параметры настройки. Пока
+   у меня всего один файл, но скоро я разобью опции на несколько файлов по
+   типам. Настройка основного контекста описана в main-context.xml:
 
-    <?xml version=“1.0” encoding=“UTF-8”?>
-    <beans xmlns="http://www.springframework.org/schema/beans\ "
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
-      xmlns:aop="http://www.springframework.org/schema/aop\ "
-      xsi:schemaLocation="\ http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
-    <!– This config contains main info about application mappings and
-    view resolvers–>
-    <bean id=“dataSource”
-    class="**org.apache.tomcat.dbcp.dbcp.BasicDataSource**\ "
-    destroy-method=“close”>
-      <property name=“driverClassName”
-    value="**net.sourceforge.jtds.jdbc.Driver**\ " />
-      <property name=“url”
-    value="**jdbc:jtds:sqlserver://dl-test:1030/dldb**\ " />
-      <property name=“username” value="**пользователь-базы**\ " />
-      <property name=“password” value="**пароль**\ " />
-    </bean>
-    <bean id=“sessionFactory”
-    class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-      <property name=“dataSource” ref=“dataSource” />
-      <property name=“configLocation”
-    value=“classpath:/hibernate.cfg.xml” />
-      <property name=“configurationClass”
-    value=“org.hibernate.cfg.AnnotationConfiguration” />
-      <property name=“hibernateProperties”>
-      <props>
-      <prop key=“hibernate.dialect”>${hibernate.dialect}</prop>
-      </props>
-      </property>
-    </bean>
-    *<bean id=“cellDAO” class=“results.CellDao”>
-      <property name=“sessionFactory” ref=“sessionFactory” />
-    </bean>
-    <bean id=“cellService” class=“results.CellService”>
-      <property name=“dao” ref=“cellDAO” />
-    </bean>
-    <bean id=“resultsTableController” class=“results.TableController”>
-      <property name=“cellService” ref=“cellService”/>
-    </bean>*
-    <bean id=“simpleUrlHandler”
-    class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-      <property name=“order”><value>0</value></property>
-      <property name=“mappings”>
-      <props>
-      **<prop key=“results”>resultsTableController</prop>**
-      </props>
-      </property>
-    </bean>
-    <bean id=“viewResolver”
-    class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-      <property name=“cache” value=“false”/>
-      <property
-    name=“viewClass”><value>org.springframework.web.servlet.view.JstlView</value></property>
-      <property
-    name=“prefix”><value>/WEB-INF/pages/jsp/</value></property>
-      <property name=“suffix”><value>.jsp</value></property>
-    </bean>
-    </beans>
+   .. code-block:: xml
 
-Сервер баз данных у меня внешний MSSQL 2005 Express Edition (к
-сожалению у меня нету выбора и приходится работать с этим, т.к. я лишь
-рефакторю код существующей большой системы, которую просто так нельзя
-сломать). Запускаю же Tomcat у себя на Linux.
+       <?xml version=“1.0” encoding=“UTF-8”?>
+       <beans xmlns="http://www.springframework.org/schema/beans\ "
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
+         xmlns:aop="http://www.springframework.org/schema/aop\ "
+         xsi:schemaLocation="\ http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+       <!-- This config contains main info about application mappings and
+       view resolvers-->
+       <bean id=“dataSource”
+       class="**org.apache.tomcat.dbcp.dbcp.BasicDataSource**\ "
+       destroy-method=“close”>
+         <property name=“driverClassName”
+       value="**net.sourceforge.jtds.jdbc.Driver**\ " />
+         <property name=“url”
+       value="**jdbc:jtds:sqlserver://dl-test:1030/dldb**\ " />
+         <property name=“username” value="**пользователь-базы**\ " />
+         <property name=“password” value="**пароль**\ " />
+       </bean>
+       <bean id=“sessionFactory”
+       class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+         <property name=“dataSource” ref=“dataSource” />
+         <property name=“configLocation”
+       value=“classpath:/hibernate.cfg.xml” />
+         <property name=“configurationClass”
+       value=“org.hibernate.cfg.AnnotationConfiguration” />
+         <property name=“hibernateProperties”>
+         <props>
+         <prop key=“hibernate.dialect”>${hibernate.dialect}</prop>
+         </props>
+         </property>
+       </bean>
+       *<bean id=“cellDAO” class=“results.CellDao”>
+         <property name=“sessionFactory” ref=“sessionFactory” />
+       </bean>
+       <bean id=“cellService” class=“results.CellService”>
+         <property name=“dao” ref=“cellDAO” />
+       </bean>
+       <bean id=“resultsTableController” class=“results.TableController”>
+         <property name=“cellService” ref=“cellService”/>
+       </bean>*
+       <bean id=“simpleUrlHandler”
+       class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+         <property name=“order”><value>0</value></property>
+         <property name=“mappings”>
+         <props>
+         **<prop key=“results”>resultsTableController</prop>**
+         </props>
+         </property>
+       </bean>
+       <bean id=“viewResolver”
+       class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+         <property name=“cache” value=“false”/>
+         <property
+       name=“viewClass”><value>org.springframework.web.servlet.view.JstlView</value></property>
+         <property
+       name=“prefix”><value>/WEB-INF/pages/jsp/</value></property>
+         <property name=“suffix”><value>.jsp</value></property>
+       </bean>
+       </beans>
 
-В бине (не путать с бинами из Java, это другое понятие бина, оно из
-Spring) **dataSource** указываются параметры подключения к серверу БД и
-класс драйвера JDBC. В sessionFactory указано, что при создании объекта
-из этого бина, нужно создать объект dataSource, для этого написана
-ссылка <property name=“dataSource” ref=“dataSource” />.
+   Сервер баз данных у меня внешний MSSQL 2005 Express Edition (к
+   сожалению у меня нету выбора и приходится работать с этим, т.к. я лишь
+   рефакторю код существующей большой системы, которую просто так нельзя
+   сломать). Запускаю же Tomcat у себя на Linux.
 
-CellDao, CellService и ResultsTableController — это мои пробные
-классы для работы с ячейками таблицы результатов. Маппинг <prop
-key=“results”>resultsTableController</prop> позволяет, при переходе по
-адресу **http://localhost:8080/dl/results**, передавать управление
-контроллеру ResultsTableController, котрый в свою очередь создаёт
-представление:
+   В бине (не путать с бинами из Java, это другое понятие бина, оно из
+   Spring) **dataSource** указываются параметры подключения к серверу БД и
+   класс драйвера JDBC. В sessionFactory указано, что при создании объекта
+   из этого бина, нужно создать объект dataSource, для этого написана
+   ссылка <property name=“dataSource” ref=“dataSource” />.
 
-    | …
-    | … new ModelAndView("**index**\ ")
-    | …
+   CellDao, CellService и ResultsTableController — это мои пробные
+   классы для работы с ячейками таблицы результатов. Маппинг <prop
+   key=“results”>resultsTableController</prop> позволяет, при переходе по
+   адресу **http://localhost:8080/dl/results**, передавать управление
+   контроллеру ResultsTableController, котрый в свою очередь создаёт
+   представление:
 
-Я сделал это, чтобы проверить мэппинг. Сами JSP-файлы (в частности и
-index.jsp) хранятся в WEB-INF/pages/jsp/, эта информация настривается в
-бине **viewResolver**. В скором будущем я добавлю класс XsltViewer,
-который будет использовать не JSP, а XSLT.Это связано с потребностью в
-отображении HTML-данных и XML API-интерфейсе одновременно, но при
-отсутствии дублирования кода.
+       | ...
+       | ... new ModelAndView("**index**\ ")
+       | ...
+
+   Я сделал это, чтобы проверить мэппинг. Сами JSP-файлы (в частности и
+   index.jsp) хранятся в WEB-INF/pages/jsp/, эта информация настривается в
+   бине **viewResolver**. В скором будущем я добавлю класс XsltViewer,
+   который будет использовать не JSP, а XSLT.Это связано с потребностью в
+   отображении HTML-данных и XML API-интерфейсе одновременно, но при
+   отсутствии дублирования кода.

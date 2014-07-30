@@ -11,10 +11,12 @@
 то бывает нужно в своём плагине или конфиге удалить строчку, но не
 запоминать её в буфер:
 
-.. code-block:: cl
+.. cut:: посмотреть код
 
-    (defun delete-line (&optional arg)
-      (interactive "P")
-      (flet ((kill-region (begin end)
-                          (delete-region begin end)))
+  .. code-block:: cl
+
+      (defun delete-line (&optional arg)
+        (interactive "P")
+        (flet ((kill-region (begin end)
+                            (delete-region begin end)))
         (kill-line arg)))

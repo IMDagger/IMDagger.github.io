@@ -39,4 +39,4 @@ olet**\ ».
 .. |image0| image:: http://img-fotki.yandex.ru/get/4001/imdagger.3/0_17614_1dfcf752_L
    :target: архив_
 
-.. _архив: http://narod.ru/disk/21138103000/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F.full.zip.html
+.. _архив: https://yadi.sk/d/K33tnpf_UmdNU

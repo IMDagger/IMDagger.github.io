@@ -16,7 +16,7 @@
 
 Котёнок Няшка говорит: “Няяяя!”
 
-**Процесс создания: **
+**Процесс создания:**
 
 .. class:: text-center
 
@@ -28,60 +28,66 @@
 
 .. class:: text-center
 
-|image2|
+.. cut:: ещё чуть процесса создания под катом
+   :paragraph: yes
 
-.. class:: text-center
+   .. class:: text-center
 
-Няшка даже в режиме редактирования няшная :)
+   |image2|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image3|
+   Няшка даже в режиме редактирования няшная :)
 
-.. class:: text-center
+   .. class:: text-center
 
-А тут виден хвост
+   |image3|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image4|
+   А тут виден хвост
 
-.. class:: text-center
+   .. class:: text-center
 
-Забыл отдельный материал сделать для ушек
+   |image4|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image5|
+   Забыл отдельный материал сделать для ушек
 
-.. class:: text-center
+   .. class:: text-center
 
-Соединил кости с телом через модификатор, т.к. это намного лучше, оно
-хорошо тогда работает с Mirror
+   |image5|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image6|
+   Соединил кости с телом через модификатор, т.к. это намного лучше, оно
+   хорошо тогда работает с Mirror
 
-.. class:: text-center
+   .. class:: text-center
 
-Вид сбоку
+   |image6|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image7|
+   Вид сбоку
 
-.. class:: text-center
+   .. class:: text-center
 
-Добавил землю, на которой сидит на подушке Няшка
+   |image7|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image8|
+   Добавил землю, на которой сидит на подушке Няшка
 
-.. class:: text-center
+   .. class:: text-center
 
-Добавил частицы меха
+   |image8|
+
+   .. class:: text-center
+
+   Добавил частицы меха
+
 
 .. |image0| image:: http://img-fotki.yandex.ru/get/4801/imdagger.7/0_3a0ce_80a2c4f_L
    :target: http://fotki.yandex.ru/users/imdagger/view/237774/

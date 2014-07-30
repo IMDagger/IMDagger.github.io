@@ -23,80 +23,83 @@ dl2ResultsHeaderItem.
 NamedNativeQuery из javax.persistence, я его переделал из примера для
 хранимых процедур:
 
-.. code-block:: java
+.. cut:: и как оно выглядит?
+   :paragraph: yes
 
-    package results;
-    import java.io.Serializable;
-    import javax.persistence.*;
-    @Entity
-    @NamedNativeQuery (name = "headerItem.forSubTree",
-            resultClass = HeaderItem.class,
-            query = "select itemId, itemIndex as childIndex, deep from dl2ResultsHeaderItemSubTree
-                      (:rootId, :deep, :leavesOnly, :includeRoot, :date)",
-            hints = {@QueryHint (name = "org.hibernate.callable", value = "true"), *// Бага!!!*
-                     @QueryHint (name = "org.hibernate.readOnly", value = "true")
-            }
-    )
-    @Table (name="dl2ResultsHeaderItem")
-    public class HeaderItem implements Serializable {
-        private Long id;
-        private Long index;
-        private int deep;
+   .. code-block:: java
 
-        public HeaderItem() {
-        };
+       package results;
+       import java.io.Serializable;
+       import javax.persistence.*;
+       @Entity
+       @NamedNativeQuery (name = "headerItem.forSubTree",
+               resultClass = HeaderItem.class,
+               query = "select itemId, itemIndex as childIndex, deep from dl2ResultsHeaderItemSubTree
+                         (:rootId, :deep, :leavesOnly, :includeRoot, :date)",
+               hints = {@QueryHint (name = "org.hibernate.callable", value = "true"), *// Бага!!!*
+                        @QueryHint (name = "org.hibernate.readOnly", value = "true")
+               }
+       )
+       @Table (name="dl2ResultsHeaderItem")
+       public class HeaderItem implements Serializable {
+           private Long id;
+           private Long index;
+           private int deep;
 
-        @Id
-        @Column(name="itemId")
-        public Long getId() {
-            return id;
-        };
+           public HeaderItem() {
+           };
 
-        public void setId(Long id) {
-            this.id = id;
-        };
+           @Id
+           @Column(name="itemId")
+           public Long getId() {
+               return id;
+           };
 
-        @Column(name="childIndex")
-        public Long getIndex() {
-            return index;
-        };
+           public void setId(Long id) {
+               this.id = id;
+           };
 
-        public void setIndex(Long index) {
-            this.index = index;
-        };
+           @Column(name="childIndex")
+           public Long getIndex() {
+               return index;
+           };
 
-        @Column(name="deep")
-        public int getDeep() {
-            return deep;
-        };
+           public void setIndex(Long index) {
+               this.index = index;
+           };
 
-        public void setDeep(int id) {
-            this.deep = deep;
-        };
-    };
+           @Column(name="deep")
+           public int getDeep() {
+               return deep;
+           };
 
-Запрос *select itemId, itemIndex as childIndex, deep ...* \ выбирает
-данные таким образом, чтобы поля возвращаемой таблицы совпадали с
-указанным в классе мэппингом.
+           public void setDeep(int id) {
+               this.deep = deep;
+           };
+       };
 
-Жаль, но таблицу и хранимую функцию делал не я, а за долго до
-меня. Поэтому их ломать нельзя (слишком много эксплуатируемого кода на
-них висит). Я довольно долго боролся с Hibernate, т.к. выпадало
-исколючение в jTDS вида: :code:`11410 [http-8080-1] INFO
-org.hibernate.type.CalendarType - could not bind value ‘2009-09-26
-16:30:13’ to parameter: 5; Invalid parameter index 5`. Я долго думал, как
-так может быть, что параметров вроде 5, передаю 5 такой конструкцией
-(:del:`собранной на скорую руку`):
+   Запрос *select itemId, itemIndex as childIndex, deep ...* \ выбирает
+   данные таким образом, чтобы поля возвращаемой таблицы совпадали с
+   указанным в классе мэппингом.
 
-.. code-block:: java
+   Жаль, но таблицу и хранимую функцию делал не я, а за долго до
+   меня. Поэтому их ломать нельзя (слишком много эксплуатируемого кода на
+   них висит). Я довольно долго боролся с Hibernate, т.к. выпадало
+   исколючение в jTDS вида: :code:`11410 [http-8080-1] INFO
+   org.hibernate.type.CalendarType - could not bind value ‘2009-09-26
+   16:30:13’ to parameter: 5; Invalid parameter index 5`. Я долго думал, как
+   так может быть, что параметров вроде 5, передаю 5 такой конструкцией
+   (:del:`собранной на скорую руку`):
 
-    List result =
-    getHibernateTemplate().findByNamedQueryAndNamedParam("headerItem.forSubTree",
-        new String[] {"rootId", "deep", "leavesOnly", "includeRoot", "date"},
-        new Object[] {rootId, deep, leavesOnly, (includeRoot ? 1 : 0), date}); // date типа java.util.Calendar
+   .. code-block:: java
 
-Но потом до меня дошло, что мешает :code:`@QueryHint(name =
-"org.hibernate.callable", value = "true")`, который предполагает, что это
-процедура и первый параметр забирает под её нужды.
+       List result =
+       getHibernateTemplate().findByNamedQueryAndNamedParam("headerItem.forSubTree",
+           new String[] {"rootId", "deep", "leavesOnly", "includeRoot", "date"},
+           new Object[] {rootId, deep, leavesOnly, (includeRoot ? 1 : 0), date}); // date типа java.util.Calendar
 
-Проблема решилась банально — я убрал эту запись и всё заработало.
+   Но потом до меня дошло, что мешает :code:`@QueryHint(name =
+   "org.hibernate.callable", value = "true")`, который предполагает, что это
+   процедура и первый параметр забирает под её нужды.
+
+   Проблема решилась банально — я убрал эту запись и всё заработало.

@@ -31,45 +31,48 @@ HTML и понажимать кнопку “Сгенерировать нову
     | Koaolia
     | Melanal
     | Vaviet K4
-    | Badabana K
-    | Beboha 1I
-    | Keate IV
-    | Oniian
-    | Bebancolia
-    | Fractirion
-    | Gaean
-    | Bebomvian
-    | Monera KI
-    | Jacoanet AR7
-    | Eacomodate
-    | Luiic
-    | Oniancolia VII
-    | Crematoth
-    | Odvolar K
-    | Kon
-    | Onivilon VIIILA
-    | Colar
-    | Cremcumber X
-    | Deat Crypto
-    | Cucun
-    | Vive VIII
-    | Crematooro
-    | Bic III
-    | Vivcytal L3
-    | Beh IVP
-    | Cucut K4
-    | Asesar IIII
-    | Yaer X
-    | Con
-    | Fracek
-    | Aca
-    | Centut
-    | Odactal
-    | Oolia
-    | Venera 7
-    | Ortyh
-    | Embarrala VII
-    | Jacal
+
+    .. cut:: хочу ещё
+
+         | Badabana K
+         | Beboha 1I
+         | Keate IV
+         | Oniian
+         | Bebancolia
+         | Fractirion
+         | Gaean
+         | Bebomvian
+         | Monera KI
+         | Jacoanet AR7
+         | Eacomodate
+         | Luiic
+         | Oniancolia VII
+         | Crematoth
+         | Odvolar K
+         | Kon
+         | Onivilon VIIILA
+         | Colar
+         | Cremcumber X
+         | Deat Crypto
+         | Cucun
+         | Vive VIII
+         | Crematooro
+         | Bic III
+         | Vivcytal L3
+         | Beh IVP
+         | Cucut K4
+         | Asesar IIII
+         | Yaer X
+         | Con
+         | Fracek
+         | Aca
+         | Centut
+         | Odactal
+         | Oolia
+         | Venera 7
+         | Ortyh
+         | Embarrala VII
+         | Jacal
 
 .. class:: text-center
 

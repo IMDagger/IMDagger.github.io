@@ -18,101 +18,103 @@
 
 Он `доступен на GitGub <https://gist.github.com/IMDagger/9102834>`__.
 
-.. code-block:: python
+.. cut:: посмотреть мой велосипед
 
-    # -*- coding: utf-8 -*-
-    from django import forms
-    from django.forms import widgets
+  .. code-block:: python
 
-    class ModelFormStyler(forms.ModelForm.__metaclass__):
-        '''
-        Allows to write such kind of forms:
-        ...
-        class Some(ModelFormStyler):
-            class Meta:
-                model = ...
-                widgets = {
-                    ...
-                    'field1': widgets.Textarea(attrs={'rows': 5}),
-                },
-                override_fields = {
-                    'field1': (forms.CharField, dict(label=..., ...)),
-                    'field2': (MyCustomField, dict(widget=widgets.TextInput())),
-                }
-             ... methods here ...
+      # -*- coding: utf-8 -*-
+      from django import forms
+      from django.forms import widgets
 
-        class Some2(Some):
-            class Meta:
-                model = ...
-                widgets = {
-                    ...
-                    'field1': widgets.Textarea(attrs={'rows': 100500}),
-                    'field2': widgets.Textarea(attrs={'rows': 100500}),
-                },
-                labels = {
-                    'field1': 'another label',
-                },
-                override_fields = {
-                    'field2': (MyCustomField2, {}),
-                }
-             ... methods here again ...
+      class ModelFormStyler(forms.ModelForm.__metaclass__):
+          '''
+          Allows to write such kind of forms:
+          ...
+          class Some(ModelFormStyler):
+              class Meta:
+                  model = ...
+                  widgets = {
+                      ...
+                      'field1': widgets.Textarea(attrs={'rows': 5}),
+                  },
+                  override_fields = {
+                      'field1': (forms.CharField, dict(label=..., ...)),
+                      'field2': (MyCustomField, dict(widget=widgets.TextInput())),
+                  }
+               ... methods here ...
 
-        '''
+          class Some2(Some):
+              class Meta:
+                  model = ...
+                  widgets = {
+                      ...
+                      'field1': widgets.Textarea(attrs={'rows': 100500}),
+                      'field2': widgets.Textarea(attrs={'rows': 100500}),
+                  },
+                  labels = {
+                      'field1': 'another label',
+                  },
+                  override_fields = {
+                      'field2': (MyCustomField2, {}),
+                  }
+               ... methods here again ...
 
-        __sections = {
-            'widgets': 'widget', # section name -> argument name
-            'labels': 'label',
-        }
+          '''
 
-        def __new__(cls, name, bases, attrs):
-            super_new = super(ModelFormStyler, cls).__new__
+          __sections = {
+              'widgets': 'widget', # section name -> argument name
+              'labels': 'label',
+          }
 
-            cls._override_custom_widgets(bases, attrs)
-            new_class = super_new(cls, name, bases, attrs)
-            return new_class
+          def __new__(cls, name, bases, attrs):
+              super_new = super(ModelFormStyler, cls).__new__
 
-        @classmethod
-        def __replacement_for(cls, attrs, bases, fname, opt_name):
-            try:
-                # .widgets, .labels and etc
-                return getattr(attrs['Meta'], opt_name)[fname]
-            except:
-                pass
-            for base in bases:
-                try:
-                    return getattr(base.Meta, opt_name)[fname]
-                except:
-                    pass
+              cls._override_custom_widgets(bases, attrs)
+              new_class = super_new(cls, name, bases, attrs)
+              return new_class
 
-        @classmethod
-        def __field_descr_for(cls, attrs, bases, fname):
-            return cls.__replacement_for(cls, attrs, bases, fname, 'field_overrides')
+          @classmethod
+          def __replacement_for(cls, attrs, bases, fname, opt_name):
+              try:
+                  # .widgets, .labels and etc
+                  return getattr(attrs['Meta'], opt_name)[fname]
+              except:
+                  pass
+              for base in bases:
+                  try:
+                      return getattr(base.Meta, opt_name)[fname]
+                  except:
+                      pass
 
-        @classmethod
-        def _override_custom_widgets(cls, bases, attrs):
-            if 'Meta' in attrs:
-                entire_dirty = set()
-                for section in ['field_overrides',] + cls.__sections.keys():
-                    # .field_overrides together with .widgets, .labels
-                    dirty = getattr(attrs['Meta'], section, {})
-                    entire_dirty.update(dirty.iterkeys())
+          @classmethod
+          def __field_descr_for(cls, attrs, bases, fname):
+              return cls.__replacement_for(cls, attrs, bases, fname, 'field_overrides')
 
-                dirty_fields = []
-                # it's now without duplicates
-                for fname in entire_dirty:
-                    descr = cls.__field_descr_for(attrs, bases, fname)
-                    if descr is not None:
-                        dirty_fields.append((fname, descr))
+          @classmethod
+          def _override_custom_widgets(cls, bases, attrs):
+              if 'Meta' in attrs:
+                  entire_dirty = set()
+                  for section in ['field_overrides',] + cls.__sections.keys():
+                      # .field_overrides together with .widgets, .labels
+                      dirty = getattr(attrs['Meta'], section, {})
+                      entire_dirty.update(dirty.iterkeys())
 
-                # create fields for all dirty descriptors (local and parent)
-                for fname, (ftype, kwargs) in dirty_fields:
-                    options = dict(kwargs)
-                    # process
-                    for section, arg_name in cls.__sections.iteritems():
-                        arg_value = cls.__replacement_for(attrs, bases, fname, section)
-                        if arg_value is not None:
-                            options[arg_name] = arg_value
-                    attrs[fname] = ftype(**options)
+                  dirty_fields = []
+                  # it's now without duplicates
+                  for fname in entire_dirty:
+                      descr = cls.__field_descr_for(attrs, bases, fname)
+                      if descr is not None:
+                          dirty_fields.append((fname, descr))
 
-    class ControlModelForm(forms.ModelForm):
-        __metaclass__ = ModelFormStyler
+                  # create fields for all dirty descriptors (local and parent)
+                  for fname, (ftype, kwargs) in dirty_fields:
+                      options = dict(kwargs)
+                      # process
+                      for section, arg_name in cls.__sections.iteritems():
+                          arg_value = cls.__replacement_for(attrs, bases, fname, section)
+                          if arg_value is not None:
+                              options[arg_name] = arg_value
+                      attrs[fname] = ftype(**options)
+
+      class ControlModelForm(forms.ModelForm):
+          __metaclass__ = ModelFormStyler

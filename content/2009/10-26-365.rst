@@ -18,19 +18,24 @@
 
 .. class:: text-center
 
-|image1|
+.. cut:: ещё картинки
+   :paragraph: yes
 
-.. class:: text-center
+   .. class:: text-center
 
-|image2|
+   |image1|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image3|
+   |image2|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image4|
+   |image3|
+
+   .. class:: text-center
+
+   |image4|
 
 .. |image0| image:: http://img-fotki.yandex.ru/get/4002/imdagger.3/0_17369_a42bb2b4_L
    :target: http://fotki.yandex.ru/users/imdagger/view/95081/

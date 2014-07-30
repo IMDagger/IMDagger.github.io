@@ -20,61 +20,66 @@
 
 |image0|
 
-Затем выделил левую половину сферы
-
 .. class:: text-center
 
-|image1|
+.. cut:: смотреть дальше
+   :paragraph: yes
 
-Нажал кнопку Set Smooth (вкладка Editing по :kbd:`F9`), которая
-применила сглаживание освещения для выбранных полигонов:
+   Затем выделил левую половину сферы
 
-.. class:: text-center
+   .. class:: text-center
 
-|image2|
+   |image1|
 
-При переходе обратно в объектный режим результат изменений стал
-сразу же очевиден:
+   Нажал кнопку Set Smooth (вкладка Editing по :kbd:`F9`), которая
+   применила сглаживание освещения для выбранных полигонов:
 
-.. class:: text-center
+   .. class:: text-center
 
-|image3|
+   |image2|
 
-При этом, в игровом режиме BGE сфера отображалась таким же образом,
-т.е. такой тип расчёта освещения допускал и внутренний игровой движок.
+   При переходе обратно в объектный режим результат изменений стал
+   сразу же очевиден:
 
-.. class:: text-center
+   .. class:: text-center
 
-|image4|
+   |image3|
 
-Но мне показалось этого мало :). Я решил создать два меша типа
-**Monkey** и поэкспериментировать с ними. Слева и справа два абсолюто
-идентичных объекта.
+   При этом, в игровом режиме BGE сфера отображалась таким же образом,
+   т.е. такой тип расчёта освещения допускал и внутренний игровой движок.
 
-.. class:: text-center
+   .. class:: text-center
 
-|image5|
+   |image4|
 
-Но к левой обезьянке затем был применён Set Smooth и запущен BGE.
+   Но мне показалось этого мало :). Я решил создать два меша типа
+   **Monkey** и поэкспериментировать с ними. Слева и справа два абсолюто
+   идентичных объекта.
 
-.. class:: text-center
+   .. class:: text-center
 
-|image6|
+   |image5|
 
-Ещё лучше стала видна разница после применения к обоим мешам
-модификатора SubSurf всего лишь 1-ого уровня (на рисунке включён Shaded
-Draw Type).
+   Но к левой обезьянке затем был применён Set Smooth и запущен BGE.
 
-.. class:: text-center
+   .. class:: text-center
 
-|image7|
+   |image6|
 
-Нашёл ещё пару ссылок по данной тематике:
+   Ещё лучше стала видна разница после применения к обоим мешам
+   модификатора SubSurf всего лишь 1-ого уровня (на рисунке включён Shaded
+   Draw Type).
 
-`Из документации <http://www.blender.org/documentation/htmlI/x2681.html>`__
+   .. class:: text-center
 
-`Заметка о возможных проблемах при Set
-Smooth <http://feeblemind.tuxfamily.org/dotclear/index.php/2007/08/13/88-how-to-solve-blenders-smoothing-problems>`__
+   |image7|
+
+   Нашёл ещё пару ссылок по данной тематике:
+
+   `Из документации <http://www.blender.org/documentation/htmlI/x2681.html>`__
+
+   `Заметка о возможных проблемах при Set
+   Smooth <http://feeblemind.tuxfamily.org/dotclear/index.php/2007/08/13/88-how-to-solve-blenders-smoothing-problems>`__
 
 .. |image0| image:: http://img-fotki.yandex.ru/get/4000/imdagger.4/0_18098_c848c4e1_L
    :target: http://fotki.yandex.ru/users/imdagger/view/98456/

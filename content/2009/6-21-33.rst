@@ -16,7 +16,7 @@
 |image0|
 
 А вот и сам исходный
-blend-\ ` <http://narod.ru/disk/9972558000/coin.blend.html>`__\ `файл <http://narod.ru/disk/10110689000/zao.blend.html>`__\ ` <http://narod.ru/disk/9972558000/coin.blend.html>`__.
+blend-\ ` <https://yadi.sk/d/lwxrbOIFUmdM3>`__\ `файл <https://yadi.sk/d/Q9LwhrzOUmdNe>`__\ ` <https://yadi.sk/d/lwxrbOIFUmdM3>`__.
 Если, кто осилит поправить материалы на моей модельке, то черкните в
 комментах.
 

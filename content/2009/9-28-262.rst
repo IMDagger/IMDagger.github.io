@@ -44,32 +44,35 @@ partition(\ **id**), где id — номер раздела, который з�
    sda1, sda2, hda1, hda2 и только ntfs), а также пользуется пакетом
    ntfsprogs, который должен быть **обязательно установлен**
 
-.. code-block:: bash
+.. cut:: хочу узреть программу!
+   :paragraph: yes
 
-   #! /bin/sh
-   for id in 1 2; do
-      for hdd in hda sda; do
-         disk=$hdd$id
-         echo "Trying $disk ..."
+   .. code-block:: bash
 
-         if [ ! -z `ntfsls -f /dev/$disk \| grep boot.ini` ]; then
-            echo "Found primary boot disk ..."
-            ntfscat -f /dev/$disk boot.ini >/root/boot.ini
-            if [ -z `cat /root/boot.ini` ]; then
-               echo "Error!"
-               exit 1;
+      #! /bin/sh
+      for id in 1 2; do
+         for hdd in hda sda; do
+            disk=$hdd$id
+            echo "Trying $disk ..."
+
+            if [ ! -z `ntfsls -f /dev/$disk \| grep boot.ini` ]; then
+               echo "Found primary boot disk ..."
+               ntfscat -f /dev/$disk boot.ini >/root/boot.ini
+               if [ -z `cat /root/boot.ini` ]; then
+                  echo "Error!"
+                  exit 1;
+               fi
+
+               echo "Try to fix disk ..."
+               ntfsfix /dev/$disk
+               sed "s/\(.*\)partition([01234]\?)\(.*\)/\1partition($id)\2/" /root/boot.ini >/root/boot_new.ini
+               echo "Replace boot.ini by new"
+               ntfscp -f /dev/$disk /root/boot_new.ini boot.ini
+            else
+               echo "Not found boot.ini"
             fi
-
-            echo "Try to fix disk ..."
-            ntfsfix /dev/$disk
-            sed "s/\(.*\)partition([01234]\?)\(.*\)/\1partition($id)\2/" /root/boot.ini >/root/boot_new.ini
-            echo "Replace boot.ini by new"
-            ntfscp -f /dev/$disk /root/boot_new.ini boot.ini
-         else
-            echo "Not found boot.ini"
-         fi
+         done
       done
-   done
 
 Вуаля и о чудо, винда загрузилась… Но… при попытке ввести в домен
 выпала ошибка «Именам пользователей не сопоставлены коды защиты данных».

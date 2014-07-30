@@ -15,53 +15,56 @@ Controller, поэтому нужно, чтобы после вызова пер
 модулей. Решил проблему копированием всех аттрибутов и методов в класс
 Controller из заданного.
 
-.. code-block:: python
+.. cut:: посмотреть код
+   :paragraph: yes
 
-     # -*- coding: utf-8 -*-
-     from controller_editmode import ControllerEditMode
+   .. code-block:: python
 
-     class Controller(ControllerEditMode):
-         pass
+       # -*- coding: utf-8 -*-
+       from controller_editmode import ControllerEditMode
 
-     def __copy(FromClass, ToClass):
-         '''
-         Копирует содержимое одного класса в другой. Не
-         копирует неизменяемые аттрибуты: __doc__ и
-         __dict__.
+       class Controller(ControllerEditMode):
+           pass
 
-         :Parameters:
-         `FromClass` : class
-         Класс аттрибуты, которого нужно скопировать
-         `ToClass` : class
-         Класс приёмник
-         '''
-         for with_name in FromClass.__dict__:
-             # некоторые аттрибуты не возможно перезаписать
-             if with_name not in ('__doc__', '__dict__'):
-                 value = getattr(FromClass, with_name)
-                 try:
-                     func = value.im_func # это метод, если есть im_func
-                     # копируется только функция от метода класса
-                     setattr(ToClass, with_name, func)
-                 except AttributeError: # нет это был не метод
-                     setattr(ToClass, with_name, value)
+       def __copy(FromClass, ToClass):
+           '''
+           Копирует содержимое одного класса в другой. Не
+           копирует неизменяемые аттрибуты: __doc__ и
+           __dict__.
 
-     def switch_to_gamemode():
-         '''
-         Переключает модуль в игровой режим. После этой
-         операции все действия по десериализации будут
-         проводится с классом ControllerGameMode.
-         '''
-         from controller_gamemode import ControllerGameMode
-         __copy(ControllerGameMode, Controller)
+           :Parameters:
+           `FromClass` : class
+           Класс аттрибуты, которого нужно скопировать
+           `ToClass` : class
+           Класс приёмник
+           '''
+           for with_name in FromClass.__dict__:
+               # некоторые аттрибуты не возможно перезаписать
+               if with_name not in ('__doc__', '__dict__'):
+                   value = getattr(FromClass, with_name)
+                   try:
+                       func = value.im_func # это метод, если есть im_func
+                       # копируется только функция от метода класса
+                       setattr(ToClass, with_name, func)
+                   except AttributeError: # нет это был не метод
+                       setattr(ToClass, with_name, value)
 
-     def switch_to_editmode():
-         '''
-         Переключает модуль в режим редактора. После этой
-         операции все действия по десериализации будут
-         проводится с классом ControllerEditMode.
-         '''
-         __copy(ControllerEditMode, Controller)
+       def switch_to_gamemode():
+           '''
+           Переключает модуль в игровой режим. После этой
+           операции все действия по десериализации будут
+           проводится с классом ControllerGameMode.
+           '''
+           from controller_gamemode import ControllerGameMode
+           __copy(ControllerGameMode, Controller)
+
+       def switch_to_editmode():
+           '''
+           Переключает модуль в режим редактора. После этой
+           операции все действия по десериализации будут
+           проводится с классом ControllerEditMode.
+           '''
+           __copy(ControllerEditMode, Controller)
 
 Главное только не копировать \_\_doc\_\_ и \_\_dict\_\_, т.к. они не
 желают перезаписываться. Если копируемый аттрибут - переменная, то она

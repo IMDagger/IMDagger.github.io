@@ -13,97 +13,100 @@
 один `генератор <{filename}../2013/6-11-1814.rst/>`__ на
 JavaScript):
 
-.. code-block:: python
+.. cut:: посмотреть исходный код
+   :paragraph: yes
 
-    import random
+   .. code-block:: python
+
+       import random
 
 
-    # base names
-    abc = ['hello', 'world', 'uniform', 'planet', 'earth',
-            'moon', 'alpha', 'mars', 'persei', 'columb',
-            'vavilon', 'venera', 'odin', 'cuala', 'generator',
-            'vivek', 'vivian', 'crematoria', 'luisiana', 'orlean',
-            'belarus', 'bebomoro', 'badaboom', 'centurion',
-            'caesar', 'jaconda', 'zergus', 'yakee', 'kevlar',
-            'koala', 'melancolia', 'tansilit', 'peanut',
-            'plastic', 'neon', 'reactor', 'fractal']
-    # for the special part
-    postfix = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX',
-                'X', 'Omega', '1', '7', '13', 'AMP', 'K', 'L3', 'AR7']
-    # for fun, special part I, II ... is too boring :-/
-    suffixes = ['te', 'op', '-ni', 'li', 'cla', '-4']
+       # base names
+       abc = ['hello', 'world', 'uniform', 'planet', 'earth',
+               'moon', 'alpha', 'mars', 'persei', 'columb',
+               'vavilon', 'venera', 'odin', 'cuala', 'generator',
+               'vivek', 'vivian', 'crematoria', 'luisiana', 'orlean',
+               'belarus', 'bebomoro', 'badaboom', 'centurion',
+               'caesar', 'jaconda', 'zergus', 'yakee', 'kevlar',
+               'koala', 'melancolia', 'tansilit', 'peanut',
+               'plastic', 'neon', 'reactor', 'fractal']
+       # for the special part
+       postfix = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX',
+                   'X', 'Omega', '1', '7', '13', 'AMP', 'K', 'L3', 'AR7']
+       # for fun, special part I, II ... is too boring :-/
+       suffixes = ['te', 'op', '-ni', 'li', 'cla', '-4']
 
-    vowel = 'aeiouy'
+       vowel = 'aeiouy'
 
-    def is_good(name):
-        # length of the planet name is more than 3 and name has at leat one vowel letter
-        return len(name) >= 3 and any(alp in name[1:] for alp in vowel)
+       def is_good(name):
+           # length of the planet name is more than 3 and name has at leat one vowel letter
+           return len(name) >= 3 and any(alp in name[1:] for alp in vowel)
 
-    def gen_planet():
-        # noname
-        name = ''
+       def gen_planet():
+           # noname
+           name = ''
 
-        # 40% names will be with special part ("fix of the tail")
-        if random.random() > 0.6:
-            add = ' ' + random.choice(postfix)
-            # 12% will be with special suffix
-            if random.random() < 0.3:
-                # choose from suffixes' list
-                suffix = random.choice(suffixes)
-                # determine start cutting position of the suffix
-                # make upper case and add to postfix
-                from_p = random.randrange(0, len(suffix))
-                suffix = suffix[from_p:].upper()
-                add += suffix
-        else:
-            # no need add something
-            add = ''
+           # 40% names will be with special part ("fix of the tail")
+           if random.random() > 0.6:
+               add = ' ' + random.choice(postfix)
+               # 12% will be with special suffix
+               if random.random() < 0.3:
+                   # choose from suffixes' list
+                   suffix = random.choice(suffixes)
+                   # determine start cutting position of the suffix
+                   # make upper case and add to postfix
+                   from_p = random.randrange(0, len(suffix))
+                   suffix = suffix[from_p:].upper()
+                   add += suffix
+           else:
+               # no need add something
+               add = ''
 
-        # try to find good name of the planet
-        while not is_good(name):
-            # choose two names from the dictionary for mixing
-            first = random.choice(abc)
-            second = random.choice(abc)
-            # first (but is not whole, at least without last symbol)
-            # plus
-            # second (but is not whole, at leat without leading symbol)
-            name = (first[:random.randrange(0, len(first) - 1)] + second[random.randrange(1, len(second)):])
+           # try to find good name of the planet
+           while not is_good(name):
+               # choose two names from the dictionary for mixing
+               first = random.choice(abc)
+               second = random.choice(abc)
+               # first (but is not whole, at least without last symbol)
+               # plus
+               # second (but is not whole, at leat without leading symbol)
+               name = (first[:random.randrange(0, len(first) - 1)] + second[random.randrange(1, len(second)):])
 
-            # make list from string for vowel checkings and random shuffle
-            lst_name = list(name)
+               # make list from string for vowel checkings and random shuffle
+               lst_name = list(name)
 
-            # only 15% of the words will be shuffled
-            if random.random() < 0.15:
-                random.shuffle(lst_name)
+               # only 15% of the words will be shuffled
+               if random.random() < 0.15:
+                   random.shuffle(lst_name)
 
-            # non vowel counter
-            non_v = 0
-            i = 0
-            # don't make names more than 15 characters length
-            # but try to insert vowels
-            while i < len(lst_name) and len(lst_name) < 15:
-                # found vowel and it's nice
-                if lst_name[i] in vowel:
-                    non_v = 0
-                else:
-                    non_v += 1
-                # two non vowel letters is not nice, it's time for insert operation
-                if non_v > 2:
-                    lst_name.insert(i, random.choice(vowel))
-                    # one additional letter is in the list now
-                    # gotta go to the next letter and clear counter
-                    non_v = 0
-                    i += 1
-                i += 1
+               # non vowel counter
+               non_v = 0
+               i = 0
+               # don't make names more than 15 characters length
+               # but try to insert vowels
+               while i < len(lst_name) and len(lst_name) < 15:
+                   # found vowel and it's nice
+                   if lst_name[i] in vowel:
+                       non_v = 0
+                   else:
+                       non_v += 1
+                   # two non vowel letters is not nice, it's time for insert operation
+                   if non_v > 2:
+                       lst_name.insert(i, random.choice(vowel))
+                       # one additional letter is in the list now
+                       # gotta go to the next letter and clear counter
+                       non_v = 0
+                       i += 1
+                   i += 1
 
-            # make string name from the temporary list
-            name = ''.join(lst_name)
+               # make string name from the temporary list
+               name = ''.join(lst_name)
 
-        # first letter will be capital and after suffix (space + postfix + suffix)
-        return name.capitalize() + add
+           # first letter will be capital and after suffix (space + postfix + suffix)
+           return name.capitalize() + add
 
-    for _ in xrange(50):
-        print gen_planet()
+       for _ in xrange(50):
+           print gen_planet()
 
 Пример из 50 названий планет, которые сгенерировал скрипт (он
 старается напичкать гласными слова, умеет перемешивать буквы и старается
@@ -123,41 +126,44 @@ JavaScript):
 -  Plire
 -  Jacone
 
--  Caesc
--  Pei
--  Caec IILI
--  Generam I
--  Melancol
--  Bha
--  Melr 1E
--  Fras IIIOP
--  Iufnilo
--  Luisa
--  Fracta
--  Orlyl
--  Amlycoelan L3
--  Cun X
--  Bela 13P
--  Cae VLI
--  Frig VIII
--  Plastel IVOP
--  Vavie
--  Avavi IXI
--  Jacone VI
--  Cenn
--  Aei X
--  Plaso VII
--  Plyd L3-4
--  Belan
--  Luisiai
--  Fracto Omega
--  Melanr
--  Luisiai
--  Tano 7
--  Belare
--  Bae IV
--  Wort
--  Plana
--  Tap VIITE
--  Ala AR7
--  Fractu
+.. cut:: хочу ещё!
+   :paragraph: yes
+
+   -  Caesc
+   -  Pei
+   -  Caec IILI
+   -  Generam I
+   -  Melancol
+   -  Bha
+   -  Melr 1E
+   -  Fras IIIOP
+   -  Iufnilo
+   -  Luisa
+   -  Fracta
+   -  Orlyl
+   -  Amlycoelan L3
+   -  Cun X
+   -  Bela 13P
+   -  Cae VLI
+   -  Frig VIII
+   -  Plastel IVOP
+   -  Vavie
+   -  Avavi IXI
+   -  Jacone VI
+   -  Cenn
+   -  Aei X
+   -  Plaso VII
+   -  Plyd L3-4
+   -  Belan
+   -  Luisiai
+   -  Fracto Omega
+   -  Melanr
+   -  Luisiai
+   -  Tano 7
+   -  Belare
+   -  Bae IV
+   -  Wort
+   -  Plana
+   -  Tap VIITE
+   -  Ala AR7
+   -  Fractu

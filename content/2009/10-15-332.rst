@@ -32,65 +32,68 @@ getVersionObject, который возвращал объект версии я
         return new Version(timeStamp);
     }
 
-Потом я прокололся на том, что передал в JSP представление объект
-класса Row, который реализует интерфейс Iterable. Но выпала ошибка:
+.. cut:: но это не всё
+   :paragraph: yes
 
-.. code-block:: java
+   Потом я прокололся на том, что передал в JSP представление объект
+   класса Row, который реализует интерфейс Iterable. Но выпала ошибка:
 
-    javax.servlet.jsp.JspTagException: Don't know how to iterate over supplied "items" in &lt;forEach&gt;
-      org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:274)
-      org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:238)
-    org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:155)
+   .. code-block:: java
 
-А нужно было передать не объект, а его итератор:
+       javax.servlet.jsp.JspTagException: Don't know how to iterate over supplied "items" in &lt;forEach&gt;
+         org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:274)
+         org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:238)
+       org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:155)
 
-.. code-block:: java
+   А нужно было передать не объект, а его итератор:
 
-    modelAndView.addObject("row", oneRow.iterator());
+   .. code-block:: java
 
-Но на этом мучения не закончились. Возникла проблема, что объекты
-кешировались при помощи EhCache, но мой код каждый раз считал данные
-оттуда устаревшими. Постепенно подозрения стали падать на небольшой
-класс Version, я никак не хотел верить, что там есть ошибка :del:`да-да я его
-почти не тестировал, он же черновой`...
+       modelAndView.addObject("row", oneRow.iterator());
 
-.. code-block:: java
+   Но на этом мучения не закончились. Возникла проблема, что объекты
+   кешировались при помощи EhCache, но мой код каждый раз считал данные
+   оттуда устаревшими. Постепенно подозрения стали падать на небольшой
+   класс Version, я никак не хотел верить, что там есть ошибка :del:`да-да я его
+   почти не тестировал, он же черновой`...
 
-    @Override
-    public int compareTo(Object o) {
-        Version other = (Version) o;
-        byte[] ovs = other.get();
-        for (int i = 0; i < ts.length; i++) {
-            if (ts[i] < ovs[i])
-                return -1;
-            else if (ts[i] > ovs[i])
-                return +1;
+   .. code-block:: java
+
+       @Override
+       public int compareTo(Object o) {
+           Version other = (Version) o;
+           byte[] ovs = other.get();
+           for (int i = 0; i < ts.length; i++) {
+               if (ts[i] < ovs[i])
+                   return -1;
+               else if (ts[i] > ovs[i])
+                   return +1;
+           }
+           return 0;
         }
-        return 0;
-     }
 
-Да, названия переменных кривые x-D, но оно и сделано по-быстрому,
-проверить прототип. Казалось проблемы нет, но я же забыл, что в Java
-значения типа byte лежат на отрезке :code:`-128 … 127`. Поэтому мои массивы
-сравнивались неверно, а обнаружил лишь благодаря тому, что в рабочей
-базе оказались два значения отличающиеся только последним байтом: в
-одном :code:`0x81`, а во втором :code:`0x7F` :P. И моя функция говорила, что
-первое меньше второго. Пришлось поправить её, но в Java нет беззнаковых
-типов, поэтому решил вопрос временно так:
+   Да, названия переменных кривые x-D, но оно и сделано по-быстрому,
+   проверить прототип. Казалось проблемы нет, но я же забыл, что в Java
+   значения типа byte лежат на отрезке :code:`-128 … 127`. Поэтому мои массивы
+   сравнивались неверно, а обнаружил лишь благодаря тому, что в рабочей
+   базе оказались два значения отличающиеся только последним байтом: в
+   одном :code:`0x81`, а во втором :code:`0x7F` :P. И моя функция говорила, что
+   первое меньше второго. Пришлось поправить её, но в Java нет беззнаковых
+   типов, поэтому решил вопрос временно так:
 
-.. code-block:: java
+   .. code-block:: java
 
-    @Override
-    public int compareTo(Object o) {
-        Version other = (Version) o;
-        byte[] ovs = other.get();
-        for (int i = 0; i < ts.length; i++)  {
-            int tsByte = ((int)ts[i] + 256) % 256;
-            int ovsByte = ((int)ovs[i] + 256) % 256;
-            if (tsByte < ovsByte)
-                return -1;
-             else if (tsByte > ovsByte)
-                return +1;
-        }
-        return 0;
-    }
+       @Override
+       public int compareTo(Object o) {
+           Version other = (Version) o;
+           byte[] ovs = other.get();
+           for (int i = 0; i < ts.length; i++)  {
+               int tsByte = ((int)ts[i] + 256) % 256;
+               int ovsByte = ((int)ovs[i] + 256) % 256;
+               if (tsByte < ovsByte)
+                   return -1;
+                else if (tsByte > ovsByte)
+                   return +1;
+           }
+           return 0;
+       }

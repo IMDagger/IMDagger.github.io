@@ -18,50 +18,53 @@ Track to
 |Конус|
 
 Кубики в логике не нуждаются, а вот для конуса добавил логические
-кирпичики. Сенсор *ojbect detect* определяет, что объекты попали в зону
-видимости в 30.0 единиц. Python-скрипт *orient* выбирает объект, на
-который нужно ориентироваться и присваивает его в свойство **object**
-актуатора *track to*. Нужно только учитывать, что у актуатора вида Edit
-Object с Track to свойство object принимает именно объекты, а не
-строковые имена. Хотя в логических блоках **OB** принимает названия
+кирпичики. Сенсор :code:`object detect` определяет, что объекты попали в зону
+видимости в 30.0 единиц. Python-скрипт :code:`orient` выбирает объект, на
+который нужно ориентироваться и присваивает его в свойство :code:`object`
+актуатора :code:`track to`. Нужно только учитывать, что у актуатора вида :code:`Edit
+Object` с :code:`Track to` свойство object принимает именно объекты, а не
+строковые имена. Хотя в логических блоках :code:`OB` принимает названия
 объектов.
 
-.. class:: text-center
+.. cut:: ещё блоки и управляющий скрипт
+   :paragraph: yes
 
-|Брики|
+   .. class:: text-center
 
-Важно не забыть включить свойство **3D**, чтобы объект следил в
-пространстве, а не по одной оси. Название объекта вписывать не
-обязательно, т.к. сценарий его сам выбирает. Код скрипта *orient*
-представлен ниже:
+   |Брики|
 
-.. code-block:: python
+   Важно не забыть включить свойство **3D**, чтобы объект следил в
+   пространстве, а не по одной оси. Название объекта вписывать не
+   обязательно, т.к. сценарий его сам выбирает. Код скрипта *orient*
+   представлен ниже:
 
-   cc = GameLogic.getCurrentController()
-   objects_detected = cc.sensors['object detect']
-   x, y, z = cc.owner.position
+   .. code-block:: python
 
-   if objects_detected.positive:
-       min_dist = None
-       closest = None
+      cc = GameLogic.getCurrentController()
+      objects_detected = cc.sensors['object detect']
+      x, y, z = cc.owner.position
 
-       around = objects_detected.hitObjectList
-       for obj in around:
-           ox, oy, oz = obj.position
-           dist = ((x - ox) ** 2 + (y - oy) ** 2 + (z - oz) ** 2) ** 0.5
+      if objects_detected.positive:
+          min_dist = None
+          closest = None
 
-           if min_dist is not None:
-               if min_dist > dist:
-                   min_dist = dist
-                   closest = obj
-               else:
-                   min_dist = dist
-                   closest = obj
+          around = objects_detected.hitObjectList
+          for obj in around:
+              ox, oy, oz = obj.position
+              dist = ((x - ox) ** 2 + (y - oy) ** 2 + (z - oz) ** 2) ** 0.5
 
-           if closest:
-               lookat = cc.actuators['track to']
-               lookat.object = closest
-               cc.activate(lookat)
+              if min_dist is not None:
+                  if min_dist > dist:
+                      min_dist = dist
+                      closest = obj
+                  else:
+                      min_dist = dist
+                      closest = obj
+
+              if closest:
+                  lookat = cc.actuators['track to']
+                  lookat.object = closest
+                  cc.activate(lookat)
 
 .. |Конус| image:: http://img-fotki.yandex.ru/get/3904/imdagger.4/0_19476_6e5def42_XL
    :target: http://fotki.yandex.ru/users/imdagger/view/103542/

@@ -39,87 +39,90 @@ aux-файла при помощи \\‍newlabel{TotPages}{{23}{23}}).
     %% вывода ошибки, если она не найдена
     {#1}
 
-Тогда я решил сделать свой макрос \\totpagesvalue, который в
-указанный счётчик сохранит число страниц из aux-файла. Вот такой он
-получился по аналогии:
+.. cut:: посмотреть описание и макрос, который я написал
+   :paragraph: yes
 
-.. code-block:: tex
+   Тогда я решил сделать свой макрос \\totpagesvalue, который в
+   указанный счётчик сохранит число страниц из aux-файла. Вот такой он
+   получился по аналогии:
 
-    \def\totpagesvalue#1{\expandafter\@totpagesvalue\csname r@TotPages\endcsname\@firstoftwo{#1}}
-    \def\@totpagesvalue#1#2#3{%
-      \ifx#1\‍relax
-       \protect\G@refundefinedtrue
-       \@latex@warning{Reference \`TotPages' on page \thepage \space
-                          undefined}%
-      \else
-       \countdef\@pagescount=#3
-       \expandafter\@pagescount=\expandafter#2#1\‍null
-      \fi}
+   .. code-block:: tex
 
-Таким образом, если вызвать :code:`\\totpagesvalue{88}`, то число страниц
-будет помещено в счётчик :code:`\\count88`. Затем я написал команду вывода числа
-и текста с правильным окончанием :code:`\\writewithword`.
+       \def\totpagesvalue#1{\expandafter\@totpagesvalue\csname r@TotPages\endcsname\@firstoftwo{#1}}
+       \def\@totpagesvalue#1#2#3{%
+         \ifx#1\‍relax
+          \protect\G@refundefinedtrue
+          \@latex@warning{Reference \`TotPages' on page \thepage \space
+                             undefined}%
+         \else
+          \countdef\@pagescount=#3
+          \expandafter\@pagescount=\expandafter#2#1\‍null
+         \fi}
 
-.. code-block:: tex
+   Таким образом, если вызвать :code:`\\totpagesvalue{88}`, то число страниц
+   будет помещено в счётчик :code:`\\count88`. Затем я написал команду вывода числа
+   и текста с правильным окончанием :code:`\\writewithword`.
 
-    %% вывод числа с текстом:
-    %% 1. число
-    %% 2. для 1 (т.е. страниц-а, рисунок-0)
-    %% 3. для 2,3,4 (т.е. страниц-ы, рисунк-а)
-    %% 4. для 0, 5, 6, 7, 8, 9 (страниц-0, рисунк-ов)
-    %% 5. номер счётчика для временного хранения данных
-    %% 6. номер второго временного счётчика для расчётов
-    \‍newcommand{\writewithword}[6] {
-      \countdef\@pagescount=#5
-      \@pagescount=#1
-      \countdef\@mod=#6
-      \@mod=\@pagescount
-      %% для x11 ... x19
-      \divide\@mod by 100
-      \multiply\@mod by 100
-      \advance\@mod by -\@pagescount
-      \multiply\@mod by -1
-      \ifthenelse{\the\@mod>10 \and \the\@mod<20}{
-        \the\@pagescount~#4
-      }{
-        \@mod=\@pagescount
-        %% для x0 … x9
-        \divide\@mod by 10
-        \multiply\@mod by 10
-        \advance\@mod by -\@pagescount
-        \multiply\@mod by -1
-        \the\@pagescount
-        \ifthenelse{\equal{\the\@mod}{1}}{#2}{
-          \ifthenelse{\equal{\the\@mod}{2}
-            \or \equal{\the\@mod}{3}
-            \or \equal{\the\@mod}{4}} {#3}{#4}
-        }
-      }
-    }
+   .. code-block:: tex
 
-Оставалось только объединить оба макроса в :code:`\\showpagecount`,
-который выводит, например, 23 страниц\ **ы** или 11 страни\ **ц**.
+       %% вывод числа с текстом:
+       %% 1. число
+       %% 2. для 1 (т.е. страниц-а, рисунок-0)
+       %% 3. для 2,3,4 (т.е. страниц-ы, рисунк-а)
+       %% 4. для 0, 5, 6, 7, 8, 9 (страниц-0, рисунк-ов)
+       %% 5. номер счётчика для временного хранения данных
+       %% 6. номер второго временного счётчика для расчётов
+       \‍newcommand{\writewithword}[6] {
+         \countdef\@pagescount=#5
+         \@pagescount=#1
+         \countdef\@mod=#6
+         \@mod=\@pagescount
+         %% для x11 ... x19
+         \divide\@mod by 100
+         \multiply\@mod by 100
+         \advance\@mod by -\@pagescount
+         \multiply\@mod by -1
+         \ifthenelse{\the\@mod>10 \and \the\@mod<20}{
+           \the\@pagescount~#4
+         }{
+           \@mod=\@pagescount
+           %% для x0 … x9
+           \divide\@mod by 10
+           \multiply\@mod by 10
+           \advance\@mod by -\@pagescount
+           \multiply\@mod by -1
+           \the\@pagescount
+           \ifthenelse{\equal{\the\@mod}{1}}{#2}{
+             \ifthenelse{\equal{\the\@mod}{2}
+               \or \equal{\the\@mod}{3}
+               \or \equal{\the\@mod}{4}} {#3}{#4}
+           }
+         }
+       }
 
-.. code-block:: tex
+   Оставалось только объединить оба макроса в :code:`\\showpagecount`,
+   который выводит, например, 23 страниц\ **ы** или 11 страни\ **ц**.
 
-    %% вывод вида: [число страниц] страниц/а/ы
-    \‍newcommand{\showpagecount}[5] {
-     \totpagesvalue{#4}
-     \countdef\@pagescount=#4
-     \writewithword{\@pagescount}{#1}{#2}{#3}{#4}{#5}
-    }
+   .. code-block:: tex
 
-У меня есть файл referat.sty, который подготавливает реферат и
-выводит число страниц и другую информацию по отчёту или диплому.
-Используется вывод страниц в нём так:
+       %% вывод вида: [число страниц] страниц/а/ы
+       \‍newcommand{\showpagecount}[5] {
+        \totpagesvalue{#4}
+        \countdef\@pagescount=#4
+        \writewithword{\@pagescount}{#1}{#2}{#3}{#4}{#5}
+       }
 
-.. code-block:: tex
+   У меня есть файл referat.sty, который подготавливает реферат и
+   выводит число страниц и другую информацию по отчёту или диплому.
+   Используется вывод страниц в нём так:
 
-   \showpagecount{страница}{страницы}{страниц}{48}{47}.
+   .. code-block:: tex
 
-.. alert-warning::
-   Не забыть подключить пакеты :code:`totpages` и :code:`ifthen`.
+      \showpagecount{страница}{страницы}{страниц}{48}{47}.
 
-Переменная TotPages у
-меня сбрасывается :code:`\\setcounter{TotPages}{-1}`, чтобы не нумеровать
-титульный лист, а реферат не учитывается в страницы.
+   .. alert-warning::
+      Не забыть подключить пакеты :code:`totpages` и :code:`ifthen`.
+
+   Переменная TotPages у
+   меня сбрасывается :code:`\\setcounter{TotPages}{-1}`, чтобы не нумеровать
+   титульный лист, а реферат не учитывается в страницы.

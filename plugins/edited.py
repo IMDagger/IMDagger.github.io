@@ -13,6 +13,9 @@ class CutBlock(Directive):
 
     required_arguments = 1
     optional_arguments = 0
+    option_spec = {
+        'paragraph': lambda arg: directives.choice(arg, ('yes', 'no')),
+    }
     final_argument_whitespace = True
     has_content = True
 
@@ -29,7 +32,10 @@ class CutBlock(Directive):
         link['classes'] += ['h-link',]
         link += nodes.Text(self.arguments[0])
 
-        cut_wrapper = nodes.inline()
+        if self.options.get('paragraph') == 'yes':
+            cut_wrapper = nodes.paragraph()
+        else:
+            cut_wrapper = nodes.inline()
         cut_wrapper['classes'] += ['cut',]
         cut_wrapper += link
 

@@ -18,7 +18,7 @@ Release, … чёрт! не для всего вызвал delete!! Вот та�
 приснилось, что я отладчик GDB.
 
 Вот тестовый билд
-`blender-2.49b-linux-x86-py2.5-imd.tar.bz2 <http://narod.ru/disk/16673697000/blender-2.49b-linux-x86-py2.5-imd.tar.bz2.html>`__
+`blender-2.49b-linux-x86-py2.5-imd.tar.bz2 <https://yadi.sk/d/K33tnpf_UmdNU>`__
 
 Что в нём есть:
 

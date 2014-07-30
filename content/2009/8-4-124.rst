@@ -14,7 +14,7 @@
 .. code-block:: python
 
     #SPACEHANDLER.VIEW3D.EVENT
-    ...  установка переменной режима, проверка клавиши P ...
+    # ...  установка переменной режима, проверка клавиши P ...
         if not Blender.game_mode:
             print 'switch to game mode'
             Blender.game_mode = True # защита от рекурсии
@@ -37,72 +37,75 @@
                                              # состоянию
             Blender.game_mode = False
 
-Добавляется заново событие нажатия клавиши :kbd:`P`,  и вызывается
-принудительная обработка всех событий немедленно. Сценарий
-приостановится в этой точке, т.к. игровой режим пока ещё блокирует
-Blender (это будет исправлено в версии 2.5, но я для проекта буду
-использовать 2.49a, поэтому могу быть спокоен за такой код). После
-разблокировки сценарий возвращает подсистему обратно в режим
-редактирования.
+.. cut:: читать далее
+  :paragraph: yes
 
-Все эти танцы с бубном были из-за того, что в Blender <2.49 модуль
-**GameLogic** не выгружался после завершения игрового процесса. Поэтому
-было трудно скрипту, который выполнялся и там, и там, менять своё
-поведение в зависимости от режима. Но в новой версии это поправили, и я
-решил переделать данный кусочек кода, и избавиться от странных
-перехватов событий (и от проблемы, что меню не перехватывается, и это
-могло вызывать ошибки).
+  Добавляется заново событие нажатия клавиши :kbd:`P`,  и вызывается
+  принудительная обработка всех событий немедленно. Сценарий
+  приостановится в этой точке, т.к. игровой режим пока ещё блокирует
+  Blender (это будет исправлено в версии 2.5, но я для проекта буду
+  использовать 2.49a, поэтому могу быть спокоен за такой код). После
+  разблокировки сценарий возвращает подсистему обратно в режим
+  редактирования.
 
-Вот такой немного страшный класс написал (он ещё не отрефакторен и
-не отдокументирован):
+  Все эти танцы с бубном были из-за того, что в Blender <2.49 модуль
+  **GameLogic** не выгружался после завершения игрового процесса. Поэтому
+  было трудно скрипту, который выполнялся и там, и там, менять своё
+  поведение в зависимости от режима. Но в новой версии это поправили, и я
+  решил переделать данный кусочек кода, и избавиться от странных
+  перехватов событий (и от проблемы, что меню не перехватывается, и это
+  могло вызывать ошибки).
 
-.. code-block:: python
+  Вот такой немного страшный класс написал (он ещё не отрефакторен и
+  не отдокументирован):
 
-    # -*- coding: utf-8 -*-
-    class Controller(object):
-        EditModeClass = None
-        GameModeClass = None
-        def __new__(cls, *args, **kwargs):
-            try:
-                import GameLogic
-                if Controller.GameModeClass is None:
-                    from controller_gamemode import ControllerGameMode
-                    class CGameMode(cls, ControllerGameMode):
-                        pass
-                    CGameMode.__name__ = cls.__name__
-                    CGameMode.__module__ = cls.__module__
-                    Controller.GameModeClass = CGameMode
-                Class = Controller.GameModeClass
-                return object.__new__(Class, *args, **kwargs)
-            except ImportError:
-                if Controller.EditModeClass is None:
-                    from controller_editmode import ControllerEditMode
-                    class CEditMode(cls, ControllerEditMode):
-                        pass
-                    CEditMode.__name__ = cls.__name__
-                    CEditMode.__module__ = cls.__module__
-                    Controller.EditModeClass = CEditMode
-                Class = Controller.EditModeClass
-                return object.__new__(Class, *args, **kwargs)
+  .. code-block:: python
 
-Зачем такая сложная схема? Всё дело в том, что контроллер :code:`Knight`
-унаследован от :code:`Warrior`, а тот в свою очередь от :code:`Controller`, который
-должен себя вести либо как :code:`ControllerGameMode`, либо как
-:code:`ControllerEditMode`, и желательно без потерь производительности при
-обращении к методам, но можно работать медленнее при создании. Эти два
-класса наследуются от :code:`BaseController`, который много чем заправляет.
+      # -*- coding: utf-8 -*-
+      class Controller(object):
+          EditModeClass = None
+          GameModeClass = None
+          def __new__(cls, *args, **kwargs):
+              try:
+                  import GameLogic
+                  if Controller.GameModeClass is None:
+                      from controller_gamemode import ControllerGameMode
+                      class CGameMode(cls, ControllerGameMode):
+                          pass
+                      CGameMode.__name__ = cls.__name__
+                      CGameMode.__module__ = cls.__module__
+                      Controller.GameModeClass = CGameMode
+                  Class = Controller.GameModeClass
+                  return object.__new__(Class, *args, **kwargs)
+              except ImportError:
+                  if Controller.EditModeClass is None:
+                      from controller_editmode import ControllerEditMode
+                      class CEditMode(cls, ControllerEditMode):
+                          pass
+                      CEditMode.__name__ = cls.__name__
+                      CEditMode.__module__ = cls.__module__
+                      Controller.EditModeClass = CEditMode
+                  Class = Controller.EditModeClass
+                  return object.__new__(Class, *args, **kwargs)
 
-Теперь *Controller* может в зависимости от режима создавать объекты
-с примесью либо одного класса либо другого и корректно справляется с
-десериализацией :code:`load` из модуля :code:`pickle`. Но есть проблема, что
-сериализатор :code:`dump` из :code:`pickle` не разрешает сохранять классы, у имя
-которых не соответвтует содержимому (т.е. существует другой класс с
-таким же :code:`\_\_name\_\_` в :code:`\_\_module\_\_`). Поэтому пришлось
-написать свой *NewPickler* унаследованный от **Pickler**, который
-перекрывал метод **save** и в случае класса, который ему не стоило
-проверять, подменял объект на настоящий класс. Делал он это
-исключительно для :underline:`определённых` типов классов, т.к. нужно понимать, что
-делаешь, а для всех это могло породить ошибки. Если решиться таким
-способом (горячей заменой сохраняемого класса) перекрыть
-**save\_global**, то придётся воевать с **memoize**, мне не удалось его
-победить и я нашёл этот, более лёгкий и верный путь.
+  Зачем такая сложная схема? Всё дело в том, что контроллер :code:`Knight`
+  унаследован от :code:`Warrior`, а тот в свою очередь от :code:`Controller`, который
+  должен себя вести либо как :code:`ControllerGameMode`, либо как
+  :code:`ControllerEditMode`, и желательно без потерь производительности при
+  обращении к методам, но можно работать медленнее при создании. Эти два
+  класса наследуются от :code:`BaseController`, который много чем заправляет.
+
+  Теперь *Controller* может в зависимости от режима создавать объекты
+  с примесью либо одного класса либо другого и корректно справляется с
+  десериализацией :code:`load` из модуля :code:`pickle`. Но есть проблема, что
+  сериализатор :code:`dump` из :code:`pickle` не разрешает сохранять классы, у имя
+  которых не соответвтует содержимому (т.е. существует другой класс с
+  таким же :code:`\_\_name\_\_` в :code:`\_\_module\_\_`). Поэтому пришлось
+  написать свой *NewPickler* унаследованный от **Pickler**, который
+  перекрывал метод **save** и в случае класса, который ему не стоило
+  проверять, подменял объект на настоящий класс. Делал он это
+  исключительно для :underline:`определённых` типов классов, т.к. нужно понимать, что
+  делаешь, а для всех это могло породить ошибки. Если решиться таким
+  способом (горячей заменой сохраняемого класса) перекрыть
+  **save\_global**, то придётся воевать с **memoize**, мне не удалось его
+  победить и я нашёл этот, более лёгкий и верный путь.

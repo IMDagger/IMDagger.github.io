@@ -46,56 +46,60 @@
 
     | **mainauth/urls.py:**
 
-    .. code-block:: python
+    .. cut:: исходник сниппета urls.py
 
-        from django.conf.urls import patterns, include, url
-        from django.conf import settings
-        ...
+      .. code-block:: python
 
-        urlpatterns = patterns('',
-            url(r'^accounts/profile/$', 'mainauth.views.index', name='show_profile'),
-            url(r'^$', 'django.contrib.auth.views.login',
-                {'template_name': 'auth_service/login.html'}, name='login'),
-            url(r'^logout/$', 'django.contrib.auth.views.logout',
-                {'next_page': '/'}, name='logout'),
+          from django.conf.urls import patterns, include, url
+          from django.conf import settings
+          ...
 
-            url(r'^api/me$', 'mainauth.views.describe_me', name='api_me'),
-            url(r'^oauth2/', include('provider.oauth2.urls', namespace='oauth2')),
-        )
+          urlpatterns = patterns('',
+              url(r'^accounts/profile/$', 'mainauth.views.index', name='show_profile'),
+              url(r'^$', 'django.contrib.auth.views.login',
+                  {'template_name': 'auth_service/login.html'}, name='login'),
+              url(r'^logout/$', 'django.contrib.auth.views.logout',
+                  {'next_page': '/'}, name='logout'),
+
+              url(r'^api/me$', 'mainauth.views.describe_me', name='api_me'),
+              url(r'^oauth2/', include('provider.oauth2.urls', namespace='oauth2')),
+          )
 
     | **mainauth/views.py:**
 
-    .. code-block:: python
+    .. cut:: исходник сниппета views.py
 
-        from annoying.decorators import render_to, ajax_request
-        from django.views.decorators.csrf import csrf_exempt
-        from provider.oauth2 import models as oauth_models
-        ...
+      .. code-block:: python
 
-        @ajax_request
-        @csrf_exempt
-        def describe_me(request):
-            token_str = request.GET.get('oauth_token', '')
-            try:
-                token = oauth_models.AccessToken.objects.get_token(token_str)
-            except oauth_models.AccessToken.DoesNotExist:
-                return {'rc': 1, 'msg': 'Wrong access token'}
-            user = token.user
-            return {
-                'rc': 0,
-                'user': {
-                    # естественно mydomain.com это просто пример
-                    # как и генерация уникального хеша для user.profile
-                    'id': 'urn:mydomain.com:{0}'.format(user.profile.hashcode),
-                    'username': user.username,
-                    'first_name': user.first_name,
-                    'last_name': user.last_name,
-                    'email': user.email,
-                    'staff': user.is_staff,
-                    'super': user.is_superuser,
-                    ...
-                }
-            }
+          from annoying.decorators import render_to, ajax_request
+          from django.views.decorators.csrf import csrf_exempt
+          from provider.oauth2 import models as oauth_models
+          ...
+
+          @ajax_request
+          @csrf_exempt
+          def describe_me(request):
+              token_str = request.GET.get('oauth_token', '')
+              try:
+                  token = oauth_models.AccessToken.objects.get_token(token_str)
+              except oauth_models.AccessToken.DoesNotExist:
+                  return {'rc': 1, 'msg': 'Wrong access token'}
+              user = token.user
+              return {
+                  'rc': 0,
+                  'user': {
+                      # естественно mydomain.com это просто пример
+                      # как и генерация уникального хеша для user.profile
+                      'id': 'urn:mydomain.com:{0}'.format(user.profile.hashcode),
+                      'username': user.username,
+                      'first_name': user.first_name,
+                      'last_name': user.last_name,
+                      'email': user.email,
+                      'staff': user.is_staff,
+                      'super': user.is_superuser,
+                      ...
+                  }
+              }
 
 В админке провайдера нужно будет создать экземпляр модели Client из
 раздела OAuth2. Для каждого сайта свой, коллбэк (или URI

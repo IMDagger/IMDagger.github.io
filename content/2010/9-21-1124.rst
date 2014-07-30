@@ -34,99 +34,104 @@
 
 .. class:: text-center
 
-|image4|
+.. cut:: ещё изображения
+  :paragraph: yes
 
-.. class:: text-center
+  .. class:: text-center
 
-|image5|
+  |image4|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image6|
+  |image5|
 
-.. class:: text-center
+  .. class:: text-center
 
-Пробные рендеры
+  |image6|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image7|
+  Пробные рендеры
 
-.. class:: text-center
+  .. class:: text-center
 
-|image8|
+  |image7|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image9|
+  |image8|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image10|
+  |image9|
 
-.. class:: text-center
+  .. class:: text-center
 
-С микрофоном
+  |image10|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image11|
+  С микрофоном
 
-.. class:: text-center
+  .. class:: text-center
 
-|image12|
+  |image11|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image13|
+  |image12|
 
-.. class:: text-center
+  .. class:: text-center
 
-А вот так делал туфельки
+  |image13|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image14|
+  А вот так делал туфельки
 
-.. class:: text-center
+  .. class:: text-center
 
-|image15|
+  |image14|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image16|
+  |image15|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image17|
+  |image16|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image18|
+  |image17|
 
-.. class:: text-center
+  .. class:: text-center
 
-Каблучки доделал можно и риггить
+  |image18|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image19|
+  Каблучки доделал можно и риггить
 
-.. class:: text-center
+  .. class:: text-center
 
-|image20|
+  |image19|
 
-.. class:: text-center
+  .. class:: text-center
 
-Добавлены скелеты, сделал риггинг
+  |image20|
 
-.. class:: text-center
+  .. class:: text-center
 
-|image21|
+  Добавлены скелеты, сделал риггинг
 
-.. class:: text-center
+  .. class:: text-center
 
-|image22|
+  |image21|
+
+  .. class:: text-center
+
+  |image22|
 
 .. |image0| image:: http://img-fotki.yandex.ru/get/4603/imdagger.8/0_41507_2a74b2a7_L
    :target: http://fotki.yandex.ru/users/imdagger/view/267527/

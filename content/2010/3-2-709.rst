@@ -24,43 +24,49 @@
 
 .. class:: text-center
 
-Добавление нового пустого меша
+.. cut:: смотреть далее
+   :paragraph: yes
 
-.. class:: text-center
+   .. class:: text-center
 
-|image1|
+   Добавление нового пустого меша
 
-.. class:: text-center
+   .. class:: text-center
 
-Включение режима Retopo при редактировании пустого меша
+   |image1|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image2|
+   Включение режима Retopo при редактировании пустого меша
 
-.. class:: text-center
+   .. class:: text-center
 
-Добавка окружности
+   |image2|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image3|
+   Добавка окружности
 
-.. class:: text-center
+   .. class:: text-center
 
-Правая половина убрана, т.к. меш робота уже имеет  модификатор Mirror
+   |image3|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image4|
+   Правая половина убрана, т.к. меш робота уже имеет  модификатор Mirror
 
-.. class:: text-center
+   .. class:: text-center
 
-Видно, что окружность «легла» на поверхность робота
+   |image4|
 
-.. class:: text-center
+   .. class:: text-center
 
-|image5|
+   Видно, что окружность «легла» на поверхность робота
+
+   .. class:: text-center
+
+   |image5|
+
 
 .. |image0| image:: http://img-fotki.yandex.ru/get/3807/imdagger.6/0_235e5_a6b4b091_L
    :target: http://fotki.yandex.ru/users/imdagger/view/144869/

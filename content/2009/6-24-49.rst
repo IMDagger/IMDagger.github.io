@@ -11,7 +11,7 @@
 посвечивались методы моих самописных классов и числа (эту возможность я
 сам добавил в режиму *lua-mode*), то этого хотелось и в *python-mode*.
 Поэтому я полез в **python.el** и подправил его немного. Новый
-`python.el <http://narod.ru/disk/10241552000/python.el.gz.html>`__.
+`python.el <https://yadi.sk/d/w0okiTNcUmdLS>`__.
 
 .. class:: text-center
 
