@@ -1,7 +1,6 @@
 
 
 :date: 2011-08-21 13:29:12
-:tags: 
 :category: friend
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1421

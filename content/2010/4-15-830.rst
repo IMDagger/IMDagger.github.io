@@ -1,7 +1,6 @@
 
 
 :date: 2010-04-15 07:27:55
-:tags: 
 :category: join
 :author: IMDagger
 :club-ya-ru-id: urn:ya.ru:club/4611686018427389409

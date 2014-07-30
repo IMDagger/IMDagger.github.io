@@ -1,7 +1,6 @@
 Установка nVidia CUDA Toolkit 4.0 на Ubuntu 11.04
 =================================================
 :date: 2012-05-15 17:56:42
-:tags: 
 :category: link
 :author: IMDagger
 :attached-url: http://samiux.blogspot.com/2011/05/howto-nvidia-cuda-toolkit-40-on-ubuntu.html

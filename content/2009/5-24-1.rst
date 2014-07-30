@@ -2,7 +2,6 @@
 
 :date: 2009-05-24 15:29:03
 :modified: 2012-05-29 21:28:09
-:tags: 
 :category: photo
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=1

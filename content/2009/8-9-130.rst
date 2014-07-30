@@ -1,7 +1,6 @@
 
 
 :date: 2009-08-09 13:31:36
-:tags: 
 :category: mood
 :author: IMDagger
 :yaru-link: http://imdagger.ya.ru/replies.xml?item_no=130

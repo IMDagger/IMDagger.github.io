@@ -1,7 +1,6 @@
 ICFPC 2009
 ==========
 :date: 2009-06-21 17:22:00
-:tags: 
 :category: link
 :author: IMDagger
 :attached-url: http://icfpcontest.org/
