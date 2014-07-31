@@ -22,36 +22,34 @@ Spring, то вышло, что часть настроек из конфиго�
 .. cut:: а как?
    :paragraph: yes
 
-   .. code-block:: xml
+   .. smart-code-block:: xml
 
        ...
-       <web-app xmlns="http://java.sun.com/xml/ns/javaee\ "
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
-         xsi:schemaLocation="\ http://java.sun.com/xml/ns/javaee
-
-        http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-                         version=“2.5”>
+       <web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
          <servlet>
          <servlet-name>dl</servlet-name>
          <servlet-class>
-                 org.springframework.web.servlet.DispatcherServlet
+             $$strong$$org.springframework.web.servlet.DispatcherServlet$$/strong$$
          </servlet-class>
          <load-on-startup>1</load-on-startup>
          </servlet>
          <servlet-mapping>
          <servlet-name>dl</servlet-name>
-         **<url-pattern>/</url-pattern>**
+         $$strong$$<url-pattern>/</url-pattern>$$/strong$$
          </servlet-mapping>
          <context-param>
          <param-name>contextConfigLocation</param-name>
-         **<param-value>/WEB-INF/dl-servlet.xml</param-value>**
+         $$strong$$<param-value>/WEB-INF/dl-servlet.xml</param-value>$$/strong$$
          </context-param>
          <listener>
          <listener-class>
-       **        org.springframework.web.context.ContextLoaderListener**
+             $$strong$$org.springframework.web.context.ContextLoaderListener$$/strong$$
          </listener-class>
          </listener>
-       **…**
+       $$strong$$...$$/strong$$
        </web-app>
 
    Тег servlet указывает Apache Tomcat, что нужно загрузить сервлет
@@ -59,80 +57,67 @@ Spring, то вышло, что часть настроек из конфиго�
    запросов. В директории WEB-INFнаходится файл dl-servlet.xml, который
    описывает настройки сервлета:
 
-   .. code-block:: xml
+   .. smart-code-block:: xml
 
-       <?xml version=“1.0” encoding=“UTF-8”?>
-       <beans xmlns="http://www.springframework.org/schema/beans\ "
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
-         xmlns:aop="http://www.springframework.org/schema/aop\ "
-         xsi:schemaLocation="\ http://www.springframework.org/schema/beans
+       <?xml version="1.0" encoding="UTF-8"?>
+       <beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:aop="http://www.springframework.org/schema/aop"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
-         **<import resource=“/dl-context/main-context.xml” />**
+         $$strong$$<import resource="/dl-context/main-context.xml" />$$/strong$$
        </beans>
 
    Он подключает из каталога dl-context различные параметры настройки. Пока
    у меня всего один файл, но скоро я разобью опции на несколько файлов по
    типам. Настройка основного контекста описана в main-context.xml:
 
-   .. code-block:: xml
+   .. smart-code-block:: xml
 
-       <?xml version=“1.0” encoding=“UTF-8”?>
-       <beans xmlns="http://www.springframework.org/schema/beans\ "
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\ "
-         xmlns:aop="http://www.springframework.org/schema/aop\ "
-         xsi:schemaLocation="\ http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
-       <!-- This config contains main info about application mappings and
-       view resolvers-->
-       <bean id=“dataSource”
-       class="**org.apache.tomcat.dbcp.dbcp.BasicDataSource**\ "
-       destroy-method=“close”>
-         <property name=“driverClassName”
-       value="**net.sourceforge.jtds.jdbc.Driver**\ " />
-         <property name=“url”
-       value="**jdbc:jtds:sqlserver://dl-test:1030/dldb**\ " />
-         <property name=“username” value="**пользователь-базы**\ " />
-         <property name=“password” value="**пароль**\ " />
+       <?xml version="1.0" encoding="UTF-8"?>
+       <beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:aop="http://www.springframework.org/schema/aop"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+       <!-- This config contains main info about application mappings and view resolvers-->
+       <bean id="dataSource" class="$$strong$$org.apache.tomcat.dbcp.dbcp.BasicDataSource$$/strong$$" destroy-method="close">
+         <property name="driverClassName" value="$$strong$$net.sourceforge.jtds.jdbc.Driver$$/strong$$" />
+         <property name="url" value="$$strong$$jdbc:jtds:sqlserver://dl-test:1030/dldb$$/strong$$" />
+         <property name="username" value="$$strong$$пользователь-базы$$/strong$$" />
+         <property name="password" value="$$strong$$пароль$$/strong$$" />
        </bean>
-       <bean id=“sessionFactory”
-       class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-         <property name=“dataSource” ref=“dataSource” />
-         <property name=“configLocation”
-       value=“classpath:/hibernate.cfg.xml” />
-         <property name=“configurationClass”
-       value=“org.hibernate.cfg.AnnotationConfiguration” />
-         <property name=“hibernateProperties”>
+       <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+         <property name="dataSource" ref="dataSource" />
+         <property name="configLocation" value="classpath:/hibernate.cfg.xml" />
+         <property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration" />
+         <property name="hibernateProperties">
          <props>
-         <prop key=“hibernate.dialect”>${hibernate.dialect}</prop>
+         <prop key="hibernate.dialect">${hibernate.dialect}</prop>
          </props>
          </property>
        </bean>
-       *<bean id=“cellDAO” class=“results.CellDao”>
-         <property name=“sessionFactory” ref=“sessionFactory” />
+       $$strong$$<bean id="cellDAO" class="results.CellDao">
+         <property name="sessionFactory" ref="sessionFactory" />
        </bean>
-       <bean id=“cellService” class=“results.CellService”>
-         <property name=“dao” ref=“cellDAO” />
+       <bean id="cellService" class="results.CellService">
+         <property name="dao" ref="cellDAO" />
        </bean>
-       <bean id=“resultsTableController” class=“results.TableController”>
-         <property name=“cellService” ref=“cellService”/>
-       </bean>*
-       <bean id=“simpleUrlHandler”
-       class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-         <property name=“order”><value>0</value></property>
-         <property name=“mappings”>
+       <bean id="resultsTableController" class="results.TableController">
+         <property name="cellService" ref="cellService"/>
+       </bean>$$/strong$$
+       <bean id="simpleUrlHandler" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+         <property name="order"><value>0</value></property>
+         <property name="mappings">
          <props>
-         **<prop key=“results”>resultsTableController</prop>**
+         $$strong$$<prop key="results">resultsTableController</prop>$$/strong$$
          </props>
          </property>
        </bean>
-       <bean id=“viewResolver”
-       class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-         <property name=“cache” value=“false”/>
-         <property
-       name=“viewClass”><value>org.springframework.web.servlet.view.JstlView</value></property>
-         <property
-       name=“prefix”><value>/WEB-INF/pages/jsp/</value></property>
-         <property name=“suffix”><value>.jsp</value></property>
+       <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+         <property name="cache" value="false"/>
+         <property name="viewClass"><value>org.springframework.web.servlet.view.JstlView</value></property>
+         <property name="prefix"><value>/WEB-INF/pages/jsp/</value></property>
+         <property name="suffix"><value>.jsp</value></property>
        </bean>
        </beans>
 
@@ -145,18 +130,20 @@ Spring, то вышло, что часть настроек из конфиго�
    Spring) **dataSource** указываются параметры подключения к серверу БД и
    класс драйвера JDBC. В sessionFactory указано, что при создании объекта
    из этого бина, нужно создать объект dataSource, для этого написана
-   ссылка <property name=“dataSource” ref=“dataSource” />.
+   ссылка <property name="dataSource" ref="dataSource" />.
 
    CellDao, CellService и ResultsTableController — это мои пробные
    классы для работы с ячейками таблицы результатов. Маппинг <prop
-   key=“results”>resultsTableController</prop> позволяет, при переходе по
+   key="results">resultsTableController</prop> позволяет, при переходе по
    адресу **http://localhost:8080/dl/results**, передавать управление
    контроллеру ResultsTableController, котрый в свою очередь создаёт
    представление:
 
-       | ...
-       | ... new ModelAndView("**index**\ ")
-       | ...
+   .. smart-code-block:: java
+
+      ...
+      ... new ModelAndView("$$strong$$index$$/strong$$")
+      ...
 
    Я сделал это, чтобы проверить мэппинг. Сами JSP-файлы (в частности и
    index.jsp) хранятся в WEB-INF/pages/jsp/, эта информация настривается в

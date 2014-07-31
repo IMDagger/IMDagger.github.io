@@ -756,3 +756,7 @@ table.table-post-80 {
     display: inline;
     padding: 3px 5px;
 }
+
+.highlight strong {
+    font-size: 110%;
+}
