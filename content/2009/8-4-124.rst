@@ -29,12 +29,12 @@
 
             # запуск BGE
             Blender.event = None # событие P уже обработано
-                                            # данным сценарием
-             normalize_path()  # это нужно для import
+                                 # данным сценарием
+            normalize_path()  # это нужно для import
             print 'switch to edit mode'
             from base.controllers import switch_to_editmode
             switch_to_editmode() # вернуть режим к прежнему
-                                             # состоянию
+                                 # состоянию
             Blender.game_mode = False
 
 .. cut:: читать далее
@@ -65,6 +65,7 @@
       class Controller(object):
           EditModeClass = None
           GameModeClass = None
+
           def __new__(cls, *args, **kwargs):
               try:
                   import GameLogic

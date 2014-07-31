@@ -23,8 +23,7 @@ Hibernate
      at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
      at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
      at java.lang.reflect.Method.invoke(Method.java:597)
-     at org.hibernate.context.
-     ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:342)
+     at org.hibernate.context.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:342)
      at $Proxy0.load(Unknown Source)
      at org.apache.jsp.index_jsp._jspService(index_jsp.java:63)
      at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
@@ -104,11 +103,11 @@ Hibernate
    чём оно мне гордо заявляло), потому что Configuration - это что-то типа
    базового «класса-пустышки». Поэтому я сделал:
 
-   .. code-block:: java
+   .. smart-code-block:: java
 
        // было:
        SessionFactory sess = new AnnotationConfiguration().configure().buildSessionFactory();
        // стало:
-       SessionFactory sess = new Configuration().configure().buildSessionFactory();
+       $$strong$$SessionFactory sess = new Configuration().configure().buildSessionFactory();$$/strong$$
 
    После чего мой код заработал :) и я возрадовался.
