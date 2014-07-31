@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Как я покорял табличные функции</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="Alex Moiseenko" />
+        <!-- Open Graph -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="/theme/css/html4css1.css" />
+        <link rel="stylesheet" href="/theme/css/style.css" />
+        <link rel="stylesheet" href="/theme/css/pygment.css" />
+        <link rel="stylesheet" href="/theme/css/math.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/x-mathjax-config">
+         MathJax.Hub.Config({
+             'HTML-CSS': {
+                 linebreaks: {
+                     automatic: true,
+                     width: 'container'
+                 }
+             },
+             tex2jax: {
+                 inlineMath: [['$math$','$/math$']],
+                 displayMath: [['$$math$$','$$/math$$']],
+                 skipTags: ['pre', 'code'],
+                 preview: ['формула...'],
+                 ignoreClass: 'math-ignore'
+             }
+         });
+        </script>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+        <script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+        <!--[if (gte IE 6)&(lte IE 8)]>
+          <script type="text/javascript" src="/theme/js/selectivizr-min.js"></script>
+          <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+        <![endif]-->
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="row page-head">
+            <div class="row page-head-status page-head-status-top"><div class="col-sm-12 b-status mine"><p><i></i><a href="#" title="настроение" class="b-consistent-link"><b>ни к чему чужое мнение, в моде самовыражение</b></a></p></div></div>
+            <div class="col-sm-2 page-left">
+                <a href="#">
+                    <img src="http://upics.yandex.ru/22199227/normal" ilo-full-src="http://upics.yandex.ru/22199227/normal">
+                </a>
+            </div>
+            <div class="col-sm-10 all-posts">
+                <div class="title-container">
+                    <h1><b><a href="http://imdagger.github.io/" class="fn nickname">IMDagger</a></b></h1>
+                </div>
+                <div class="title-menu">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active">
+                            <a href="#">Дневник</a>
+                        </li>
+                        <li><a href="#">О себе</a></li>
+                        <li><a href="#">Фотки</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row page-body">
+<div class="col-sm-2 page-left">
+<div class="row widget">
+    <div class="widget-content">
+        <div class="widget__title">
+            <div class="widget__title-link">Популярное в дневнике</div>
+        </div>
+        <div class="widget__body">
+            <div class="widget-line">
+                <div class="widget-entry">
+                    <div class="widget-day__title">25&nbsp;июня</div>
+                    <div class="widget-entry clearfix">
+                        <div class="widget-entry__item">
+                            <div class="widget-entry__title">
+                                <a href="#" class="h-link">&nbsp;&nbsp;&nbsp; Висцеральная теория сна выглядит стр…</a>
+                            </div>
+                            <div class="widget-entry__info">2&nbsp;ответа</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-entry">
+                    <div class="widget-day__title">16&nbsp;мая</div>
+                    <div class="widget-entry clearfix">
+                        <div class="widget-entry__item">
+                            <div class="widget-entry__title">
+                                <a href="#" class="h-link">Пожалуй у ByFly сегодня даже более серьё…</a>
+                            </div>
+                            <div class="widget-entry__info">2&nbsp;ответа</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+<div class="col-sm-10 all-posts">
+<div class="row b-post-filter">
+    <span class="pull-right">
+        записи по
+        <div class="btn-group">
+            <span type="button" class="pseudo-link" data-toggle="dropdown">месяцам</span>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="#" class="h-link">Нулябрь</a><li>
+                <li><a href="#" class="h-link">Первябрь</a><li>
+            </ul>
+        </div> ·
+        <div class="btn-group">
+            <span type="button" class="pseudo-link" data-toggle="dropdown">меткам</span>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a class="tag-2" href="/tag/linux.html" class="h-link">linux</a>                    <a class="tag-1" href="/tag/radost.html" class="h-link">радость</a>                    <a class="tag-1" href="/tag/python.html" class="h-link">python</a>                    <a class="tag-1" href="/tag/bge.html" class="h-link">bge</a>                    <a class="tag-2" href="/tag/iandeks.html" class="h-link">Яндекс</a>                </li>                <li>                    <a class="tag-2" href="/tag/google.html" class="h-link">google</a>                    <a class="tag-2" href="/tag/icfpc.html" class="h-link">icfpc</a>                    <a class="tag-1" href="/tag/blender.html" class="h-link">blender</a>                    <a class="tag-1" href="/tag/programmirovanie.html" class="h-link">программирование</a>                    <a class="tag-2" href="/tag/bredni.html" class="h-link">бредни</a>                </li>                <li>                    <a class="tag-2" href="/tag/java.html" class="h-link">java</a>                    <a class="tag-1" href="/tag/rabota.html" class="h-link">работа</a>                    <a class="tag-1" href="/tag/oshibka.html" class="h-link">ошибка</a>                    <a class="tag-2" href="/tag/emacs.html" class="h-link">emacs</a>                    <a class="tag-2" href="/tag/eda.html" class="h-link">еда</a>                </li>                <li>                    <a class="tag-1" href="/tag/ia.html" class="h-link">Я</a>                    <a class="tag-1" href="/tag/zhizn.html" class="h-link">жизнь</a>                    <a class="tag-2" href="/tag/javascript.html" class="h-link">javascript</a>                    <a class="tag-1" href="/tag/nabrosok.html" class="h-link">набросок</a>                    <a class="tag-2" href="/tag/sborka.html" class="h-link">сборка</a>                </li>            </ul>
+        </div> ·
+        <div class="btn-group">
+            <span type="button" class="pseudo-link" data-toggle="dropdown">типам</span>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="/category/description.html" class="h-link">обращение</a><li>
+                <li><a href="/category/friend.html" class="h-link"></a><li>
+                <li><a href="/category/join.html" class="h-link"></a><li>
+                <li><a href="/category/link.html" class="h-link">ссылки</a><li>
+                <li><a href="/category/mood.html" class="h-link">настроение</a><li>
+                <li><a href="/category/photo.html" class="h-link">фото</a><li>
+                <li><a href="/category/text.html" class="h-link">текст</a><li>
+                <li><a href="/category/video.html" class="h-link">видео</a><li>
+                <li><a href="/category/wishlist.html" class="h-link"></a><li>
+            </ul>
+        </div>
+    </span>
+</div>    <div class="row b-post">
+<div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="/posts/2009/09/26/kak-ia-pokorial-tablichnye-funktsii/" >
+                26 сентября 2009 года, 17:35
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+<div class="row tags-row">
+    <span class="tag"><a class="h-link" href="/tag/spring.html">spring</a></span>,    <span class="tag"><a class="h-link" href="/tag/hibernate.html">hibernate</a></span>,    <span class="tag"><a class="h-link" href="/tag/annotatsii.html">аннотации</a></span></div>
+            <div class="post-title">
+<a class="no-link" href="/posts/2009/09/26/kak-ia-pokorial-tablichnye-funktsii/">Как я покорял табличные функции</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>Во-первых, я хотел постараться проделать всю работу через аннотации
+<strong>JPA</strong> и <strong>Hibernate</strong>. Но мне требовалось промэппить пробный класс
+<em>HeaderItem</em> не только на таблицу <em>dl2ResultsHeaderItem</em>, но и на
+результат функции из базы данных. А функция
+<em>dl2ResultsHeaderItemSubTree</em> требует 5 параметров и возвращает таблицу
+из 3 параметров, у которой не все названия совпадают с
+dl2ResultsHeaderItem.</p>
+<p>Поискав во «всемирной паутине» ответ на свой вопрос, как сделать
+такую операцию, я нашёл ответ только для хранимых процедур, а мне нужна
+была хранимая функция. Причём всё, что я находил похожее для моих нужд,
+оно почему-то у меня не работало.</p>
+<p>Поэтому я нашёл способ реализовать задуманное через аннотацию
+NamedNativeQuery из javax.persistence, я его переделал из примера для
+хранимых процедур:</p>
+<p class="cut"><a class="h-link reference internal" href="#cut_41155920"data-toggle="collapse">и как оно выглядит?</a></p>
+<div class="collapse" id="cut_41155920">
+<div class="highlight"><pre><span class="pgcss-kn">package</span> <span class="pgcss-n">results</span><span class="pgcss-o">;</span>
+<span class="pgcss-kn">import</span> <span class="pgcss-nn">java.io.Serializable</span><span class="pgcss-o">;</span>
+<span class="pgcss-kn">import</span> <span class="pgcss-nn">javax.persistence.*</span><span class="pgcss-o">;</span>
+<span class="pgcss-nd">@Entity</span>
+<span class="pgcss-nd">@NamedNativeQuery</span> <span class="pgcss-o">(</span><span class="pgcss-n">name</span> <span class="pgcss-o">=</span> <span class="pgcss-s">&quot;headerItem.forSubTree&quot;</span><span class="pgcss-o">,</span>
+        <span class="pgcss-n">resultClass</span> <span class="pgcss-o">=</span> <span class="pgcss-n">HeaderItem</span><span class="pgcss-o">.</span><span class="pgcss-na">class</span><span class="pgcss-o">,</span>
+        <span class="pgcss-n">query</span> <span class="pgcss-o">=</span> <span class="pgcss-s">&quot;select itemId, itemIndex as childIndex, deep from dl2ResultsHeaderItemSubTree</span>
+<span class="pgcss-s">                  (:rootId, :deep, :leavesOnly, :includeRoot, :date)&quot;</span><span class="pgcss-o">,</span>
+        <span class="pgcss-n">hints</span> <span class="pgcss-o">=</span> <span class="pgcss-o">{</span><span class="pgcss-nd">@QueryHint</span> <span class="pgcss-o">(</span><span class="pgcss-n">name</span> <span class="pgcss-o">=</span> <span class="pgcss-s">&quot;org.hibernate.callable&quot;</span><span class="pgcss-o">,</span> <span class="pgcss-n">value</span> <span class="pgcss-o">=</span> <span class="pgcss-s">&quot;true&quot;</span><span class="pgcss-o">),</span> <span class="pgcss-o">*</span><span class="pgcss-c1">// Бага!!!*</span>
+                 <span class="pgcss-nd">@QueryHint</span> <span class="pgcss-o">(</span><span class="pgcss-n">name</span> <span class="pgcss-o">=</span> <span class="pgcss-s">&quot;org.hibernate.readOnly&quot;</span><span class="pgcss-o">,</span> <span class="pgcss-n">value</span> <span class="pgcss-o">=</span> <span class="pgcss-s">&quot;true&quot;</span><span class="pgcss-o">)</span>
+        <span class="pgcss-o">}</span>
+<span class="pgcss-o">)</span>
+<span class="pgcss-nd">@Table</span> <span class="pgcss-o">(</span><span class="pgcss-n">name</span><span class="pgcss-o">=</span><span class="pgcss-s">&quot;dl2ResultsHeaderItem&quot;</span><span class="pgcss-o">)</span>
+<span class="pgcss-kd">public</span> <span class="pgcss-kd">class</span> <span class="pgcss-nc">HeaderItem</span> <span class="pgcss-kd">implements</span> <span class="pgcss-n">Serializable</span> <span class="pgcss-o">{</span>
+    <span class="pgcss-kd">private</span> <span class="pgcss-n">Long</span> <span class="pgcss-n">id</span><span class="pgcss-o">;</span>
+    <span class="pgcss-kd">private</span> <span class="pgcss-n">Long</span> <span class="pgcss-n">index</span><span class="pgcss-o">;</span>
+    <span class="pgcss-kd">private</span> <span class="pgcss-kt">int</span> <span class="pgcss-n">deep</span><span class="pgcss-o">;</span>
+
+    <span class="pgcss-kd">public</span> <span class="pgcss-nf">HeaderItem</span><span class="pgcss-o">()</span> <span class="pgcss-o">{</span>
+    <span class="pgcss-o">};</span>
+
+    <span class="pgcss-nd">@Id</span>
+    <span class="pgcss-nd">@Column</span><span class="pgcss-o">(</span><span class="pgcss-n">name</span><span class="pgcss-o">=</span><span class="pgcss-s">&quot;itemId&quot;</span><span class="pgcss-o">)</span>
+    <span class="pgcss-kd">public</span> <span class="pgcss-n">Long</span> <span class="pgcss-nf">getId</span><span class="pgcss-o">()</span> <span class="pgcss-o">{</span>
+        <span class="pgcss-k">return</span> <span class="pgcss-n">id</span><span class="pgcss-o">;</span>
+    <span class="pgcss-o">};</span>
+
+    <span class="pgcss-kd">public</span> <span class="pgcss-kt">void</span> <span class="pgcss-nf">setId</span><span class="pgcss-o">(</span><span class="pgcss-n">Long</span> <span class="pgcss-n">id</span><span class="pgcss-o">)</span> <span class="pgcss-o">{</span>
+        <span class="pgcss-k">this</span><span class="pgcss-o">.</span><span class="pgcss-na">id</span> <span class="pgcss-o">=</span> <span class="pgcss-n">id</span><span class="pgcss-o">;</span>
+    <span class="pgcss-o">};</span>
+
+    <span class="pgcss-nd">@Column</span><span class="pgcss-o">(</span><span class="pgcss-n">name</span><span class="pgcss-o">=</span><span class="pgcss-s">&quot;childIndex&quot;</span><span class="pgcss-o">)</span>
+    <span class="pgcss-kd">public</span> <span class="pgcss-n">Long</span> <span class="pgcss-nf">getIndex</span><span class="pgcss-o">()</span> <span class="pgcss-o">{</span>
+        <span class="pgcss-k">return</span> <span class="pgcss-n">index</span><span class="pgcss-o">;</span>
+    <span class="pgcss-o">};</span>
+
+    <span class="pgcss-kd">public</span> <span class="pgcss-kt">void</span> <span class="pgcss-nf">setIndex</span><span class="pgcss-o">(</span><span class="pgcss-n">Long</span> <span class="pgcss-n">index</span><span class="pgcss-o">)</span> <span class="pgcss-o">{</span>
+        <span class="pgcss-k">this</span><span class="pgcss-o">.</span><span class="pgcss-na">index</span> <span class="pgcss-o">=</span> <span class="pgcss-n">index</span><span class="pgcss-o">;</span>
+    <span class="pgcss-o">};</span>
+
+    <span class="pgcss-nd">@Column</span><span class="pgcss-o">(</span><span class="pgcss-n">name</span><span class="pgcss-o">=</span><span class="pgcss-s">&quot;deep&quot;</span><span class="pgcss-o">)</span>
+    <span class="pgcss-kd">public</span> <span class="pgcss-kt">int</span> <span class="pgcss-nf">getDeep</span><span class="pgcss-o">()</span> <span class="pgcss-o">{</span>
+        <span class="pgcss-k">return</span> <span class="pgcss-n">deep</span><span class="pgcss-o">;</span>
+    <span class="pgcss-o">};</span>
+
+    <span class="pgcss-kd">public</span> <span class="pgcss-kt">void</span> <span class="pgcss-nf">setDeep</span><span class="pgcss-o">(</span><span class="pgcss-kt">int</span> <span class="pgcss-n">id</span><span class="pgcss-o">)</span> <span class="pgcss-o">{</span>
+        <span class="pgcss-k">this</span><span class="pgcss-o">.</span><span class="pgcss-na">deep</span> <span class="pgcss-o">=</span> <span class="pgcss-n">deep</span><span class="pgcss-o">;</span>
+    <span class="pgcss-o">};</span>
+<span class="pgcss-o">};</span>
+</pre></div>
+<p>Запрос <em>select itemId, itemIndex as childIndex, deep ...</em> выбирает
+данные таким образом, чтобы поля возвращаемой таблицы совпадали с
+указанным в классе мэппингом.</p>
+<p>Жаль, но таблицу и хранимую функцию делал не я, а за долго до
+меня. Поэтому их ломать нельзя (слишком много эксплуатируемого кода на
+них висит). Я довольно долго боролся с Hibernate, т.к. выпадало
+исколючение в jTDS вида: <code class="code">
+11410 [http-8080-1] INFO
+org.hibernate.type.CalendarType - could not bind value ‘2009-09-26
+16:30:13’ to parameter: 5; Invalid parameter index 5</code>
+. Я долго думал, как
+так может быть, что параметров вроде 5, передаю 5 такой конструкцией
+(<del class="del">
+собранной на скорую руку</del>
+):</p>
+<div class="highlight"><pre><span class="pgcss-n">List</span> <span class="pgcss-n">result</span> <span class="pgcss-o">=</span>
+<span class="pgcss-n">getHibernateTemplate</span><span class="pgcss-o">().</span><span class="pgcss-na">findByNamedQueryAndNamedParam</span><span class="pgcss-o">(</span><span class="pgcss-s">&quot;headerItem.forSubTree&quot;</span><span class="pgcss-o">,</span>
+    <span class="pgcss-k">new</span> <span class="pgcss-n">String</span><span class="pgcss-o">[]</span> <span class="pgcss-o">{</span><span class="pgcss-s">&quot;rootId&quot;</span><span class="pgcss-o">,</span> <span class="pgcss-s">&quot;deep&quot;</span><span class="pgcss-o">,</span> <span class="pgcss-s">&quot;leavesOnly&quot;</span><span class="pgcss-o">,</span> <span class="pgcss-s">&quot;includeRoot&quot;</span><span class="pgcss-o">,</span> <span class="pgcss-s">&quot;date&quot;</span><span class="pgcss-o">},</span>
+    <span class="pgcss-k">new</span> <span class="pgcss-n">Object</span><span class="pgcss-o">[]</span> <span class="pgcss-o">{</span><span class="pgcss-n">rootId</span><span class="pgcss-o">,</span> <span class="pgcss-n">deep</span><span class="pgcss-o">,</span> <span class="pgcss-n">leavesOnly</span><span class="pgcss-o">,</span> <span class="pgcss-o">(</span><span class="pgcss-n">includeRoot</span> <span class="pgcss-o">?</span> <span class="pgcss-mi">1</span> <span class="pgcss-o">:</span> <span class="pgcss-mi">0</span><span class="pgcss-o">),</span> <span class="pgcss-n">date</span><span class="pgcss-o">});</span> <span class="pgcss-c1">// date типа java.util.Calendar</span>
+</pre></div>
+<p>Но потом до меня дошло, что мешает <code class="code">
+&#64;QueryHint(name =
+&quot;org.hibernate.callable&quot;, value = &quot;true&quot;)</code>
+, который предполагает, что это
+процедура и первый параметр забирает под её нужды.</p>
+<p>Проблема решилась банально — я убрал эту запись и всё заработало.</p>
+</div>
+                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div>    </div>
+</div>
+        </div>
+    </body>
+</html>
