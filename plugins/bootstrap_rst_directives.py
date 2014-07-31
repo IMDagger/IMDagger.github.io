@@ -24,7 +24,6 @@ from pelican import signals
 from pelican.readers import RstReader, PelicanHTMLTranslator
 
 
-
 class CleanHTMLTranslator(PelicanHTMLTranslator):
 
     """

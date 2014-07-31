@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import bs4
 import cgi
+import six
 from pelican import utils
 from pelican import signals
 from pelican import contents
@@ -8,6 +9,10 @@ from docutils import nodes, utils
 from docutils.parsers.rst import Directive, directives, states
 from docutils.parsers.rst.directives import images
 from docutils.parsers.rst.roles import set_classes
+from pygments.formatters import HtmlFormatter
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name, TextLexer
+import pelican.settings as pys
 
 class CutBlock(Directive):
 
@@ -94,7 +99,7 @@ def photo(sender):
     last_photo = None
     for article in sender.articles:
         if article.category == 'photo' and (date is None or date < article.date) \
-           and u'Я' in article.tags:
+           and hasattr(article, 'tags') and u'Я' in article.tags:
             img = [line.split('::')[1] for line in open(article.source_path) if line.startswith('.. photo-block::')][0]
             sender.settings['ME']['PHOTO']['url'] = img
             sender.settings['ME']['PHOTO']['article'] = article
@@ -169,6 +174,70 @@ class YaVideo(Directive):
             nodes.raw('', '</div>', format='html'),
         ]
 
+class SmartFormatter(HtmlFormatter):
+
+    def _format_lines(self, tokensource):
+        for t, value in HtmlFormatter._format_lines(self, tokensource):
+            if t == 1:
+                yield t, value.replace('$$strong$$', '<strong>').replace('$$/strong$$', '</strong>')
+            else:
+                yield t, value
+
+class SmartCodeBlock(Directive):
+    """ Source code syntax highlighting.
+    """
+    required_arguments = 1
+    optional_arguments = 0
+    final_argument_whitespace = True
+    option_spec = {
+        'anchorlinenos': directives.flag,
+        'classprefix': directives.unchanged,
+        'hl_lines': directives.unchanged,
+        'lineanchors': directives.unchanged,
+        'linenos': directives.unchanged,
+        'linenospecial': directives.nonnegative_int,
+        'linenostart': directives.nonnegative_int,
+        'linenostep': directives.nonnegative_int,
+        'lineseparator': directives.unchanged,
+        'linespans': directives.unchanged,
+        'nobackground': directives.flag,
+        'nowrap': directives.flag,
+        'tagsfile': directives.unchanged,
+        'tagurlformat': directives.unchanged,
+    }
+    has_content = True
+
+    def run(self):
+        self.assert_has_content()
+        try:
+            lexer = get_lexer_by_name(self.arguments[0])
+        except ValueError:
+            # no lexer found - use the text one instead of an exception
+            lexer = TextLexer()
+
+        # Fetch the defaults
+        if pys.PYGMENTS_RST_OPTIONS is not None:
+            for k, v in six.iteritems(pys.PYGMENTS_RST_OPTIONS):
+                # Locally set options overrides the defaults
+                if k not in self.options:
+                    self.options[k] = v
+
+        if ('linenos' in self.options and
+                self.options['linenos'] not in ('table', 'inline')):
+            if self.options['linenos'] == 'none':
+                self.options.pop('linenos')
+            else:
+                self.options['linenos'] = 'table'
+
+        for flag in ('nowrap', 'nobackground', 'anchorlinenos'):
+            if flag in self.options:
+                self.options[flag] = True
+
+        # noclasses should already default to False, but just in case...
+        formatter = SmartFormatter(noclasses=False, **self.options)
+        parsed = highlight('\n'.join(self.content), lexer, formatter)
+        return [nodes.raw('', parsed, format='html')]
+
 def register():
     signals.content_object_init.connect(add_images_hint)
     signals.article_generator_finalized.connect(mood)
@@ -177,3 +246,4 @@ def register():
     directives.register_directive('photo-block', PhotoBlock)
     directives.register_directive('yavideo', YaVideo)
     directives.register_directive('cut', CutBlock)
+    directives.register_directive('smart-code-block', SmartCodeBlock)
