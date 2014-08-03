@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IMDagger</title><link>/</link><description></description><atom:link href="/feeds/imdagger.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 18 Jul 2014 23:59:00 +0300</lastBuildDate><item><title>Переезд</title><link>/posts/2014/06/26/pereezd/</link><description>&lt;p&gt;Такс, придётся подумать куда перехать с Я.ру, чтобы всё перенести
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IMDagger</title><link>/</link><description></description><atom:link href="/feeds/imdagger.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 01 Aug 2014 04:30:00 +0300</lastBuildDate><item><title>Переехал</title><link>/posts/2014/08/01/blog-movement/</link><description>&lt;p&gt;Наконец-то я переехал в новое место — GitHub Pages. Теперь я использую
+статические страницы, генерацию и reStructuredText для написания своих
+постов. Все предыдущие посты я заранее сдампил (т.к. я знал, что Яндекс
+это сделают криво да ещё и медленно, поэтому я нещадно использовал их
+API ещё до того, как они привели финальный механизм в действие), а
+затем HTML-тексты я сконвертировал при помощи &lt;a class="reference external" href="http://johnmacfarlane.net/pandoc/"&gt;Pandoc&lt;/a&gt;.
+Чудесная утилита для преобразования из всего во всё. Были конечно проблемы
+с тем, как я раньше оформлял код (Я.ру не позволял это сделать по человески),
+поэтому при конвертации возникли разнообразные недочёты, которые пришлось
+устранить руками. А ещё пришлось сделать некоторое количество плагинов для
+Pelican, чтобы у меня были теги для зачёркивания текста, для оформления
+постов с фотографиями и для более продвинутой разметки кода. Также порядочно
+времени ушло на создание стиля похожего на то, что у меня было раньше, но
+на основе &lt;strong&gt;bootstrap&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Буду теперь обживаться и привыкать тут, настраивать деплой постов,
+править все проблемы полученные при конвертации во время переезда.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Fri, 01 Aug 2014 04:30:00 +0300</pubDate><guid>tag:,2014-08-01:posts/2014/08/01/blog-movement/</guid><category>переезд</category><category>блог</category><category>Я.ру</category><category>радость</category><category>жизнь</category><category>pelican</category><category>rst</category></item><item><title>Ввод специальных символов в Emacs</title><link>/posts/2014/08/01/emacs-unicode-chars/</link><description>&lt;p&gt;В Emacs, если нужно ввести специальный символ, то не обязательно
+переключать метод ввода, можно воспользоваться сочетанием &lt;kbd class="kbd"&gt;
+C-x 8 ENTER&lt;/kbd&gt;
+,
+которое предложит варианты, либо сразу ввести шорткат сочетания, например:
+&lt;kbd class="kbd"&gt;
+C-x 8 ' e&lt;/kbd&gt;
+ даёт é символ с диакритическим знаком.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Fri, 01 Aug 2014 03:57:00 +0300</pubDate><guid>tag:,2014-08-01:posts/2014/08/01/emacs-unicode-chars/</guid><category>emacs</category><category>сочетание</category><category>клавиша</category><category>символы</category><category>unicode</category></item><item><title>Переезд</title><link>/posts/2014/06/26/pereezd/</link><description>&lt;p&gt;Такс, придётся подумать куда перехать с Я.ру, чтобы всё перенести
 как нужно. Жду, когда они зальют на Я.Диск все посты в HTML, чтобы
 посмотреть, что там, хотя если они будут долго шевелиться, то мне
 придётся самому сделать краулера, который вытащит всё моё. В принципе
@@ -131,7 +155,7 @@ JIT-оптимизированный код справляется с задач
 &lt;span class="pgcss-gp"&gt;... &lt;/span&gt;    &lt;span class="pgcss-k"&gt;return&lt;/span&gt; &lt;span class="pgcss-ow"&gt;not&lt;/span&gt; &lt;span class="pgcss-nb"&gt;bool&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;is_complex&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;match&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;#39;1&amp;#39;&lt;/span&gt; &lt;span class="pgcss-o"&gt;*&lt;/span&gt; &lt;span class="pgcss-n"&gt;n&lt;/span&gt;&lt;span class="pgcss-p"&gt;))&lt;/span&gt;
 &lt;span class="pgcss-gp"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_83410896"data-toggle="collapse"&gt;Подробнее&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_83410896"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_77732112"data-toggle="collapse"&gt;Подробнее&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_77732112"&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&amp;gt;&amp;gt;&amp;gt; check_prime(1)&lt;/div&gt;
 &lt;div class="line"&gt;&lt;strong&gt;False&lt;/strong&gt;&lt;/div&gt;
@@ -257,7 +281,7 @@ filter(user_&lt;strong&gt;_&lt;/strong&gt;_client_profile), и от этого d
 Meta.override _fields&lt;/code&gt;
 :&lt;/p&gt;
 &lt;p&gt;Он &lt;a class="reference external" href="https://gist.github.com/IMDagger/9102834"&gt;доступен на GitGub&lt;/a&gt;.&lt;/p&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_74828432"data-toggle="collapse"&gt;посмотреть мой велосипед&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_74828432"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_67090576"data-toggle="collapse"&gt;посмотреть мой велосипед&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_67090576"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;forms&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django.forms&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;widgets&lt;/span&gt;
@@ -359,7 +383,7 @@ Meta.override _fields&lt;/code&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Thu, 20 Feb 2014 01:45:09 +0300</pubDate><guid>tag:,2014-02-20:posts/2014/02/20/urn:ya.ru:post/22199227/1935/</guid><category>Django</category><category>виджет</category><category>поле</category><category>перекрытие</category><category>перегрузка</category><category>modelform</category><category>форма</category><category>работа</category><category>программирование</category></item><item><title>Удаление строки</title><link>/posts/2014/02/18/udalenie-stroki/</link><description>&lt;p&gt;Функция удаление строки в Emacs без запоминания в kill ring буфер, а
 то бывает нужно в своём плагине или конфиге удалить строчку, но не
 запоминать её в буфер:&lt;/p&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_85396560"data-toggle="collapse"&gt;посмотреть код&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_85396560"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_74731280"data-toggle="collapse"&gt;посмотреть код&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_74731280"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nb"&gt;defun&lt;/span&gt; &lt;span class="pgcss-nv"&gt;delete-line&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;&amp;amp;optional&lt;/span&gt; &lt;span class="pgcss-nv"&gt;arg&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
   &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;interactive&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;P&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
   &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;flet&lt;/span&gt; &lt;span class="pgcss-p"&gt;((&lt;/span&gt;&lt;span class="pgcss-nv"&gt;kill-region&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;begin&lt;/span&gt; &lt;span class="pgcss-nv"&gt;end&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
@@ -684,7 +708,7 @@ pickle.loads&lt;/code&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&lt;strong&gt;mainauth/urls.py:&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_77533136"data-toggle="collapse"&gt;исходник сниппета urls.py&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_77533136"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_71649360"data-toggle="collapse"&gt;исходник сниппета urls.py&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_71649360"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django.conf.urls&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;patterns&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;include&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;url&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django.conf&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;settings&lt;/span&gt;
 &lt;span class="pgcss-o"&gt;...&lt;/span&gt;
@@ -704,7 +728,7 @@ pickle.loads&lt;/code&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&lt;strong&gt;mainauth/views.py:&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_66027344"data-toggle="collapse"&gt;исходник сниппета views.py&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_66027344"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_71650576"data-toggle="collapse"&gt;исходник сниппета views.py&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_71650576"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;annoying.decorators&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;render_to&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;ajax_request&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django.views.decorators.csrf&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;csrf_exempt&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;provider.oauth2&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;models&lt;/span&gt; &lt;span class="pgcss-k"&gt;as&lt;/span&gt; &lt;span class="pgcss-n"&gt;oauth_models&lt;/span&gt;
@@ -1167,7 +1191,7 @@ p&lt;sub&gt;2y&lt;/sub&gt;). Нужно вычислить его длину и 
 k&lt;sub&gt;1&lt;/sub&gt; и k&lt;sub&gt;2&lt;/sub&gt;, которые могут принимать значения k&lt;sub&gt;i&lt;/sub&gt;
 ∈ {-1, 1}. В Maxima я смог свести поиск и решение уравнения к такой
 последовательности:&lt;/p&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_83720016"data-toggle="collapse"&gt;Можно увидеть всю формулу, но не просите потом развидеть её&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_83720016"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_70953872"data-toggle="collapse"&gt;Можно увидеть всю формулу, но не просите потом развидеть её&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_70953872"&gt;
 &lt;pre class="literal-block"&gt;
 (%i1) p1: [p1x, p1y];
 (%o1)                             [p1x, p1y]
@@ -1389,7 +1413,7 @@ HTML и понажимать кнопку “Сгенерировать нову
 &lt;div class="line"&gt;Melanal&lt;/div&gt;
 &lt;div class="line"&gt;Vaviet K4&lt;/div&gt;
 &lt;/div&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_72723472"&gt;хочу ещё&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_72723472"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_73609680"&gt;хочу ещё&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_73609680"&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;Badabana K&lt;/div&gt;
 &lt;div class="line"&gt;Beboha 1I&lt;/div&gt;
@@ -2868,8 +2892,8 @@ Atom D525 с 1.8 GHz где-то не более 0.8 секунды:&lt;/p&gt;
 &lt;p&gt;При чём, если заменить &lt;strong&gt;x&lt;/strong&gt; на &lt;strong&gt;(this):x&lt;/strong&gt;, то всё отлично
 срабатывает. Kawa 1.12.1 (revision 7282) и стабильная 1.12 просто падали
 с ошибкой NullPointerException:&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_77526224"data-toggle="collapse"&gt;показать стэк-трейс&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_77526224"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_68704528"data-toggle="collapse"&gt;показать стэк-трейс&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_68704528"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-o"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;compiling&lt;/span&gt; &lt;span class="pgcss-n"&gt;test&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;scm&lt;/span&gt; &lt;span class="pgcss-n"&gt;to&lt;/span&gt; &lt;span class="pgcss-n"&gt;test&lt;/span&gt;&lt;span class="pgcss-o"&gt;)&lt;/span&gt;
 &lt;span class="pgcss-n"&gt;test&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;scm&lt;/span&gt;&lt;span class="pgcss-o"&gt;:&lt;/span&gt;&lt;span class="pgcss-mi"&gt;4&lt;/span&gt;&lt;span class="pgcss-o"&gt;:&lt;/span&gt; &lt;span class="pgcss-n"&gt;internal&lt;/span&gt; &lt;span class="pgcss-n"&gt;error&lt;/span&gt; &lt;span class="pgcss-k"&gt;while&lt;/span&gt; &lt;span class="pgcss-n"&gt;compiling&lt;/span&gt; &lt;span class="pgcss-n"&gt;test&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;scm&lt;/span&gt;
 &lt;span class="pgcss-n"&gt;java&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;lang&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;NullPointerException&lt;/span&gt;
@@ -4272,8 +4296,8 @@ Firefox его обновляет не сильно активно и иногд
 &lt;p&gt;Аааа!!.. они меня нашли и поймали, задержание прошло быстро&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Sun, 07 Aug 2011 01:56:07 +0300</pubDate><guid>tag:,2011-08-07:posts/2011/08/07/aga-popalsia/</guid><category>Я</category><category>google</category><category>slide</category></item><item><title>С IT happens</title><link>/posts/2011/08/06/s-it-happens/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://ithappens.ru/story/6275"&gt;#6275&lt;/a&gt; &lt;strong&gt;«Плачут все. Но
 настоящие сисадмины плачут тайно, потому что настоящие сисадмины не
 плачут никогда.»&lt;/strong&gt;&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_77473936"data-toggle="collapse"&gt;http://ithappens.ru/story/6275&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_77473936"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_67125328"data-toggle="collapse"&gt;http://ithappens.ru/story/6275&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_67125328"&gt;
 &lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Самое сложное в этой жизни — улыбаться, несмотря ни на что. Загадка
@@ -4425,8 +4449,8 @@ doc.parent})&lt;/code&gt;
 couchdb, mochiweb и т.д. После удаления 0.11 директорий вот такая ошибка
 при создании документа исчезла и я смог продолжить мои эксперименты с
 репликацией:&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_76682384"data-toggle="collapse"&gt;показать весь трэйс с ошибкой&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_76682384"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_67166288"data-toggle="collapse"&gt;показать весь трэйс с ошибкой&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_67166288"&gt;
 &lt;pre class="literal-block"&gt;
 [info] [&amp;lt;0.464.0&amp;gt;] 127.0.0.1 - - 'PUT' /dluser/5aeb0baa0557cc4048385a8ff3000e2b 500
 [error] [&amp;lt;0.609.0&amp;gt;] function_clause error in HTTP request
@@ -6263,8 +6287,8 @@ Red-Nelb шарниры для носков ног, оказалось очен�
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/267529/"&gt;&lt;img alt="image2" src="http://img-fotki.yandex.ru/get/4601/imdagger.8/0_41509_114635bc_L" title="image2"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Пианино без модификаторов&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/267530/"&gt;&lt;img alt="image3" src="http://img-fotki.yandex.ru/get/4508/imdagger.8/0_4150a_26dbc116_L" title="image3"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_72837328"&gt;ещё изображения&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_72837328"&gt;
+&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_65797072"&gt;ещё изображения&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_65797072"&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/267531/"&gt;&lt;img alt="image4" src="http://img-fotki.yandex.ru/get/4604/imdagger.8/0_4150b_81d7469f_L" title="image4"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/267532/"&gt;&lt;img alt="image5" src="http://img-fotki.yandex.ru/get/4603/imdagger.8/0_4150c_cbdb7b3_L" title="image5"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/267533/"&gt;&lt;img alt="image6" src="http://img-fotki.yandex.ru/get/4604/imdagger.8/0_4150d_df582009_L" title="image6"/&gt;&lt;/a&gt;&lt;/p&gt;
@@ -6576,8 +6600,8 @@ iframe, а не canvas. Вот код, который проверяет пра�
 небольшую опечатку в коде и исправил, а также написал ещё
 один &lt;a class="reference external" href="/posts/2013/06/12/generator-nazvanii-planet-vozvrashchenie/"&gt;генератор&lt;/a&gt; на
 JavaScript):&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_72293456"data-toggle="collapse"&gt;посмотреть исходный код&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_72293456"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_62325968"data-toggle="collapse"&gt;посмотреть исходный код&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_62325968"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-nn"&gt;random&lt;/span&gt;
 
 
@@ -6687,8 +6711,8 @@ JavaScript):&lt;/p&gt;
 &lt;li&gt;Plire&lt;/li&gt;
 &lt;li&gt;Jacone&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_63223312"data-toggle="collapse"&gt;хочу ещё!&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_63223312"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_61129680"data-toggle="collapse"&gt;хочу ещё!&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_61129680"&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Caesc&lt;/li&gt;
 &lt;li&gt;Pei&lt;/li&gt;
@@ -6980,8 +7004,8 @@ Google и на сайте фирмы, где я &lt;a class="reference external"
 &lt;p&gt;&lt;strong&gt;Процесс создания:&lt;/strong&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/237775/"&gt;&lt;img alt="image1" src="http://img-fotki.yandex.ru/get/4802/imdagger.7/0_3a0cf_396260b8_L" title="image1"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Тут у Няшки скелет пока управляет только усами&lt;/p&gt;
-&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_67784336"&gt;ещё чуть процесса создания под катом&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_67784336"&gt;
+&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_62325968"&gt;ещё чуть процесса создания под катом&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_62325968"&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/237776/"&gt;&lt;img alt="image2" src="http://img-fotki.yandex.ru/get/5403/imdagger.7/0_3a0d0_87eb8ae1_L" title="image2"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Няшка даже в режиме редактирования няшная :)&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/237777/"&gt;&lt;img alt="image3" src="http://img-fotki.yandex.ru/get/4801/imdagger.7/0_3a0d1_898348_L" title="image3"/&gt;&lt;/a&gt;&lt;/p&gt;
@@ -7581,8 +7605,8 @@ route add
 другой осью) на конце.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/177837/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/4209/imdagger.6/0_2b6ad_53d65419_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_72291856"&gt;А теперь по порядку как он работает:&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_72291856"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_54756432"&gt;А теперь по порядку как он работает:&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_54756432"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-c"&gt;# локальные имена быстрее многочисленных обращений к модулю&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;Rasterizer&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;makeScreenshot&lt;/span&gt;
 
@@ -7976,8 +8000,8 @@ Alt + C&lt;/kbd&gt;
 решение данной головоломки:&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/160324/"&gt;&lt;img alt="image3" src="http://img-fotki.yandex.ru/get/3910/imdagger.6/0_27244_260c538e_L" title="image3"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/160325/"&gt;&lt;img alt="image4" src="http://img-fotki.yandex.ru/get/3812/imdagger.6/0_27245_87e5dde8_L" title="image4"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_70715472"&gt;а почему так?&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_70715472"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_65784784"&gt;а почему так?&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_65784784"&gt;
 &lt;!-- --&gt;
 &lt;blockquote&gt;
 Вторая головоломка тоже простая:
@@ -8163,8 +8187,8 @@ aux-файла при помощи \‍newlabel{TotPages}{{23}{23}}).&lt;/p&gt;
 &lt;span class="pgcss-c"&gt;%% вывода ошибки, если она не найдена&lt;/span&gt;
 &lt;span class="pgcss-nb"&gt;{&lt;/span&gt;#1&lt;span class="pgcss-nb"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_70717520"data-toggle="collapse"&gt;посмотреть описание и макрос, который я написал&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_70717520"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_59616848"data-toggle="collapse"&gt;посмотреть описание и макрос, который я написал&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_59616848"&gt;
 &lt;p&gt;Тогда я решил сделать свой макрос \totpagesvalue, который в
 указанный счётчик сохранит число страниц из aux-файла. Вот такой он
 получился по аналогии:&lt;/p&gt;
@@ -8321,8 +8345,8 @@ lib приложения.&lt;/li&gt;
 объекты, затем убрал лишнее и соединил. Теперь можно сделать так:&lt;/p&gt;
 &lt;p&gt;Верхняя часть меша робота&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/144869/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/3807/imdagger.6/0_235e5_a6b4b091_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_69377232"&gt;смотреть далее&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_69377232"&gt;
+&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_62169168"&gt;смотреть далее&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_62169168"&gt;
 &lt;p class="text-center"&gt;Добавление нового пустого меша&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/144870/"&gt;&lt;img alt="image1" src="http://img-fotki.yandex.ru/get/3813/imdagger.6/0_235e6_1007e7c7_L" title="image1"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Включение режима Retopo при редактировании пустого меша&lt;/p&gt;
@@ -8337,8 +8361,8 @@ lib приложения.&lt;/li&gt;
 Главная злая героиня переварилась в торт, прыгнув с сироп, при этом сама
 это сделала :). Вот немного кадров из мультика:&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/144285/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/3814/imdagger.5/0_2339d_12177448_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_70778000"&gt;А вот и порождения психоделического разума: ...&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_70778000"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_63669136"&gt;А вот и порождения психоделического разума: ...&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_63669136"&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/144294/"&gt;&lt;img alt="image1" src="http://img-fotki.yandex.ru/get/3811/imdagger.5/0_233a6_ba7ef5ad_L" title="image1"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;А вот это полицейский в лесу увидел и сам сказал, что это всего лишь
 порождение его разума&lt;/p&gt;
@@ -9553,8 +9577,8 @@ F9&lt;/kbd&gt;
 для текста. Нужно указать в поле &lt;em&gt;Object&lt;/em&gt; имя крышки табуретки. Текст
 прижмётся плотно к ней. Но это плохо…, следует сделать небольшой зазор
 &lt;em&gt;Offset&lt;/em&gt; равный 0.04, чтобы не «проваливался».&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_65179856"&gt;ещё немного процесса под катом&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_65179856"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_63470480"&gt;ещё немного процесса под катом&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_63470480"&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/108544/"&gt;&lt;img alt="image2" src="http://img-fotki.yandex.ru/get/4013/imdagger.4/0_1a800_29eb43d9_L" title="image2"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Позиции рук придал при помощи костей, кости назначил автоматически
 при помощи &lt;strong&gt;Create From Bone Heat&lt;/strong&gt;, когда связывал меш и арматуру. Не
@@ -9814,8 +9838,8 @@ size. И это проявляется только в IE. Я конечно п�
 графическим редактором, но и игровым редактором. Переодическия дописываю
 в наше меню новые возможности, которые должны облегчить жизнь при
 создание игрового мира.&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_70602256"data-toggle="collapse"&gt;посмотреть класс&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_70602256"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_63470416"data-toggle="collapse"&gt;посмотреть класс&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_63470416"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;Blender.BGL&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;glEnable&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;glBlendFunc&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt;\
     &lt;span class="pgcss-n"&gt;glRasterPos2f&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;glDrawPixels&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;glDisable&lt;/span&gt;
@@ -10039,8 +10063,8 @@ Track to&lt;/code&gt;
 OB&lt;/code&gt;
  принимает названия
 объектов.&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_54756048"&gt;ещё блоки и управляющий скрипт&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_54756048"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_63552208"&gt;ещё блоки и управляющий скрипт&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_63552208"&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/103545/"&gt;&lt;img alt="Брики" src="http://img-fotki.yandex.ru/get/4101/imdagger.4/0_19479_da052e6a_L" title="Брики"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Важно не забыть включить свойство &lt;strong&gt;3D&lt;/strong&gt;, чтобы объект следил в
 пространстве, а не по одной оси. Название объекта вписывать не
@@ -10254,8 +10278,8 @@ SDL-1.2.11/src/cdrom/linux/SDL_syscdrom.c
 сделано при помощи трёх источников света без отбрасывания тени и
 отдельный источник только для тени.&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/100864/"&gt;&lt;img alt="Мистер ШюрупЪ в опасности" src="http://img-fotki.yandex.ru/get/4002/imdagger.4/0_18a00_9bdaf896_L" title="Мистер ШюрупЪ в опасности"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_69374672"&gt;немножко текста и картинок о процессе создания&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_69374672"&gt;
+&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_62526160"&gt;немножко текста и картинок о процессе создания&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_62526160"&gt;
 &lt;p&gt;Нарезка создавалась с использованием кривой, у которой было задано
 сечение созданное в виде полукруга. Кривая была Curve Circle, которую
 конвертировал в Path и разъединил концы.&lt;/p&gt;
@@ -10348,8 +10372,8 @@ M-x eval-region&lt;/kbd&gt;
 будет занесён тег last_gateway_to_hell. Тут вот Many создал интерфейс
 обмена предметами и код для работы с ним, я код контроллеров для
 взаимодействия интерфейса с моделями рюкзака, тела и комбослотов.&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_60787408"&gt;тоже интересно, что там я написал&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_60787408"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_54699984"&gt;тоже интересно, что там я написал&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_54699984"&gt;
 &lt;p&gt;Поправил в его сцене некоторые вещи, которые напомню ему: сделать
 относительный путь к текстуре (начинающийся со &lt;strong&gt;//&lt;/strong&gt;), переименовать
 сцену в BagScene, центрировать камеру, сместить одну кнопку (он помнит
@@ -10585,8 +10609,8 @@ result2.flv&lt;/strong&gt;&lt;/blockquote&gt;
 объекта даже при минимальной необходимости.&lt;/p&gt;
 &lt;p&gt;Для примера я создал обычную UV-сферу 32 на 32.&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/98456/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/4000/imdagger.4/0_18098_c848c4e1_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_69395536"&gt;смотреть дальше&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_69395536"&gt;
+&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_58690000"&gt;смотреть дальше&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_58690000"&gt;
 &lt;p&gt;Затем выделил левую половину сферы&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/98457/"&gt;&lt;img alt="image1" src="http://img-fotki.yandex.ru/get/4105/imdagger.4/0_18099_c16429b_L" title="image1"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Нажал кнопку Set Smooth (вкладка Editing по &lt;kbd class="kbd"&gt;
@@ -10726,8 +10750,8 @@ olet&lt;/strong&gt;».&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.
 делать сегодня ещё эсминец, крейсер и линкор, а я не успею. Так
 выглядить прямо в редакторе:&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/95081/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/4002/imdagger.3/0_17369_a42bb2b4_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_68382864"&gt;ещё картинки&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_68382864"&gt;
+&lt;p class="cut text-center"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_62484688"&gt;ещё картинки&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_62484688"&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/95082/"&gt;&lt;img alt="image1" src="http://img-fotki.yandex.ru/get/4005/imdagger.3/0_1736a_892729c0_L" title="image1"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/95083/"&gt;&lt;img alt="image2" src="http://img-fotki.yandex.ru/get/3801/imdagger.3/0_1736b_ccc3d898_L" title="image2"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/95084/"&gt;&lt;img alt="image3" src="http://img-fotki.yandex.ru/get/3806/imdagger.3/0_1736c_bb5e8441_L" title="image3"/&gt;&lt;/a&gt;&lt;/p&gt;
@@ -10899,8 +10923,8 @@ DTYPE&lt;/strong&gt;. А в родительский класс:&lt;/p&gt;
 травм. Во время бредописания не пострадал ни один человеческий мозг,
 лишь мозг автора, но он и так воспалён и болен.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_69457296"data-toggle="collapse"&gt;мой мозг сильный, ручаюсь, что выдержу&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_69457296"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_61131600"data-toggle="collapse"&gt;мой мозг сильный, ручаюсь, что выдержу&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_61131600"&gt;
 &lt;p&gt;В одной далёкой деревушке на окраине в шалаше проживал слепой
 мастер Астерсон. Он любил собирать различные устройства для людей, но
 всю жизнь хотел построить дом. А научится этому делу будучи слепым было
@@ -10973,8 +10997,8 @@ getVersionObject, который возвращал объект версии я
     &lt;span class="pgcss-k"&gt;return&lt;/span&gt; &lt;span class="pgcss-k"&gt;new&lt;/span&gt; &lt;span class="pgcss-nf"&gt;Version&lt;/span&gt;&lt;span class="pgcss-o"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;timeStamp&lt;/span&gt;&lt;span class="pgcss-o"&gt;);&lt;/span&gt;
 &lt;span class="pgcss-o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_68357072"data-toggle="collapse"&gt;но это не всё&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_68357072"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_61129488"data-toggle="collapse"&gt;но это не всё&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_61129488"&gt;
 &lt;p&gt;Потом я прокололся на том, что передал в JSP представление объект
 класса Row, который реализует интерфейс Iterable. Но выпала ошибка:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-n"&gt;javax&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;servlet&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;jsp&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;JspTagException&lt;/span&gt;&lt;span class="pgcss-o"&gt;:&lt;/span&gt; &lt;span class="pgcss-n"&gt;Don&lt;/span&gt;&lt;span class="pgcss-err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-n"&gt;t&lt;/span&gt; &lt;span class="pgcss-n"&gt;know&lt;/span&gt; &lt;span class="pgcss-n"&gt;how&lt;/span&gt; &lt;span class="pgcss-n"&gt;to&lt;/span&gt; &lt;span class="pgcss-n"&gt;iterate&lt;/span&gt; &lt;span class="pgcss-n"&gt;over&lt;/span&gt; &lt;span class="pgcss-n"&gt;supplied&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;items&amp;quot;&lt;/span&gt; &lt;span class="pgcss-n"&gt;in&lt;/span&gt; &lt;span class="pgcss-o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="pgcss-n"&gt;lt&lt;/span&gt;&lt;span class="pgcss-o"&gt;;&lt;/span&gt;&lt;span class="pgcss-n"&gt;forEach&lt;/span&gt;&lt;span class="pgcss-o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="pgcss-n"&gt;gt&lt;/span&gt;&lt;span class="pgcss-o"&gt;;&lt;/span&gt;
@@ -11365,8 +11389,8 @@ partition(&lt;strong&gt;id&lt;/strong&gt;), где id — номер разде�
 sda1, sda2, hda1, hda2 и только ntfs), а также пользуется пакетом
 ntfsprogs, который должен быть &lt;strong&gt;обязательно установлен&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_60679568"data-toggle="collapse"&gt;хочу узреть программу!&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_60679568"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_58705808"data-toggle="collapse"&gt;хочу узреть программу!&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_58705808"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-c"&gt;#! /bin/sh&lt;/span&gt;
 &lt;span class="pgcss-k"&gt;for &lt;/span&gt;id in 1 2; &lt;span class="pgcss-k"&gt;do&lt;/span&gt;
 &lt;span class="pgcss-k"&gt;   for &lt;/span&gt;hdd in hda sda; &lt;span class="pgcss-k"&gt;do&lt;/span&gt;
@@ -11427,8 +11451,8 @@ dl2ResultsHeaderItem.&lt;/p&gt;
 &lt;p&gt;Поэтому я нашёл способ реализовать задуманное через аннотацию
 NamedNativeQuery из javax.persistence, я его переделал из примера для
 хранимых процедур:&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_67599888"data-toggle="collapse"&gt;и как оно выглядит?&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_67599888"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_62087952"data-toggle="collapse"&gt;и как оно выглядит?&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_62087952"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-kn"&gt;package&lt;/span&gt; &lt;span class="pgcss-n"&gt;results&lt;/span&gt;&lt;span class="pgcss-o"&gt;;&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-nn"&gt;java.io.Serializable&lt;/span&gt;&lt;span class="pgcss-o"&gt;;&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-nn"&gt;javax.persistence.*&lt;/span&gt;&lt;span class="pgcss-o"&gt;;&lt;/span&gt;
@@ -11525,8 +11549,8 @@ Spring, то вышло, что часть настроек из конфиго�
 который описывал параметры подключения Hibernate3 к базе данных через
 драйвер &lt;strong&gt;jTDS&lt;/strong&gt;. Настройки web.xml в WEB-INF стали выглядеть таким
 образом:&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_69377232"data-toggle="collapse"&gt;а как?&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_69377232"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_57276816"data-toggle="collapse"&gt;а как?&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_57276816"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;...
 &lt;span class="pgcss-nt"&gt;&amp;lt;web-app&lt;/span&gt; &lt;span class="pgcss-na"&gt;xmlns=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;http://java.sun.com/xml/ns/javaee&amp;quot;&lt;/span&gt;
   &lt;span class="pgcss-na"&gt;xmlns:xsi=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;/span&gt;
@@ -11763,8 +11787,8 @@ results.Cell&lt;/code&gt;
  &lt;span class="pgcss-n"&gt;at&lt;/span&gt; &lt;span class="pgcss-n"&gt;org&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;apache&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;tomcat&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;util&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;net&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;JIoEndpoint&lt;/span&gt;&lt;span class="pgcss-n"&gt;$Worker&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;run&lt;/span&gt;&lt;span class="pgcss-o"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;JIoEndpoint&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;java&lt;/span&gt;&lt;span class="pgcss-o"&gt;:&lt;/span&gt;&lt;span class="pgcss-mi"&gt;454&lt;/span&gt;&lt;span class="pgcss-o"&gt;)&lt;/span&gt;
  &lt;span class="pgcss-n"&gt;at&lt;/span&gt; &lt;span class="pgcss-n"&gt;java&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;lang&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;Thread&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;run&lt;/span&gt;&lt;span class="pgcss-o"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;Thread&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;java&lt;/span&gt;&lt;span class="pgcss-o"&gt;:&lt;/span&gt;&lt;span class="pgcss-mi"&gt;619&lt;/span&gt;&lt;span class="pgcss-o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_64355344"data-toggle="collapse"&gt;а что было дальше?&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_64355344"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_59517840"data-toggle="collapse"&gt;а что было дальше?&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_59517840"&gt;
 &lt;p&gt;Класс Cell у меня очень простой и лежит как и положено в classes в
 пакете results. Единственное, что маппинг сделан не через XML, а через
 аннотации Java. Т.к. я не хотел делать через XML, то решил посмотреть,
@@ -11899,8 +11923,8 @@ Emacs. Я модифицировал существующее такое при�
 &lt;/ul&gt;
 &lt;p&gt;Вот так оно выглядит:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/80430/"&gt;&lt;img alt="Панель" src="http://img-fotki.yandex.ru/get/3707/imdagger.3/0_13a2e_da2dfe6b_L" title="Панель"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_55948624"&gt;дальше много текста и пояснений&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_55948624"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_45387856"&gt;дальше много текста и пояснений&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_45387856"&gt;
 &lt;p&gt;Процесс, отображающий иконку в трее:&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;Дублирует при помощи dup стандартный поток ввода (stdin)&lt;/li&gt;
@@ -12366,8 +12390,8 @@ fork&lt;/code&gt;
 StreamRequestHandler&lt;/code&gt;
  (есть и другие, например, для UDP), поэтому я
 его взял за основу:&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_60679824"data-toggle="collapse"&gt;читать далее&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_60679824"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_54758480"data-toggle="collapse"&gt;читать далее&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_54758480"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-o"&gt;...&lt;/span&gt;
 &lt;span class="pgcss-k"&gt;class&lt;/span&gt; &lt;span class="pgcss-nc"&gt;PasswordChanger&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;StreamRequestHandler&lt;/span&gt;&lt;span class="pgcss-p"&gt;):&lt;/span&gt;
     &lt;span class="pgcss-o"&gt;...&lt;/span&gt;
@@ -12623,8 +12647,8 @@ yield&lt;/code&gt;
 &lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; …&lt;/p&gt;
 &lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;strong&gt;yield&lt;/strong&gt; …&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_56649808"data-toggle="collapse"&gt;читать дальше&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_56649808"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_43782096"data-toggle="collapse"&gt;читать дальше&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_43782096"&gt;
 &lt;p&gt;И сижу себе мучаюсь, ищу проблему в коде (наивный, ошибка в моём
 ДНК). Мой мозг почему-то подумал, что &lt;strong&gt;yield&lt;/strong&gt; из &lt;em&gt;__rotating&lt;/em&gt;
 прервёт сопрограмму аж до уровня выше &lt;em&gt;__moving&lt;/em&gt;, т.е. то, что вызвало
@@ -12688,8 +12712,8 @@ Shift + F1&lt;/kbd&gt;
 , с опцией &lt;strong&gt;Link&lt;/strong&gt;) с
 логическими блоками.&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/68347/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/3609/imdagger.3/0_10afb_15b79523_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_60787536"&gt;далее&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_60787536"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_63470032"&gt;далее&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_63470032"&gt;
 &lt;p&gt;Допустим, нам хочется, чтобы при срабатывании контроллера на кубике
 &lt;em&gt;Cube&lt;/em&gt;, вызывался актуатор из объекта &lt;em&gt;Test&lt;/em&gt;. Выделяем оба объекта
 (голубым цветом выделен объект из библиотеки, его редактировать нельзя):&lt;/p&gt;
@@ -12808,8 +12832,8 @@ P&lt;/kbd&gt;
                              &lt;span class="pgcss-c"&gt;# состоянию&lt;/span&gt;
         &lt;span class="pgcss-n"&gt;Blender&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;game_mode&lt;/span&gt; &lt;span class="pgcss-o"&gt;=&lt;/span&gt; &lt;span class="pgcss-bp"&gt;False&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_54560848"data-toggle="collapse"&gt;читать далее&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_54560848"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_48574416"data-toggle="collapse"&gt;читать далее&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_48574416"&gt;
 &lt;p&gt;Добавляется заново событие нажатия клавиши &lt;kbd class="kbd"&gt;
 P&lt;/kbd&gt;
 ,  и вызывается
@@ -12949,8 +12973,8 @@ Blender, поэтому создал его вида &lt;em&gt;#SPACEHANDLER.VIE
 &lt;p&gt;Я сразу же вытащил из drawText первые строки по установке матрицы,
 немного подправил, т.к. можно это сделать проще, чем у &lt;strong&gt;Crouch&lt;/strong&gt;.
 Вот, что получилось:&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_65183952"&gt;посмотреть&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_65183952"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_58705744"&gt;посмотреть&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_58705744"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-c"&gt;#SPACEHANDLER.VIEW3D.DRAW&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;Blender&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;BGL&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;Window&lt;/span&gt;
 
@@ -13056,8 +13080,8 @@ Controller, поэтому нужно, чтобы после вызова пер
 новые создавались уже на базе нового контроллера и без релоадинга
 модулей. Решил проблему копированием всех аттрибутов и методов в класс
 Controller из заданного.&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_50888592"data-toggle="collapse"&gt;посмотреть код&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_50888592"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_58691472"data-toggle="collapse"&gt;посмотреть код&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_58691472"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;controller_editmode&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;ControllerEditMode&lt;/span&gt;
 
@@ -13153,8 +13177,8 @@ Controller из заданного.&lt;/p&gt;
 &lt;p&gt;И так, приступим. Пусть уже создан объект Cube на втором слое в
 Blender (можно и на другом слое, важно, чтобы не на видимом, а то объект
 не будет создаваться).&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_59743312"&gt;читать далее&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_59743312"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_53577168"&gt;читать далее&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_53577168"&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/60176/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/3508/imdagger.2/0_eb10_e122c2dc_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Теперь нужно деактивировать второй слой и активировать первый, на
 котором расположен источник света и камера. Пусть требуется создать 64
@@ -13417,8 +13441,8 @@ Ctrl + C&lt;/kbd&gt;
 применить то, что скопировал. Тогда я понял (нагуглил), что это не
 копирование в некоторый буффер, а прямое копирование параметров одного
 объекта на другой.&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_63224464"&gt;... создание&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_63224464"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_58612496"&gt;... создание&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_58612496"&gt;
 &lt;p&gt;Так выглядел объект наследник:&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/58296/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/3509/imdagger.2/0_e3b8_cf493eb5_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;А так - объект родитель:&lt;/p&gt;
@@ -13513,8 +13537,8 @@ metal и специфика звучания и ритма своя.&lt;/p&gt;
 дощечек, но расположенных по кривой). Вот, что вышло:&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/57508/"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/3513/imdagger.2/0_e0a4_778ce76f_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Моделирование и подготовка скриншотов для блога заняли 25 минут.&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_59637328"&gt;... процесс создания&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_59637328"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_54693520"&gt;... процесс создания&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_54693520"&gt;
 &lt;p&gt;Создание самого звена цепи проблем не вызвало. Из-за того, что это была
 не цель работы, то особо не старался, просто создал кривую и установил
 ей параметр &lt;strong&gt;BevOb&lt;/strong&gt; равным названию объекта типа &lt;strong&gt;Curve Circle&lt;/strong&gt;.
@@ -13774,8 +13798,8 @@ blend-` &amp;lt;&lt;a class="reference external" href="https://yadi.sk/d/lwxrbOI
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51123"&gt;&lt;img alt="image0" src="http://img-fotki.yandex.ru/get/3502/imdagger.0/0_c7b3_8c4cbf8e_L" title="image0"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Исходный файл с монетками и текстурой лежит тут
 &lt;a class="reference external" href="https://yadi.sk/d/lwxrbOIFUmdM3"&gt;(coin.blend)&lt;/a&gt;.&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_54594448"&gt;Делалось это всё так:&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_54594448"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_53576208"&gt;Делалось это всё так:&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_53576208"&gt;
 &lt;p&gt;Для начала нужно создать цилиндр с 64 вершинами&lt;/p&gt;
 &lt;p class="text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/next/users/imdagger/album/36211/view/51127"&gt;&lt;img alt="image1" src="http://img-fotki.yandex.ru/get/3500/imdagger.0/0_c7b7_34fff6e_L" title="image1"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Затем его нужно сжать вдоль оси Y&lt;/p&gt;

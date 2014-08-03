@@ -140,7 +140,7 @@
         </div> ·
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">меткам</span>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a class="tag-1" href="/tag/radost.html" class="h-link">радость</a>                    <a class="tag-2" href="/tag/sborka.html" class="h-link">сборка</a>                    <a class="tag-2" href="/tag/icfpc.html" class="h-link">icfpc</a>                    <a class="tag-1" href="/tag/ia.html" class="h-link">Я</a>                    <a class="tag-1" href="/tag/zhizn.html" class="h-link">жизнь</a>                </li>                <li>                    <a class="tag-1" href="/tag/rabota.html" class="h-link">работа</a>                    <a class="tag-2" href="/tag/bredni.html" class="h-link">бредни</a>                    <a class="tag-1" href="/tag/programmirovanie.html" class="h-link">программирование</a>                    <a class="tag-2" href="/tag/linux.html" class="h-link">linux</a>                    <a class="tag-2" href="/tag/javascript.html" class="h-link">javascript</a>                </li>                <li>                    <a class="tag-1" href="/tag/python.html" class="h-link">python</a>                    <a class="tag-2" href="/tag/emacs.html" class="h-link">emacs</a>                    <a class="tag-2" href="/tag/java.html" class="h-link">java</a>                    <a class="tag-2" href="/tag/eda.html" class="h-link">еда</a>                    <a class="tag-1" href="/tag/oshibka.html" class="h-link">ошибка</a>                </li>                <li>                    <a class="tag-1" href="/tag/blender.html" class="h-link">blender</a>                    <a class="tag-2" href="/tag/iandeks.html" class="h-link">Яндекс</a>                    <a class="tag-1" href="/tag/bge.html" class="h-link">bge</a>                    <a class="tag-1" href="/tag/nabrosok.html" class="h-link">набросок</a>                    <a class="tag-2" href="/tag/google.html" class="h-link">google</a>                </li>            </ul>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a class="tag-2" href="/tag/linux.html" class="h-link">linux</a>                    <a class="tag-2" href="/tag/iandeks.html" class="h-link">Яндекс</a>                    <a class="tag-1" href="/tag/oshibka.html" class="h-link">ошибка</a>                    <a class="tag-1" href="/tag/bge.html" class="h-link">bge</a>                    <a class="tag-2" href="/tag/eda.html" class="h-link">еда</a>                </li>                <li>                    <a class="tag-1" href="/tag/rabota.html" class="h-link">работа</a>                    <a class="tag-2" href="/tag/sborka.html" class="h-link">сборка</a>                    <a class="tag-1" href="/tag/blender.html" class="h-link">blender</a>                    <a class="tag-1" href="/tag/programmirovanie.html" class="h-link">программирование</a>                    <a class="tag-1" href="/tag/radost.html" class="h-link">радость</a>                </li>                <li>                    <a class="tag-2" href="/tag/emacs.html" class="h-link">emacs</a>                    <a class="tag-1" href="/tag/ia.html" class="h-link">Я</a>                    <a class="tag-1" href="/tag/zhizn.html" class="h-link">жизнь</a>                    <a class="tag-2" href="/tag/bredni.html" class="h-link">бредни</a>                    <a class="tag-2" href="/tag/java.html" class="h-link">java</a>                </li>                <li>                    <a class="tag-2" href="/tag/google.html" class="h-link">google</a>                    <a class="tag-1" href="/tag/nabrosok.html" class="h-link">набросок</a>                    <a class="tag-1" href="/tag/python.html" class="h-link">python</a>                    <a class="tag-2" href="/tag/javascript.html" class="h-link">javascript</a>                    <a class="tag-2" href="/tag/icfpc.html" class="h-link">icfpc</a>                </li>            </ul>
         </div> ·
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">типам</span>
@@ -160,6 +160,79 @@
 </div>
     <div class="row b-post">
 <div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="/posts/2010/05/17/normalizatsiia-id/" >
+                17 мая 2010 года, 21:07
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+<div class="row tags-row">
+    <span class="tag"><a class="h-link" href="/tag/python.html">python</a></span>,    <span class="tag"><a class="h-link" href="/tag/openid.html">openid</a></span></div>
+            <div class="post-title">
+<a class="no-link" href="/posts/2010/05/17/normalizatsiia-id/">Нормализация ID</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>&nbsp; &nbsp; Можно нормализовать и получить уникальный ID для пользователя в
+OpenID без авторизации. В пакете openid.consumer.discover присутствует
+функция discover, которая принимает URI OpenID пользователя. она
+возвратит кортеж и двух объектов: строка с display_identifier и список
+объектов класса <strong>OpenIDServiceEndpoint</strong>. В доке 2.2.4 написано, что
+оно вернёт просто один объект этого класса, но это враки :). А вот у
+объекта есть свойства local_id и claimed_id, по ним и нужно
+ориентироваться.</p>
+                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="/posts/2010/05/17/voenkomat/" >
+                17 мая 2010 года, 20:37
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+<div class="row tags-row">
+    <span class="tag"><a class="h-link" href="/tag/ia.html">Я</a></span>,    <span class="tag"><a class="h-link" href="/tag/zhizn.html">жизнь</a></span></div>
+            <div class="post-title">
+<a class="no-link" href="/posts/2010/05/17/voenkomat/">Военкомат</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>&nbsp; &nbsp; Съездил в больницу от военкомата. Меня эта бюрократия убивает.
+Получить справку на явку в больницу 17 в 10 утра, но на явку в военкомат
+с результатами в 9 утра, поэтому продлить явку на 24 число, пойти в
+больницу и получить последнее обследование на 26 число. Чёрт, снова
+нужно продлить явку в военкомат! И зачем больнице проверять у меня всё,
+если я жаловался только на сердце? Теперь тонну времени тратить на
+всякие анализы, кровь свою тратить, нервы…</p>
+                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
             <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
@@ -501,87 +574,6 @@ redirectURL, первый параметр — имя серсива, котор
 почему-то сделал пока <em>Y.Node.create(node_for_cloning.innerHTML)</em>. В
 jQuery была функция clone, я её использовал, а тут что-то я либо
 невнимательно смотрел, либо не туда смотрел.</p>
-                </div>
-            </div>
-            <div class="row comments-row">
-                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
-            </div>
-        </div>
-    </div>
-</div><div class="panel panel-text">
-    <div class="panel-heading b-post-type b-post-type-text">
-        <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
-        </b>
-написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2010/05/05/ustanovka-vysoty-v-bloke/" >
-                5 мая 2010 года, 13:25
-            </a>
-        </span>
-    </div>
-    <div class="panel-body">
-        <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
-        </div>
-        <div class="col-sm-11 b-right-col">
-<div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/javascript.html">javascript</a></span>,    <span class="tag"><a class="h-link" href="/tag/yui.html">yui</a></span>,    <span class="tag"><a class="h-link" href="/tag/css.html">css</a></span></div>
-            <div class="post-title">
-<a class="no-link" href="/posts/2010/05/05/ustanovka-vysoty-v-bloke/">Установка высоты в блоке</a>            </div>
-            <div class="row post-body">
-                <div class="b-text">
-<p>С размышлениями, как в YUI установить высоту возникло немного
-проблем. Т.к. я сначала пытался установить height, а потом только
-включал <code class="code">
-node.setStyle(&quot;display&quot;, &quot;inherit&quot;)</code>
-, т.к. у меня в стиле был
-прописал <code class="code">
-display: none;</code>
- то это и вызывало неожиданную для меня реакцию
-на установку высоты. Ещё удалось побороть противную рамочку вокруг
-ссылки на изображение (не та, которая просто вокруг изображения), а
-собственно тоненькая рамочка выделения в FF. Выключил так <code class="code">
-a:focus
-{outline: none;}</code>
-. Т.е. при выделении никаких рамочек.</p>
-                </div>
-            </div>
-            <div class="row comments-row">
-                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
-            </div>
-        </div>
-    </div>
-</div><div class="panel panel-text">
-    <div class="panel-heading b-post-type b-post-type-text">
-        <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
-        </b>
-написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2010/05/03/razmer-bloka/" >
-                3 мая 2010 года, 21:04
-            </a>
-        </span>
-    </div>
-    <div class="panel-body">
-        <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
-        </div>
-        <div class="col-sm-11 b-right-col">
-<div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/blok.html">блок</a></span>,    <span class="tag"><a class="h-link" href="/tag/razmer.html">размер</a></span>,    <span class="tag"><a class="h-link" href="/tag/konteiner.html">контейнер</a></span>,    <span class="tag"><a class="h-link" href="/tag/element.html">элемент</a></span>,    <span class="tag"><a class="h-link" href="/tag/yui.html">yui</a></span></div>
-            <div class="post-title">
-<a class="no-link" href="/posts/2010/05/03/razmer-bloka/">Размер блока</a>            </div>
-            <div class="row post-body">
-                <div class="b-text">
-<p>Что-то я затупил и порядочно времени потратил на поиск функционала,
-который мне вернёт текущую высоту указанного <em>div</em>. В библиотеке YUI
-(3-ей версии) это делается так:</p>
-<div class="highlight"><pre><span class="pgcss-kd">var</span> <span class="pgcss-nx">node</span> <span class="pgcss-o">=</span> <span class="pgcss-nx">Y</span><span class="pgcss-p">.</span><span class="pgcss-nx">one</span><span class="pgcss-p">(</span><span class="pgcss-s2">&quot;#traceback&quot;</span><span class="pgcss-p">);</span> <span class="pgcss-c1">// один узел с id равным traceback</span>
-<span class="pgcss-kd">var</span> <span class="pgcss-nx">content_height</span> <span class="pgcss-o">=</span> <span class="pgcss-nx">node</span><span class="pgcss-p">.</span><span class="pgcss-nx">get</span><span class="pgcss-p">(</span><span class="pgcss-s2">&quot;region&quot;</span><span class="pgcss-p">).</span><span class="pgcss-nx">height</span><span class="pgcss-p">;</span>
-</pre></div>
-<p>Ещё оказалось, что нужно получения родителя не функция parent(),
-как я предположил, а ancestor(). Мне стоило задуматься о слово предок
-:).</p>
                 </div>
             </div>
             <div class="row comments-row">

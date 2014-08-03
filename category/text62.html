@@ -140,7 +140,7 @@
         </div> ·
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">меткам</span>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a class="tag-1" href="/tag/radost.html" class="h-link">радость</a>                    <a class="tag-2" href="/tag/sborka.html" class="h-link">сборка</a>                    <a class="tag-2" href="/tag/icfpc.html" class="h-link">icfpc</a>                    <a class="tag-1" href="/tag/ia.html" class="h-link">Я</a>                    <a class="tag-1" href="/tag/zhizn.html" class="h-link">жизнь</a>                </li>                <li>                    <a class="tag-1" href="/tag/rabota.html" class="h-link">работа</a>                    <a class="tag-2" href="/tag/bredni.html" class="h-link">бредни</a>                    <a class="tag-1" href="/tag/programmirovanie.html" class="h-link">программирование</a>                    <a class="tag-2" href="/tag/linux.html" class="h-link">linux</a>                    <a class="tag-2" href="/tag/javascript.html" class="h-link">javascript</a>                </li>                <li>                    <a class="tag-1" href="/tag/python.html" class="h-link">python</a>                    <a class="tag-2" href="/tag/emacs.html" class="h-link">emacs</a>                    <a class="tag-2" href="/tag/java.html" class="h-link">java</a>                    <a class="tag-2" href="/tag/eda.html" class="h-link">еда</a>                    <a class="tag-1" href="/tag/oshibka.html" class="h-link">ошибка</a>                </li>                <li>                    <a class="tag-1" href="/tag/blender.html" class="h-link">blender</a>                    <a class="tag-2" href="/tag/iandeks.html" class="h-link">Яндекс</a>                    <a class="tag-1" href="/tag/bge.html" class="h-link">bge</a>                    <a class="tag-1" href="/tag/nabrosok.html" class="h-link">набросок</a>                    <a class="tag-2" href="/tag/google.html" class="h-link">google</a>                </li>            </ul>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a class="tag-2" href="/tag/linux.html" class="h-link">linux</a>                    <a class="tag-2" href="/tag/iandeks.html" class="h-link">Яндекс</a>                    <a class="tag-1" href="/tag/oshibka.html" class="h-link">ошибка</a>                    <a class="tag-1" href="/tag/bge.html" class="h-link">bge</a>                    <a class="tag-2" href="/tag/eda.html" class="h-link">еда</a>                </li>                <li>                    <a class="tag-1" href="/tag/rabota.html" class="h-link">работа</a>                    <a class="tag-2" href="/tag/sborka.html" class="h-link">сборка</a>                    <a class="tag-1" href="/tag/blender.html" class="h-link">blender</a>                    <a class="tag-1" href="/tag/programmirovanie.html" class="h-link">программирование</a>                    <a class="tag-1" href="/tag/radost.html" class="h-link">радость</a>                </li>                <li>                    <a class="tag-2" href="/tag/emacs.html" class="h-link">emacs</a>                    <a class="tag-1" href="/tag/ia.html" class="h-link">Я</a>                    <a class="tag-1" href="/tag/zhizn.html" class="h-link">жизнь</a>                    <a class="tag-2" href="/tag/bredni.html" class="h-link">бредни</a>                    <a class="tag-2" href="/tag/java.html" class="h-link">java</a>                </li>                <li>                    <a class="tag-2" href="/tag/google.html" class="h-link">google</a>                    <a class="tag-1" href="/tag/nabrosok.html" class="h-link">набросок</a>                    <a class="tag-1" href="/tag/python.html" class="h-link">python</a>                    <a class="tag-2" href="/tag/javascript.html" class="h-link">javascript</a>                    <a class="tag-2" href="/tag/icfpc.html" class="h-link">icfpc</a>                </li>            </ul>
         </div> ·
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">типам</span>
@@ -160,6 +160,149 @@
 </div>
     <div class="row b-post">
 <div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="/posts/2009/11/24/track-to/" >
+                24 ноября 2009 года, 18:01
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+<div class="row tags-row">
+    <span class="tag"><a class="h-link" href="/tag/blender.html">blender</a></span>,    <span class="tag"><a class="h-link" href="/tag/python.html">python</a></span>,    <span class="tag"><a class="h-link" href="/tag/bge.html">bge</a></span>,    <span class="tag"><a class="h-link" href="/tag/track-to.html">track to</a></span></div>
+            <div class="post-title">
+<a class="no-link" href="/posts/2009/11/24/track-to/">Track to</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>Сегодня смастерил маленький пример, как в BGE сделать, чтобы один
+объект «следил» за другими. При этом поворачивался в сторону ближайшего.
+Все объекты, за которыми нужно наблюдение являются динамическими с
+физикой. Сначала я добавил в сцену три кубика, для которых включил
+физику, из-за неё они стали падать вниз. Затем конус следящий за
+кубиками:</p>
+<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/103542/"><img alt="Конус" src="http://img-fotki.yandex.ru/get/3904/imdagger.4/0_19476_6e5def42_XL" title="Конус"/></a></p>
+<p>Кубики в логике не нуждаются, а вот для конуса добавил логические
+кирпичики. Сенсор <code class="code">
+object detect</code>
+ определяет, что объекты попали в зону
+видимости в 30.0 единиц. Python-скрипт <code class="code">
+orient</code>
+ выбирает объект, на
+который нужно ориентироваться и присваивает его в свойство <code class="code">
+object</code>
+
+актуатора <code class="code">
+track to</code>
+. Нужно только учитывать, что у актуатора вида <code class="code">
+Edit
+Object</code>
+ с <code class="code">
+Track to</code>
+ свойство object принимает именно объекты, а не
+строковые имена. Хотя в логических блоках <code class="code">
+OB</code>
+ принимает названия
+объектов.</p>
+<p class="cut"><a class="h-link reference internal" data-toggle="collapse" href="#cut_63552208">ещё блоки и управляющий скрипт</a></p>
+<div class="collapse" id="cut_63552208">
+<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/103545/"><img alt="Брики" src="http://img-fotki.yandex.ru/get/4101/imdagger.4/0_19479_da052e6a_L" title="Брики"/></a></p>
+<p>Важно не забыть включить свойство <strong>3D</strong>, чтобы объект следил в
+пространстве, а не по одной оси. Название объекта вписывать не
+обязательно, т.к. сценарий его сам выбирает. Код скрипта <em>orient</em>
+представлен ниже:</p>
+<div class="highlight"><pre><span class="pgcss-n">cc</span> <span class="pgcss-o">=</span> <span class="pgcss-n">GameLogic</span><span class="pgcss-o">.</span><span class="pgcss-n">getCurrentController</span><span class="pgcss-p">()</span>
+<span class="pgcss-n">objects_detected</span> <span class="pgcss-o">=</span> <span class="pgcss-n">cc</span><span class="pgcss-o">.</span><span class="pgcss-n">sensors</span><span class="pgcss-p">[</span><span class="pgcss-s">'object detect'</span><span class="pgcss-p">]</span>
+<span class="pgcss-n">x</span><span class="pgcss-p">,</span> <span class="pgcss-n">y</span><span class="pgcss-p">,</span> <span class="pgcss-n">z</span> <span class="pgcss-o">=</span> <span class="pgcss-n">cc</span><span class="pgcss-o">.</span><span class="pgcss-n">owner</span><span class="pgcss-o">.</span><span class="pgcss-n">position</span>
+
+<span class="pgcss-k">if</span> <span class="pgcss-n">objects_detected</span><span class="pgcss-o">.</span><span class="pgcss-n">positive</span><span class="pgcss-p">:</span>
+    <span class="pgcss-n">min_dist</span> <span class="pgcss-o">=</span> <span class="pgcss-bp">None</span>
+    <span class="pgcss-n">closest</span> <span class="pgcss-o">=</span> <span class="pgcss-bp">None</span>
+
+    <span class="pgcss-n">around</span> <span class="pgcss-o">=</span> <span class="pgcss-n">objects_detected</span><span class="pgcss-o">.</span><span class="pgcss-n">hitObjectList</span>
+    <span class="pgcss-k">for</span> <span class="pgcss-n">obj</span> <span class="pgcss-ow">in</span> <span class="pgcss-n">around</span><span class="pgcss-p">:</span>
+        <span class="pgcss-n">ox</span><span class="pgcss-p">,</span> <span class="pgcss-n">oy</span><span class="pgcss-p">,</span> <span class="pgcss-n">oz</span> <span class="pgcss-o">=</span> <span class="pgcss-n">obj</span><span class="pgcss-o">.</span><span class="pgcss-n">position</span>
+        <span class="pgcss-n">dist</span> <span class="pgcss-o">=</span> <span class="pgcss-p">((</span><span class="pgcss-n">x</span> <span class="pgcss-o">-</span> <span class="pgcss-n">ox</span><span class="pgcss-p">)</span> <span class="pgcss-o">**</span> <span class="pgcss-mi">2</span> <span class="pgcss-o">+</span> <span class="pgcss-p">(</span><span class="pgcss-n">y</span> <span class="pgcss-o">-</span> <span class="pgcss-n">oy</span><span class="pgcss-p">)</span> <span class="pgcss-o">**</span> <span class="pgcss-mi">2</span> <span class="pgcss-o">+</span> <span class="pgcss-p">(</span><span class="pgcss-n">z</span> <span class="pgcss-o">-</span> <span class="pgcss-n">oz</span><span class="pgcss-p">)</span> <span class="pgcss-o">**</span> <span class="pgcss-mi">2</span><span class="pgcss-p">)</span> <span class="pgcss-o">**</span> <span class="pgcss-mf">0.5</span>
+
+        <span class="pgcss-k">if</span> <span class="pgcss-n">min_dist</span> <span class="pgcss-ow">is</span> <span class="pgcss-ow">not</span> <span class="pgcss-bp">None</span><span class="pgcss-p">:</span>
+            <span class="pgcss-k">if</span> <span class="pgcss-n">min_dist</span> <span class="pgcss-o">&gt;</span> <span class="pgcss-n">dist</span><span class="pgcss-p">:</span>
+                <span class="pgcss-n">min_dist</span> <span class="pgcss-o">=</span> <span class="pgcss-n">dist</span>
+                <span class="pgcss-n">closest</span> <span class="pgcss-o">=</span> <span class="pgcss-n">obj</span>
+            <span class="pgcss-k">else</span><span class="pgcss-p">:</span>
+                <span class="pgcss-n">min_dist</span> <span class="pgcss-o">=</span> <span class="pgcss-n">dist</span>
+                <span class="pgcss-n">closest</span> <span class="pgcss-o">=</span> <span class="pgcss-n">obj</span>
+
+        <span class="pgcss-k">if</span> <span class="pgcss-n">closest</span><span class="pgcss-p">:</span>
+            <span class="pgcss-n">lookat</span> <span class="pgcss-o">=</span> <span class="pgcss-n">cc</span><span class="pgcss-o">.</span><span class="pgcss-n">actuators</span><span class="pgcss-p">[</span><span class="pgcss-s">'track to'</span><span class="pgcss-p">]</span>
+            <span class="pgcss-n">lookat</span><span class="pgcss-o">.</span><span class="pgcss-n">object</span> <span class="pgcss-o">=</span> <span class="pgcss-n">closest</span>
+            <span class="pgcss-n">cc</span><span class="pgcss-o">.</span><span class="pgcss-n">activate</span><span class="pgcss-p">(</span><span class="pgcss-n">lookat</span><span class="pgcss-p">)</span>
+</pre></div>
+</div>                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="/posts/2009/11/23/polochka/" >
+                23 ноября 2009 года, 18:36
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+<div class="row tags-row">
+    <span class="tag"><a class="h-link" href="/tag/proekt.html">проект</a></span>,    <span class="tag"><a class="h-link" href="/tag/bazaar.html">bazaar</a></span>,    <span class="tag"><a class="h-link" href="/tag/shelve.html">shelve</a></span></div>
+            <div class="post-title">
+<a class="no-link" href="/posts/2009/11/23/polochka/">Полочка</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>Чем больше использую bzr, тем больше начинаю употреблять его
+функционала. Потихоньку растёт список активно используемыемых мной
+команд. В этот раз я модифицировал в проекте много файлов, но все
+модификации были связаны с началом работы в
+<em>concretic.items.__init__</em>. Вышло, что я написал скрипт, который
+загрузит эти файлы, которые правил для рекурсивного импорта. Но эти две
+модификации несут разный смысл и мне нужно было сделать два коммита, а
+откат при помощи <strong>bzr revert</strong> делать не хотел (чтобы закоммитить по
+отдельности). Тогда я вспомнил про <strong>bzr shelve</strong>, что можно часть
+файлов «отложить в долгий ящик». Схема коммитов:</p>
+<div class="highlight"><pre><span class="pgcss-gp">$</span> bzr shelve __init__.py
+<span class="pgcss-go">говорит, что запомнило модификацию под именем 1</span>
+<span class="pgcss-go">описание можно задать при помощи опции -m</span>
+<span class="pgcss-gp">$</span> bzr commit
+<span class="pgcss-go">описываю суть модификации множества файлов (всех, кроме</span>
+<span class="pgcss-go">__init__.py)</span>
+<span class="pgcss-gp">$</span> bzr unshelve
+<span class="pgcss-go">применяется сохранённая модификации на последнюю ревизию</span>
+<span class="pgcss-gp">$</span> bzr commit
+<span class="pgcss-go">на этот раз описываю суть созданного скрипта</span>
+</pre></div>
+<p>Приятно находить что-то новое в достаточно долго используемом
+инструменте. От этого любви к нему только прибавляется.</p>
+                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
             <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
@@ -535,115 +678,6 @@ SDL-1.2.11/src/cdrom/linux/SDL_syscdrom.c
 <p class="text-center"><strong>Стало</strong></p>
 <p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/101095/"><img alt="image1" src="http://img-fotki.yandex.ru/get/3700/imdagger.3/0_11b2e_cbcada7b_L" title="image1"/></a></p>
 <p class="text-center">Было</p>                </div>
-            </div>
-            <div class="row comments-row">
-                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
-            </div>
-        </div>
-    </div>
-</div><div class="panel panel-text">
-    <div class="panel-heading b-post-type b-post-type-text">
-        <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
-        </b>
-написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/11/15/shurup/" >
-                15 ноября 2009 года, 15:33
-            </a>
-        </span>
-    </div>
-    <div class="panel-body">
-        <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
-        </div>
-        <div class="col-sm-11 b-right-col">
-<div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/blender.html">blender</a></span>,    <span class="tag"><a class="h-link" href="/tag/nabrosok.html">набросок</a></span></div>
-            <div class="post-title">
-<a class="no-link" href="/posts/2009/11/15/shurup/">ШурупЪ</a>            </div>
-            <div class="row post-body">
-                <div class="b-text">
-<p>Делал ночью. Страшно хотелось спать, материалы уже не было сил
-расставить, да и не умею я их хорошо и правильно создавать. Освещение
-сделано при помощи трёх источников света без отбрасывания тени и
-отдельный источник только для тени.</p>
-<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/100864/"><img alt="Мистер ШюрупЪ в опасности" src="http://img-fotki.yandex.ru/get/4002/imdagger.4/0_18a00_9bdaf896_L" title="Мистер ШюрупЪ в опасности"/></a></p>
-<p class="cut text-center"><a class="h-link reference internal" data-toggle="collapse" href="#cut_69374672">немножко текста и картинок о процессе создания</a></p>
-<div class="collapse" id="cut_69374672">
-<p>Нарезка создавалась с использованием кривой, у которой было задано
-сечение созданное в виде полукруга. Кривая была Curve Circle, которую
-конвертировал в Path и разъединил концы.</p>
-<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/100872/"><img alt="image1" src="http://img-fotki.yandex.ru/get/4002/imdagger.4/0_18a08_ecb399b_L" title="image1"/></a> <a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/100873/"><img alt="image2" src="http://img-fotki.yandex.ru/get/3900/imdagger.4/0_18a09_a457f3a6_L" title="image2"/></a></p>
-<p>Cопоставил концы получившегося объекта так, чтобы после применения
-модификатора Array петли образовали насечку. Главное не забыть включить
-в модификаторе Merge.</p>
-<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/100874/"><img alt="image3" src="http://img-fotki.yandex.ru/get/4100/imdagger.4/0_18a0a_613f45e2_L" title="image3"/></a> <a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/100875/"><img alt="image4" src="http://img-fotki.yandex.ru/get/3905/imdagger.4/0_18a0b_76cefa0c_L" title="image4"/></a></p>
-<p>Кольцо было преобразовано в меш ( <kbd class="kbd">
-Alt+C</kbd>
- ), на который действовал
-модификатор Array, пространтсов между кольцами было заполнено.</p>
-<p>После создания шурупа, была сделана решётка Lattice, которая стала
-родительской для объекта. С её помощью шуруп был деформирован.</p>
-<p>Руки и ноги созданы двольно просто, но я наконец-то начал применять
-кости для формирования поз. Отныне я рисую кисть в нормальном состоянии,
-а затем провожу риггинг. А раньше я пытался сразу поделировать часть
-тела в такой позции. Прогресс :)…</p>
-<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/100876/"><img alt="Нога" src="http://img-fotki.yandex.ru/get/4004/imdagger.4/0_18a0c_b0559a99_L" title="Нога"/></a></p>
-<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/100877/"><img alt="Рука" src="http://img-fotki.yandex.ru/get/4003/imdagger.4/0_18a0d_ccac473a_L" title="Рука"/></a></p>
-<p>Рельеф гайки образовался таким же образом, как и нарезка шурупа:
-рендеринг обратной стороны курочка  нарезки.</p>
-</div>                </div>
-            </div>
-            <div class="row comments-row">
-                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
-            </div>
-        </div>
-    </div>
-</div><div class="panel panel-text">
-    <div class="panel-heading b-post-type b-post-type-text">
-        <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
-        </b>
-написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/11/15/voprosiki/" title="изменено 14 июля 2014 года в 04:24">
-                15 ноября 2009 года, 12:45
-            </a>
-        </span>
-    </div>
-    <div class="panel-body">
-        <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
-        </div>
-        <div class="col-sm-11 b-right-col">
-<div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/diplom.html">диплом</a></span>,    <span class="tag"><a class="h-link" href="/tag/java.html">java</a></span>,    <span class="tag"><a class="h-link" href="/tag/mssql.html">mssql</a></span>,    <span class="tag"><a class="h-link" href="/tag/hibernate.html">hibernate</a></span>,    <span class="tag"><a class="h-link" href="/tag/bukvy.html">буквы</a></span>,    <span class="tag"><a class="h-link" href="/tag/kodirovka.html">кодировка</a></span></div>
-            <div class="post-title">
-<a class="no-link" href="/posts/2009/11/15/voprosiki/">Вопросики</a>            </div>
-            <div class="row post-body">
-                <div class="b-text">
-<p>Вместо букв при выводе информации из базы данных отображались
-вопросики. Приложение у меня на Java, работает с базой данных через
-Hibernate, сама база крутится на MS SQL Server. Плюс само приложение я
-пишу и отлаживаю под Linux. Но кодировка в базе данных <code class="code">
-cp1251</code>
-, отчего у
-меня возникло немного проблем, т.к. в Java кодировка по умолчанию UTF-8.
-Вместо русских букв были одни вопросики, но поразмыслив я добавил в URL
-дополнительную информацию (конфигурация происходит через Spring
-посредством IoC):</p>
-<div class="highlight"><pre><span class="pgcss-nt">&lt;bean</span> <span class="pgcss-na">id=</span><span class="pgcss-s">&quot;dataSource&quot;</span> <span class="pgcss-na">class=</span><span class="pgcss-s">&quot;org.apache.tomcat.dbcp.dbcp.BasicDataSource&quot;</span>
-    <span class="pgcss-na">destroy-method=</span><span class="pgcss-s">&quot;close&quot;</span><span class="pgcss-nt">&gt;</span>
-    ...
-    <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;url&quot;</span> <span class="pgcss-na">value=</span><span class="pgcss-s">&quot;jdbc:jtds:sqlserver://dl-test:1030/dldb;charset=cp1251&quot;</span> <span class="pgcss-nt">/&gt;</span>
-    ...
-<span class="pgcss-nt">&lt;/bean&gt;</span>
-</pre></div>
-<p>А ещё я заметил, что на JSP-странице я забыл тег с указанием
-кодировки вывода из Java, что и было ключевой проблемой:</p>
-<div class="highlight"><pre><span class="pgcss-k">&lt;%@</span> <span class="pgcss-n">page</span> <span class="pgcss-n">language</span><span class="pgcss-o">=</span><span class="pgcss-s">&quot;java&quot;</span> <span class="pgcss-n">contentType</span><span class="pgcss-o">=</span><span class="pgcss-s">&quot;text/html;charset=utf-8&quot;</span> <span class="pgcss-n">pageEncoding</span><span class="pgcss-o">=</span><span class="pgcss-s">&quot;utf-8&quot;</span> <span class="pgcss-k">%&gt;</span>
-</pre></div>
-<p>После этого русские буквы отобразились.</p>
-                </div>
             </div>
             <div class="row comments-row">
                 <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
