@@ -115,3 +115,7 @@ PYGMENTS_RST_OPTIONS = {
 }
 
 TAG_CLOUD_MAX_ITEMS = 20
+
+FILES_TO_COPY = (
+    ('extra/favicon.ico', 'favicon.ico'),
+)
