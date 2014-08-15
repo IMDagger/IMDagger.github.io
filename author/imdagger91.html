@@ -4,8 +4,11 @@
         <meta charset="utf-8" />
         <title>IMDagger - Articles by IMDagger</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="" />
-        <meta name="author" content="Alex Moiseenko" />
+        <meta name="description" content="Блог IMDagger: IT и жизнь" />
+        <meta name="keywords" content="python,lisp,scheme,racket,emacs,blender,программирование,моделирование,lua,c++,c,js,java,git,bazaar" />
+        <meta name="author" content="Alex Moiseenko (IMDagger)" />
+
+<meta name="robots" content="noindex"/>
         <!-- Open Graph -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
@@ -16,26 +19,7 @@
         <link rel="stylesheet" href="/theme/css/math.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script type="text/x-mathjax-config">
-         MathJax.Hub.Config({
-             'HTML-CSS': {
-                 linebreaks: {
-                     automatic: true,
-                     width: 'container'
-                 }
-             },
-             tex2jax: {
-                 inlineMath: [['$math$','$/math$']],
-                 displayMath: [['$$math$$','$$/math$$']],
-                 skipTags: ['pre', 'code'],
-                 preview: ['формула...'],
-                 ignoreClass: 'math-ignore'
-             }
-         });
-        </script>
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
-
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML,http://imdagger.github.io/theme/js/math.js"></script>
         <script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
         <!--[if (gte IE 6)&(lte IE 8)]>
           <script type="text/javascript" src="/theme/js/selectivizr-min.js"></script>
@@ -58,7 +42,7 @@
             </div>
             <div class="col-sm-10 all-posts">
                 <div class="title-container">
-                    <h1><b><a href="http://imdagger.github.io/" class="fn nickname">IMDagger</a></b></h1>
+                    <h1><b><a href="http://imdagger.github.io" class="fn nickname">IMDagger</a></b></h1>
                 </div>
                 <div class="title-menu">
                     <ul class="nav nav-tabs" role="tablist">
@@ -67,6 +51,7 @@
                         </li>
                         <li><a href="#">О себе</a></li>
                         <li><a href="#">Фотки</a></li>
+                        <li><a href="#">RSS-ленты</a></li>
                     </ul>
                 </div>
             </div>
@@ -94,6 +79,23 @@
 </div>
 
 <div class="row widget">
+    <div class="widget-content">
+        <div class="widget__title">
+            <div class="widget__title-link">Метрика</div>
+        </div>
+        <div class="widget__body">
+            <div class="widget-line">
+              <!-- noindex -->
+              <!-- googleoff: index -->
+              <div class="widget-entry">
+                <!-- Yandex.Metrika informer --><a href="https://metrika.yandex.ru/stat/?id=25746494&amp;from=informer" target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/25746494/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:25746494,lang:'ru'});return false}catch(e){}"/></a><!-- /Yandex.Metrika informer --><!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter25746494 = new Ya.Metrika({id:25746494, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/25746494" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                <!-- googleon: index -->
+                <!-- /noindex -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="row widget">
     <div class="widget-content">
         <div class="widget__title">
             <div class="widget__title-link">Популярное в дневнике</div>
@@ -134,26 +136,26 @@
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">месяцам</span>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                <li><a href="#" class="h-link">Нулябрь</a><li>
-                <li><a href="#" class="h-link">Первябрь</a><li>
+                <li><a rel="nofollow" href="#" class="h-link">Нулябрь</a><li>
+                <li><a rel="nofollow" href="#" class="h-link">Первябрь</a><li>
             </ul>
         </div> ·
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">меткам</span>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a class="tag-2" href="/tag/linux.html" class="h-link">linux</a>                    <a class="tag-2" href="/tag/iandeks.html" class="h-link">Яндекс</a>                    <a class="tag-1" href="/tag/oshibka.html" class="h-link">ошибка</a>                    <a class="tag-1" href="/tag/bge.html" class="h-link">bge</a>                    <a class="tag-2" href="/tag/eda.html" class="h-link">еда</a>                </li>                <li>                    <a class="tag-1" href="/tag/rabota.html" class="h-link">работа</a>                    <a class="tag-2" href="/tag/sborka.html" class="h-link">сборка</a>                    <a class="tag-1" href="/tag/blender.html" class="h-link">blender</a>                    <a class="tag-1" href="/tag/programmirovanie.html" class="h-link">программирование</a>                    <a class="tag-1" href="/tag/radost.html" class="h-link">радость</a>                </li>                <li>                    <a class="tag-2" href="/tag/emacs.html" class="h-link">emacs</a>                    <a class="tag-1" href="/tag/ia.html" class="h-link">Я</a>                    <a class="tag-1" href="/tag/zhizn.html" class="h-link">жизнь</a>                    <a class="tag-2" href="/tag/bredni.html" class="h-link">бредни</a>                    <a class="tag-2" href="/tag/java.html" class="h-link">java</a>                </li>                <li>                    <a class="tag-2" href="/tag/google.html" class="h-link">google</a>                    <a class="tag-1" href="/tag/nabrosok.html" class="h-link">набросок</a>                    <a class="tag-1" href="/tag/python.html" class="h-link">python</a>                    <a class="tag-2" href="/tag/javascript.html" class="h-link">javascript</a>                    <a class="tag-2" href="/tag/icfpc.html" class="h-link">icfpc</a>                </li>            </ul>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/sborka.html" class="h-link">сборка</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/iandeks.html" class="h-link">Яндекс</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/programmirovanie.html" class="h-link">программирование</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/emacs.html" class="h-link">emacs</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/eda.html" class="h-link">еда</a>                </li>                <li>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/python.html" class="h-link">python</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/zhizn.html" class="h-link">жизнь</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/oshibka.html" class="h-link">ошибка</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/nabrosok.html" class="h-link">набросок</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/bge.html" class="h-link">bge</a>                </li>                <li>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/radost.html" class="h-link">радость</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/java.html" class="h-link">java</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/linux.html" class="h-link">linux</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/rabota.html" class="h-link">работа</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/blender.html" class="h-link">blender</a>                </li>                <li>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/icfpc.html" class="h-link">icfpc</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/ia.html" class="h-link">Я</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/bredni.html" class="h-link">бредни</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/google.html" class="h-link">google</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/javascript.html" class="h-link">javascript</a>                </li>            </ul>
         </div> ·
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">типам</span>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                <li><a href="/category/description.html" class="h-link">обращение</a><li>
-                <li><a href="/category/friend.html" class="h-link"></a><li>
-                <li><a href="/category/join.html" class="h-link"></a><li>
-                <li><a href="/category/link.html" class="h-link">ссылки</a><li>
-                <li><a href="/category/mood.html" class="h-link">настроение</a><li>
-                <li><a href="/category/photo.html" class="h-link">фото</a><li>
-                <li><a href="/category/text.html" class="h-link">текст</a><li>
-                <li><a href="/category/video.html" class="h-link">видео</a><li>
-                <li><a href="/category/wishlist.html" class="h-link"></a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/description.html" class="h-link">обращение</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/friend.html" class="h-link"></a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/join.html" class="h-link"></a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/link.html" class="h-link">ссылки</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/mood.html" class="h-link">настроение</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/photo.html" class="h-link">фото</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/text.html" class="h-link">текст</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/video.html" class="h-link">видео</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/wishlist.html" class="h-link"></a><li>
             </ul>
         </div>
     </span>
@@ -162,23 +164,147 @@
 <div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/11/06/kosti/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/11/07/nebolshoi-proval/" >
+                7 ноября 2009 года, 21:42
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+            <noindex>
+<div class="row tags-row">
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/diplom.html">диплом</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/javascript.html">javascript</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/oblom.html">облом</a></span></div>
+            </noindex>
+            <div class="post-title">
+<a class="no-link" href="http://imdagger.github.io/posts/2009/11/07/nebolshoi-proval/">Небольшой провал</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>&nbsp; &nbsp; Функция expander, которую я написал утром, облегчила участь
+веб-серверу. Отныне ему не нужно было передавать несколько сотен
+килобайт «пустоты». Но возникла проблема: мой скрипт работает
+<strong>ооооочень</strong> медленно. Пойду домой, попробую его перестроить и
+ускорить.</p>
+                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/11/07/razrezhennaia-tablitsa/" >
+                7 ноября 2009 года, 12:54
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+            <noindex>
+<div class="row tags-row">
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/diplom.html">диплом</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/javascript.html">javascript</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/tablitsa.html">таблица</a></span></div>
+            </noindex>
+            <div class="post-title">
+<a class="no-link" href="http://imdagger.github.io/posts/2009/11/07/razrezhennaia-tablitsa/">Разреженная таблица</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>Возможно это какой-то велосипед, но я ничего подходящего в интернете
+не нашёл. У меня есть очень большая таблица, но она в некоторых местах
+сильно разрежена. Из-за этого веб-сервер передаёт множество
+<code class="code">
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;</code>
+ для того, чтобы ячейки были пустыми. Я решил, что можно
+вместо целого ряда таких пустых ячеек передавать <code class="code">
+&lt;td size="число" /&gt;</code>
+, а
+затем мой JavaScript на клиентской стороне расширит их до группы
+«настоящих ячеек». Черновой скрипт, который ищет в DOM узел с
+идентификатором <strong>results</strong>, таблица которую нужно перестроить:</p>
+<div class="highlight"><pre><span class="pgcss-kd">function</span> <span class="pgcss-nx">expander</span><span class="pgcss-p">()</span> <span class="pgcss-p">{</span>
+    <span class="pgcss-kd">var</span> <span class="pgcss-nx">table</span> <span class="pgcss-o">=</span> <span class="pgcss-nb">document</span><span class="pgcss-p">.</span><span class="pgcss-nx">getElementById</span><span class="pgcss-p">(</span><span class="pgcss-s2">"results"</span><span class="pgcss-p">);</span>
+
+    <span class="pgcss-kd">var</span> <span class="pgcss-nx">rows</span> <span class="pgcss-o">=</span> <span class="pgcss-nx">table</span><span class="pgcss-p">.</span><span class="pgcss-nx">rows</span><span class="pgcss-p">;</span>
+
+    <span class="pgcss-k">for</span> <span class="pgcss-p">(</span><span class="pgcss-kd">var</span> <span class="pgcss-nx">i</span> <span class="pgcss-o">=</span> <span class="pgcss-mi">0</span><span class="pgcss-p">;</span> <span class="pgcss-nx">i</span> <span class="pgcss-o">&lt;</span> <span class="pgcss-nx">rows</span><span class="pgcss-p">.</span><span class="pgcss-nx">length</span><span class="pgcss-p">;</span> <span class="pgcss-nx">i</span><span class="pgcss-o">++</span><span class="pgcss-p">)</span> <span class="pgcss-p">{</span>
+        <span class="pgcss-kd">var</span> <span class="pgcss-nx">row</span> <span class="pgcss-o">=</span> <span class="pgcss-nx">rows</span><span class="pgcss-p">[</span><span class="pgcss-nx">i</span><span class="pgcss-p">];</span>
+        <span class="pgcss-kd">var</span> <span class="pgcss-nx">cells</span> <span class="pgcss-o">=</span> <span class="pgcss-nx">row</span><span class="pgcss-p">.</span><span class="pgcss-nx">cells</span><span class="pgcss-p">;</span>
+
+        <span class="pgcss-k">for</span> <span class="pgcss-p">(</span><span class="pgcss-kd">var</span> <span class="pgcss-nx">j</span> <span class="pgcss-o">=</span> <span class="pgcss-mi">0</span><span class="pgcss-p">;</span> <span class="pgcss-nx">j</span> <span class="pgcss-o">&lt;</span> <span class="pgcss-nx">cells</span><span class="pgcss-p">.</span><span class="pgcss-nx">length</span><span class="pgcss-p">;</span> <span class="pgcss-nx">j</span><span class="pgcss-o">++</span><span class="pgcss-p">)</span> <span class="pgcss-p">{</span>
+            <span class="pgcss-kd">var</span> <span class="pgcss-nx">cell</span> <span class="pgcss-o">=</span> <span class="pgcss-nx">cells</span><span class="pgcss-p">[</span><span class="pgcss-nx">j</span><span class="pgcss-p">];</span>
+            <span class="pgcss-kd">var</span> <span class="pgcss-nx">size</span> <span class="pgcss-o">=</span> <span class="pgcss-nx">cell</span><span class="pgcss-p">.</span><span class="pgcss-nx">getAttribute</span><span class="pgcss-p">(</span><span class="pgcss-s2">"size"</span><span class="pgcss-p">);</span>
+
+            <span class="pgcss-k">if</span> <span class="pgcss-p">(</span><span class="pgcss-nx">size</span><span class="pgcss-p">)</span> <span class="pgcss-p">{</span>
+                <span class="pgcss-kd">var</span> <span class="pgcss-nx">mustAdd</span> <span class="pgcss-o">=</span> <span class="pgcss-nb">parseInt</span><span class="pgcss-p">(</span><span class="pgcss-nx">size</span><span class="pgcss-p">);</span>
+
+                <span class="pgcss-k">while</span> <span class="pgcss-p">(</span><span class="pgcss-nx">mustAdd</span> <span class="pgcss-o">&gt;</span> <span class="pgcss-mi">0</span><span class="pgcss-p">)</span> <span class="pgcss-p">{</span>
+                    <span class="pgcss-kd">var</span> <span class="pgcss-nx">emptyCell</span> <span class="pgcss-o">=</span> <span class="pgcss-nb">document</span><span class="pgcss-p">.</span><span class="pgcss-nx">createElement</span><span class="pgcss-p">(</span><span class="pgcss-s2">"td"</span><span class="pgcss-p">);</span>
+                    <span class="pgcss-nx">emptyCell</span><span class="pgcss-p">.</span><span class="pgcss-nx">innerHTML</span> <span class="pgcss-o">=</span> <span class="pgcss-s2">"&amp;nbsp;"</span><span class="pgcss-p">;</span>
+
+                    <span class="pgcss-nx">row</span><span class="pgcss-p">.</span><span class="pgcss-nx">insertBefore</span><span class="pgcss-p">(</span><span class="pgcss-nx">emptyCell</span><span class="pgcss-p">,</span> <span class="pgcss-nx">cell</span><span class="pgcss-p">);</span>
+                    <span class="pgcss-nx">mustAdd</span><span class="pgcss-o">--</span><span class="pgcss-p">;</span>
+                <span class="pgcss-p">}</span>
+
+                <span class="pgcss-nx">row</span><span class="pgcss-p">.</span><span class="pgcss-nx">removeChild</span><span class="pgcss-p">(</span><span class="pgcss-nx">cell</span><span class="pgcss-p">);</span>
+            <span class="pgcss-p">}</span>
+        <span class="pgcss-p">}</span>
+    <span class="pgcss-p">}</span>
+<span class="pgcss-p">}</span>
+</pre></div>
+<p>И простейшая таблица в 6 колонок и 2 ряда:</p>
+<div class="highlight"><pre><span class="pgcss-nt">&lt;body</span> <span class="pgcss-na">onload=</span><span class="pgcss-s">"javascript:expander();"</span><span class="pgcss-nt">&gt;</span>
+<span class="pgcss-nt">&lt;table</span> <span class="pgcss-na">id=</span><span class="pgcss-s">"results"</span> <span class="pgcss-na">border=</span><span class="pgcss-s">"1"</span><span class="pgcss-nt">&gt;</span>
+<span class="pgcss-nt">&lt;tr&gt;&lt;td&gt;</span>Text<span class="pgcss-nt">&lt;/td&gt;&lt;td</span> <span class="pgcss-na">size=</span><span class="pgcss-s">"4"</span><span class="pgcss-nt">/&gt;&lt;td&gt;</span>Text2<span class="pgcss-nt">&lt;/td&gt;&lt;/tr&gt;</span>
+<span class="pgcss-nt">&lt;tr&gt;&lt;td</span> <span class="pgcss-na">size=</span><span class="pgcss-s">"2"</span><span class="pgcss-nt">/&gt;&lt;td&gt;</span>Text<span class="pgcss-nt">&lt;/td&gt;&lt;td&gt;</span>Text2<span class="pgcss-nt">&lt;/td&gt;&lt;td</span> <span class="pgcss-na">size=</span><span class="pgcss-s">"2"</span><span class="pgcss-nt">/&gt;&lt;/tr&gt;</span>
+<span class="pgcss-nt">&lt;/table&gt;</span>
+<span class="pgcss-nt">&lt;/body&gt;</span>
+</pre></div>
+<p>Была расширена при помощи вставки insertBefore пустых ячеек до
+ячейки <code class="code">
+&lt;td size="число" /&gt;</code>
+, а затем удаления «расширяемой» ячейки из
+ряда.</p>
+<p class="text-center"><img alt="image0" src="http://img-fotki.yandex.ru/get/3903/imdagger.4/0_181b4_fb5c8ab2_L" title="image0"/></p>                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/11/06/kosti/" >
                 6 ноября 2009 года, 20:58
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/blender.html">blender</a></span>,    <span class="tag"><a class="h-link" href="/tag/skrinkasting.html">скринкастинг</a></span>,    <span class="tag"><a class="h-link" href="/tag/bge.html">bge</a></span>,    <span class="tag"><a class="h-link" href="/tag/kost.html">кость</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/blender.html">blender</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/skrinkasting.html">скринкастинг</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/bge.html">bge</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/kost.html">кость</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/11/06/kosti/">Кости</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/11/06/kosti/">Кости</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Из-за немощности моего рабочего компа (в остновном я его использую,
@@ -220,23 +346,25 @@ result2.flv</strong></blockquote>
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/11/05/sglazhivanie/" title="изменено 14 июля 2014 года в 04:49">
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/11/05/sglazhivanie/" title="изменено 14 июля 2014 года в 04:49">
                 5 ноября 2009 года, 19:19
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/blender.html">blender</a></span>,    <span class="tag"><a class="h-link" href="/tag/bge.html">bge</a></span>,    <span class="tag"><a class="h-link" href="/tag/sglazhivanie.html">сглаживание</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/blender.html">blender</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/bge.html">bge</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/sglazhivanie.html">сглаживание</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/11/05/sglazhivanie/">Сглаживание</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/11/05/sglazhivanie/">Сглаживание</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Только обратил внимание на кнопку <strong>Set Smooth</strong> в Blender.
@@ -247,8 +375,8 @@ result2.flv</strong></blockquote>
 объекта даже при минимальной необходимости.</p>
 <p>Для примера я создал обычную UV-сферу 32 на 32.</p>
 <p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/98456/"><img alt="image0" src="http://img-fotki.yandex.ru/get/4000/imdagger.4/0_18098_c848c4e1_L" title="image0"/></a></p>
-<p class="cut text-center"><a class="h-link reference internal" data-toggle="collapse" href="#cut_58690000">смотреть дальше</a></p>
-<div class="collapse" id="cut_58690000">
+<p class="cut text-center"><a class="h-link reference internal" data-toggle="collapse" href="#cut_59619536">смотреть дальше</a></p>
+<div class="collapse" id="cut_59619536">
 <p>Затем выделил левую половину сферы</p>
 <p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/98457/"><img alt="image1" src="http://img-fotki.yandex.ru/get/4105/imdagger.4/0_18099_c16429b_L" title="image1"/></a></p>
 <p>Нажал кнопку Set Smooth (вкладка Editing по <kbd class="kbd">
@@ -286,23 +414,25 @@ Smooth</a></p>
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/11/04/skrinkasty/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/11/04/skrinkasty/" >
                 4 ноября 2009 года, 21:26
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/skrinkasting.html">скринкастинг</a></span>,    <span class="tag"><a class="h-link" href="/tag/ffmpeg.html">ffmpeg</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/skrinkasting.html">скринкастинг</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/ffmpeg.html">ffmpeg</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/11/04/skrinkasty/">Скринкасты</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/11/04/skrinkasty/">Скринкасты</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Скачал <strong>ffmpeg</strong> попробовать. Сейчас сижу компилирую его с опцией
@@ -326,23 +456,25 @@ Resistance, ну и интересно разнообразить формат �
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/11/03/sfera/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/11/03/sfera/" >
                 3 ноября 2009 года, 19:38
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/python.html">python</a></span>,    <span class="tag"><a class="h-link" href="/tag/zadacha.html">задача</a></span>,    <span class="tag"><a class="h-link" href="/tag/spoj.html">spoj</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/python.html">python</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/zadacha.html">задача</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/spoj.html">spoj</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/11/03/sfera/">Сфера</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/11/03/sfera/">Сфера</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Решил посетить SPOJ (Sphere Online Judge), давно я там не решал.
@@ -382,23 +514,25 @@ Python, больше ужать не выходит:</p>
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/11/02/nashiol-starye-skriny/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/11/02/nashiol-starye-skriny/" >
                 2 ноября 2009 года, 16:49
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/ia.html">Я</a></span>,    <span class="tag"><a class="h-link" href="/tag/vospominanie.html">воспоминание</a></span>,    <span class="tag"><a class="h-link" href="/tag/igral.html">играл</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/ia.html">Я</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/vospominanie.html">воспоминание</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/igral.html">играл</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/11/02/nashiol-starye-skriny/">Нашёл старые скрины</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/11/02/nashiol-starye-skriny/">Нашёл старые скрины</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Нашёл и смахнул скупую слезу, т.к. вспомнил, что как-то в 2005 году
@@ -425,23 +559,25 @@ Python, больше ужать не выходит:</p>
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/10/31/chto-to-ne-vykhodit/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/10/31/chto-to-ne-vykhodit/" >
                 31 октября 2009 года, 20:50
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/blender.html">blender</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/blender.html">blender</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/10/31/chto-to-ne-vykhodit/">Что-то не выходит</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/10/31/chto-to-ne-vykhodit/">Что-то не выходит</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>&nbsp; Всего лишь три кости в этом мистере-резисторе, а не получается
@@ -457,23 +593,25 @@ Python, больше ужать не выходит:</p>
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/10/30/resistance/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/10/30/resistance/" >
                 30 октября 2009 года, 21:33
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/blender.html">blender</a></span>,    <span class="tag"><a class="h-link" href="/tag/bge.html">bge</a></span>,    <span class="tag"><a class="h-link" href="/tag/3d.html">3d</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/blender.html">blender</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/bge.html">bge</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/3d.html">3d</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/10/30/resistance/">Resistance</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/10/30/resistance/">Resistance</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Хочу сделать в BGE небольшую программку, где игрок будет управлять
@@ -510,108 +648,30 @@ Python, больше ужать не выходит:</p>
 </div><div class="panel panel-photo">
     <div class="panel-heading b-post-type b-post-type-photo">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 вывесил фотки        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/10/30/glotok-neba-nad-domom/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/10/30/glotok-neba-nad-domom/" >
                 30 октября 2009 года, 13:15
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/nebo.html">небо</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/nebo.html">небо</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="posts/2009/10/30/glotok-neba-nad-domom/">Глоток неба над домом</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/10/30/glotok-neba-nad-domom/">Глоток неба над домом</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p class="row photo-item"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/96415"><img alt="Глоток неба над домом" src="http://img-fotki.yandex.ru/get/4001/imdagger.3/0_1789f_2c6dee92_L" title="Глоток неба над домом"/></a></p>
 <p class="row photo-item"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/96419"><img alt="Глоток неба над домом" src="http://img-fotki.yandex.ru/get/3904/imdagger.3/0_178a3_6834031c_L" title="Глоток неба над домом"/></a></p>
 <p>Делать было нечего, сидел кушал батончики “Смак” (в шоколадной глазури).</p>                </div>
-            </div>
-            <div class="row comments-row">
-                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
-            </div>
-        </div>
-    </div>
-</div><div class="panel panel-text">
-    <div class="panel-heading b-post-type b-post-type-text">
-        <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
-        </b>
-написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/10/28/kursovaia/" >
-                28 октября 2009 года, 19:52
-            </a>
-        </span>
-    </div>
-    <div class="panel-body">
-        <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
-        </div>
-        <div class="col-sm-11 b-right-col">
-<div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/kursovaia.html">курсовая</a></span>,    <span class="tag"><a class="h-link" href="/tag/rabota.html">работа</a></span>,    <span class="tag"><a class="h-link" href="/tag/darom.html">даром</a></span></div>
-            <div class="post-title">
-<a class="no-link" href="/posts/2009/10/28/kursovaia/">Курсовая</a>            </div>
-            <div class="row post-body">
-                <div class="b-text">
-<p>Доделал курсовую, которую писал человеку (ужасно не выспался за эти
-пару дней). Жаль конечно, что пришлось собрать текст в формат doc, т.к.
-мне не нужны переработки :). А если преподаватель заподозрит, что тот
-человек вообще всё не сам делал, он же начнёт методично искать ошибки в
-работе. Работа заключается в создании игрового приложения «Морской бой»
-в среде Delphi (да-да! я чуть вспомнил, как на нём программировать x-D).
-Я для написания текста несколько глав, чтобы ускорить процесс
-скопипастил одолжил из других публичных и бесплатных курсовых работ,
-поэтому тоже выкладываю то, что получилось. Вдруг кто-нибудь,
-когда-нибудь сюда попадёт из поисковика и найдёт эту работу, а сам не
-успевает уже написать курсовую, то пусть берёт эту даром :).</p>
-<p>Вот <a class="reference external" href="https://yadi.sk/d/K33tnpf_UmdNU">архив</a>,
-там и программа и текст с описанием (исходник вставлен не полность, хоть
-требования к оформлению указывали, что нужно, но мне тогда придётся
-потратится на 100 листов бумаги против 30).</p>
-<p>P.S. Не советую пробовать прочитать текст курсовой работы или
-смотреть прогу тем, кто разбирается в программировании, т.к. такие и
-сами могут с лёгкостью написать такую работу. Искусственный интеллект
-написан за 1 час — он мутный, но работает, даже пару раз выиграл.</p>
-<p class="text-center"><a class="reference external" href="https://yadi.sk/d/K33tnpf_UmdNU"><img alt="image0" src="http://img-fotki.yandex.ru/get/4001/imdagger.3/0_17614_1dfcf752_L" title="image0"/></a></p>
-<p>P.S.S. Чтобы сделать эту курсовую пришлось найти компьютер у
-человека, у которого есть винда :(. Но что же поделаешь: «<strong>Ales non
-olet</strong>».</p>                </div>
-            </div>
-            <div class="row comments-row">
-                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
-            </div>
-        </div>
-    </div>
-</div><div class="panel panel-mood">
-    <div class="panel-heading b-post-type b-post-type-mood">
-        <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
-        </b>
-поделился настроением        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/10/28/urn:ya.ru:post/22199227/369/" >
-                28 октября 2009 года, 16:15
-            </a>
-        </span>
-    </div>
-    <div class="panel-body">
-        <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
-        </div>
-        <div class="col-sm-11 b-right-col">
-            <div class="post-title">
-            </div>
-            <div class="row post-body">
-                <div class="b-text">
-<p>Деньги-деньги, дребеденьги, Позабыв покой и лень. Делай деньги, делай
-деньги, А остальное всё дребедень, А остальное всё дребедебень.</p>
-                </div>
             </div>
             <div class="row comments-row">
                 <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
@@ -627,5 +687,5 @@ olet</strong>».</p>                </div>
     </div>
 </div>
         </div>
-<!-- Yandex.Metrika informer --><a href="https://metrika.yandex.ru/stat/?id=25746494&amp;from=informer" target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/25746494/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:25746494,lang:'ru'});return false}catch(e){}"/></a><!-- /Yandex.Metrika informer --><!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter25746494 = new Ya.Metrika({id:25746494, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/25746494" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->    </body>
+    </body>
 </html>

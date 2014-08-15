@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/link.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-05-05T19:15:40+03:00</updated><entry><title>Транспорт в Гомеле</title><link href="http://imdagger.github.io/posts/2014/05/05/transport-v-gomele/" rel="alternate"></link><updated>2014-05-05T19:15:40+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-05-05:posts/2014/05/05/transport-v-gomele/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; В браузере я привык использовать gomeltrans.net, но на смартфоне я
+редко включаю 3G-интернет. А вот для мобильной версии нашёлся GoTrans,
+удобное приложение, может работать оффлайн, сайт у них тоже приятный;
+правда привычкам изменять сложно и с компьютера я буду как и раньше
+открывать любимый сайт. Зато в мобильном +1 приложение.&lt;/p&gt;
+</summary><category term="мобильный"></category><category term="транспорт"></category><category term="Гомель"></category><category term="приложение"></category></entry><entry><title>Быстрая аппроксимация расстояния</title><link href="http://imdagger.github.io/posts/2014/02/27/bystraia-approksimatsiia-rasstoianiia/" rel="alternate"></link><updated>2014-02-27T01:24:14+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-02-27:posts/2014/02/27/bystraia-approksimatsiia-rasstoianiia/</id><summary type="html">&lt;p&gt;Улучшенное Манхэттенское расстояние.&lt;/p&gt;
+</summary><category term="расстояние"></category><category term="быстрый"></category><category term="функция"></category><category term="аппроксимация"></category></entry><entry><title>Удаление строки</title><link href="http://imdagger.github.io/posts/2014/02/18/udalenie-stroki/" rel="alternate"></link><updated>2014-02-18T03:28:08+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-02-18:posts/2014/02/18/udalenie-stroki/</id><summary type="html">&lt;p&gt;Функция удаление строки в Emacs без запоминания в kill ring буфер, а
+то бывает нужно в своём плагине или конфиге удалить строчку, но не
+запоминать её в буфер:&lt;/p&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_73468880"data-toggle="collapse"&gt;посмотреть код&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_73468880"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nb"&gt;defun&lt;/span&gt; &lt;span class="pgcss-nv"&gt;delete-line&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;&amp;amp;optional&lt;/span&gt; &lt;span class="pgcss-nv"&gt;arg&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+  &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;interactive&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;P&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+  &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;flet&lt;/span&gt; &lt;span class="pgcss-p"&gt;((&lt;/span&gt;&lt;span class="pgcss-nv"&gt;kill-region&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;begin&lt;/span&gt; &lt;span class="pgcss-nv"&gt;end&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+                      &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;delete-region&lt;/span&gt; &lt;span class="pgcss-nv"&gt;begin&lt;/span&gt; &lt;span class="pgcss-nv"&gt;end&lt;/span&gt;&lt;span class="pgcss-p"&gt;)))&lt;/span&gt;
+  &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;kill-line&lt;/span&gt; &lt;span class="pgcss-nv"&gt;arg&lt;/span&gt;&lt;span class="pgcss-p"&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="запоминание"></category><category term="функция"></category><category term="строка"></category><category term="emacs"></category><category term="ring"></category><category term="удаление"></category></entry><entry><title>Ваня и Тотошка</title><link href="http://imdagger.github.io/posts/2014/02/11/vania-i-totoshka/" rel="alternate"></link><updated>2014-02-11T03:32:56+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-02-11:posts/2014/02/11/vania-i-totoshka/</id><summary type="html">&lt;p&gt;Посмотрел, в целом понравилось, только бездомных со свалки стоило было
+как-то получше загримировать, видно, что не спитые и кожа достаточно
+чистая.&lt;/p&gt;
+</summary><category term="драма"></category><category term="фильм"></category><category term="жизнь"></category><category term="артхаус"></category></entry><entry><title>Sentry для Scrapy</title><link href="http://imdagger.github.io/posts/2014/02/10/sentry-dlia-scrapy/" rel="alternate"></link><updated>2014-02-10T23:00:30+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-02-10:posts/2014/02/10/sentry-dlia-scrapy/</id><summary type="html">&lt;p&gt;О, есть уже готовая связка для пауков на Scrapy с отправкой логов в
+Sentry.&lt;/p&gt;
+</summary><category term="sentry"></category><category term="логгирование"></category><category term="scrapy"></category></entry><entry><title>Список продуктов питания</title><link href="http://imdagger.github.io/posts/2014/02/09/spisok-produktov-pitaniia/" rel="alternate"></link><updated>2014-02-09T03:11:48+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-02-09:posts/2014/02/09/spisok-produktov-pitaniia/</id><summary type="html">&lt;p&gt;Ого, огромный список продуктов, где к каждому можно посмотреть,
+витамины, липиды, углеводы, воду, клетчатку и др.&lt;/p&gt;
+</summary><category term="база"></category><category term="продукты"></category><category term="информация"></category><category term="питание"></category><category term="список"></category></entry><entry><title>Пропорциональная сетка в gnuplot</title><link href="http://imdagger.github.io/posts/2014/02/06/proportsionalnaia-setka-v-gnuplot/" rel="alternate"></link><updated>2014-02-06T11:36:33+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-02-06:posts/2014/02/06/proportsionalnaia-setka-v-gnuplot/</id><summary type="html">&lt;p&gt;Всё время не доходили руки поискать, как заставить gnuplot отображать
+квадратные ячейки в сетке при построении графиков, чтобы всё было
+пропорционально.
+set size square и вуаля.&lt;/p&gt;
+</summary><category term="пропорция"></category><category term="построение"></category><category term="gnuplot"></category><category term="график"></category></entry><entry><title></title><link href="http://imdagger.github.io/posts/2014/01/29/urn:ya.ru:post/22199227/1923/" rel="alternate"></link><updated>2014-01-29T14:34:47+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-01-29:posts/2014/01/29/urn:ya.ru:post/22199227/1923/</id><summary type="html">&lt;p&gt;Вот так и доверяй «безопасности», которую «обеспечивают» PayPal и
+GoDaddy для своих клиентов.&lt;/p&gt;
+</summary><category term="godaddy"></category><category term="paypal"></category><category term="безопасность"></category></entry><entry><title>Проверка SSL-отпечатка</title><link href="http://imdagger.github.io/posts/2014/01/11/proverka-ssl-otpechatka/" rel="alternate"></link><updated>2014-01-11T18:02:57+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-01-11:posts/2014/01/11/proverka-ssl-otpechatka/</id><summary type="html">&lt;p&gt;Что-то сертификат на xmpp.ya.ru:5223 поменялся, вот решил перепроверить
+его fingerprint.&lt;/p&gt;
+</summary><category term="fingerprint"></category><category term="сертификат"></category><category term="проверка"></category><category term="отпечаток"></category><category term="ssl"></category></entry><entry><title>Передвижка домов в Москве</title><link href="http://imdagger.github.io/posts/2014/01/10/peredvizhka-domov-v-moskve/" rel="alternate"></link><updated>2014-01-10T01:05:30+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-01-10:posts/2014/01/10/peredvizhka-domov-v-moskve/</id><summary type="html">&lt;p&gt;Интересные исторические события по перемещению домов в десятки тысяч
+тонн с одного места в другое. Особенно меня удивляют/пугают случаи без
+выселения жильцов в момент переезда.&lt;/p&gt;
+</summary><category term="дом"></category><category term="переезд"></category><category term="Москва"></category></entry><entry><title>Переносы слов, UTF-8 и XeLaTeX</title><link href="http://imdagger.github.io/posts/2013/12/26/perenosy-slov-utf-8-i-xelatex/" rel="alternate"></link><updated>2013-12-26T03:41:21+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-12-26:posts/2013/12/26/perenosy-slov-utf-8-i-xelatex/</id><summary type="html">&lt;p&gt;Заметка о том, как подружить babel с UTF-8 или использовать вместо него
+polyglossia. Я выбрал второй вариант.&lt;/p&gt;
+</summary><category term="polyglossia"></category><category term="UTF-8"></category><category term="русский"></category><category term="babel"></category><category term="xelatex"></category></entry><entry><title>Красота LaTeX</title><link href="http://imdagger.github.io/posts/2013/12/26/krasota-latex/" rel="alternate"></link><updated>2013-12-26T03:37:38+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-12-26:posts/2013/12/26/krasota-latex/</id><summary type="html">&lt;p&gt;Красоту Лэйтэх можно увидеть в правильном кернинге, лигатурах и
+начертаниях. Хотя для меня красота этого пакета заключается скорее в
+том, что можно сделать один раз стилевой файл, а потом писать всё
+остальное время только текст и не думать об отображении.&lt;/p&gt;
+</summary><category term="красота"></category><category term="latex"></category></entry><entry><title>Моему ящику в Яндекс.Почте 7 лет ;)</title><link href="http://imdagger.github.io/posts/2013/12/21/moemu-iashchiku-v-iandekspochte-7-let/" rel="alternate"></link><updated>2013-12-21T01:19:49+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-12-21:posts/2013/12/21/moemu-iashchiku-v-iandekspochte-7-let/</id><summary type="html">&lt;p&gt;О как время летит&lt;/p&gt;
+</summary><category term="почта"></category><category term="Яндекс"></category><category term="возраст"></category></entry><entry><title></title><link href="http://imdagger.github.io/posts/2013/11/07/urn:ya.ru:post/22199227/1883/" rel="alternate"></link><updated>2013-11-07T03:35:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-11-07:posts/2013/11/07/urn:ya.ru:post/22199227/1883/</id><summary type="html">&lt;p&gt;Если Python 2.6 (хотя он уже двумя ногами покоится с миром, ибо 2.7
+одной ногой там уже тоже, но всё же) выдаёт нечто вот такое &lt;code class="code"&gt;
+KeyError:
+' \x00'&lt;/code&gt;
+ при &lt;code class="code"&gt;
+pickle.loads&lt;/code&gt;
+. То видимо в loads попала unicode строка,
+например, если строка взята из результата запроса библиотеки requests.
+Стоит тогда сконвертировать в str эту строку и всё будет хорошо, либо
+сервису, который отдаёт данные стоит завернуть всё это дело в base64.&lt;/p&gt;
+</summary><category term="2.6"></category><category term="python"></category><category term="десереализация"></category><category term="pickle"></category><category term="ошибка"></category></entry><entry><title>Сборка информации о КОП</title><link href="http://imdagger.github.io/posts/2013/10/21/sborka-informatsii-o-kop/" rel="alternate"></link><updated>2013-10-21T00:22:44+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-10-21:posts/2013/10/21/sborka-informatsii-o-kop/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; В частности в сфере гейм девелопмента.&lt;/p&gt;
+</summary><category term="компонента"></category><category term="ориентированный"></category><category term="программирование"></category><category term="метод"></category><category term="разработка"></category></entry><entry><title>Электроника</title><link href="http://imdagger.github.io/posts/2013/09/28/elektronika/" rel="alternate"></link><updated>2013-09-28T13:54:01+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-09-28:posts/2013/09/28/elektronika/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Отличный продавец электроники и радиодеталей! Мне нравится покупать
+у него детали, т.к. не сильно далеко и плюс он всегда всё распишет,
+посчитает и каждый заказ упакует в пакетик, и каждый набор снова в свой
+мелкий пакетик. И добавляет бонус к покупке в виде дополнительных
+деталей.&lt;/p&gt;
+</summary><category term="электроника"></category><category term="детали"></category><category term="продавец"></category></entry><entry><title>Творожные завитушки</title><link href="http://imdagger.github.io/posts/2013/09/04/tvorozhnye-zavitushki/" rel="alternate"></link><updated>2013-09-04T01:07:59+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-09-04:posts/2013/09/04/tvorozhnye-zavitushki/</id><summary type="html">&lt;blockquote&gt;
+&lt;p class="row photo-item"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/sarachai/view/714095/"&gt;&lt;img alt="Завитушки" src="http://img-fotki.yandex.ru/get/9356/99673415.39/0_ae56f_69ae5840_L" title="Завитушки"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Понадобится:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;400 гр творога&lt;/li&gt;
+&lt;li&gt;4 ст.л. сахара&lt;/li&gt;
+&lt;li&gt;1 стакан муки (можно чуть больше )&lt;/li&gt;
+&lt;li&gt;3/4 ч.л. соды&lt;/li&gt;
+&lt;li&gt;4 желтка&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Творог растереть с желтками добавить соду (творог сам погасит её ) и оставить
+на 5 минут. Добавить муку и сахар, замесить тесто. Убрать его в холодильник 1.5 часа.
+Раскатать, свернуть в рулет, нарезать кружочками толщиной в 1 см. Выпекать при температуре
+200 градусов 15-20 минут.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Выглядит аппетитно&lt;/p&gt;</summary><category term="еда"></category></entry><entry><title>Bootstrap кнопка ON/OFF</title><link href="http://imdagger.github.io/posts/2013/07/24/bootstrap-knopka-onoff/" rel="alternate"></link><updated>2013-07-25T22:18:15+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-07-24:posts/2013/07/24/bootstrap-knopka-onoff/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Настраиваемый слайдер с двумя состояниями, основан на Bootstrap,
+удобный, расширяемый.&lt;/p&gt;
+</summary><category term="кнопка"></category><category term="слайдер"></category><category term="переключатель"></category><category term="bootstrap"></category></entry><entry><title>Noty</title><link href="http://imdagger.github.io/posts/2013/06/14/noty/" rel="alternate"></link><updated>2013-06-14T14:40:32+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-06-14:posts/2013/06/14/noty/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Отличный плагин для jQuery для показа всплывающих сообщений.
+Приятно, что легко расширяется, и часто используемый функционал сразу
+вынесен в опции: т.е. всякие таймауты, обработчики по показу, закрытию,
+способ закрытия сообщения, показ в своём контейнере, кнопки и многое
+другое.&lt;/p&gt;
+</summary><category term="jquery"></category><category term="сообщение"></category><category term="noty"></category><category term="всплывающий"></category><category term="javascript"></category><category term="показ"></category><category term="плагин"></category></entry><entry><title>Аппроксимация би-дугами</title><link href="http://imdagger.github.io/posts/2013/06/11/approksimatsiia-bi-dugami/" rel="alternate"></link><updated>2013-06-11T02:05:08+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-06-11:posts/2013/06/11/approksimatsiia-bi-dugami/</id><summary type="html">&lt;p&gt;Формула и реализация построение дуги между двумя точками, из которых
+выходит два вектора задающих касательные к дуге.&lt;/p&gt;
+</summary><category term="дуга"></category><category term="би-дуги"></category><category term="дву-дуги"></category><category term="biarc"></category><category term="аппроксимация"></category></entry><entry><title>What's the difference between "under", "below", "beneath", and "underneath"?</title><link href="http://imdagger.github.io/posts/2013/06/10/whats-the-difference-between-under-below-beneath-and-underneath/" rel="alternate"></link><updated>2013-06-10T02:42:09+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-06-10:posts/2013/06/10/whats-the-difference-between-under-below-beneath-and-underneath/</id><summary type="html">&lt;p&gt;Отличие under от below, beneath и underneath.&lt;/p&gt;
+</summary><category term="слова"></category><category term="английский"></category></entry><entry><title>Шпаргалка по дисциплине "Пластическая анатомия"</title><link href="http://imdagger.github.io/posts/2013/06/06/shpargalka-po-distsipline-plasticheskaia-anatomiia/" rel="alternate"></link><updated>2013-06-06T03:33:38+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-06-06:posts/2013/06/06/shpargalka-po-distsipline-plasticheskaia-anatomiia/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Может кому-то пригодится. Собирал информацию из разных источников,
+вопросы к билетам в архиве (картинкой). Внутри архива шпаргалка в 3-ёх
+форматах: OpenDocument, DOC и PDF. Пластическая анатомия для художников.
+Можно использовать на свой страх и риск.&lt;/p&gt;
+</summary><category term="пластическая"></category><category term="анатомия"></category><category term="шпаргалка"></category><category term="ответ"></category><category term="экзамен"></category></entry><entry><title>Миндальное печенье</title><link href="http://imdagger.github.io/posts/2013/04/25/mindalnoe-pechene/" rel="alternate"></link><updated>2013-04-25T03:18:06+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-04-25:posts/2013/04/25/mindalnoe-pechene/</id><summary type="html">&lt;blockquote&gt;
+&lt;p class="row photo-item"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/foxycook/view/808106/"&gt;&lt;img alt="Печенье" src="http://img-fotki.yandex.ru/get/5638/175843626.3/0_c54aa_b9b6862a_L" title="Печенье"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Миндальное печенье очень популярно в разных странах. Замечательное сопровождение к утренней чашечке кофе.
+Аромат миндаля придает печенью необычайный вкус. В составе печенья совсем нет привычной
+муки — только миндальная или молотый миндаль. Молочных продуктов в нем тоже нет,
+как и глютена.&lt;/p&gt;
+&lt;p&gt;Состав продуктов:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Миндальная мука — 200 г&lt;/li&gt;
+&lt;li&gt;Сахар коричневый — полстакана&lt;/li&gt;
+&lt;li&gt;Сахар ванильный — 10 г&lt;/li&gt;
+&lt;li&gt;Яйцо — 1-2 штуки&lt;/li&gt;
+&lt;li&gt;Миндаль для украшения&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Приготовление кратко:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Смешать все компоненты&lt;/li&gt;
+&lt;li&gt;Вымесить тесто&lt;/li&gt;
+&lt;li&gt;Сформировать печенье&lt;/li&gt;
+&lt;li&gt;Украсить миндалем&lt;/li&gt;
+&lt;li&gt;Выпекать на промасленной бумаге&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://edalegko.ru/izbrannoe/mindalnoe-pechene/"&gt;подробное приготовление по шагам с фото&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Выглядит вкусно! Нужно будет попробовать сделать миндальную муку и таких
+достаточно диетических печенок.&lt;/p&gt;</summary><category term="печенье"></category><category term="миндаль"></category><category term="еда"></category></entry><entry><title>ICFP Programming Contest 2013</title><link href="http://imdagger.github.io/posts/2013/04/23/icfp-programming-contest-2013/" rel="alternate"></link><updated>2013-04-23T01:40:39+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-04-23:posts/2013/04/23/icfp-programming-contest-2013/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Если сайт Microsoft Research не обманывает, то соревнование будет с
+8 августа (видимо в ночь с 8 на 9, т.к. соревнование всегда проходит 3
+дня: пт, сб, вс) по 11 августа.&lt;/p&gt;
+</summary><category term="соревнование"></category><category term="радость"></category><category term="2013"></category><category term="программирование"></category><category term="icfpc"></category></entry><entry><title>Racket на Android</title><link href="http://imdagger.github.io/posts/2013/04/14/racket-na-android/" rel="alternate"></link><updated>2013-04-14T04:30:28+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-04-14:posts/2013/04/14/racket-na-android/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Я тоже смог произвести кросс-компиляцию (просто ради интереса)
+Racket Scheme, прочитав, что делал человек по ссылке. Только я делал
+чуть по-другому, т.к. у меня уже установлен racket в системе. Если
+собрать .zo файлы и выставить на них правильное время, то стартует
+достаточно быстро, а работает racket вообще быстро (собирал с jit).&lt;/p&gt;
+</summary><category term="racket"></category><category term="Android"></category><category term="компиляция"></category></entry><entry><title>Восстановление операций по матрице Левенштейна</title><link href="http://imdagger.github.io/posts/2013/03/14/vosstanovlenie-operatsii-po-matritse-levenshteina/" rel="alternate"></link><updated>2013-03-14T16:41:04+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-03-14:posts/2013/03/14/vosstanovlenie-operatsii-po-matritse-levenshteina/</id><summary type="html">&lt;p&gt;Хорошо с примером разъяснено в ответе по ссылке, как это сделать.&lt;/p&gt;
+</summary><category term="последовательность"></category><category term="дистанция"></category><category term="Левеншнейн"></category><category term="преобразование"></category><category term="операции"></category><category term="модификация"></category></entry><entry><title>Расширение базовых классов в CPython</title><link href="http://imdagger.github.io/posts/2013/03/13/rasshirenie-bazovykh-klassov-v-cpython/" rel="alternate"></link><updated>2013-03-13T02:36:22+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-03-13:posts/2013/03/13/rasshirenie-bazovykh-klassov-v-cpython/</id><summary type="html">&lt;p&gt;В Python, в классической реализации CPython не предусмотрено расширение
+базовых классов типа: &lt;code class="code"&gt;
+type&lt;/code&gt;
+, &lt;code class="code"&gt;
+int&lt;/code&gt;
+, &lt;code class="code"&gt;
+str&lt;/code&gt;
+, &lt;code class="code"&gt;
+dict&lt;/code&gt;
+ и т.д., из соображений
+производительности и засорения базовых классов. Но если очень хочется,
+то пару хаков и можно за счёт модификации структуры в рабочем
+python-процессе разрешить такой функционал (так сделал хакер Lincoln de
+Sousa &lt;a class="reference external" href="https://github.com/clarete/"&gt;https://github.com/clarete/&lt;/a&gt; ), достаточно посредством ctypes, и
+доступного pythonapi в нём, вызвать внутренний метод и пропатчить
+базовый класс налету. И тогда можно делать такие штуки (пример из
+библиотеки &lt;a class="reference external" href="https://github.com/gabrielfalcao/sure"&gt;https://github.com/gabrielfalcao/sure&lt;/a&gt; для тестов):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-p"&gt;{&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;:&lt;/span&gt; &lt;span class="pgcss-mi"&gt;1&lt;/span&gt;&lt;span class="pgcss-p"&gt;}&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;does&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;have&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;key&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;being&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;with_value&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;equal&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-mi"&gt;1&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Вообще такое расширение будет работать на страх и риск того, кто
+использует. Не знаю как на такие трюки отреарировал бы gevent, uwsgi или
+ещё какие библиотеки, которые работают непосредственно с интерпретатором
+на низком уровне.&lt;/p&gt;
+</summary><category term="патч"></category><category term="type"></category><category term="python"></category><category term="класс"></category><category term="int"></category><category term="базовый"></category><category term="str"></category><category term="модификация"></category></entry><entry><title>Game Closure DevKit</title><link href="http://imdagger.github.io/posts/2013/03/09/game-closure-devkit/" rel="alternate"></link><updated>2013-03-09T23:56:26+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-03-09:posts/2013/03/09/game-closure-devkit/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Интересная штука, и на JavaScript + HTML5, на компе бегает шустро,
+на телефоне не пробовал, но говорят, что тоже будет быстро. И в примере
+их собственная игра на Android имеет порядка 7 тыс. отличных оценок и
+сотни тысяч закачек, видимо не лагает. Хотя для меня немного
+удивительно, т.к. я опирался в своих ожиданиях на статистику поддержки
+WebGL в мобильных устройствах на 2012 год.&lt;/p&gt;
+</summary><category term="программирование"></category><category term="javascript"></category><category term="создание"></category><category term="HTML5"></category><category term="игры"></category><category term="движок"></category></entry><entry><title>Бюджетный VPS</title><link href="http://imdagger.github.io/posts/2013/03/03/biudzhetnyi-vps/" rel="alternate"></link><updated>2013-03-03T02:42:04+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-03-03:posts/2013/03/03/biudzhetnyi-vps/</id><summary type="html">&lt;p&gt;Обзавёлся тут для своих целей машинкой с 128Mib RAM всего за $15 в год.
+Там можно взять и 1Gib за $5 месяц, что неплохо, если требуется держать
+несколько средних сервисов для внутренних нужд.&lt;/p&gt;
+</summary><category term="дёшево"></category><category term="vps"></category></entry><entry><title>Pip и установка из git-репозитория</title><link href="http://imdagger.github.io/posts/2013/02/27/pip-i-ustanovka-iz-git-repozitoriia/" rel="alternate"></link><updated>2013-02-27T01:48:54+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2013-02-27:posts/2013/02/27/pip-i-ustanovka-iz-git-repozitoriia/</id><summary type="html">&lt;p&gt;Утилита pip позволяет легко установить конкретную ревизию из
+git-репозитория, достаточно добавить к ссылке &amp;#64;sha1-номер-коммита:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-go"&gt;pip install git+git://github.com/jtauber/django-mailer.git@840d25bb9db9fbc80&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="pip"></category><category term="python"></category><category term="ревизия"></category><category term="установка"></category><category term="git"></category></entry><entry><title>Получение информации о приложении</title><link href="http://imdagger.github.io/posts/2012/12/28/poluchenie-informatsii-o-prilozhenii/" rel="alternate"></link><updated>2012-12-28T20:23:13+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-12-28:posts/2012/12/28/poluchenie-informatsii-o-prilozhenii/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Как получить информацию о Facebook-приложении по user access_token?
+Достаточно отправить запрос вида:
+&lt;a class="reference external" href="https://graph.facebook.com/app/?access_token=[user_access_token]"&gt;https://graph.facebook.com/app/?access_token=[user_access_token]&lt;/a&gt;
+&amp;nbsp; &amp;nbsp; А затем по id из словаря можно убедится, что токен принадлежит
+нашему приложению, а из /me можно узнать какому пользователю конкретно.&lt;/p&gt;
+</summary><category term="token"></category><category term="facebook"></category><category term="приложение"></category></entry><entry><title></title><link href="http://imdagger.github.io/posts/2012/11/21/urn:ya.ru:post/22199227/1718/" rel="alternate"></link><updated>2012-11-21T21:45:46+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-11-21:posts/2012/11/21/urn:ya.ru:post/22199227/1718/</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nb"&gt;export &lt;/span&gt;&lt;span class="pgcss-nv"&gt;PYTHONIOENCODING&lt;/span&gt;&lt;span class="pgcss-o"&gt;=&lt;/span&gt;utf-8
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;То, что нужно чтобы UTF-8 вывод работал для Python 2.7.1+ даже, если к
+пайпу подключён less.&lt;/p&gt;
+</summary><category term="вывод"></category><category term="python"></category><category term="UTF-8"></category></entry><entry><title>SpriteMapper</title><link href="http://imdagger.github.io/posts/2012/10/07/spritemapper/" rel="alternate"></link><updated>2012-10-07T02:31:14+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-10-07:posts/2012/10/07/spritemapper/</id><summary type="html">&lt;p&gt;Неплохой пакер изображений в атлас, даже есть Ant-задача из коробки.
+Один недостаток, что можно регулировать только максимальную ширину
+атласа, а высоту нельзя.&lt;/p&gt;
+</summary><category term="упаковка"></category><category term="атлас"></category><category term="изображение"></category><category term="CEGO"></category></entry><entry><title></title><link href="http://imdagger.github.io/posts/2012/08/29/urn:ya.ru:post/22199227/1669/" rel="alternate"></link><updated>2012-08-29T01:56:08+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-08-29:posts/2012/08/29/urn:ya.ru:post/22199227/1669/</id><summary type="html">&lt;p&gt;Странно, но у меня, кажется, воспроизводится в новой Kawa баг семилетней
+давности =/&lt;/p&gt;
+</summary><category term="ellipsis"></category><category term="ошибка"></category><category term="kawa"></category><category term="вложенный"></category></entry><entry><title>Человек, которого знают в нашем городе все</title><link href="http://imdagger.github.io/posts/2012/07/12/chelovek-kotorogo-znaiut-v-nashem-gorode-vse/" rel="alternate"></link><updated>2012-07-12T02:06:31+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-07-12:posts/2012/07/12/chelovek-kotorogo-znaiut-v-nashem-gorode-vse/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Когда-то мне удалось немного с Валерием Ляшкевичем пообщаться. Я был
+тогда мальчишкой, мы шли на обед, и решили немного его порасспрашивать
+про работы. Я уже почти ничего не помню из разговора, но помню, что он
+показался очень энергичным человеком, рассказывал что-то про стили,
+символику, очень эмоционально всё повествовал. Оказывается он отправился
+в Питер (а я думал это слухи), это же отличная новость! Человек нашёл
+себя, и главное, что жив здоров и может творить дальше.&lt;/p&gt;
+</summary><category term="художник"></category><category term="знают"></category><category term="все"></category><category term="Гомель"></category><category term="уехал"></category></entry><entry><title>Википедия против цензуры!</title><link href="http://imdagger.github.io/posts/2012/07/10/vikipediia-protiv-tsenzury/" rel="alternate"></link><updated>2012-07-10T03:04:19+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-07-10:posts/2012/07/10/vikipediia-protiv-tsenzury/</id><summary type="html"></summary><category term="цензура"></category><category term="забастовка"></category><category term="интернет"></category></entry><entry><title>Установка nVidia CUDA Toolkit 4.0 на Ubuntu 11.04</title><link href="http://imdagger.github.io/posts/2012/05/15/ustanovka-nvidia-cuda-toolkit-40-na-ubuntu-1104/" rel="alternate"></link><updated>2012-05-15T20:56:42+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-05-15:posts/2012/05/15/ustanovka-nvidia-cuda-toolkit-40-na-ubuntu-1104/</id><summary type="html">&lt;p&gt;Пробую на своём нетбуке, надеюсь, чт ос optirun не будет коллизий.&lt;/p&gt;
+</summary></entry><entry><title>ICFPC 2012</title><link href="http://imdagger.github.io/posts/2012/04/04/icfpc-2012/" rel="alternate"></link><updated>2012-04-04T01:32:20+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-04-04:posts/2012/04/04/icfpc-2012/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Ура! Организаторы ICFP Programming Contest определились с датой
+проведения, надеюсь, что с 13 по 16 июля я смогу принять участие в
+соревновании, нужно будет ещё подготовиться к этому мероприятию, как
+только появится более подробная информация по требованиям.
+The ICFP Programming Contest dates have been announced. The contest will
+run from Friday 13 July 12:00 GMT to Monday 16 July 12:00 GMT.&lt;/p&gt;
+</summary><category term="соревнование"></category><category term="радость"></category><category term="жизнь"></category><category term="программирование"></category><category term="icfpc"></category></entry><entry><title>Unit-тесты для libGDX</title><link href="http://imdagger.github.io/posts/2012/02/17/unit-testy-dlia-libgdx/" rel="alternate"></link><updated>2012-02-17T16:11:02+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-02-17:posts/2012/02/17/unit-testy-dlia-libgdx/</id><summary type="html">&lt;p&gt;Порой тесты поясняют суть библиотеки даже лучше, чем любая документация
+и туториалы.&lt;/p&gt;
+</summary><category term="код"></category><category term="ссылка"></category><category term="libGDX"></category><category term="программирование"></category><category term="тестирование"></category></entry><entry><title>Грядущие изменения</title><link href="http://imdagger.github.io/posts/2011/11/16/griadushchie-izmeneniia/" rel="alternate"></link><updated>2011-11-16T03:51:56+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-11-16:posts/2011/11/16/griadushchie-izmeneniia/</id><summary type="html">&lt;p&gt;А я как-то пропустил эту новость, а потом болел, вот теперь заметил
+изменения. В принципе стало компактнее и приятнее, только шрифты у меня
+немного странно начали отображаться&lt;/p&gt;
+</summary><category term="Я.ру"></category><category term="изменение"></category></entry><entry><title>Подключение библиотек в JAR-архив</title><link href="http://imdagger.github.io/posts/2011/11/03/podkliuchenie-bibliotek-v-jar-arkhiv/" rel="alternate"></link><updated>2011-11-03T23:24:18+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-11-03:posts/2011/11/03/podkliuchenie-bibliotek-v-jar-arkhiv/</id><summary type="html">&lt;p&gt;Сначала я пробовал замутить с Class-Path, но решение оказалось проще,
+достаточно было использовать zipfileset, чтобы впихнуть содержимое из
+libGDX &lt;strong&gt;jar&lt;/strong&gt;-ов в проект.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nt"&gt;&amp;lt;jar&lt;/span&gt; &lt;span class="pgcss-na"&gt;destfile=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;${build.file}&amp;quot;&lt;/span&gt;&lt;span class="pgcss-nt"&gt;&amp;gt;&lt;/span&gt;
+    ...
+    &lt;span class="pgcss-nt"&gt;&amp;lt;zipfileset&lt;/span&gt; &lt;span class="pgcss-na"&gt;src=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;${external.libs}/gdx.jar&amp;quot;&lt;/span&gt; &lt;span class="pgcss-na"&gt;includes=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;**/*&amp;quot;&lt;/span&gt;&lt;span class="pgcss-nt"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="pgcss-nt"&gt;&amp;lt;zipfileset&lt;/span&gt; &lt;span class="pgcss-na"&gt;src=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;${external.libs}/gdx-natives.jar&amp;quot;&lt;/span&gt; &lt;span class="pgcss-na"&gt;includes=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;**/*&amp;quot;&lt;/span&gt;&lt;span class="pgcss-nt"&gt;/&amp;gt;&lt;/span&gt;
+    ...
+&lt;span class="pgcss-nt"&gt;&amp;lt;/jar&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="подключение"></category><category term="zipfileset"></category><category term="программирование"></category><category term="JAR"></category></entry><entry><title>Fossil SCM</title><link href="http://imdagger.github.io/posts/2011/10/29/fossil-scm/" rel="alternate"></link><updated>2011-10-29T02:52:47+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-10-29:posts/2011/10/29/fossil-scm/</id><summary type="html">&lt;p&gt;Наткнулся ещё раз на Fossil, до этого только немного про него читал. Как
+SCM+Wiki+Blog+Trac в одном флаконе, очень даже интересно выглядит. Нужно
+будет как-нибудь попробовать его, чтобы ощутить на себе фичи и баги.&lt;/p&gt;
+</summary><category term="SCM"></category><category term="fossil"></category><category term="контроль"></category><category term="версия"></category><category term="разработка"></category></entry><entry><title>Шейпинг трафика</title><link href="http://imdagger.github.io/posts/2011/10/26/sheiping-trafika/" rel="alternate"></link><updated>2011-10-26T03:35:28+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-10-26:posts/2011/10/26/sheiping-trafika/</id><summary type="html">&lt;p&gt;Нужно будет попробовать tc на офисе, думаю это решит проблему того, что
+ssh, svn и im-трафик приоритетный, а вот торренты и закачки тоже важны,
+но не такой высокий приоритет, чтобы забивать два канала под завязку.&lt;/p&gt;
+</summary><category term="приоритет"></category><category term="трафик"></category><category term="работа"></category><category term="шейпинг"></category><category term="tc"></category></entry><entry><title>Сохранение функций из PyMongo</title><link href="http://imdagger.github.io/posts/2011/09/15/sokhranenie-funktsii-iz-pymongo/" rel="alternate"></link><updated>2011-09-15T23:29:39+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-09-15:posts/2011/09/15/sokhranenie-funktsii-iz-pymongo/</id><summary type="html">&lt;p&gt;Думаю pymongo.code.Code поможет мне сохранять JavaScript код не как
+строки в поля документов.&lt;/p&gt;
+</summary></entry><entry><title>Greasemonkey и onclick</title><link href="http://imdagger.github.io/posts/2011/08/05/greasemonkey-i-onclick/" rel="alternate"></link><updated>2011-08-05T23:34:58+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-08-05:posts/2011/08/05/greasemonkey-i-onclick/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Пытаясь помочь человеку с скриптом, который использовал традиционную
+модель DOM, узнал, что установить onclick из Greasemonkey не выйдет и
+это нужно делать при помощи addEventListener из DOM2. Т.к. вариант с
+установкой строки в onclick теряет область видимости скрипта. После
+правки решил ещё взглянуть зачем этой функции 3-ий параметр (заодно
+узнал про войну двух гигантов оттуда)
+&lt;a class="reference external" href="http://www.quirksmode.org/js/events_advanced.html"&gt;http://www.quirksmode.org/js/events_advanced.html&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Greasemonkey"></category><category term="javascript"></category><category term="программирование"></category><category term="скрипт"></category></entry><entry><title>IE7 и лишняя запятая</title><link href="http://imdagger.github.io/posts/2011/07/25/ie7-i-lishniaia-zapiataia/" rel="alternate"></link><updated>2011-07-25T13:58:48+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-07-25:posts/2011/07/25/ie7-i-lishniaia-zapiataia/</id><summary type="html">&lt;p&gt;Ошибка в IE: “Предполагается наличие идентификатора, строки или числа”&lt;/p&gt;
+</summary><category term="ошибка"></category><category term="javascript"></category><category term="IE"></category></entry><entry><title>Hovercraft</title><link href="http://imdagger.github.io/posts/2011/07/16/hovercraft/" rel="alternate"></link><updated>2011-07-16T21:19:48+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-07-16:posts/2011/07/16/hovercraft/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; Нужно будет попробовать эту штукенцию, т.к. это прямой доступ из
+Erlang в CouchDB без HTTP API, для повышения производительности при
+работе с данной базой (она и сама написана на Erlang). Только он должен
+крутиться в том же beam, что и ChouchDB. Можно оставить HTTP API для
+частей системы написанной, на других языках, или не для критически
+важных операций. Т.е. оставить его не для массовых вставок и обновлений.&lt;/p&gt;
+</summary><category term="erlang"></category><category term="программирование"></category><category term="couchdb"></category><category term="hovercraft"></category></entry><entry><title>Stacktrace на лету</title><link href="http://imdagger.github.io/posts/2011/06/30/stacktrace-na-letu/" rel="alternate"></link><updated>2011-06-30T18:56:09+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-06-30:posts/2011/06/30/stacktrace-na-letu/</id><summary type="html">&lt;p&gt;Не знал, что можно так красиво повесить обработчик на SIGUSR1&lt;/p&gt;
+</summary><category term="отладка"></category><category term="python"></category><category term="stack"></category><category term="рабочий"></category><category term="процесс"></category></entry><entry><title>Zotonic</title><link href="http://imdagger.github.io/posts/2011/01/30/zotonic/" rel="alternate"></link><updated>2011-01-30T21:58:59+02:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-01-30:posts/2011/01/30/zotonic/</id><summary type="html">&lt;p&gt;Присматриваюсь к этой CMS на Erlang, прикольная штука.&lt;/p&gt;
+</summary><category term="erlang"></category><category term="cms"></category><category term="web"></category></entry><entry><title>UJAM</title><link href="http://imdagger.github.io/posts/2010/12/18/ujam/" rel="alternate"></link><updated>2010-12-18T19:17:31+02:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-12-18:posts/2010/12/18/ujam/</id><summary type="html">&lt;p&gt;Прикольный сервис, завёл себе там аккаунт. Можно напевать мелодию в
+микрофон (а можно загрузить готовое), а сервис превратит это в ноты и
+исполнит композицию с использованием выбранного инструмента. Умеет
+подыгрывать, можно редактировать&amp;nbsp; сгенерированную музыку.&lt;/p&gt;
+</summary><category term="UJAM"></category><category term="генерация"></category><category term="музыка"></category></entry><entry><title>CodeCup 2011</title><link href="http://imdagger.github.io/posts/2010/11/30/codecup-2011/" rel="alternate"></link><updated>2010-11-30T23:46:52+02:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-11-30:posts/2010/11/30/codecup-2011/</id><summary type="html">&lt;p&gt;В Google AI Contest я поучавствовал, теперь меня ждёт CodeCup. В этот
+раз нужно написать бота для игры Dvonn. Это стратегическая игра для двух
+игроков, где есть 3 нейтральные фишки на поле. С правилами можно
+ознакомится на сайте, также там есть пример одного из боёв. Пока ещё не
+поздно, хотя соревнования начались достаточно давно, но можно ещё успеть
+на два тестовых раунда перед финальным боем.&lt;/p&gt;
+</summary><category term="программирование"></category><category term="2010"></category><category term="соревнование"></category><category term="бот"></category><category term="турнир"></category><category term="ai"></category><category term="CodeCup"></category><category term="2011"></category><category term="участие"></category></entry><entry><title>IMDagger v.s. gibbzy</title><link href="http://imdagger.github.io/posts/2010/11/28/imdagger-vs-gibbzy/" rel="alternate"></link><updated>2010-11-28T20:06:36+02:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-11-28:posts/2010/11/28/imdagger-vs-gibbzy/</id><summary type="html">&lt;p&gt;Неплохо и лавинообразно мой бот атаковал, тут он красиво орудовал,
+просто перехахватов было мало и пенальти не вырос, чтобы понизить
+агрессивность бота. Но всё же заметно, что к концу игры бот стал вялым.&lt;/p&gt;
+</summary><category term="сражение"></category><category term="игра"></category><category term="Galcon"></category><category term="python"></category><category term="запись"></category><category term="бот"></category><category term="ai"></category></entry><entry><title>Blend-формат изнутри</title><link href="http://imdagger.github.io/posts/2010/11/21/blend-format-iznutri/" rel="alternate"></link><updated>2010-11-21T19:49:28+02:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-11-21:posts/2010/11/21/blend-format-iznutri/</id><summary type="html">&lt;p&gt;Очень доступно объясняет, как устроены blend-файлы, т.к. даже по
+исходнику трудно понять, что там происходит.&lt;/p&gt;
+</summary><category term="blender"></category><category term="формат"></category><category term="файл"></category><category term="документация"></category></entry><entry><title>Для курсачей и дипломов</title><link href="http://imdagger.github.io/posts/2010/10/16/dlia-kursachei-i-diplomov/" rel="alternate"></link><updated>2010-10-16T21:18:16+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-10-16:posts/2010/10/16/dlia-kursachei-i-diplomov/</id><summary type="html">&lt;p&gt;Под эту музыку всегда получались хорошие, объёмные и качественные
+курсовые работы, лабораторные и дипломные :) Особенно, когда по времени
+осталось мало, а делать ещё много.&lt;/p&gt;
+</summary><category term="Я"></category><category term="мысли"></category><category term="бредни"></category></entry><entry><title>Про меня</title><link href="http://imdagger.github.io/posts/2010/10/16/pro-menia/" rel="alternate"></link><updated>2010-10-16T15:20:03+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-10-16:posts/2010/10/16/pro-menia/</id><summary type="html">&lt;p&gt;Жаль только, что я не смогу человеку дать что-нибудь взамен за его
+девайс :( Хм… я бы поменялся на 48&amp;quot; моник :)&lt;/p&gt;
+</summary><category term="cyanide"></category><category term="Я"></category><category term="happiness"></category></entry><entry><title>Google AI Challenge!</title><link href="http://imdagger.github.io/posts/2010/09/08/google-ai-challenge/" rel="alternate"></link><updated>2010-09-08T20:37:51+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-09-08:posts/2010/09/08/google-ai-challenge/</id><summary type="html">&lt;p&gt;Нужно будет взглянуть, что за оно :)&lt;/p&gt;
+</summary><category term="ai"></category><category term="google"></category><category term="конкурс"></category></entry><entry><title>Как раз про меня</title><link href="http://imdagger.github.io/posts/2010/07/25/kak-raz-pro-menia/" rel="alternate"></link><updated>2010-07-25T20:30:07+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-07-25:posts/2010/07/25/kak-raz-pro-menia/</id><summary type="html">&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Мне это до боли знакомо:&lt;/div&gt;
+&lt;div class="line"&gt;xxx: Что такое отпуск?&lt;/div&gt;
+&lt;div class="line"&gt;yyy: это когда можно опоздать на работу и за это ничего не будет.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Я"></category><category term="работа"></category><category term="смешно"></category></entry><entry><title>Туториал</title><link href="http://imdagger.github.io/posts/2010/07/11/tutorial/" rel="alternate"></link><updated>2010-07-11T21:36:54+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-07-11:posts/2010/07/11/tutorial/</id><summary type="html">&lt;p&gt;Забавно проходить туториал сразу в реальном времени. Эффективнее, чем
+просто читать книжку, но конечно же не замена.&lt;/p&gt;
+</summary><category term="erlang"></category><category term="туториал"></category><category term="программирование"></category></entry><entry><title>Java 4-ever</title><link href="http://imdagger.github.io/posts/2010/06/26/java-4-ever/" rel="alternate"></link><updated>2010-06-26T19:34:50+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-06-26:posts/2010/06/26/java-4-ever/</id><summary type="html">&lt;p&gt;Порадовал промо-ролик про Java с JavaZone 2010 с
+&lt;a class="reference external" href="http://jz10.java.no/java-4-ever-trailer.html"&gt;http://jz10.java.no/java-4-ever-trailer.html&lt;/a&gt;&lt;/p&gt;
+</summary><category term="java"></category><category term="ролик"></category></entry><entry><title>Не знал</title><link href="http://imdagger.github.io/posts/2010/06/19/ne-znal/" rel="alternate"></link><updated>2010-06-19T20:23:12+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-06-19:posts/2010/06/19/ne-znal/</id><summary type="html">&lt;p&gt;До вчерашнего для не знал, что мы частично OpenSource :)&lt;/p&gt;
+</summary><category term="работа"></category><category term="slide"></category></entry><entry><title></title><link href="http://imdagger.github.io/posts/2010/05/13/urn:ya.ru:post/22199227/872/" rel="alternate"></link><updated>2010-05-13T20:07:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-05-13:posts/2010/05/13/urn:ya.ru:post/22199227/872/</id><summary type="html">&lt;p&gt;Небольшая табличка сопоставления jQuery и YUI3.&lt;/p&gt;
+</summary><category term="javascript"></category><category term="yui"></category><category term="jquery"></category></entry><entry><title>Культ карго</title><link href="http://imdagger.github.io/posts/2010/04/15/kult-kargo/" rel="alternate"></link><updated>2010-04-15T11:16:26+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-04-15:posts/2010/04/15/kult-kargo/</id><summary type="html">&lt;p&gt;Наткнулся в комментариях на Хабре про него, впервые услышал про такой
+культ :) Строить деревянные взлётно посадочные полосы забавно …&lt;/p&gt;
+</summary><category term="культ"></category><category term="карго"></category></entry><entry><title>Кекс "Творожный"</title><link href="http://imdagger.github.io/posts/2010/04/14/keks-tvorozhnyi/" rel="alternate"></link><updated>2010-04-14T21:09:24+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-04-14:posts/2010/04/14/keks-tvorozhnyi/</id><summary type="html">&lt;blockquote&gt;
+&lt;p class="row photo-item"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/zhukov-nin/view/182757/"&gt;&lt;img alt="Кекс" src="http://img-fotki.yandex.ru/get/4314/zhukov-nin.20/0_2c9e5_a3580c5e_L" title="Кекс"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Рецепт:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;200гр.масло сл.240гр.&lt;/li&gt;
+&lt;li&gt;сахарный песок&lt;/li&gt;
+&lt;li&gt;разрыхлитель&lt;/li&gt;
+&lt;li&gt;творог300гр.&lt;/li&gt;
+&lt;li&gt;4 яйца&lt;/li&gt;
+&lt;li&gt;изюм&lt;/li&gt;
+&lt;li&gt;500гр. муки&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Вот в такой последовательности смешать продукты и положить в форму, выпекать 50мин. при температуре 150гр.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Нужно будет снова поготовить, а то что-то я давно себя сдобным не
+баловал.&lt;/p&gt;</summary><category term="еда"></category><category term="кекс"></category></entry><entry><title>Оу ноу....</title><link href="http://imdagger.github.io/posts/2010/03/08/ou-nou/" rel="alternate"></link><updated>2010-03-08T17:55:22+02:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2010-03-08:posts/2010/03/08/ou-nou/</id><summary type="html">&lt;p&gt;Простая и увлекательная игра, но отобрала у меня около часа времени :(
+которое было выделено под написание отчёта, всё нужно трудиться!&lt;/p&gt;
+</summary><category term="время"></category><category term="играл"></category><category term="отдых"></category></entry><entry><title>Мэппинг</title><link href="http://imdagger.github.io/posts/2009/12/12/mepping/" rel="alternate"></link><updated>2009-12-12T09:57:56+02:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-12-12:posts/2009/12/12/mepping/</id><summary type="html">&lt;p&gt;Про мэппинг native-запросов, а так же стоит прочитать и ознакомиться с
+примерами из главы 16 документации по Hibernate.&lt;/p&gt;
+</summary><category term="hibernate"></category></entry><entry><title>Стоит задуматься</title><link href="http://imdagger.github.io/posts/2009/10/27/stoit-zadumatsia/" rel="alternate"></link><updated>2009-10-27T20:56:10+02:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-10-27:posts/2009/10/27/stoit-zadumatsia/</id><summary type="html">&lt;p&gt;Виртуальное кладбище&lt;/p&gt;
+</summary><category term="смерть"></category></entry><entry><title>Пользовательские типы</title><link href="http://imdagger.github.io/posts/2009/10/09/polzovatelskie-tipy/" rel="alternate"></link><updated>2009-10-09T19:37:10+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-10-09:posts/2009/10/09/polzovatelskie-tipy/</id><summary type="html">&lt;p&gt;Про то, как создавать свои типы данных в Hibernate. Довольно понятное и
+подробное описание на русском языке.&lt;/p&gt;
+</summary><category term="hibernate"></category></entry><entry><title>Яблочный пирог</title><link href="http://imdagger.github.io/posts/2009/10/02/iablochnyi-pirog/" rel="alternate"></link><updated>2009-10-02T13:49:46+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-10-02:posts/2009/10/02/iablochnyi-pirog/</id><summary type="html">&lt;p class="row photo-item text-center"&gt;&lt;a class="reference external" href="http://fotki.yandex.ru/users/nad94506725/view/117022/"&gt;&lt;img alt="Пирог" src="http://img-fotki.yandex.ru/get/3806/nad94506725.e/0_1c91e_6f06eff9_M" title="Пирог"/&gt;&lt;/a&gt;&lt;/p&gt;
+ 
+&lt;blockquote&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Тесто:&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;1 стакан кефира&lt;/li&gt;
+&lt;li&gt;250г маргарина&lt;/li&gt;
+&lt;li&gt;1 ч.л. соды неполная,без горки&lt;/li&gt;
+&lt;li&gt;мука приблизительно 3 стакана, чтобы получилось тесто густое, очень мягкое и эластичное&lt;/li&gt;
+&lt;li&gt;два яйца&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Приготовление:&lt;/dt&gt;
+&lt;dd&gt;Соду погасить в кефире, добавить растопленый маргарин, муку, яйца,
+(не забыть соль и сахар по вкусу) и замесить густое тесто. Разделить тесто
+на 2 части, раскатать пласт, положить начинку, сверху накрыть вторым пластом
+и защипнуть края (если начинка сочная (как в данном случае, хотя можно и пофантазировать
+с выбором начинки) нужно сделать надрезы на верхнем слое теста перед
+прищипкой, или проколы,чтобы паром не разорвало пирог) смазать яйцом
+и печь около 40 минут при температуре 220C.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Нужно будет попробовать сделать.&lt;/p&gt;</summary><category term="пирог"></category></entry><entry><title>Автоматическое тестирование</title><link href="http://imdagger.github.io/posts/2009/09/27/avtomaticheskoe-testirovanie/" rel="alternate"></link><updated>2009-09-27T19:41:46+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-09-27:posts/2009/09/27/avtomaticheskoe-testirovanie/</id><summary type="html">&lt;p&gt;Для автотестирования Web-приложений из Java-кода.
+А ещё там есть ссылка на Selenium.&lt;/p&gt;
+</summary><category term="java"></category><category term="тестирование"></category></entry><entry><title>Буфер обмена</title><link href="http://imdagger.github.io/posts/2009/09/20/bufer-obmena/" rel="alternate"></link><updated>2009-09-20T15:18:46+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-09-20:posts/2009/09/20/bufer-obmena/</id><summary type="html">&lt;p&gt;Чтобы копировать в буфер обмена из Emacs в X-ы можно было простым
+привычным для Emacs нажатием &lt;kbd class="kbd"&gt;
+M-w&lt;/kbd&gt;
+.&lt;/p&gt;
+</summary><category term="emacs"></category><category term="буфер"></category></entry><entry><title>Овсяное печенье</title><link href="http://imdagger.github.io/posts/2009/09/14/ovsianoe-pechene/" rel="alternate"></link><updated>2009-09-14T20:41:40+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-09-14:posts/2009/09/14/ovsianoe-pechene/</id><summary type="html">&lt;p class="row photo-item text-center"&gt;&lt;a class="reference external" href="http://clubs.ya.ru/4611686018427387998/replies.xml?item_no=34323"&gt;&lt;img alt="Печенье" src="http://img-fotki.yandex.ru/get/3702/nat-27.1/0_31396_be475739_L" title="Печенье"/&gt;&lt;/a&gt;&lt;/p&gt;
+ 
+&lt;blockquote&gt;
+&lt;p&gt;Состав: геркулес 3 стакана, яйцо 2 шт, сахар 1,5 стакана, маргарин 300 г.,
+мука 2 стакана, мед 1 столовая ложка, сода 1 чайная ложка, погасить уксусом, ваниль, соль.&lt;/p&gt;
+&lt;p&gt;Геркулес подсушить в микроволновке или на сухой сковородке, измельчить в муку.
+Все ингредиенты смешать до однородной массы. Влажными руками скатать небольшие шарики и
+выложить на противень, застеленный бумагой для выпечки. Выпекать при
+температуре 200 градусов до румяной корочки.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Как раз есть лишний геркулес :) Нужно будет попробовать свои силы…&lt;/p&gt;</summary><category term="печенье"></category><category term="еда"></category></entry><entry><title>Существо из Сожа</title><link href="http://imdagger.github.io/posts/2009/09/09/sushchestvo-iz-sozha/" rel="alternate"></link><updated>2009-09-09T20:29:05+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-09-09:posts/2009/09/09/sushchestvo-iz-sozha/</id><summary type="html">&lt;p&gt;Теперь буду знать, что эта “штука” из моего видео зовётся Щитень :).&lt;/p&gt;
+</summary><category term="щитень"></category><category term="сож"></category><category term="создание"></category></entry><entry><title>PUT и POST</title><link href="http://imdagger.github.io/posts/2009/09/05/put-i-post/" rel="alternate"></link><updated>2009-09-05T20:13:23+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-09-05:posts/2009/09/05/put-i-post/</id><summary type="html">&lt;p&gt;Нужно будет запомнить эти мысли о том, как использовать эти методы при
+REST. Скоро они мне помогут и дадут почву и пищу для (уже) моих
+размышлений.&lt;/p&gt;
+</summary><category term="REST"></category><category term="dl"></category><category term="PUT"></category><category term="HTTP"></category><category term="POST"></category></entry><entry><title>Иллюзия с лицами (круто!)</title><link href="http://imdagger.github.io/posts/2009/08/25/illiuziia-s-litsami-kruto/" rel="alternate"></link><updated>2009-08-25T21:06:19+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-08-25:posts/2009/08/25/illiuziia-s-litsami-kruto/</id><summary type="html">&lt;p&gt;Вкратце в чём иллюзия и что там написано на иностранном языке:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Посмотреть картинку с монитора;&lt;/li&gt;
+&lt;li&gt;А теперь нужно отодвинутся на сантиметров 40 от текущей дистанции
+назад и посмотреть лица снова ;)&lt;/li&gt;
+&lt;/ol&gt;
+</summary><category term="иллюзия"></category></entry><entry><title>Clonezilla SE</title><link href="http://imdagger.github.io/posts/2009/08/25/clonezilla-se/" rel="alternate"></link><updated>2009-08-25T19:26:14+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-08-25:posts/2009/08/25/clonezilla-se/</id><summary type="html">&lt;p&gt;Описание установки и настройки DRBL и Clonezilla, которое мне помогло
+решить часть проблем с запуском сервера dcs.&lt;/p&gt;
+</summary><category term="clonezilla"></category><category term="клонирование"></category><category term="drbl"></category></entry><entry><title>Извещения в трее от Emacs</title><link href="http://imdagger.github.io/posts/2009/08/19/izveshcheniia-v-tree-ot-emacs/" rel="alternate"></link><updated>2009-08-19T18:11:16+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-08-19:posts/2009/08/19/izveshcheniia-v-tree-ot-emacs/</id><summary type="html">&lt;p&gt;Небольшое, но полезное описание того, как сделать, чтобы была иконка
+Emacs в трее (при помощи дополнительной утилиты), и чтобы её состоянием
+можно было управлять. Можно сделать, чтобы она моргала. Может что-нибудь
+добавлю в неё для моего jabber.el (в духе попап меню, котрое показывает
+количество сообщений от пользователя).&lt;/p&gt;
+</summary><category term="emacs"></category><category term="трей"></category></entry><entry><title>Blender и освещение</title><link href="http://imdagger.github.io/posts/2009/06/22/blender-i-osveshchenie/" rel="alternate"></link><updated>2009-06-22T12:58:23+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-06-22:posts/2009/06/22/blender-i-osveshchenie/</id><summary type="html">&lt;p&gt;Дали ссылку на блог, где можно читать, куда стремиться, чтобы делать
+красивые рендеры в Blender&lt;/p&gt;
+</summary><category term="blender"></category><category term="свет"></category></entry><entry><title>ICFPC 2009</title><link href="http://imdagger.github.io/posts/2009/06/21/icfpc-2009/" rel="alternate"></link><updated>2009-06-21T20:22:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2009-06-21:posts/2009/06/21/icfpc-2009/</id><summary type="html">&lt;p&gt;Попробую поучавствовать в этом соревновании. Проверю свои навыки в
+программировании в связке Python + C. До этого учавствовал в Sapka, бот
+(NoobTeam) занял 8-11 место, я был очень рад результату и огорчён
+досадной ошибке в коде. Думаю получу от этого турнира не меньше фана…&lt;/p&gt;
+</summary></entry></feed>

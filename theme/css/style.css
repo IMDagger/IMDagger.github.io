@@ -412,7 +412,9 @@ a.pseudo-link:hover {
     color: inherit;
     text-decoration: underline;
 }
-.nav-tabs > li.active > a {
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:active {
     color: inherit;
     font-weight: bold;
     text-decoration: none;
@@ -421,10 +423,12 @@ a.pseudo-link:hover {
 .nav-tabs > li.active {
     padding-bottom: 2px;
 }
-.nav-tabs > li, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-                                              background-color: #fff;
-                                              border-color: #fff;
-                                          }
+.nav-tabs > li,
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+    background-color: #fff;
+    border-color: #fff;
+}
 
 .nav-tabs > li {
     margin-right: 2px;
@@ -755,6 +759,7 @@ table.table-post-80 {
 .dropdown-menu > li > a[class*="tag-"] {
     display: inline;
     padding: 3px 5px;
+    background-color: transparent;
 }
 
 .highlight strong {

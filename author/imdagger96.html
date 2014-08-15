@@ -4,8 +4,11 @@
         <meta charset="utf-8" />
         <title>IMDagger - Articles by IMDagger</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="" />
-        <meta name="author" content="Alex Moiseenko" />
+        <meta name="description" content="Блог IMDagger: IT и жизнь" />
+        <meta name="keywords" content="python,lisp,scheme,racket,emacs,blender,программирование,моделирование,lua,c++,c,js,java,git,bazaar" />
+        <meta name="author" content="Alex Moiseenko (IMDagger)" />
+
+<meta name="robots" content="noindex"/>
         <!-- Open Graph -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
@@ -16,26 +19,7 @@
         <link rel="stylesheet" href="/theme/css/math.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script type="text/x-mathjax-config">
-         MathJax.Hub.Config({
-             'HTML-CSS': {
-                 linebreaks: {
-                     automatic: true,
-                     width: 'container'
-                 }
-             },
-             tex2jax: {
-                 inlineMath: [['$math$','$/math$']],
-                 displayMath: [['$$math$$','$$/math$$']],
-                 skipTags: ['pre', 'code'],
-                 preview: ['формула...'],
-                 ignoreClass: 'math-ignore'
-             }
-         });
-        </script>
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
-
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML,http://imdagger.github.io/theme/js/math.js"></script>
         <script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
         <!--[if (gte IE 6)&(lte IE 8)]>
           <script type="text/javascript" src="/theme/js/selectivizr-min.js"></script>
@@ -58,7 +42,7 @@
             </div>
             <div class="col-sm-10 all-posts">
                 <div class="title-container">
-                    <h1><b><a href="http://imdagger.github.io/" class="fn nickname">IMDagger</a></b></h1>
+                    <h1><b><a href="http://imdagger.github.io" class="fn nickname">IMDagger</a></b></h1>
                 </div>
                 <div class="title-menu">
                     <ul class="nav nav-tabs" role="tablist">
@@ -67,6 +51,7 @@
                         </li>
                         <li><a href="#">О себе</a></li>
                         <li><a href="#">Фотки</a></li>
+                        <li><a href="#">RSS-ленты</a></li>
                     </ul>
                 </div>
             </div>
@@ -94,6 +79,23 @@
 </div>
 
 <div class="row widget">
+    <div class="widget-content">
+        <div class="widget__title">
+            <div class="widget__title-link">Метрика</div>
+        </div>
+        <div class="widget__body">
+            <div class="widget-line">
+              <!-- noindex -->
+              <!-- googleoff: index -->
+              <div class="widget-entry">
+                <!-- Yandex.Metrika informer --><a href="https://metrika.yandex.ru/stat/?id=25746494&amp;from=informer" target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/25746494/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:25746494,lang:'ru'});return false}catch(e){}"/></a><!-- /Yandex.Metrika informer --><!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter25746494 = new Ya.Metrika({id:25746494, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/25746494" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                <!-- googleon: index -->
+                <!-- /noindex -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="row widget">
     <div class="widget-content">
         <div class="widget__title">
             <div class="widget__title-link">Популярное в дневнике</div>
@@ -134,26 +136,26 @@
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">месяцам</span>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                <li><a href="#" class="h-link">Нулябрь</a><li>
-                <li><a href="#" class="h-link">Первябрь</a><li>
+                <li><a rel="nofollow" href="#" class="h-link">Нулябрь</a><li>
+                <li><a rel="nofollow" href="#" class="h-link">Первябрь</a><li>
             </ul>
         </div> ·
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">меткам</span>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a class="tag-2" href="/tag/linux.html" class="h-link">linux</a>                    <a class="tag-2" href="/tag/iandeks.html" class="h-link">Яндекс</a>                    <a class="tag-1" href="/tag/oshibka.html" class="h-link">ошибка</a>                    <a class="tag-1" href="/tag/bge.html" class="h-link">bge</a>                    <a class="tag-2" href="/tag/eda.html" class="h-link">еда</a>                </li>                <li>                    <a class="tag-1" href="/tag/rabota.html" class="h-link">работа</a>                    <a class="tag-2" href="/tag/sborka.html" class="h-link">сборка</a>                    <a class="tag-1" href="/tag/blender.html" class="h-link">blender</a>                    <a class="tag-1" href="/tag/programmirovanie.html" class="h-link">программирование</a>                    <a class="tag-1" href="/tag/radost.html" class="h-link">радость</a>                </li>                <li>                    <a class="tag-2" href="/tag/emacs.html" class="h-link">emacs</a>                    <a class="tag-1" href="/tag/ia.html" class="h-link">Я</a>                    <a class="tag-1" href="/tag/zhizn.html" class="h-link">жизнь</a>                    <a class="tag-2" href="/tag/bredni.html" class="h-link">бредни</a>                    <a class="tag-2" href="/tag/java.html" class="h-link">java</a>                </li>                <li>                    <a class="tag-2" href="/tag/google.html" class="h-link">google</a>                    <a class="tag-1" href="/tag/nabrosok.html" class="h-link">набросок</a>                    <a class="tag-1" href="/tag/python.html" class="h-link">python</a>                    <a class="tag-2" href="/tag/javascript.html" class="h-link">javascript</a>                    <a class="tag-2" href="/tag/icfpc.html" class="h-link">icfpc</a>                </li>            </ul>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">                <li>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/sborka.html" class="h-link">сборка</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/iandeks.html" class="h-link">Яндекс</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/programmirovanie.html" class="h-link">программирование</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/emacs.html" class="h-link">emacs</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/eda.html" class="h-link">еда</a>                </li>                <li>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/python.html" class="h-link">python</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/zhizn.html" class="h-link">жизнь</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/oshibka.html" class="h-link">ошибка</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/nabrosok.html" class="h-link">набросок</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/bge.html" class="h-link">bge</a>                </li>                <li>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/radost.html" class="h-link">радость</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/java.html" class="h-link">java</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/linux.html" class="h-link">linux</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/rabota.html" class="h-link">работа</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/blender.html" class="h-link">blender</a>                </li>                <li>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/icfpc.html" class="h-link">icfpc</a>                    <a rel="nofollow" class="tag-1" href="http://imdagger.github.io/tag/ia.html" class="h-link">Я</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/bredni.html" class="h-link">бредни</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/google.html" class="h-link">google</a>                    <a rel="nofollow" class="tag-2" href="http://imdagger.github.io/tag/javascript.html" class="h-link">javascript</a>                </li>            </ul>
         </div> ·
         <div class="btn-group">
             <span type="button" class="pseudo-link" data-toggle="dropdown">типам</span>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                <li><a href="/category/description.html" class="h-link">обращение</a><li>
-                <li><a href="/category/friend.html" class="h-link"></a><li>
-                <li><a href="/category/join.html" class="h-link"></a><li>
-                <li><a href="/category/link.html" class="h-link">ссылки</a><li>
-                <li><a href="/category/mood.html" class="h-link">настроение</a><li>
-                <li><a href="/category/photo.html" class="h-link">фото</a><li>
-                <li><a href="/category/text.html" class="h-link">текст</a><li>
-                <li><a href="/category/video.html" class="h-link">видео</a><li>
-                <li><a href="/category/wishlist.html" class="h-link"></a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/description.html" class="h-link">обращение</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/friend.html" class="h-link"></a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/join.html" class="h-link"></a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/link.html" class="h-link">ссылки</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/mood.html" class="h-link">настроение</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/photo.html" class="h-link">фото</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/text.html" class="h-link">текст</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/video.html" class="h-link">видео</a><li>
+                <li><a rel="nofollow" href="http://imdagger.github.io/category/wishlist.html" class="h-link"></a><li>
             </ul>
         </div>
     </span>
@@ -162,23 +164,112 @@
 <div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/30/bukvennoe-pechene/" title="изменено 13 июля 2014 года в 16:45">
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/10/01/stranno/" >
+                1 октября 2009 года, 21:26
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+            <noindex>
+<div class="row tags-row">
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/python.html">python</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/http.html">HTTP</a></span></div>
+            </noindex>
+            <div class="post-title">
+<a class="no-link" href="http://imdagger.github.io/posts/2009/10/01/stranno/">Странно</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>Странно, что при передаче POST-запроса при помощи httplib (из
+стандартной поставки Python), данные формы отправляются как-то позже,
+только после уничтожения объекта соединения, а не во время вызова
+<em>request</em>:</p>
+<div class="highlight"><pre><span class="pgcss-n">conn</span> <span class="pgcss-o">=</span> <span class="pgcss-n">httplib</span><span class="pgcss-o">.</span><span class="pgcss-n">HTTPConnection</span><span class="pgcss-p">(</span><span class="pgcss-s">&#39;localhost&#39;</span><span class="pgcss-p">,</span> <span class="pgcss-mi">8080</span><span class="pgcss-p">)</span>
+<span class="pgcss-n">params</span> <span class="pgcss-o">=</span> <span class="pgcss-n">urllib</span><span class="pgcss-o">.</span><span class="pgcss-n">urlencode</span><span class="pgcss-p">({</span><span class="pgcss-s">&#39;name&#39;</span><span class="pgcss-p">,</span> <span class="pgcss-s">&#39;а тут данные много-много&#39;</span><span class="pgcss-p">})</span>
+<span class="pgcss-n">headers</span> <span class="pgcss-o">=</span> <span class="pgcss-p">{</span><span class="pgcss-s">&#39;Content&#39;</span><span class="pgcss-o">-</span><span class="pgcss-nb">type</span> <span class="pgcss-p">:</span> <span class="pgcss-s">&#39;application/x-www-form-urlencoded&#39;</span><span class="pgcss-p">,</span> <span class="pgcss-s">&#39;Accept&#39;</span> <span class="pgcss-p">:</span> <span class="pgcss-s">&#39;text&#39;</span><span class="pgcss-o">/</span><span class="pgcss-n">plain</span><span class="pgcss-p">}</span>
+<span class="pgcss-n">conn</span><span class="pgcss-o">.</span><span class="pgcss-n">request</span><span class="pgcss-p">(</span><span class="pgcss-s">&#39;POST&#39;</span><span class="pgcss-p">,</span> <span class="pgcss-s">&#39;/test/test.jsp&#39;</span><span class="pgcss-p">,</span> <span class="pgcss-n">params</span><span class="pgcss-p">,</span> <span class="pgcss-n">headers</span><span class="pgcss-p">)</span>
+<span class="pgcss-n">response</span> <span class="pgcss-o">=</span> <span class="pgcss-n">conn</span><span class="pgcss-o">.</span><span class="pgcss-n">getresponse</span><span class="pgcss-p">()</span>
+<span class="pgcss-n">data</span> <span class="pgcss-o">=</span> <span class="pgcss-n">response</span><span class="pgcss-o">.</span><span class="pgcss-n">read</span><span class="pgcss-p">()</span>
+</pre></div>
+<p>Но read возвращает данные от скрипта будто параметры и не
+передавались при помощи POST. Методом проб и ошибок я понял, что тело
+HTTP запроса не отправляется. И заменил на другой код с использованием
+urllib, который к счастью заработал:</p>
+<div class="highlight"><pre><span class="pgcss-n">params</span> <span class="pgcss-o">=</span> <span class="pgcss-n">urllib</span><span class="pgcss-o">.</span><span class="pgcss-n">urlencode</span><span class="pgcss-p">({</span><span class="pgcss-s">&#39;name&#39;</span><span class="pgcss-p">,</span> <span class="pgcss-s">&#39;а тут данные много-много&#39;</span><span class="pgcss-p">})</span>
+<span class="pgcss-n">response</span> <span class="pgcss-o">=</span> <span class="pgcss-n">urllib</span><span class="pgcss-o">.</span><span class="pgcss-n">urlopen</span><span class="pgcss-p">(</span><span class="pgcss-s">&#39;http://localhost:8080/test/test.jsp&#39;</span><span class="pgcss-p">,</span> <span class="pgcss-n">params</span><span class="pgcss-p">)</span>
+<span class="pgcss-n">data</span> <span class="pgcss-o">=</span> <span class="pgcss-n">response</span><span class="pgcss-o">.</span><span class="pgcss-n">read</span><span class="pgcss-p">()</span>
+</pre></div>
+<p>И оп! Он смог переслать тело запроса через сокет. А почему с httplib
+не получилось я даже пока не знаю.</p>
+<p>P.S. Давно что-то я про Python не писал :)</p>
+                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/10/01/tortik/" >
+                1 октября 2009 года, 20:35
+            </a>
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-1 b-post__layout-left">
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+        </div>
+        <div class="col-sm-11 b-right-col">
+            <noindex>
+<div class="row tags-row">
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/tort.html">торт</a></span></div>
+            </noindex>
+            <div class="post-title">
+<a class="no-link" href="http://imdagger.github.io/posts/2009/10/01/tortik/">Тортик</a>            </div>
+            <div class="row post-body">
+                <div class="b-text">
+<p>Полторы недели назад кушал вкусный тортик, который сделала мама. Масса
+его была ~7кг. Цветок и лепестки сделаны из сахара.</p>
+<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/86328/"><img alt="Торт" src="http://img-fotki.yandex.ru/get/3802/imdagger.3/0_15138_951b13a1_XL" style="width: 400px; height: 300px;" title="Торт"/></a></p>
+<p class="text-center"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/86327/"><img alt="Торт" src="http://img-fotki.yandex.ru/get/3714/imdagger.3/0_15137_40a6e763_XL" style="width: 400px; height: 300px;" title="Торт"/></a></p>                </div>
+            </div>
+            <div class="row comments-row">
+                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-text">
+    <div class="panel-heading b-post-type b-post-type-text">
+        <b class="b-user">
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+        </b>
+написал        <span class="pull-right b-date">
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/09/30/bukvennoe-pechene/" title="изменено 13 июля 2014 года в 16:45">
                 30 сентября 2009 года, 11:49
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/pechene.html">печенье</a></span>,    <span class="tag"><a class="h-link" href="/tag/gotovliu.html">готовлю</a></span>,    <span class="tag"><a class="h-link" href="/tag/eda.html">еда</a></span>,    <span class="tag"><a class="h-link" href="/tag/ovsianoe.html">овсяное</a></span>,    <span class="tag"><a class="h-link" href="/tag/kukhnia.html">кухня</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/pechene.html">печенье</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/gotovliu.html">готовлю</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/eda.html">еда</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/ovsianoe.html">овсяное</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/kukhnia.html">кухня</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/09/30/bukvennoe-pechene/">Буквенное печенье</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/09/30/bukvennoe-pechene/">Буквенное печенье</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Вчера вечером сделал овсяное печенье. Приготовилось всё очень
@@ -218,19 +309,21 @@
 </div><div class="panel panel-mood">
     <div class="panel-heading b-post-type b-post-type-mood">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 поделился настроением        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/29/urn:ya.ru:post/22199227/265/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/09/29/urn:ya.ru:post/22199227/265/" >
                 29 сентября 2009 года, 20:01
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
+            </noindex>
             <div class="post-title">
             </div>
             <div class="row post-body">
@@ -246,23 +339,25 @@
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/28/klonirovanie-obrazov/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/09/28/klonirovanie-obrazov/" >
                 28 сентября 2009 года, 14:16
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/clonezilla.html">clonezilla</a></span>,    <span class="tag"><a class="h-link" href="/tag/samba4.html">samba4</a></span>,    <span class="tag"><a class="h-link" href="/tag/vosstanovlenie.html">восстановление</a></span>,    <span class="tag"><a class="h-link" href="/tag/boot.html">boot</a></span>,    <span class="tag"><a class="h-link" href="/tag/drbl.html">drbl</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/clonezilla.html">clonezilla</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/samba4.html">samba4</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/vosstanovlenie.html">восстановление</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/boot.html">boot</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/drbl.html">drbl</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/09/28/klonirovanie-obrazov/">Клонирование образов</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/09/28/klonirovanie-obrazov/">Клонирование образов</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>В моей ситуации PDC сервером является <strong>Samba 4.0.0-alpha9</strong> из GIT.
@@ -306,8 +401,8 @@ partition(<strong>id</strong>), где id — номер раздела, кот�
 sda1, sda2, hda1, hda2 и только ntfs), а также пользуется пакетом
 ntfsprogs, который должен быть <strong>обязательно установлен</strong></p>
 </div>
-<p class="cut"><a class="h-link reference internal" href="#cut_58705808"data-toggle="collapse">хочу узреть программу!</a></p>
-<div class="collapse" id="cut_58705808">
+<p class="cut"><a class="h-link reference internal" href="#cut_59186640"data-toggle="collapse">хочу узреть программу!</a></p>
+<div class="collapse" id="cut_59186640">
 <div class="highlight"><pre><span class="pgcss-c">#! /bin/sh</span>
 <span class="pgcss-k">for </span>id in 1 2; <span class="pgcss-k">do</span>
 <span class="pgcss-k">   for </span>hdd in hda sda; <span class="pgcss-k">do</span>
@@ -357,23 +452,25 @@ Clonezilla, там есть даже галочка для этого, но мн
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/28/mozg/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/09/28/mozg/" >
                 28 сентября 2009 года, 06:38
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/rabota.html">работа</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/rabota.html">работа</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/09/28/mozg/">Мозг</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/09/28/mozg/">Мозг</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Мозг проснулся в 5:20 и сказал: «Бе-бе-бе хочу спать! Спать!». Но я
@@ -390,21 +487,23 @@ Clonezilla, там есть даже галочка для этого, но мн
 </div><div class="panel panel-link">
     <div class="panel-heading b-post-type b-post-type-link">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 поделился ссылкой        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/27/avtomaticheskoe-testirovanie/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/09/27/avtomaticheskoe-testirovanie/" >
                 27 сентября 2009 года, 19:41
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/java.html">java</a></span>,    <span class="tag"><a class="h-link" href="/tag/testirovanie.html">тестирование</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/java.html">java</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/testirovanie.html">тестирование</a></span></div>
+            </noindex>
             <div class="post-title">
 <a class="h-link" href="http://sourceforge.net/projects/jwebunit/">
     <img class="b-ico" src="http://favicon.yandex.ru/favicon/sourceforge.net?default=yaru-external">Автоматическое тестирование</a>
@@ -423,19 +522,21 @@ Clonezilla, там есть даже галочка для этого, но мн
 </div><div class="panel panel-mood">
     <div class="panel-heading b-post-type b-post-type-mood">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 поделился настроением        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/26/urn:ya.ru:post/22199227/257/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/09/26/urn:ya.ru:post/22199227/257/" >
                 26 сентября 2009 года, 18:28
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
+            </noindex>
             <div class="post-title">
             </div>
             <div class="row post-body">
@@ -451,23 +552,25 @@ Clonezilla, там есть даже галочка для этого, но мн
 </div><div class="panel panel-text">
     <div class="panel-heading b-post-type b-post-type-text">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/26/kak-ia-pokorial-tablichnye-funktsii/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/09/26/kak-ia-pokorial-tablichnye-funktsii/" >
                 26 сентября 2009 года, 17:35
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/spring.html">spring</a></span>,    <span class="tag"><a class="h-link" href="/tag/hibernate.html">hibernate</a></span>,    <span class="tag"><a class="h-link" href="/tag/annotatsii.html">аннотации</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/spring.html">spring</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/hibernate.html">hibernate</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/annotatsii.html">аннотации</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="/posts/2009/09/26/kak-ia-pokorial-tablichnye-funktsii/">Как я покорял табличные функции</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/09/26/kak-ia-pokorial-tablichnye-funktsii/">Как я покорял табличные функции</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p>Во-первых, я хотел постараться проделать всю работу через аннотации
@@ -484,8 +587,8 @@ dl2ResultsHeaderItem.</p>
 <p>Поэтому я нашёл способ реализовать задуманное через аннотацию
 NamedNativeQuery из javax.persistence, я его переделал из примера для
 хранимых процедур:</p>
-<p class="cut"><a class="h-link reference internal" href="#cut_62087952"data-toggle="collapse">и как оно выглядит?</a></p>
-<div class="collapse" id="cut_62087952">
+<p class="cut"><a class="h-link reference internal" href="#cut_57573456"data-toggle="collapse">и как оно выглядит?</a></p>
+<div class="collapse" id="cut_57573456">
 <div class="highlight"><pre><span class="pgcss-kn">package</span> <span class="pgcss-n">results</span><span class="pgcss-o">;</span>
 <span class="pgcss-kn">import</span> <span class="pgcss-nn">java.io.Serializable</span><span class="pgcss-o">;</span>
 <span class="pgcss-kn">import</span> <span class="pgcss-nn">javax.persistence.*</span><span class="pgcss-o">;</span>
@@ -573,23 +676,25 @@ org.hibernate.type.CalendarType - could not bind value ‘2009-09-26
 </div><div class="panel panel-photo">
     <div class="panel-heading b-post-type b-post-type-photo">
         <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
+            <a class="b-user__link" href="http://imdagger.github.io/author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
         </b>
 вывесил фотки        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/24/pust-zemlia-budet-pukhom/" >
+            <a class="h-link" href="http://imdagger.github.io/posts/2009/09/24/pust-zemlia-budet-pukhom/" >
                 24 сентября 2009 года, 14:52
             </a>
         </span>
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="http://imdagger.github.io/author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
 <div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/pozhar.html">пожар</a></span>,    <span class="tag"><a class="h-link" href="/tag/vinchester.html">винчестер</a></span></div>
+    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/pozhar.html">пожар</a></span>,    <span class="tag"><a rel="nofollow" class="h-link" href="http://imdagger.github.io/tag/vinchester.html">винчестер</a></span></div>
+            </noindex>
             <div class="post-title">
-<a class="no-link" href="posts/2009/09/24/pust-zemlia-budet-pukhom/">Пусть земля будет пухом</a>            </div>
+<a class="no-link" href="http://imdagger.github.io/posts/2009/09/24/pust-zemlia-budet-pukhom/">Пусть земля будет пухом</a>            </div>
             <div class="row post-body">
                 <div class="b-text">
 <p class="row photo-item"><a class="reference external" href="http://fotki.yandex.ru/users/imdagger/view/83761"><img alt="Пусть земля будет пухом" src="http://img-fotki.yandex.ru/get/3804/imdagger.3/0_14731_11fe5928_L" title="Пусть земля будет пухом"/></a></p>
@@ -605,194 +710,6 @@ org.hibernate.type.CalendarType - could not bind value ‘2009-09-26
             </div>
         </div>
     </div>
-</div><div class="panel panel-mood">
-    <div class="panel-heading b-post-type b-post-type-mood">
-        <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
-        </b>
-поделился настроением        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/23/urn:ya.ru:post/22199227/252/" >
-                23 сентября 2009 года, 17:45
-            </a>
-        </span>
-    </div>
-    <div class="panel-body">
-        <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
-        </div>
-        <div class="col-sm-11 b-right-col">
-            <div class="post-title">
-            </div>
-            <div class="row post-body">
-                <div class="b-text">
-<p>Появилась небольшая апатия, хотя я знаю почему :)</p>
-                </div>
-            </div>
-            <div class="row comments-row">
-                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
-            </div>
-        </div>
-    </div>
-</div><div class="panel panel-text">
-    <div class="panel-heading b-post-type b-post-type-text">
-        <b class="b-user">
-            <a class="b-user__link" href="author/imdagger.html"><b class="b-user__first-letter">I</b>MDagger</a>
-        </b>
-написал        <span class="pull-right b-date">
-            <a class="h-link" href="/posts/2009/09/23/steny-kreposti-postroeny/" >
-                23 сентября 2009 года, 17:20
-            </a>
-        </span>
-    </div>
-    <div class="panel-body">
-        <div class="col-sm-1 b-post__layout-left">
-            <a href="author/imdagger.html"><img src="http://upics.yandex.ru/22199227/middle"></a>
-        </div>
-        <div class="col-sm-11 b-right-col">
-<div class="row tags-row">
-    <span class="tag"><a class="h-link" href="/tag/dl.html">dl</a></span>,    <span class="tag"><a class="h-link" href="/tag/java.html">java</a></span>,    <span class="tag"><a class="h-link" href="/tag/spring.html">spring</a></span>,    <span class="tag"><a class="h-link" href="/tag/hibernate.html">hibernate</a></span></div>
-            <div class="post-title">
-<a class="no-link" href="/posts/2009/09/23/steny-kreposti-postroeny/">Стены крепости построены</a>            </div>
-            <div class="row post-body">
-                <div class="b-text">
-<p>Прочитав
-<a class="reference external" href="http://samolisov.blogspot.com/2009/06/hibernate-spring.html">блог</a>
-сурового челябинского программиста и
-<a class="reference external" href="http://maestric.com/doc/java/spring/mvc">туториал</a>, как работать со
-<strong>SpringFramework</strong>, я всё же смог настроить тандем Spring+Hibernate.
-Т.к. я сначала настраивал <strong>Hibernate</strong> отдельно, а затем прикручивал
-Spring, то вышло, что часть настроек из конфигов нужно было перенести в
-другое место из-за того, что в связке настройку будет производить
-фреймворк, а не ORM. Пришлось убрать файл context.xml из META-INF,
-который описывал параметры подключения Hibernate3 к базе данных через
-драйвер <strong>jTDS</strong>. Настройки web.xml в WEB-INF стали выглядеть таким
-образом:</p>
-<p class="cut"><a class="h-link reference internal" href="#cut_57276816"data-toggle="collapse">а как?</a></p>
-<div class="collapse" id="cut_57276816">
-<div class="highlight"><pre>...
-<span class="pgcss-nt">&lt;web-app</span> <span class="pgcss-na">xmlns=</span><span class="pgcss-s">&quot;http://java.sun.com/xml/ns/javaee&quot;</span>
-  <span class="pgcss-na">xmlns:xsi=</span><span class="pgcss-s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-  <span class="pgcss-na">xsi:schemaLocation=</span><span class="pgcss-s">&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</span>
-  <span class="pgcss-na">version=</span><span class="pgcss-s">&quot;2.5&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;servlet&gt;</span>
-  <span class="pgcss-nt">&lt;servlet-name&gt;</span>dl<span class="pgcss-nt">&lt;/servlet-name&gt;</span>
-  <span class="pgcss-nt">&lt;servlet-class&gt;</span>
-      <strong>org.springframework.web.servlet.DispatcherServlet</strong>
-  <span class="pgcss-nt">&lt;/servlet-class&gt;</span>
-  <span class="pgcss-nt">&lt;load-on-startup&gt;</span>1<span class="pgcss-nt">&lt;/load-on-startup&gt;</span>
-  <span class="pgcss-nt">&lt;/servlet&gt;</span>
-  <span class="pgcss-nt">&lt;servlet-mapping&gt;</span>
-  <span class="pgcss-nt">&lt;servlet-name&gt;</span>dl<span class="pgcss-nt">&lt;/servlet-name&gt;</span>
-  <strong><span class="pgcss-nt">&lt;url-pattern&gt;</span>/<span class="pgcss-nt">&lt;/url-pattern&gt;</span></strong>
-  <span class="pgcss-nt">&lt;/servlet-mapping&gt;</span>
-  <span class="pgcss-nt">&lt;context-param&gt;</span>
-  <span class="pgcss-nt">&lt;param-name&gt;</span>contextConfigLocation<span class="pgcss-nt">&lt;/param-name&gt;</span>
-  <strong><span class="pgcss-nt">&lt;param-value&gt;</span>/WEB-INF/dl-servlet.xml<span class="pgcss-nt">&lt;/param-value&gt;</span></strong>
-  <span class="pgcss-nt">&lt;/context-param&gt;</span>
-  <span class="pgcss-nt">&lt;listener&gt;</span>
-  <span class="pgcss-nt">&lt;listener-class&gt;</span>
-      <strong>org.springframework.web.context.ContextLoaderListener</strong>
-  <span class="pgcss-nt">&lt;/listener-class&gt;</span>
-  <span class="pgcss-nt">&lt;/listener&gt;</span>
-<strong>...</strong>
-<span class="pgcss-nt">&lt;/web-app&gt;</span>
-</pre></div>
-<p>Тег servlet указывает Apache Tomcat, что нужно загрузить сервлет
-<strong>org.springframework.web.servlet.DispatcherServlet</strong> для обработки
-запросов. В директории WEB-INFнаходится файл dl-servlet.xml, который
-описывает настройки сервлета:</p>
-<div class="highlight"><pre><span class="pgcss-cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="pgcss-nt">&lt;beans</span> <span class="pgcss-na">xmlns=</span><span class="pgcss-s">&quot;http://www.springframework.org/schema/beans&quot;</span>
-  <span class="pgcss-na">xmlns:xsi=</span><span class="pgcss-s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-  <span class="pgcss-na">xmlns:aop=</span><span class="pgcss-s">&quot;http://www.springframework.org/schema/aop&quot;</span>
-  <span class="pgcss-na">xsi:schemaLocation=</span><span class="pgcss-s">&quot;http://www.springframework.org/schema/beans</span>
-<span class="pgcss-s">  http://www.springframework.org/schema/beans/spring-beans-2.0.xsd&quot;</span><span class="pgcss-nt">&gt;</span>
-  <strong><span class="pgcss-nt">&lt;import</span> <span class="pgcss-na">resource=</span><span class="pgcss-s">&quot;/dl-context/main-context.xml&quot;</span> <span class="pgcss-nt">/&gt;</span></strong>
-<span class="pgcss-nt">&lt;/beans&gt;</span>
-</pre></div>
-<p>Он подключает из каталога dl-context различные параметры настройки. Пока
-у меня всего один файл, но скоро я разобью опции на несколько файлов по
-типам. Настройка основного контекста описана в main-context.xml:</p>
-<div class="highlight"><pre><span class="pgcss-cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="pgcss-nt">&lt;beans</span> <span class="pgcss-na">xmlns=</span><span class="pgcss-s">&quot;http://www.springframework.org/schema/beans&quot;</span>
-  <span class="pgcss-na">xmlns:xsi=</span><span class="pgcss-s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-  <span class="pgcss-na">xmlns:aop=</span><span class="pgcss-s">&quot;http://www.springframework.org/schema/aop&quot;</span>
-  <span class="pgcss-na">xsi:schemaLocation=</span><span class="pgcss-s">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd&quot;</span><span class="pgcss-nt">&gt;</span>
-<span class="pgcss-c">&lt;!-- This config contains main info about application mappings and view resolvers--&gt;</span>
-<span class="pgcss-nt">&lt;bean</span> <span class="pgcss-na">id=</span><span class="pgcss-s">&quot;dataSource&quot;</span> <span class="pgcss-na">class=</span><span class="pgcss-s">&quot;<strong>org.apache.tomcat.dbcp.dbcp.BasicDataSource</strong>&quot;</span> <span class="pgcss-na">destroy-method=</span><span class="pgcss-s">&quot;close&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;driverClassName&quot;</span> <span class="pgcss-na">value=</span><span class="pgcss-s">&quot;<strong>net.sourceforge.jtds.jdbc.Driver</strong>&quot;</span> <span class="pgcss-nt">/&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;url&quot;</span> <span class="pgcss-na">value=</span><span class="pgcss-s">&quot;<strong>jdbc:jtds:sqlserver://dl-test:1030/dldb</strong>&quot;</span> <span class="pgcss-nt">/&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;username&quot;</span> <span class="pgcss-na">value=</span><span class="pgcss-s">&quot;<strong>пользователь-базы</strong>&quot;</span> <span class="pgcss-nt">/&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;password&quot;</span> <span class="pgcss-na">value=</span><span class="pgcss-s">&quot;<strong>пароль</strong>&quot;</span> <span class="pgcss-nt">/&gt;</span>
-<span class="pgcss-nt">&lt;/bean&gt;</span>
-<span class="pgcss-nt">&lt;bean</span> <span class="pgcss-na">id=</span><span class="pgcss-s">&quot;sessionFactory&quot;</span> <span class="pgcss-na">class=</span><span class="pgcss-s">&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;dataSource&quot;</span> <span class="pgcss-na">ref=</span><span class="pgcss-s">&quot;dataSource&quot;</span> <span class="pgcss-nt">/&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;configLocation&quot;</span> <span class="pgcss-na">value=</span><span class="pgcss-s">&quot;classpath:/hibernate.cfg.xml&quot;</span> <span class="pgcss-nt">/&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;configurationClass&quot;</span> <span class="pgcss-na">value=</span><span class="pgcss-s">&quot;org.hibernate.cfg.AnnotationConfiguration&quot;</span> <span class="pgcss-nt">/&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;hibernateProperties&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;props&gt;</span>
-  <span class="pgcss-nt">&lt;prop</span> <span class="pgcss-na">key=</span><span class="pgcss-s">&quot;hibernate.dialect&quot;</span><span class="pgcss-nt">&gt;</span>${hibernate.dialect}<span class="pgcss-nt">&lt;/prop&gt;</span>
-  <span class="pgcss-nt">&lt;/props&gt;</span>
-  <span class="pgcss-nt">&lt;/property&gt;</span>
-<span class="pgcss-nt">&lt;/bean&gt;</span>
-<strong><span class="pgcss-nt">&lt;bean</span> <span class="pgcss-na">id=</span><span class="pgcss-s">&quot;cellDAO&quot;</span> <span class="pgcss-na">class=</span><span class="pgcss-s">&quot;results.CellDao&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;sessionFactory&quot;</span> <span class="pgcss-na">ref=</span><span class="pgcss-s">&quot;sessionFactory&quot;</span> <span class="pgcss-nt">/&gt;</span>
-<span class="pgcss-nt">&lt;/bean&gt;</span>
-<span class="pgcss-nt">&lt;bean</span> <span class="pgcss-na">id=</span><span class="pgcss-s">&quot;cellService&quot;</span> <span class="pgcss-na">class=</span><span class="pgcss-s">&quot;results.CellService&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;dao&quot;</span> <span class="pgcss-na">ref=</span><span class="pgcss-s">&quot;cellDAO&quot;</span> <span class="pgcss-nt">/&gt;</span>
-<span class="pgcss-nt">&lt;/bean&gt;</span>
-<span class="pgcss-nt">&lt;bean</span> <span class="pgcss-na">id=</span><span class="pgcss-s">&quot;resultsTableController&quot;</span> <span class="pgcss-na">class=</span><span class="pgcss-s">&quot;results.TableController&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;cellService&quot;</span> <span class="pgcss-na">ref=</span><span class="pgcss-s">&quot;cellService&quot;</span><span class="pgcss-nt">/&gt;</span>
-<span class="pgcss-nt">&lt;/bean&gt;</span></strong>
-<span class="pgcss-nt">&lt;bean</span> <span class="pgcss-na">id=</span><span class="pgcss-s">&quot;simpleUrlHandler&quot;</span> <span class="pgcss-na">class=</span><span class="pgcss-s">&quot;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;order&quot;</span><span class="pgcss-nt">&gt;&lt;value&gt;</span>0<span class="pgcss-nt">&lt;/value&gt;&lt;/property&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;mappings&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;props&gt;</span>
-  <strong><span class="pgcss-nt">&lt;prop</span> <span class="pgcss-na">key=</span><span class="pgcss-s">&quot;results&quot;</span><span class="pgcss-nt">&gt;</span>resultsTableController<span class="pgcss-nt">&lt;/prop&gt;</span></strong>
-  <span class="pgcss-nt">&lt;/props&gt;</span>
-  <span class="pgcss-nt">&lt;/property&gt;</span>
-<span class="pgcss-nt">&lt;/bean&gt;</span>
-<span class="pgcss-nt">&lt;bean</span> <span class="pgcss-na">id=</span><span class="pgcss-s">&quot;viewResolver&quot;</span> <span class="pgcss-na">class=</span><span class="pgcss-s">&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;</span><span class="pgcss-nt">&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;cache&quot;</span> <span class="pgcss-na">value=</span><span class="pgcss-s">&quot;false&quot;</span><span class="pgcss-nt">/&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;viewClass&quot;</span><span class="pgcss-nt">&gt;&lt;value&gt;</span>org.springframework.web.servlet.view.JstlView<span class="pgcss-nt">&lt;/value&gt;&lt;/property&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;prefix&quot;</span><span class="pgcss-nt">&gt;&lt;value&gt;</span>/WEB-INF/pages/jsp/<span class="pgcss-nt">&lt;/value&gt;&lt;/property&gt;</span>
-  <span class="pgcss-nt">&lt;property</span> <span class="pgcss-na">name=</span><span class="pgcss-s">&quot;suffix&quot;</span><span class="pgcss-nt">&gt;&lt;value&gt;</span>.jsp<span class="pgcss-nt">&lt;/value&gt;&lt;/property&gt;</span>
-<span class="pgcss-nt">&lt;/bean&gt;</span>
-<span class="pgcss-nt">&lt;/beans&gt;</span>
-</pre></div>
-<p>Сервер баз данных у меня внешний MSSQL 2005 Express Edition (к
-сожалению у меня нету выбора и приходится работать с этим, т.к. я лишь
-рефакторю код существующей большой системы, которую просто так нельзя
-сломать). Запускаю же Tomcat у себя на Linux.</p>
-<p>В бине (не путать с бинами из Java, это другое понятие бина, оно из
-Spring) <strong>dataSource</strong> указываются параметры подключения к серверу БД и
-класс драйвера JDBC. В sessionFactory указано, что при создании объекта
-из этого бина, нужно создать объект dataSource, для этого написана
-ссылка &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;.</p>
-<p>CellDao, CellService и ResultsTableController — это мои пробные
-классы для работы с ячейками таблицы результатов. Маппинг &lt;prop
-key=&quot;results&quot;&gt;resultsTableController&lt;/prop&gt; позволяет, при переходе по
-адресу <strong>http://localhost:8080/dl/results</strong>, передавать управление
-контроллеру ResultsTableController, котрый в свою очередь создаёт
-представление:</p>
-<div class="highlight"><pre><span class="pgcss-o">...</span>
-<span class="pgcss-o">...</span> <span class="pgcss-k">new</span> <span class="pgcss-n">ModelAndView</span><span class="pgcss-o">(</span><span class="pgcss-s">&quot;<strong>index</strong>&quot;</span><span class="pgcss-o">)</span>
-<span class="pgcss-o">...</span>
-</pre></div>
-<p>Я сделал это, чтобы проверить мэппинг. Сами JSP-файлы (в частности и
-index.jsp) хранятся в WEB-INF/pages/jsp/, эта информация настривается в
-бине <strong>viewResolver</strong>. В скором будущем я добавлю класс XsltViewer,
-который будет использовать не JSP, а XSLT.Это связано с потребностью в
-отображении HTML-данных и XML API-интерфейсе одновременно, но при
-отсутствии дублирования кода.</p>
-</div>
-                </div>
-            </div>
-            <div class="row comments-row">
-                <span><a class="pseudo-link b-candy b-comment-shortcut"><i class="b-ico"></i>ответить</a></span>
-            </div>
-        </div>
-    </div>
 </div>        <div class="panel panel-default">
             <div class="panel-body more">
                 <span class="less-prev"><a class="h-link" href="author/imdagger95.html">Назад</a></span>
@@ -802,5 +719,5 @@ index.jsp) хранятся в WEB-INF/pages/jsp/, эта информация �
     </div>
 </div>
         </div>
-<!-- Yandex.Metrika informer --><a href="https://metrika.yandex.ru/stat/?id=25746494&amp;from=informer" target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/25746494/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:25746494,lang:'ru'});return false}catch(e){}"/></a><!-- /Yandex.Metrika informer --><!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter25746494 = new Ya.Metrika({id:25746494, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/25746494" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->    </body>
+    </body>
 </html>
