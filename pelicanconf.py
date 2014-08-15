@@ -55,6 +55,7 @@ POST_TYPE_NAMES = {
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+FEED_MAX_ITEMS = 0
 
 # Blogroll
 LINKS =  (('Pelican', 'http://getpelican.com/'),

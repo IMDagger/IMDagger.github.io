@@ -49,12 +49,19 @@ def cf_upload():
           '-K {cloudfiles_api_key} '
           'upload -c {cloudfiles_container} .'.format(**env))
 
-@hosts(production)
-def publish():
-    local('pelican -s publishconf.py')
-    project.rsync_project(
-        remote_dir=dest_path,
-        exclude=".DS_Store",
-        local_dir=DEPLOY_PATH.rstrip('/') + '/',
-        delete=True
-    )
+def publish(dest_path=dest_path, remote=False):
+    @hosts(production)
+    def push_remote(*args, **kwargs):
+        kwargs['remote'] = False
+        publish(*args, **kwargs)
+
+    if remote:
+        push_remote(dest_path=dest_path, remote=remote)
+    else:
+        local('pelican -s publishconf.py')
+        project.rsync_project(
+            remote_dir=dest_path,
+            exclude=['.DS_Store', '.git'],
+            local_dir=DEPLOY_PATH.rstrip('/') + '/',
+            delete=True
+        )
