@@ -116,6 +116,18 @@ PYGMENTS_RST_OPTIONS = {
 
 TAG_CLOUD_MAX_ITEMS = 20
 
-FILES_TO_COPY = (
-    ('extra/favicon.ico', 'favicon.ico'),
-)
+STATIC_PATHS = [
+    'extra/favicon.ico',
+]
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {
+        'path': 'favicon.ico',
+    },
+}
+
+CONTENT_CACHING_LAYER = 'generator'
+
+#PAGINATION_PATTERNS = (
+#    (1, '{base_name}/', '{base_name}/index.html'),
+#    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+#)

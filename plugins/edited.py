@@ -68,6 +68,8 @@ class PhotoBlock(images.Image):
 
 def add_images_hint(sender):
     article = sender
+    if article._content is None:
+        return
     body = bs4.BeautifulSoup(article._content).body
     if not body:
         return

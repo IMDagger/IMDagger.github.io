@@ -3,12 +3,12 @@
         {% set author_name = article.author|string %}
         {% block author_prefix %}
         <b class="b-user">
-            <a class="b-user__link" href="{{ article.author.url }}"><b class="b-user__first-letter">{{ author_name|first }}</b>{{ author_name[1:] }}</a>
+            <a class="b-user__link" href="{{ SITEURL }}/{{ article.author.url }}"><b class="b-user__first-letter">{{ author_name|first }}</b>{{ author_name[1:] }}</a>
         </b>
         {% endblock %}
         {% block operation %}{% endblock %}
         <span class="pull-right b-date">
-            <a class="h-link" href="/{{ article.url }}" {% if article.modified %}title="изменено {{ article.modified.day }} {{ ALT_MONTHES[article.modified.month] }} {{ article.modified.year }} года в {{ article.modified.strftime('%H:%M') }}"{% endif %}>
+            <a class="h-link" href="{{ SITEURL }}/{{ article.url }}" {% if article.modified %}title="изменено {{ article.modified.day }} {{ ALT_MONTHES[article.modified.month] }} {{ article.modified.year }} года в {{ article.modified.strftime('%H:%M') }}"{% endif %}>
             {% if article.date.year != NOW.year %}
                 {{ article.date.day }} {{ ALT_MONTHES[article.date.month] }} {{ article.date.year }} года, {{ article.date.strftime('%H:%M') }}
             {% else %}
@@ -19,10 +19,12 @@
     </div>
     <div class="panel-body">
         <div class="col-sm-1 b-post__layout-left">
-            <a href="{{ article.author.url }}"><img src="http://upics.yandex.ru/22199227/middle"></a>
+            <a href="{{ SITEURL }}/{{ article.author.url }}"><img src="http://upics.yandex.ru/22199227/middle"></a>
         </div>
         <div class="col-sm-11 b-right-col">
+            <noindex>
             {% include 'includes/taglist.html' %}
+            </noindex>
             <div class="post-title">
                 {% block post_title %}{{ article.title }}{% endblock %}
             </div>

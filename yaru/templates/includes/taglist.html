@@ -1,7 +1,7 @@
 {% if article.tags %}
 <div class="row tags-row">
 {% for tag in article.tags %}
-    <span class="tag"><a class="h-link" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>{% if not loop.last %},{% endif %}
+    <span class="tag"><a rel="nofollow" class="h-link" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>{% if not loop.last %},{% endif %}
 {% endfor %}
 </div>
 {% endif %}
