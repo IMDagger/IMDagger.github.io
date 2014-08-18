@@ -161,7 +161,7 @@ JIT-оптимизированный код справляется с задач
 &lt;span class="pgcss-gp"&gt;... &lt;/span&gt;    &lt;span class="pgcss-k"&gt;return&lt;/span&gt; &lt;span class="pgcss-ow"&gt;not&lt;/span&gt; &lt;span class="pgcss-nb"&gt;bool&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;is_complex&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-n"&gt;match&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;#39;1&amp;#39;&lt;/span&gt; &lt;span class="pgcss-o"&gt;*&lt;/span&gt; &lt;span class="pgcss-n"&gt;n&lt;/span&gt;&lt;span class="pgcss-p"&gt;))&lt;/span&gt;
 &lt;span class="pgcss-gp"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_71121040"data-toggle="collapse"&gt;Подробнее&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_71121040"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_42845968"data-toggle="collapse"&gt;Подробнее&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_42845968"&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&amp;gt;&amp;gt;&amp;gt; check_prime(1)&lt;/div&gt;
 &lt;div class="line"&gt;&lt;strong&gt;False&lt;/strong&gt;&lt;/div&gt;
@@ -285,7 +285,7 @@ filter(user_&lt;strong&gt;_&lt;/strong&gt;_client_profile), и от этого d
 Meta.override _fields&lt;/code&gt;
 :&lt;/p&gt;
 &lt;p&gt;Он &lt;a class="reference external" href="https://gist.github.com/IMDagger/9102834"&gt;доступен на GitGub&lt;/a&gt;.&lt;/p&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_68158416"data-toggle="collapse"&gt;посмотреть мой велосипед&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_68158416"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_33429904"data-toggle="collapse"&gt;посмотреть мой велосипед&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_33429904"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;forms&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django.forms&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;widgets&lt;/span&gt;
@@ -659,7 +659,7 @@ Graph. Ну да.. наивно, но что ж поделаешь, если т�
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&lt;strong&gt;mainauth/urls.py:&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_70920528"data-toggle="collapse"&gt;исходник сниппета urls.py&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_70920528"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_37663696"data-toggle="collapse"&gt;исходник сниппета urls.py&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_37663696"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django.conf.urls&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;patterns&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;include&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;url&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django.conf&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;settings&lt;/span&gt;
 &lt;span class="pgcss-o"&gt;...&lt;/span&gt;
@@ -679,7 +679,7 @@ Graph. Ну да.. наивно, но что ж поделаешь, если т�
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&lt;strong&gt;mainauth/views.py:&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_68137360"data-toggle="collapse"&gt;исходник сниппета views.py&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_68137360"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_42876176"data-toggle="collapse"&gt;исходник сниппета views.py&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_42876176"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;annoying.decorators&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;render_to&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;ajax_request&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;django.views.decorators.csrf&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;csrf_exempt&lt;/span&gt;
 &lt;span class="pgcss-kn"&gt;from&lt;/span&gt; &lt;span class="pgcss-nn"&gt;provider.oauth2&lt;/span&gt; &lt;span class="pgcss-kn"&gt;import&lt;/span&gt; &lt;span class="pgcss-n"&gt;models&lt;/span&gt; &lt;span class="pgcss-k"&gt;as&lt;/span&gt; &lt;span class="pgcss-n"&gt;oauth_models&lt;/span&gt;
@@ -1082,7 +1082,7 @@ p&lt;sub&gt;2y&lt;/sub&gt;). Нужно вычислить его длину и 
 k&lt;sub&gt;1&lt;/sub&gt; и k&lt;sub&gt;2&lt;/sub&gt;, которые могут принимать значения k&lt;sub&gt;i&lt;/sub&gt;
 ∈ {-1, 1}. В Maxima я смог свести поиск и решение уравнения к такой
 последовательности:&lt;/p&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_73581520"data-toggle="collapse"&gt;Можно увидеть всю формулу, но не просите потом развидеть её&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_73581520"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_33428304"data-toggle="collapse"&gt;Можно увидеть всю формулу, но не просите потом развидеть её&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_33428304"&gt;
 &lt;pre class="literal-block"&gt;
 (%i1) p1: [p1x, p1y];
 (%o1)                             [p1x, p1y]
@@ -1299,7 +1299,7 @@ HTML и понажимать кнопку “Сгенерировать нову
 &lt;div class="line"&gt;Melanal&lt;/div&gt;
 &lt;div class="line"&gt;Vaviet K4&lt;/div&gt;
 &lt;/div&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_65837584"&gt;хочу ещё&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_65837584"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" data-toggle="collapse" href="#cut_33574352"&gt;хочу ещё&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_33574352"&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;Badabana K&lt;/div&gt;
 &lt;div class="line"&gt;Beboha 1I&lt;/div&gt;
@@ -2648,8 +2648,8 @@ Atom D525 с 1.8 GHz где-то не более 0.8 секунды:&lt;/p&gt;
 &lt;p&gt;При чём, если заменить &lt;strong&gt;x&lt;/strong&gt; на &lt;strong&gt;(this):x&lt;/strong&gt;, то всё отлично
 срабатывает. Kawa 1.12.1 (revision 7282) и стабильная 1.12 просто падали
 с ошибкой NullPointerException:&lt;/p&gt;
-&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_68051280"data-toggle="collapse"&gt;показать стэк-трейс&lt;/a&gt;&lt;/p&gt;
-&lt;div class="collapse" id="cut_68051280"&gt;
+&lt;p class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_33428240"data-toggle="collapse"&gt;показать стэк-трейс&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="cut_33428240"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-o"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;compiling&lt;/span&gt; &lt;span class="pgcss-n"&gt;test&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;scm&lt;/span&gt; &lt;span class="pgcss-n"&gt;to&lt;/span&gt; &lt;span class="pgcss-n"&gt;test&lt;/span&gt;&lt;span class="pgcss-o"&gt;)&lt;/span&gt;
 &lt;span class="pgcss-n"&gt;test&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;scm&lt;/span&gt;&lt;span class="pgcss-o"&gt;:&lt;/span&gt;&lt;span class="pgcss-mi"&gt;4&lt;/span&gt;&lt;span class="pgcss-o"&gt;:&lt;/span&gt; &lt;span class="pgcss-n"&gt;internal&lt;/span&gt; &lt;span class="pgcss-n"&gt;error&lt;/span&gt; &lt;span class="pgcss-k"&gt;while&lt;/span&gt; &lt;span class="pgcss-n"&gt;compiling&lt;/span&gt; &lt;span class="pgcss-n"&gt;test&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;scm&lt;/span&gt;
 &lt;span class="pgcss-n"&gt;java&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;lang&lt;/span&gt;&lt;span class="pgcss-o"&gt;.&lt;/span&gt;&lt;span class="pgcss-na"&gt;NullPointerException&lt;/span&gt;

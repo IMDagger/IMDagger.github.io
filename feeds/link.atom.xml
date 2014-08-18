@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/link.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-05-05T19:15:40+03:00</updated><entry><title>Транспорт в Гомеле</title><link href="http://imdagger.github.io/posts/2014/05/05/transport-v-gomele/" rel="alternate"></link><updated>2014-05-05T19:15:40+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-05-05:posts/2014/05/05/transport-v-gomele/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; В браузере я привык использовать gomeltrans.net, но на смартфоне я
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/link.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-08-18T03:17:00+03:00</updated><entry><title>Быстрые списки с произвольным доступом</title><link href="http://imdagger.github.io/posts/2014/08/18/bystrye-spiski-s-proizvolnym-dostupom/" rel="alternate"></link><updated>2014-08-18T03:17:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-08-18:posts/2014/08/18/bystrye-spiski-s-proizvolnym-dostupom/</id><summary type="html">&lt;p&gt;Наткнулся на описание реализации алгоритма списков с поддержкой
+всех необходимых базовых операций (добавка элемента, отщепление, получение
+хвоста и др.) за &lt;span class="raw-latex"&gt;$math$O(1)$/math$&lt;/span&gt; и поиск/обновление за &lt;span class="raw-latex"&gt;$math$O(log_{2}{N})$/math$&lt;/span&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;strong&gt;Pure Functional Random-Access Lists&lt;/strong&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;em&gt;Chris Okasaki&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;School of Computer Science, Carnegie Mellon University&lt;/div&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;По ссылке доступна страница, где можно ознакомиться с работой в формате PDF.&lt;/p&gt;
+</summary><category term="список"></category><category term="алгоритм"></category><category term="структура"></category><category term="быстрый"></category></entry><entry><title>Транспорт в Гомеле</title><link href="http://imdagger.github.io/posts/2014/05/05/transport-v-gomele/" rel="alternate"></link><updated>2014-05-05T19:15:40+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-05-05:posts/2014/05/05/transport-v-gomele/</id><summary type="html">&lt;p&gt;&amp;nbsp; &amp;nbsp; В браузере я привык использовать gomeltrans.net, но на смартфоне я
 редко включаю 3G-интернет. А вот для мобильной версии нашёлся GoTrans,
 удобное приложение, может работать оффлайн, сайт у них тоже приятный;
 правда привычкам изменять сложно и с компьютера я буду как и раньше
@@ -8,7 +19,7 @@
 </summary><category term="расстояние"></category><category term="быстрый"></category><category term="функция"></category><category term="аппроксимация"></category></entry><entry><title>Удаление строки</title><link href="http://imdagger.github.io/posts/2014/02/18/udalenie-stroki/" rel="alternate"></link><updated>2014-02-18T03:28:08+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-02-18:posts/2014/02/18/udalenie-stroki/</id><summary type="html">&lt;p&gt;Функция удаление строки в Emacs без запоминания в kill ring буфер, а
 то бывает нужно в своём плагине или конфиге удалить строчку, но не
 запоминать её в буфер:&lt;/p&gt;
-&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_73468880"data-toggle="collapse"&gt;посмотреть код&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_73468880"&gt;
+&lt;span class="cut"&gt;&lt;a class="h-link reference internal" href="#cut_33430672"data-toggle="collapse"&gt;посмотреть код&lt;/a&gt;&lt;/span&gt;&lt;div class="collapse" id="cut_33430672"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nb"&gt;defun&lt;/span&gt; &lt;span class="pgcss-nv"&gt;delete-line&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;&amp;amp;optional&lt;/span&gt; &lt;span class="pgcss-nv"&gt;arg&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
   &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;interactive&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;P&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
   &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;flet&lt;/span&gt; &lt;span class="pgcss-p"&gt;((&lt;/span&gt;&lt;span class="pgcss-nv"&gt;kill-region&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;begin&lt;/span&gt; &lt;span class="pgcss-nv"&gt;end&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
