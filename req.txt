@@ -1,2 +1,3 @@
 pelican-youtube
 pelican-vimeo
+pelican-extended-sitemap

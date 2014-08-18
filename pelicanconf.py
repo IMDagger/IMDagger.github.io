@@ -89,7 +89,8 @@ PLUGINS = [
     'plugins.edited',
     'plugins.bootstrap_rst_directives',
     'pelican_youtube',
-    'pelican_vimeo'
+    'pelican_vimeo',
+    'extended_sitemap',
 ]
 
 USE_FOLDER_AS_CATEGORY = False
@@ -127,6 +128,21 @@ EXTRA_PATH_METADATA = {
 }
 
 CONTENT_CACHING_LAYER = 'generator'
+
+EXTENDED_SITEMAP_PLUGIN = {
+    'priorities': {
+        'index': 1.0,
+        'articles': 0.9,
+        'pages': 0.5,
+        'others': 0.0,
+    },
+    'changefrequencies': {
+        'index': 'daily',
+        'articles': 'weekly',
+        'pages': 'monthly',
+        'others': 'never',
+    }
+}
 
 #PAGINATION_PATTERNS = (
 #    (1, '{base_name}/', '{base_name}/index.html'),
