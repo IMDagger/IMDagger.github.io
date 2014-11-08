@@ -1,14 +1,15 @@
 from fabric.api import *
 import fabric.contrib.project as project
 import os
+import datetime
 
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = 'output'
-DEPLOY_PATH = env.deploy_path
+SRC_PATH = env.deploy_path
 
 # Remote server configuration
 production = 'root@localhost:22'
-dest_path = '/var/www'
+dst_path = 'deploy/'
 
 # Rackspace Cloud Files configuration settings
 env.cloudfiles_username = 'my_rackspace_username'
@@ -17,7 +18,7 @@ env.cloudfiles_container = 'my_cloudfiles_container'
 
 
 def clean():
-    if os.path.isdir(DEPLOY_PATH):
+    if os.path.isdir(SRC_PATH):
         local('rm -rf {deploy_path}'.format(**env))
         local('mkdir {deploy_path}'.format(**env))
 
@@ -49,19 +50,9 @@ def cf_upload():
           '-K {cloudfiles_api_key} '
           'upload -c {cloudfiles_container} .'.format(**env))
 
-def publish(dest_path=dest_path, remote=False):
-    @hosts(production)
-    def push_remote(*args, **kwargs):
-        kwargs['remote'] = False
-        publish(*args, **kwargs)
-
-    if remote:
-        push_remote(dest_path=dest_path, remote=remote)
-    else:
-        local('pelican -s publishconf.py')
-        project.rsync_project(
-            remote_dir=dest_path,
-            exclude=['.DS_Store', '.git'],
-            local_dir=DEPLOY_PATH.rstrip('/') + '/',
-            delete=True
-        )
+def publish(dst_path=dst_path):
+    local('pelican -s publishconf.py')
+    exclude = ' '.join('--exclude ' + fname for fname in ['.DS_Store', '.git', 'README.md', 'LICENSE'])
+    normal = lambda x: (x.rstrip('/') + '/')
+    local('rsync -r {0} --delete {src} {dst}'.format(exclude, src=normal(SRC_PATH), dst=normal(dst_path)))
+    local('cd {0} && git commit -a -m "snapshot {1}"'.format(normal(dst_path), datetime.datetime.now().isoformat()))

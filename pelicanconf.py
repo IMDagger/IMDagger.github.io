@@ -145,10 +145,3 @@ EXTENDED_SITEMAP_PLUGIN = {
         'others': 'never',
     }
 }
-
-#PAGINATION_PATTERNS = (
-#    (1, '{base_name}/', '{base_name}/index.html'),
-#    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
-#)
-from pelican import paginator
-paginator.Page.end_index = 'hello'
