@@ -49,6 +49,8 @@ POST_TYPE_NAMES = {
     'video': u'видео',
     'photo': u'фото',
     'link': u'ссылки',
+    'join': u'клубы',
+    'friend': u'дружба',
 }
 
 # Feed generation is usually not desired when developing
@@ -148,3 +150,5 @@ EXTENDED_SITEMAP_PLUGIN = {
 #    (1, '{base_name}/', '{base_name}/index.html'),
 #    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
 #)
+from pelican import paginator
+paginator.Page.end_index = 'hello'

@@ -26,10 +26,10 @@
         <div class="panel panel-default">
             <div class="panel-body more">
                 {% if articles_page.has_previous() %}
-                <span class="less-prev"><a class="h-link" href="{{ articles_previous_page.url }}">Назад</a></span>
+                <span class="less-prev"><a class="h-link" href="{{ SITEURL }}/{{ articles_previous_page.url }}">Назад</a></span>
                 {% endif %}
                 {% if articles_page.has_next() %}
-                <span class="more-next"><a class="h-link" href="{{ articles_next_page.url }}">Ещё записи</a></span>
+                <span class="more-next"><a class="h-link" href="{{ SITEURL }}/{{ articles_next_page.url }}">Ещё записи</a></span>
                 {% endif %}
             </div>
         </div>
