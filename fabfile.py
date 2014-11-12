@@ -55,4 +55,4 @@ def publish(dst_path=dst_path):
     exclude = ' '.join('--exclude ' + fname for fname in ['.DS_Store', '.git', 'README.md', 'LICENSE'])
     normal = lambda x: (x.rstrip('/') + '/')
     local('rsync -r {0} --delete {src} {dst}'.format(exclude, src=normal(SRC_PATH), dst=normal(dst_path)))
-    local('cd {0} && git commit -a -m "snapshot {1}"'.format(normal(dst_path), datetime.datetime.now().isoformat()))
+    local('cd {0} && git add . && git commit -a -m "snapshot {1}"'.format(normal(dst_path), datetime.datetime.now().isoformat()))
