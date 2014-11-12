@@ -2,9 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://imdagger.github.io/</loc>
-<lastmod>2014-11-09T01:30:00+03:00</lastmod>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/posts/2014/11/11/syntax-parse-i-literaly/</loc>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.90</priority>
 </url><url>
 <loc>http://imdagger.github.io/posts/2014/11/09/sell/</loc>
 <lastmod>2014-11-09T01:30:00+03:00</lastmod>
@@ -5712,7 +5717,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/category/text.html</loc>
-<lastmod>2014-11-08T15:43:00+03:00</lastmod>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -7151,6 +7156,11 @@
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
+<loc>http://imdagger.github.io/tag/literals.html</loc>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
 <loc>http://imdagger.github.io/tag/location.html</loc>
 <lastmod>2011-03-11T23:34:09+02:00</lastmod>
 <changefreq>never</changefreq>
@@ -7527,7 +7537,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/racket.html</loc>
-<lastmod>2014-04-19T16:22:37+03:00</lastmod>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -7798,6 +7808,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/synonym.html</loc>
 <lastmod>2012-04-28T01:34:21+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/syntax-parse.html</loc>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -8403,6 +8418,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/bilet.html</loc>
 <lastmod>2011-11-29T03:02:41+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/binding.html</loc>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -11366,6 +11386,11 @@
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
+<loc>http://imdagger.github.io/tag/sviazyvanie.html</loc>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
 <loc>http://imdagger.github.io/tag/sglazhivanie.html</loc>
 <lastmod>2009-11-05T19:19:24+02:00</lastmod>
 <changefreq>never</changefreq>
@@ -11442,7 +11467,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/sintaksis.html</loc>
-<lastmod>2009-06-24T21:41:25+03:00</lastmod>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -12392,7 +12417,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/author/imdagger.html</loc>
-<lastmod>2014-11-09T01:30:00+03:00</lastmod>
+<lastmod>2014-11-11T04:15:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url>
