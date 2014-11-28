@@ -2,9 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://imdagger.github.io/</loc>
-<lastmod>2014-11-11T04:15:00+03:00</lastmod>
+<lastmod>2014-11-29T01:34:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/posts/2014/11/29/programmirovanie/</loc>
+<lastmod>2014-11-29T01:34:00+03:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.90</priority>
 </url><url>
 <loc>http://imdagger.github.io/posts/2014/11/11/syntax-parse-i-literaly/</loc>
 <lastmod>2014-11-11T04:15:00+03:00</lastmod>
@@ -5717,7 +5722,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/category/text.html</loc>
-<lastmod>2014-11-11T04:15:00+03:00</lastmod>
+<lastmod>2014-11-29T01:34:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -8482,7 +8487,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/bredni.html</loc>
-<lastmod>2014-06-13T02:32:51+03:00</lastmod>
+<lastmod>2014-11-29T01:34:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -10002,7 +10007,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/mysl.html</loc>
-<lastmod>2014-06-07T13:54:01+03:00</lastmod>
+<lastmod>2014-11-29T01:34:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -11017,7 +11022,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/programmirovanie.html</loc>
-<lastmod>2014-03-25T13:28:27+03:00</lastmod>
+<lastmod>2014-11-29T01:34:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -11083,6 +11088,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/protsess.html</loc>
 <lastmod>2014-10-17T17:28:00+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/prochital.html</loc>
+<lastmod>2014-11-29T01:34:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -12417,7 +12427,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/author/imdagger.html</loc>
-<lastmod>2014-11-11T04:15:00+03:00</lastmod>
+<lastmod>2014-11-29T01:34:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url>
