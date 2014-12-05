@@ -12,7 +12,7 @@
         <!-- Open Graph -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico" />
         <link rel="stylesheet" href="/theme/css/html4css1.css" />
         <link rel="stylesheet" href="/theme/css/style.css" />
         <link rel="stylesheet" href="/theme/css/pygment.css" />
@@ -30,6 +30,12 @@
         <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom-лента" />
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS-лента" />
+        {% endif %}
     </head>
 
     <body>
@@ -49,9 +55,14 @@
                         <li class="active">
                             <a href="#">Дневник</a>
                         </li>
-                        <li><a href="#">О себе</a></li>
-                        <li><a href="#">Фотки</a></li>
-                        <li><a href="#">RSS-ленты</a></li>
+                        {% for title, link in MENUITEMS %}
+                        <li><a href="{{ link }}">{{ title }}</a></li>
+                        {% endfor %}
+                        {% if DISPLAY_PAGES_ON_MENU %}
+                        {% for page in PAGES %}
+                        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                        {% endfor %}
+                        {% endif %}
                     </ul>
                 </div>
             </div>
