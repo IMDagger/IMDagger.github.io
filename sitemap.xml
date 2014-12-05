@@ -2,9 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://imdagger.github.io/</loc>
-<lastmod>2014-11-29T01:34:00+03:00</lastmod>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/</loc>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.90</priority>
 </url><url>
 <loc>http://imdagger.github.io/posts/2014/11/29/programmirovanie/</loc>
 <lastmod>2014-11-29T01:34:00+03:00</lastmod>
@@ -5722,7 +5727,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/category/text.html</loc>
-<lastmod>2014-11-29T01:34:00+03:00</lastmod>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -6491,6 +6496,11 @@
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
+<loc>http://imdagger.github.io/tag/chaos.html</loc>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
 <loc>http://imdagger.github.io/tag/checkinstall.html</loc>
 <lastmod>2012-06-07T02:25:36+03:00</lastmod>
 <changefreq>never</changefreq>
@@ -6603,6 +6613,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/demodularize.html</loc>
 <lastmod>2013-12-09T02:18:57+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/deponia.html</loc>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -7522,7 +7537,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/python.html</loc>
-<lastmod>2014-04-19T16:22:37+03:00</lastmod>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -9257,7 +9272,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/igra.html</loc>
-<lastmod>2014-05-02T02:06:14+03:00</lastmod>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -9402,7 +9417,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/kvest.html</loc>
-<lastmod>2012-11-14T20:16:09+03:00</lastmod>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -11022,7 +11037,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/programmirovanie.html</loc>
-<lastmod>2014-11-29T01:34:00+03:00</lastmod>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -11078,6 +11093,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/profil.html</loc>
 <lastmod>2014-05-14T18:34:08+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/prokhozhdenie.html</loc>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -12427,7 +12447,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/author/imdagger.html</loc>
-<lastmod>2014-11-29T01:34:00+03:00</lastmod>
+<lastmod>2014-12-04T02:20:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url>
