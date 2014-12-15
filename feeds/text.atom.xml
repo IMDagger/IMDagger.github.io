@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/text.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-12-04T02:20:00+03:00</updated><entry><title>Квест про бургеры из Chaos of Deponia</title><link href="http://imdagger.github.io/posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/" rel="alternate"></link><updated>2014-12-04T02:20:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-04:posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/</id><summary type="html">&lt;p&gt;Во время прохождения квеста про ресторан в игре Chaos of Deponia столкнулся с
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/text.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-12-15T03:15:00+03:00</updated><entry><title>Вывод окружности в Kivy</title><link href="http://imdagger.github.io/posts/2014/12/15/vyvod-okruzhnosti-v-kivy/" rel="alternate"></link><updated>2014-12-15T03:15:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-15:posts/2014/12/15/vyvod-okruzhnosti-v-kivy/</id><summary type="html">&lt;p&gt;Не знаю почему я решил, что используя Ellipse инструкцию,
+я могу получить окружность, а не круг. Я пытался в ней
+найти как отказаться от заливки... хо-хо но ведь, окружность —
+это просто линия! И нужно использовать Line со специальным параметром:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-n"&gt;Line&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;circle&lt;/span&gt;&lt;span class="pgcss-o"&gt;=&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;x&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;y&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;r&lt;/span&gt;&lt;span class="pgcss-p"&gt;),&lt;/span&gt; &lt;span class="pgcss-n"&gt;width&lt;/span&gt;&lt;span class="pgcss-o"&gt;=&lt;/span&gt;&lt;span class="pgcss-mf"&gt;2.0&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Параметр &lt;code class="code"&gt;
+circle&lt;/code&gt;
+ можно трактовать, будто передан параметр &lt;code class="code"&gt;
+points&lt;/code&gt;
+,
+который содержит точки окружности и сквозь них будет прочерчена линия толщиной
+width.&lt;/p&gt;
+</summary><category term="программирование"></category><category term="python"></category><category term="kivy"></category><category term="окружность"></category></entry><entry><title>Квест про бургеры из Chaos of Deponia</title><link href="http://imdagger.github.io/posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/" rel="alternate"></link><updated>2014-12-04T02:20:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-04:posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/</id><summary type="html">&lt;p&gt;Во время прохождения квеста про ресторан в игре Chaos of Deponia столкнулся с
 задачей, в которой нужно не имея денег получить бесплатную печенюшку. Но эта
 Печенка даётся только, если возьмёшь гамбургеры из утконоса и напиток из
 утконоса. Т.е. следовало сделать так, чтобы на подносе &lt;strong&gt;не осталось&lt;/strong&gt; платной
@@ -3670,18 +3683,4 @@ smart-табуляцию, что мне не подходит, т.к. появл
 билетов в окружности.&lt;/p&gt;
 &lt;p&gt;Осталось убедится, что у кондуктора билеты идут по возрастанию, тогда
 это &lt;strong&gt;окончательно подтвердит&lt;/strong&gt; мои измышления :].&lt;/p&gt;
-</summary><category term="жизнь"></category><category term="билет"></category><category term="автобус"></category><category term="размышления"></category><category term="математика"></category><category term="Я"></category><category term="бредни"></category></entry><entry><title>Исключение файлов при сборке под Android</title><link href="http://imdagger.github.io/posts/2011/11/16/iskliuchenie-failov-pri-sborke-pod-android/" rel="alternate"></link><updated>2011-11-16T03:30:06+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-11-16:posts/2011/11/16/iskliuchenie-failov-pri-sborke-pod-android/</id><summary type="html">&lt;p&gt;Жаль, что без копирования+вставки не обошлось, но проблема
-заключалась в том, что при сборке под Android нужно, чтобы Ant исключил
-некоторые java-файлы. Т.к. эти файлы не удастся собрать под мобильную
-платформу и они предназначены для другой сборки.&lt;/p&gt;
-&lt;p&gt;Я забрался в &lt;em&gt;android-sdk-linux_x86/tools/ant/main_rules.xml&lt;/em&gt; и
-нашёл &lt;em&gt;target&lt;/em&gt; с &lt;em&gt;name&lt;/em&gt; равный &lt;em&gt;compile&lt;/em&gt;. Затем я скопировал всё правило
-и вставил в свой файл Ant-правил до &lt;code class="code"&gt;
-&amp;lt;setup /&amp;gt;&lt;/code&gt;
- узла.&lt;/p&gt;
-&lt;p&gt;После этого внутри узла javac добавил правило:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nt"&gt;&amp;lt;javac&lt;/span&gt; &lt;span class="pgcss-err"&gt;...&lt;/span&gt;&lt;span class="pgcss-nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="pgcss-nt"&gt;&amp;lt;exclude&lt;/span&gt; &lt;span class="pgcss-na"&gt;name=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;путь/к/файлу&amp;quot;&lt;/span&gt; &lt;span class="pgcss-nt"&gt;/&amp;gt;&lt;/span&gt; &lt;span class="pgcss-c"&gt;&amp;lt;!-- src/ в этот путь не нужно включать --&amp;gt;&lt;/span&gt;
-&lt;span class="pgcss-nt"&gt;&amp;lt;/javac&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-</summary><category term="файл"></category><category term="правило"></category><category term="исключение"></category><category term="Android"></category><category term="ant"></category><category term="компиляция"></category></entry></feed>
+</summary><category term="жизнь"></category><category term="билет"></category><category term="автобус"></category><category term="размышления"></category><category term="математика"></category><category term="Я"></category><category term="бредни"></category></entry></feed>

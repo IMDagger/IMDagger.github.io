@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/all.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-12-04T02:20:00+03:00</updated><entry><title>Квест про бургеры из Chaos of Deponia</title><link href="http://imdagger.github.io/posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/" rel="alternate"></link><updated>2014-12-04T02:20:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-04:posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/</id><summary type="html">&lt;p&gt;Во время прохождения квеста про ресторан в игре Chaos of Deponia столкнулся с
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/all.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-12-15T03:15:00+03:00</updated><entry><title>Вывод окружности в Kivy</title><link href="http://imdagger.github.io/posts/2014/12/15/vyvod-okruzhnosti-v-kivy/" rel="alternate"></link><updated>2014-12-15T03:15:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-15:posts/2014/12/15/vyvod-okruzhnosti-v-kivy/</id><summary type="html">&lt;p&gt;Не знаю почему я решил, что используя Ellipse инструкцию,
+я могу получить окружность, а не круг. Я пытался в ней
+найти как отказаться от заливки... хо-хо но ведь, окружность —
+это просто линия! И нужно использовать Line со специальным параметром:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-n"&gt;Line&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;circle&lt;/span&gt;&lt;span class="pgcss-o"&gt;=&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;x&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;y&lt;/span&gt;&lt;span class="pgcss-p"&gt;,&lt;/span&gt; &lt;span class="pgcss-n"&gt;r&lt;/span&gt;&lt;span class="pgcss-p"&gt;),&lt;/span&gt; &lt;span class="pgcss-n"&gt;width&lt;/span&gt;&lt;span class="pgcss-o"&gt;=&lt;/span&gt;&lt;span class="pgcss-mf"&gt;2.0&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Параметр &lt;code class="code"&gt;
+circle&lt;/code&gt;
+ можно трактовать, будто передан параметр &lt;code class="code"&gt;
+points&lt;/code&gt;
+,
+который содержит точки окружности и сквозь них будет прочерчена линия толщиной
+width.&lt;/p&gt;
+</summary><category term="программирование"></category><category term="python"></category><category term="kivy"></category><category term="окружность"></category></entry><entry><title>Квест про бургеры из Chaos of Deponia</title><link href="http://imdagger.github.io/posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/" rel="alternate"></link><updated>2014-12-04T02:20:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-04:posts/2014/12/04/kvest-pro-burgery-iz-chaos-of-deponia/</id><summary type="html">&lt;p&gt;Во время прохождения квеста про ресторан в игре Chaos of Deponia столкнулся с
 задачей, в которой нужно не имея денег получить бесплатную печенюшку. Но эта
 Печенка даётся только, если возьмёшь гамбургеры из утконоса и напиток из
 утконоса. Т.е. следовало сделать так, чтобы на подносе &lt;strong&gt;не осталось&lt;/strong&gt; платной
@@ -2800,27 +2813,4 @@ PC и Android:&lt;/p&gt;
     &lt;span class="pgcss-nt"&gt;&amp;lt;/fileset&amp;gt;&lt;/span&gt;
 &lt;span class="pgcss-nt"&gt;&amp;lt;/path&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-</summary><category term="сборка"></category><category term="файл"></category><category term="Android"></category><category term="ant"></category><category term="выборочный"></category><category term="библиотека"></category></entry><entry><title>Ant, вывод XML</title><link href="http://imdagger.github.io/posts/2012/10/24/ant-vyvod-xml/" rel="alternate"></link><updated>2012-10-24T04:00:23+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-10-24:posts/2012/10/24/ant-vyvod-xml/</id><summary type="html">&lt;p&gt;При автоматической сборке есть необходимость генерировать
-AndroidManifest.xml. Но &lt;code class="code"&gt;
-&amp;amp;lt;&lt;/code&gt;
- и &lt;code class="code"&gt;
-&amp;amp;gt;&lt;/code&gt;
- выглядят не так наглядно как &amp;lt; и &amp;gt;,
-поэтому для echo правило лучше указать &lt;code class="code"&gt;
-&amp;lt;!CDATA&amp;lt;[ … ]]&amp;gt;&lt;/code&gt;
-, но стоит не
-забывать, что это обычный вывод, а не &lt;strong&gt;echoxml&lt;/strong&gt; правило, и если
-сделать лишний перевод строки перед &lt;code class="code"&gt;
-&amp;lt;?xml&lt;/code&gt;
- тегом, то на выходе будет не
-валидный XML.&lt;/p&gt;
-&lt;p&gt;А вот задача &lt;strong&gt;echoxml&lt;/strong&gt; позволяет выводить вложенные теги в файл.
-Хотя для AndroidManifest.xml она не применима с версией Ant 1.8.2, ибо
-он не позволяет вложенному тегу иметь пространство имён (в данном случае
-тег manifest с
-&lt;code class="code"&gt;
-xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/code&gt;
-). Но для
-остального очень удобная плюшка, которая отформатирует XML добавит
-заголовок самостоятельно.&lt;/p&gt;
-</summary><category term="вывод"></category><category term="ant"></category><category term="сборка"></category><category term="xml"></category></entry></feed>
+</summary><category term="сборка"></category><category term="файл"></category><category term="Android"></category><category term="ant"></category><category term="выборочный"></category><category term="библиотека"></category></entry></feed>
