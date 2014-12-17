@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/text.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-12-15T03:15:00+03:00</updated><entry><title>Вывод окружности в Kivy</title><link href="http://imdagger.github.io/posts/2014/12/15/vyvod-okruzhnosti-v-kivy/" rel="alternate"></link><updated>2014-12-15T03:15:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-15:posts/2014/12/15/vyvod-okruzhnosti-v-kivy/</id><summary type="html">&lt;p&gt;Не знаю почему я решил, что используя Ellipse инструкцию,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/text.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-12-17T14:27:00+03:00</updated><entry><title>Emacs и Hunspell</title><link href="http://imdagger.github.io/posts/2014/12/17/emacs-i-hunspell/" rel="alternate"></link><updated>2014-12-17T14:27:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-17:posts/2014/12/17/emacs-i-hunspell/</id><summary type="html">&lt;p&gt;Раньше у меня с Emacs использовалась проверка через Aspell,
+но так можно проверять только один язык в тексте, либо собирать
+мультиязыковой словарь. Я решил посмотреть, может ли Hunspell
+просто принять в качестве аргументов несколько словарей, и да,
+он может это. Поэтому я сделал выбор в пользу него.
+Хотя на этом пути тоже возникли свои подводные камни связанные
+с тем, что в пакетах старая сборка Hunspell. А в ней есть
+&lt;a class="reference external" href="http://debbugs.gnu.org/cgi/bugreport.cgi?bug=7781"&gt;ошибка&lt;/a&gt; при
+работе с UTF-8, когда утилита выводит номер
+байта вместо номера символа. Поэтому пришлось собрать
+пакет из &lt;a class="reference external" href="http://sourceforge.net/projects/hunspell/"&gt;исходников&lt;/a&gt;.
+А ещё установить пакет  hunspell-ru-ie-yo из
+&lt;a class="reference external" href="https://launchpad.net/~andrew-crew-kuznetsov/+archive/ubuntu/xneur-stable"&gt;ppa:andrew-crew-kuznetsov/xneur-stable&lt;/a&gt;
+от команды XNeur, чтобы была в словарях бука &lt;strong&gt;Ё&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Устанавливаем пакет Hunspell и языки.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nv"&gt;$ &lt;/span&gt;./configure.sh --prefix&lt;span class="pgcss-o"&gt;=&lt;/span&gt;/usr
+&lt;span class="pgcss-nv"&gt;$ &lt;/span&gt;sudo checkinstall make &lt;span class="pgcss-c"&gt;# используем утилиту для сборки deb&lt;/span&gt;
+...
+&lt;span class="pgcss-nv"&gt;$ &lt;/span&gt;sudo apt-get install hunspell-en-us hunspell-ru-ie-yo
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Правда последняя версии чекера из SVN немного медленная и пришлось
+нарастить timeout-ы в &lt;code class="code"&gt;
+flyspell-lazy.el&lt;/code&gt;
+. Включить другой движок для
+Emacs не составляет большой проблемы.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;custom-set-variables&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-local-dictionary-alist&lt;/span&gt;
+   &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;((&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;russian-english&amp;quot;&lt;/span&gt;
+     &lt;span class="pgcss-s"&gt;&amp;quot;[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюяA-Za-z]&amp;quot;&lt;/span&gt;
+     &lt;span class="pgcss-s"&gt;&amp;quot;[^АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюяA-Za-z]&amp;quot;&lt;/span&gt;
+     &lt;span class="pgcss-s"&gt;&amp;quot;[-&amp;#39;]&amp;quot;&lt;/span&gt;  &lt;span class="pgcss-no"&gt;nil&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;-d&amp;quot;&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;ru_RU,en_US&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt; &lt;span class="pgcss-no"&gt;nil&lt;/span&gt; &lt;span class="pgcss-nv"&gt;utf-8&lt;/span&gt;&lt;span class="pgcss-p"&gt;)))&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-program-name&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;hunspell&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-dictionary&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;russian-english&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-really-aspell&lt;/span&gt; &lt;span class="pgcss-no"&gt;nil&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-really-hunspell&lt;/span&gt; &lt;span class="pgcss-no"&gt;t&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-encoding8-command&lt;/span&gt; &lt;span class="pgcss-no"&gt;t&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-silently-savep&lt;/span&gt; &lt;span class="pgcss-no"&gt;t&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;flyspell-delay&lt;/span&gt; &lt;span class="pgcss-mi"&gt;1&lt;/span&gt;&lt;span class="pgcss-p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;В данном случае словарь russian-english это ключ, по которому происходит
+поиск настроек. Где я уже указал опции &lt;code class="code"&gt;
+-d ru_RU,en_US&lt;/code&gt;
+ и кодировку
+ввода &lt;strong&gt;UTF-8&lt;/strong&gt;.&lt;/p&gt;
+&lt;!-- LocalWords: Hunspell checkinstall --&gt;
+</summary><category term="emacs"></category><category term="spellcheck"></category><category term="hunspell"></category><category term="aspell"></category><category term="проверка"></category><category term="UTF-8"></category></entry><entry><title>Вывод окружности в Kivy</title><link href="http://imdagger.github.io/posts/2014/12/15/vyvod-okruzhnosti-v-kivy/" rel="alternate"></link><updated>2014-12-15T03:15:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-15:posts/2014/12/15/vyvod-okruzhnosti-v-kivy/</id><summary type="html">&lt;p&gt;Не знаю почему я решил, что используя Ellipse инструкцию,
 я могу получить окружность, а не круг. Я пытался в ней
 найти как отказаться от заливки... хо-хо но ведь, окружность —
 это просто линия! И нужно использовать Line со специальным параметром:&lt;/p&gt;
@@ -3645,42 +3690,4 @@ smart-табуляцию, что мне не подходит, т.к. появл
 из-за того, что они только применялись для админки. Пришлось их вычищать
 чуть меньше десяти часов во FreeBSD. Зато фикс кода занят меньше пяти
 минут.&lt;/p&gt;
-</summary><category term="ошибка"></category><category term="FreeBSD"></category><category term="программирование"></category><category term="много"></category><category term="файл"></category><category term="работа"></category></entry><entry><title>Автобусные билеты</title><link href="http://imdagger.github.io/posts/2011/11/29/avtobusnye-bilety/" rel="alternate"></link><updated>2014-07-15T04:26:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-11-29:posts/2011/11/29/avtobusnye-bilety/</id><summary type="html">&lt;p&gt;Недавно заинтересовала проблема разности номеров на автобусном
-билетике, а точнее разности основного видимого номера и отпечатанного
-номера с обратной стороны билета от номера, который был под ним. Сначала
-я сталкивался с разностью в 36 и это было довольно продолжительное
-время. Я даже уже начала верить, что разность в определённое время
-всегда равна ~36, т.к. за смену расходуется обычно одинаковое число
-билетов в среднем.&lt;/p&gt;
-&lt;p&gt;Но затем я впервые столкнулся с разностью 30, и понеслось. Были 14,
-28, 20 и т.д. Я начала задумываться над тем, чтобы вычислить радиус
-мотка у кондуктора (&lt;em&gt;нет, я не псих, у меня справка есть&lt;/em&gt; :) ). Первая
-проблема подкралась незаметно, когда я ехал на последнем автобусе ночью
-и заметил, что у кондуктора средних размеров рулон билетов, а она мне
-выдала билет с разностью 14, а на следующий день этот же последний
-автобус мне выдал разность 38, и я был в шоке, т.к. моток был
-&lt;strong&gt;малюсенький&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Моя первоначальная идея рушилась, что я могу по этой разности понять
-размер рулона. Затем мне пришла в голову более стройная идея, что
-автобусный парк заказывает в некотором унитарном предприятии печать
-билетов. Тот в свою очередь печатает билеты по возрастанию номеров и
-закручивает в рулон. Билеты с меньшими номерами оказываются ближе к
-центру, а с большими на периферии. Краска в тот момент ещё свежая,
-поэтому появляется на обратной стороне на бумаге оттиск от билета снизу.&lt;/p&gt;
-&lt;p&gt;Затем эти исходные рулоны поступают в автобусные парки (или это
-происходит прямо на заводе, я не знаю), где они сматываются уже в новые
-мотки, пригодные для кондукторов. Поэтому мои расчёты для разности 28
-дают радиус, которые не похож на рулон, что держал кондуктор автобуса.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div class="formula"&gt;
-&lt;i&gt;L&lt;/i&gt;&lt;sub&gt;&lt;i&gt;билета&lt;/i&gt;&lt;/sub&gt; ≈ 4.5&lt;i&gt;см&lt;/i&gt;&lt;br/&gt;Δ&lt;i&gt;k&lt;/i&gt; ≈ 28&lt;i&gt;билетов&lt;/i&gt;&lt;br/&gt;Δ&lt;i&gt;k&lt;/i&gt;⋅&lt;i&gt;L&lt;/i&gt;&lt;sub&gt;&lt;i&gt;билета&lt;/i&gt;&lt;/sub&gt; = &lt;i&gt;C&lt;/i&gt; = 2⋅&lt;i&gt;π&lt;/i&gt;⋅&lt;i&gt;R&lt;/i&gt;&lt;br/&gt;&lt;i&gt;R&lt;/i&gt; = &lt;span class="fraction"&gt;&lt;span class="ignored"&gt;(&lt;/span&gt;&lt;span class="numerator"&gt;Δ&lt;i&gt;k&lt;/i&gt;⋅&lt;i&gt;L&lt;/i&gt;&lt;sub&gt;&lt;i&gt;билета&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;&lt;span class="ignored"&gt;)/(&lt;/span&gt;&lt;span class="denominator"&gt;2⋅&lt;i&gt;π&lt;/i&gt;&lt;/span&gt;&lt;span class="ignored"&gt;)&lt;/span&gt;&lt;/span&gt; ≈ 4.5⋅28 ⁄ (2⋅3.14159) ≈ 20&lt;i&gt;см&lt;/i&gt;
-&lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Я хоть и плохо вижу, но рулон с радиусом почти 20см я бы отличил от
-средних размеров кольца билетов. Поэтому единственное решение, что это
-радиус исходного билетного барабана с уже намотанным слоем билетов при
-печати. Вероятнее всего его стандартный максимальный размер где-то 36-38
-билетов в окружности.&lt;/p&gt;
-&lt;p&gt;Осталось убедится, что у кондуктора билеты идут по возрастанию, тогда
-это &lt;strong&gt;окончательно подтвердит&lt;/strong&gt; мои измышления :].&lt;/p&gt;
-</summary><category term="жизнь"></category><category term="билет"></category><category term="автобус"></category><category term="размышления"></category><category term="математика"></category><category term="Я"></category><category term="бредни"></category></entry></feed>
+</summary><category term="ошибка"></category><category term="FreeBSD"></category><category term="программирование"></category><category term="много"></category><category term="файл"></category><category term="работа"></category></entry></feed>

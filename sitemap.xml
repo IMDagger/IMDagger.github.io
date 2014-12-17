@@ -2,9 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://imdagger.github.io/</loc>
-<lastmod>2014-12-15T03:15:00+03:00</lastmod>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/posts/2014/12/17/emacs-i-hunspell/</loc>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.90</priority>
 </url><url>
 <loc>http://imdagger.github.io/posts/2014/12/15/vyvod-okruzhnosti-v-kivy/</loc>
 <lastmod>2014-12-15T03:15:00+03:00</lastmod>
@@ -5742,7 +5747,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/category/text.html</loc>
-<lastmod>2014-12-15T03:15:00+03:00</lastmod>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -6252,7 +6257,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/utf-8.html</loc>
-<lastmod>2013-12-26T03:41:21+03:00</lastmod>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -6373,6 +6378,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/as.html</loc>
 <lastmod>2011-02-02T20:17:20+02:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/aspell.html</loc>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -6747,7 +6757,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/emacs.html</loc>
-<lastmod>2014-08-01T03:57:00+03:00</lastmod>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -6998,6 +7008,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/humble.html</loc>
 <lastmod>2012-11-11T13:50:14+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/hunspell.html</loc>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -7758,6 +7773,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/spacehandler.html</loc>
 <lastmod>2010-01-15T21:30:28+02:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/spellcheck.html</loc>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -11047,7 +11067,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/proverka.html</loc>
-<lastmod>2014-01-11T18:02:57+03:00</lastmod>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -12467,7 +12487,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/author/imdagger.html</loc>
-<lastmod>2014-12-15T03:15:00+03:00</lastmod>
+<lastmod>2014-12-17T14:27:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url>

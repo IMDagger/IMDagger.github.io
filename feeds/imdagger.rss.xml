@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IMDagger</title><link>http://imdagger.github.io/</link><description></description><atom:link href="http://imdagger.github.io/feeds/imdagger.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 15 Dec 2014 03:15:00 +0300</lastBuildDate><item><title>Вывод окружности в Kivy</title><link>http://imdagger.github.io/posts/2014/12/15/vyvod-okruzhnosti-v-kivy/</link><description>&lt;p&gt;Не знаю почему я решил, что используя Ellipse инструкцию,
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IMDagger</title><link>http://imdagger.github.io/</link><description></description><atom:link href="http://imdagger.github.io/feeds/imdagger.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 17 Dec 2014 14:27:00 +0300</lastBuildDate><item><title>Emacs и Hunspell</title><link>http://imdagger.github.io/posts/2014/12/17/emacs-i-hunspell/</link><description>&lt;p&gt;Раньше у меня с Emacs использовалась проверка через Aspell,
+но так можно проверять только один язык в тексте, либо собирать
+мультиязыковой словарь. Я решил посмотреть, может ли Hunspell
+просто принять в качестве аргументов несколько словарей, и да,
+он может это. Поэтому я сделал выбор в пользу него.
+Хотя на этом пути тоже возникли свои подводные камни связанные
+с тем, что в пакетах старая сборка Hunspell. А в ней есть
+&lt;a class="reference external" href="http://debbugs.gnu.org/cgi/bugreport.cgi?bug=7781"&gt;ошибка&lt;/a&gt; при
+работе с UTF-8, когда утилита выводит номер
+байта вместо номера символа. Поэтому пришлось собрать
+пакет из &lt;a class="reference external" href="http://sourceforge.net/projects/hunspell/"&gt;исходников&lt;/a&gt;.
+А ещё установить пакет  hunspell-ru-ie-yo из
+&lt;a class="reference external" href="https://launchpad.net/~andrew-crew-kuznetsov/+archive/ubuntu/xneur-stable"&gt;ppa:andrew-crew-kuznetsov/xneur-stable&lt;/a&gt;
+от команды XNeur, чтобы была в словарях бука &lt;strong&gt;Ё&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Устанавливаем пакет Hunspell и языки.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nv"&gt;$ &lt;/span&gt;./configure.sh --prefix&lt;span class="pgcss-o"&gt;=&lt;/span&gt;/usr
+&lt;span class="pgcss-nv"&gt;$ &lt;/span&gt;sudo checkinstall make &lt;span class="pgcss-c"&gt;# используем утилиту для сборки deb&lt;/span&gt;
+...
+&lt;span class="pgcss-nv"&gt;$ &lt;/span&gt;sudo apt-get install hunspell-en-us hunspell-ru-ie-yo
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Правда последняя версии чекера из SVN немного медленная и пришлось
+нарастить timeout-ы в &lt;code class="code"&gt;
+flyspell-lazy.el&lt;/code&gt;
+. Включить другой движок для
+Emacs не составляет большой проблемы.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;custom-set-variables&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-local-dictionary-alist&lt;/span&gt;
+   &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;((&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;russian-english&amp;quot;&lt;/span&gt;
+     &lt;span class="pgcss-s"&gt;&amp;quot;[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюяA-Za-z]&amp;quot;&lt;/span&gt;
+     &lt;span class="pgcss-s"&gt;&amp;quot;[^АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюяA-Za-z]&amp;quot;&lt;/span&gt;
+     &lt;span class="pgcss-s"&gt;&amp;quot;[-&amp;#39;]&amp;quot;&lt;/span&gt;  &lt;span class="pgcss-no"&gt;nil&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;-d&amp;quot;&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;ru_RU,en_US&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt; &lt;span class="pgcss-no"&gt;nil&lt;/span&gt; &lt;span class="pgcss-nv"&gt;utf-8&lt;/span&gt;&lt;span class="pgcss-p"&gt;)))&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-program-name&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;hunspell&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-dictionary&lt;/span&gt; &lt;span class="pgcss-s"&gt;&amp;quot;russian-english&amp;quot;&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-really-aspell&lt;/span&gt; &lt;span class="pgcss-no"&gt;nil&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-really-hunspell&lt;/span&gt; &lt;span class="pgcss-no"&gt;t&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-encoding8-command&lt;/span&gt; &lt;span class="pgcss-no"&gt;t&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;ispell-silently-savep&lt;/span&gt; &lt;span class="pgcss-no"&gt;t&lt;/span&gt;&lt;span class="pgcss-p"&gt;)&lt;/span&gt;
+ &lt;span class="pgcss-o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nv"&gt;flyspell-delay&lt;/span&gt; &lt;span class="pgcss-mi"&gt;1&lt;/span&gt;&lt;span class="pgcss-p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;В данном случае словарь russian-english это ключ, по которому происходит
+поиск настроек. Где я уже указал опции &lt;code class="code"&gt;
+-d ru_RU,en_US&lt;/code&gt;
+ и кодировку
+ввода &lt;strong&gt;UTF-8&lt;/strong&gt;.&lt;/p&gt;
+&lt;!-- LocalWords: Hunspell checkinstall --&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Wed, 17 Dec 2014 14:27:00 +0300</pubDate><guid>tag:imdagger.github.io,2014-12-17:posts/2014/12/17/emacs-i-hunspell/</guid><category>emacs</category><category>spellcheck</category><category>hunspell</category><category>aspell</category><category>проверка</category><category>UTF-8</category></item><item><title>Вывод окружности в Kivy</title><link>http://imdagger.github.io/posts/2014/12/15/vyvod-okruzhnosti-v-kivy/</link><description>&lt;p&gt;Не знаю почему я решил, что используя Ellipse инструкцию,
 я могу получить окружность, а не круг. Я пытался в ней
 найти как отказаться от заливки... хо-хо но ведь, окружность —
 это просто линия! И нужно использовать Line со специальным параметром:&lt;/p&gt;
@@ -2799,18 +2844,4 @@ xrandr –dpi 86&lt;/blockquote&gt;
 возможности в сторону разных типов группировок изображений сильно
 урезаны. Так ещё и название файла из addImage из нового пакера выпилили,
 приходится использовать старый пакер, он тоже очень хорош.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Sun, 28 Oct 2012 01:22:46 +0300</pubDate><guid>tag:imdagger.github.io,2012-10-28:posts/2012/10/28/texturepacker-i-taily/</guid><category>упаковка</category><category>текстура</category><category>libGDX</category><category>TexturePacker</category><category>тайлы</category></item><item><title>Опциональная библиотека</title><link>http://imdagger.github.io/posts/2012/10/25/optsionalnaia-biblioteka/</link><description>&lt;p&gt;Для выборочного включения
-&lt;a class="reference external" href="http://ant.apache.org/manual/Types/fileset.html"&gt;fileset&lt;/a&gt; в path
-правиле можно воспользоваться параметром erroronmissingdir, это
-позволяет объединить сборку под несколько платформ, когда всего на 1 из
-платформ есть дополнительный набор библиотек. Например, при сборке под
-PC и Android:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nt"&gt;&amp;lt;path&lt;/span&gt; &lt;span class="pgcss-na"&gt;id=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;compiling-env&amp;quot;&lt;/span&gt;&lt;span class="pgcss-nt"&gt;&amp;gt;&lt;/span&gt;
-    ...
-    &lt;span class="pgcss-nt"&gt;&amp;lt;fileset&lt;/span&gt; &lt;span class="pgcss-na"&gt;id=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;path.internal.android-libs&amp;quot;&lt;/span&gt; &lt;span class="pgcss-na"&gt;dir=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;${sdk.dir}/platforms/${target}/&amp;quot;&lt;/span&gt;
-            &lt;span class="pgcss-na"&gt;erroronmissingdir=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;false&amp;quot;&lt;/span&gt;&lt;span class="pgcss-nt"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="pgcss-nt"&gt;&amp;lt;filename&lt;/span&gt; &lt;span class="pgcss-na"&gt;name=&lt;/span&gt;&lt;span class="pgcss-s"&gt;&amp;quot;android.jar&amp;quot;&lt;/span&gt; &lt;span class="pgcss-nt"&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class="pgcss-nt"&gt;&amp;lt;/fileset&amp;gt;&lt;/span&gt;
-&lt;span class="pgcss-nt"&gt;&amp;lt;/path&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Thu, 25 Oct 2012 13:32:28 +0300</pubDate><guid>tag:imdagger.github.io,2012-10-25:posts/2012/10/25/optsionalnaia-biblioteka/</guid><category>сборка</category><category>файл</category><category>Android</category><category>ant</category><category>выборочный</category><category>библиотека</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Sun, 28 Oct 2012 01:22:46 +0300</pubDate><guid>tag:imdagger.github.io,2012-10-28:posts/2012/10/28/texturepacker-i-taily/</guid><category>упаковка</category><category>текстура</category><category>libGDX</category><category>TexturePacker</category><category>тайлы</category></item></channel></rss>
