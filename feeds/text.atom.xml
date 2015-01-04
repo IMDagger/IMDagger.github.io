@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/text.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-12-17T14:27:00+03:00</updated><entry><title>Emacs и Hunspell</title><link href="http://imdagger.github.io/posts/2014/12/17/emacs-i-hunspell/" rel="alternate"></link><updated>2014-12-17T14:27:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-17:posts/2014/12/17/emacs-i-hunspell/</id><summary type="html">&lt;p&gt;Раньше у меня с Emacs использовалась проверка через Aspell,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/text.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-01-05T02:12:00+03:00</updated><entry><title>Прошёл последнюю часть Депонии</title><link href="http://imdagger.github.io/posts/2015/01/05/proshiol-posledniuiu-chast-deponii/" rel="alternate"></link><updated>2015-01-05T02:12:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-05:posts/2015/01/05/proshiol-posledniuiu-chast-deponii/</id><summary type="html">&lt;p&gt;Грустно Goodbye Deponia 3 закончилась, но в принципе ..., с другой стороны, главный
+герой изменился хотя бы чуть-чуть внутренне и стал лучше. Т.к. до этого он
+столько всего натворил: и детей монстру скормил, и пару любимых
+разлучил в особо жестоком формате. Конечно хотелось бы увидеть,
+что Руфус вместе с Гоал, розовые сопли и т.д. Но конец игры — есть конец игры.&lt;/p&gt;
+&lt;!-- LocalWords:  Deponia Депонии Руфус Гоал --&gt;
+</summary><category term="goodbye"></category><category term="deponia"></category><category term="daedalic"></category><category term="квест"></category><category term="прохождение"></category><category term="игра"></category><category term="конец"></category></entry><entry><title>Emacs и Hunspell</title><link href="http://imdagger.github.io/posts/2014/12/17/emacs-i-hunspell/" rel="alternate"></link><updated>2014-12-17T14:27:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-17:posts/2014/12/17/emacs-i-hunspell/</id><summary type="html">&lt;p&gt;Раньше у меня с Emacs использовалась проверка через Aspell,
 но так можно проверять только один язык в тексте, либо собирать
 мультиязыковой словарь. Я решил посмотреть, может ли Hunspell
 просто принять в качестве аргументов несколько словарей, и да,
@@ -3682,12 +3688,4 @@ smart-табуляцию, что мне не подходит, т.к. появл
 нужно, но я на них наткнулся на стороннем сайте, откуда затем снова
 пришёл на MongoDB
 &lt;a class="reference external" href="http://www.mongodb.org/display/DOCS/Advanced+Queries#AdvancedQueries-RegularExpressions"&gt;Wiki&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Я"></category><category term="невнимательность"></category><category term="$where"></category><category term="документация"></category><category term="MongoDB"></category></entry><entry><title>10,000,000 файлов</title><link href="http://imdagger.github.io/posts/2011/12/01/10000000-failov/" rel="alternate"></link><updated>2011-12-01T23:31:04+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-12-01:posts/2011/12/01/10000000-failov/</id><summary type="html">&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Случайно осталось в коде обработчика запросов на пока баннера
-сохранение и создание сессии. Так за месяц набежало почти 10 миллионов
-файлов по пару сотен байт. От этого серверу было не очень прикольно,
-т.к. сесии складывались на диск файлами, а не в базу (что значительно бы
-ускорило процесс), т.к. особой потребности в быстрых сессиях не было
-из-за того, что они только применялись для админки. Пришлось их вычищать
-чуть меньше десяти часов во FreeBSD. Зато фикс кода занят меньше пяти
-минут.&lt;/p&gt;
-</summary><category term="ошибка"></category><category term="FreeBSD"></category><category term="программирование"></category><category term="много"></category><category term="файл"></category><category term="работа"></category></entry></feed>
+</summary><category term="Я"></category><category term="невнимательность"></category><category term="$where"></category><category term="документация"></category><category term="MongoDB"></category></entry></feed>

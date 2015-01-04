@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/all.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2014-12-17T14:27:00+03:00</updated><entry><title>Emacs и Hunspell</title><link href="http://imdagger.github.io/posts/2014/12/17/emacs-i-hunspell/" rel="alternate"></link><updated>2014-12-17T14:27:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-17:posts/2014/12/17/emacs-i-hunspell/</id><summary type="html">&lt;p&gt;Раньше у меня с Emacs использовалась проверка через Aspell,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/all.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-01-05T02:12:00+03:00</updated><entry><title>Прошёл последнюю часть Депонии</title><link href="http://imdagger.github.io/posts/2015/01/05/proshiol-posledniuiu-chast-deponii/" rel="alternate"></link><updated>2015-01-05T02:12:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-05:posts/2015/01/05/proshiol-posledniuiu-chast-deponii/</id><summary type="html">&lt;p&gt;Грустно Goodbye Deponia 3 закончилась, но в принципе ..., с другой стороны, главный
+герой изменился хотя бы чуть-чуть внутренне и стал лучше. Т.к. до этого он
+столько всего натворил: и детей монстру скормил, и пару любимых
+разлучил в особо жестоком формате. Конечно хотелось бы увидеть,
+что Руфус вместе с Гоал, розовые сопли и т.д. Но конец игры — есть конец игры.&lt;/p&gt;
+&lt;!-- LocalWords:  Deponia Депонии Руфус Гоал --&gt;
+</summary><category term="goodbye"></category><category term="deponia"></category><category term="daedalic"></category><category term="квест"></category><category term="прохождение"></category><category term="игра"></category><category term="конец"></category></entry><entry><title>Emacs и Hunspell</title><link href="http://imdagger.github.io/posts/2014/12/17/emacs-i-hunspell/" rel="alternate"></link><updated>2014-12-17T14:27:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2014-12-17:posts/2014/12/17/emacs-i-hunspell/</id><summary type="html">&lt;p&gt;Раньше у меня с Emacs использовалась проверка через Aspell,
 но так можно проверять только один язык в тексте, либо собирать
 мультиязыковой словарь. Я решил посмотреть, может ли Hunspell
 просто принять в качестве аргументов несколько словарей, и да,
@@ -2833,15 +2839,4 @@ xdpyinfo | grep -B2 resolution&lt;/blockquote&gt;
 xrandr –dpi 86&lt;/blockquote&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Приложения в libGDX на этом PC стали отображаться как положено и
 задано в сантиметрах.&lt;/p&gt;
-</summary><category term="nouveau"></category><category term="отображение"></category><category term="nvidia"></category><category term="компьютер"></category><category term="Xorg"></category><category term="dpi"></category><category term="видеокарта"></category><category term="старый"></category></entry><entry><title>TexturePacker и тайлы</title><link href="http://imdagger.github.io/posts/2012/10/28/texturepacker-i-taily/" rel="alternate"></link><updated>2012-10-28T01:22:46+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-10-28:posts/2012/10/28/texturepacker-i-taily/</id><summary type="html">&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; В старом TexturePacker, чтобы он нормально упаковывал тайловые
-текстуры нужно кроме того, что добавить _x, _y или _xy суффикс к
-названию исходного изображения, следует ещё и minWidth, minHeight тоже
-сделать поменьше, а то только те, что больше 128 пойдут в атласы, а
-остальные будут проигнорированы. Плюс в моей расширенной версии
-упаковщика текстуры не обязаны находиться в одной директории, чтобы
-попасть в один атлас, но для этого пришлось изменить немного addImage. А
-вот TextureAtlas2 хоть и сделан уже получше, но с расширением его
-возможности в сторону разных типов группировок изображений сильно
-урезаны. Так ещё и название файла из addImage из нового пакера выпилили,
-приходится использовать старый пакер, он тоже очень хорош.&lt;/p&gt;
-</summary><category term="упаковка"></category><category term="текстура"></category><category term="libGDX"></category><category term="TexturePacker"></category><category term="тайлы"></category></entry></feed>
+</summary><category term="nouveau"></category><category term="отображение"></category><category term="nvidia"></category><category term="компьютер"></category><category term="Xorg"></category><category term="dpi"></category><category term="видеокарта"></category><category term="старый"></category></entry></feed>
