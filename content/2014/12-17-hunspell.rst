@@ -18,7 +18,7 @@ Emacs и Hunspell
 байта вместо номера символа. Поэтому пришлось собрать
 пакет из `исходников <http://sourceforge.net/projects/hunspell/>`__\.
 А ещё установить пакет  hunspell-ru-ie-yo из
-`ppa:andrew-crew-kuznetsov/xneur-stable <https://launchpad.net/~andrew-crew-kuznetsov/+archive/ubuntu/xneur-stable>`
+`ppa:andrew-crew-kuznetsov/xneur-stable <https://launchpad.net/~andrew-crew-kuznetsov/+archive/ubuntu/xneur-stable>`__
 от команды XNeur, чтобы была в словарях бука **Ё**.
 
 Устанавливаем пакет Hunspell и языки.
@@ -35,6 +35,7 @@ Emacs и Hunspell
 Emacs не составляет большой проблемы.
 
 .. code-block:: cl
+
    (custom-set-variables
     '(ispell-local-dictionary-alist
       '(("russian-english"
