@@ -1,0 +1,37 @@
+Bumblebee, ION2 и NVidia в Ubuntu 14.04 LTS
+===========================================
+:date: 2015-01-26 01:30
+:tags: ubuntu, bumblebee, nvidia, ion2
+:category: text
+:author: IMDagger
+
+После обновления с 12.04 LTS попытка запустить :code:`optirun -b primus glxinfo` завершалась
+ошибкой, что второе устройство не обнаружено.
+
+  Cannot access secondary GPU - error: [XORG] (EE) No devices detected
+
+Я накатил на всякий случай драйверы :code:`nvidia-331-updates` а затем решил глянуть, что
+за устройства у меня видны:
+
+.. code-block:: sh
+
+   $ lspci
+   ...
+   04:00.0 VGA compatible controller: NVIDIA Corporation GT218 [ION 2] (rev ff)
+
+Ну и тут стало ясно, что у устройства один адрес, а для Bumblebee прописан другой
+номер, поэтому правка вот такого вида решила вопрос:
+
+.. code-block:: sh
+
+   /etc/bumblebee/xorg.conf.nvidia
+   ...
+   #   If the X server does not automatically detect your VGA device,
+   #   you can manually set it here.
+   #   To get the BusID prop, run `lspci | egrep 'VGA|3D'` and input the data
+   #   as you see in the commented example.
+   #   This Setting may be needed in some platforms with more than one
+   #   nvidia card, which may confuse the proprietary driver (e.g.,
+   #   trying to take ownership of the wrong device). Also needed on Ubuntu 13.04.
+   BusID "PCI:04:00:0"
+   ...
