@@ -2,9 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://imdagger.github.io/</loc>
-<lastmod>2015-01-05T02:12:00+03:00</lastmod>
+<lastmod>2015-01-26T01:30:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/</loc>
+<lastmod>2015-01-26T01:30:00+03:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.90</priority>
 </url><url>
 <loc>http://imdagger.github.io/posts/2015/01/05/proshiol-posledniuiu-chast-deponii/</loc>
 <lastmod>2015-01-05T02:12:00+03:00</lastmod>
@@ -5752,7 +5757,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/category/text.html</loc>
-<lastmod>2015-01-05T02:12:00+03:00</lastmod>
+<lastmod>2015-01-26T01:30:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -6506,6 +6511,11 @@
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
+<loc>http://imdagger.github.io/tag/bumblebee.html</loc>
+<lastmod>2015-01-26T01:30:00+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
 <loc>http://imdagger.github.io/tag/bundle.html</loc>
 <lastmod>2012-11-11T13:50:14+03:00</lastmod>
 <changefreq>never</changefreq>
@@ -7086,6 +7096,11 @@
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
+<loc>http://imdagger.github.io/tag/ion2.html</loc>
+<lastmod>2015-01-26T01:30:00+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
 <loc>http://imdagger.github.io/tag/ipo.html</loc>
 <lastmod>2010-08-01T21:10:57+03:00</lastmod>
 <changefreq>never</changefreq>
@@ -7387,7 +7402,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/nvidia.html</loc>
-<lastmod>2012-11-02T16:56:36+03:00</lastmod>
+<lastmod>2015-01-26T01:30:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -7982,7 +7997,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/ubuntu.html</loc>
-<lastmod>2014-04-25T17:35:01+03:00</lastmod>
+<lastmod>2015-01-26T01:30:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -12507,7 +12522,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/author/imdagger.html</loc>
-<lastmod>2015-01-05T02:12:00+03:00</lastmod>
+<lastmod>2015-01-26T01:30:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url>

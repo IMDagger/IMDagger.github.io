@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/text.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-01-05T02:12:00+03:00</updated><entry><title>Прошёл последнюю часть Депонии</title><link href="http://imdagger.github.io/posts/2015/01/05/proshiol-posledniuiu-chast-deponii/" rel="alternate"></link><updated>2015-01-05T02:12:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-05:posts/2015/01/05/proshiol-posledniuiu-chast-deponii/</id><summary type="html">&lt;p&gt;Грустно Goodbye Deponia 3 закончилась, но в принципе ..., с другой стороны, главный
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/text.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-01-26T01:30:00+03:00</updated><entry><title>Bumblebee, ION2 и NVidia в Ubuntu 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/" rel="alternate"></link><updated>2015-01-26T01:30:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-26:posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/</id><summary type="html">&lt;p&gt;После обновления с 12.04 LTS попытка запустить &lt;code class="code"&gt;
+optirun -b primus glxinfo&lt;/code&gt;
+ завершалась
+ошибкой, что второе устройство не обнаружено.&lt;/p&gt;
+&lt;blockquote&gt;
+Cannot access secondary GPU - error: [XORG] (EE) No devices detected&lt;/blockquote&gt;
+&lt;p&gt;Я накатил на всякий случай драйверы &lt;code class="code"&gt;
+nvidia-331-updates&lt;/code&gt;
+ а затем решил глянуть, что
+за устройства у меня видны:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nv"&gt;$ &lt;/span&gt;lspci
+...
+04:00.0 VGA compatible controller: NVIDIA Corporation GT218 &lt;span class="pgcss-o"&gt;[&lt;/span&gt;ION 2&lt;span class="pgcss-o"&gt;]&lt;/span&gt; &lt;span class="pgcss-o"&gt;(&lt;/span&gt;rev ff&lt;span class="pgcss-o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ну и тут стало ясно, что у устройства один адрес, а для Bumblebee прописан другой
+номер, поэтому правка вот такого вида решила вопрос:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;/etc/bumblebee/xorg.conf.nvidia
+...
+&lt;span class="pgcss-c"&gt;#   If the X server does not automatically detect your VGA device,&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   you can manually set it here.&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   To get the BusID prop, run `lspci | egrep &amp;#39;VGA|3D&amp;#39;` and input the data&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   as you see in the commented example.&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   This Setting may be needed in some platforms with more than one&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   nvidia card, which may confuse the proprietary driver (e.g.,&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   trying to take ownership of the wrong device). Also needed on Ubuntu 13.04.&lt;/span&gt;
+BusID &lt;span class="pgcss-s2"&gt;&amp;quot;PCI:04:00:0&amp;quot;&lt;/span&gt;
+...
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="ubuntu"></category><category term="bumblebee"></category><category term="nvidia"></category><category term="ion2"></category></entry><entry><title>Прошёл последнюю часть Депонии</title><link href="http://imdagger.github.io/posts/2015/01/05/proshiol-posledniuiu-chast-deponii/" rel="alternate"></link><updated>2015-01-05T02:12:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-05:posts/2015/01/05/proshiol-posledniuiu-chast-deponii/</id><summary type="html">&lt;p&gt;Грустно Goodbye Deponia 3 закончилась, но в принципе ..., с другой стороны, главный
 герой изменился хотя бы чуть-чуть внутренне и стал лучше. Т.к. до этого он
 столько всего натворил: и детей монстру скормил, и пару любимых
 разлучил в особо жестоком формате. Конечно хотелось бы увидеть,
@@ -3682,10 +3710,4 @@ smart-табуляцию, что мне не подходит, т.к. появл
 &lt;span class="pgcss-o"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
-</summary><category term="python"></category><category term="emacs"></category><category term="работа"></category><category term="табуляция"></category><category term="backspace"></category></entry><entry><title>$where в MongoDB</title><link href="http://imdagger.github.io/posts/2011/12/12/where-v-mongodb/" rel="alternate"></link><updated>2011-12-12T03:55:54+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2011-12-12:posts/2011/12/12/where-v-mongodb/</id><summary type="html">&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Внимательнее нужно мне читать стандартную документацию к MongoDB, а
-то я был удивлён оператором $where для поиска, а также возможностью
-использовать регулярные выражения для поиска. Пока оно мне ещё не особо
-нужно, но я на них наткнулся на стороннем сайте, откуда затем снова
-пришёл на MongoDB
-&lt;a class="reference external" href="http://www.mongodb.org/display/DOCS/Advanced+Queries#AdvancedQueries-RegularExpressions"&gt;Wiki&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Я"></category><category term="невнимательность"></category><category term="$where"></category><category term="документация"></category><category term="MongoDB"></category></entry></feed>
+</summary><category term="python"></category><category term="emacs"></category><category term="работа"></category><category term="табуляция"></category><category term="backspace"></category></entry></feed>

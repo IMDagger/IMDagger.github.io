@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/all.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-01-05T02:12:00+03:00</updated><entry><title>Прошёл последнюю часть Депонии</title><link href="http://imdagger.github.io/posts/2015/01/05/proshiol-posledniuiu-chast-deponii/" rel="alternate"></link><updated>2015-01-05T02:12:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-05:posts/2015/01/05/proshiol-posledniuiu-chast-deponii/</id><summary type="html">&lt;p&gt;Грустно Goodbye Deponia 3 закончилась, но в принципе ..., с другой стороны, главный
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/all.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-01-26T01:30:00+03:00</updated><entry><title>Bumblebee, ION2 и NVidia в Ubuntu 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/" rel="alternate"></link><updated>2015-01-26T01:30:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-26:posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/</id><summary type="html">&lt;p&gt;После обновления с 12.04 LTS попытка запустить &lt;code class="code"&gt;
+optirun -b primus glxinfo&lt;/code&gt;
+ завершалась
+ошибкой, что второе устройство не обнаружено.&lt;/p&gt;
+&lt;blockquote&gt;
+Cannot access secondary GPU - error: [XORG] (EE) No devices detected&lt;/blockquote&gt;
+&lt;p&gt;Я накатил на всякий случай драйверы &lt;code class="code"&gt;
+nvidia-331-updates&lt;/code&gt;
+ а затем решил глянуть, что
+за устройства у меня видны:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nv"&gt;$ &lt;/span&gt;lspci
+...
+04:00.0 VGA compatible controller: NVIDIA Corporation GT218 &lt;span class="pgcss-o"&gt;[&lt;/span&gt;ION 2&lt;span class="pgcss-o"&gt;]&lt;/span&gt; &lt;span class="pgcss-o"&gt;(&lt;/span&gt;rev ff&lt;span class="pgcss-o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ну и тут стало ясно, что у устройства один адрес, а для Bumblebee прописан другой
+номер, поэтому правка вот такого вида решила вопрос:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;/etc/bumblebee/xorg.conf.nvidia
+...
+&lt;span class="pgcss-c"&gt;#   If the X server does not automatically detect your VGA device,&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   you can manually set it here.&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   To get the BusID prop, run `lspci | egrep &amp;#39;VGA|3D&amp;#39;` and input the data&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   as you see in the commented example.&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   This Setting may be needed in some platforms with more than one&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   nvidia card, which may confuse the proprietary driver (e.g.,&lt;/span&gt;
+&lt;span class="pgcss-c"&gt;#   trying to take ownership of the wrong device). Also needed on Ubuntu 13.04.&lt;/span&gt;
+BusID &lt;span class="pgcss-s2"&gt;&amp;quot;PCI:04:00:0&amp;quot;&lt;/span&gt;
+...
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="ubuntu"></category><category term="bumblebee"></category><category term="nvidia"></category><category term="ion2"></category></entry><entry><title>Прошёл последнюю часть Депонии</title><link href="http://imdagger.github.io/posts/2015/01/05/proshiol-posledniuiu-chast-deponii/" rel="alternate"></link><updated>2015-01-05T02:12:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-05:posts/2015/01/05/proshiol-posledniuiu-chast-deponii/</id><summary type="html">&lt;p&gt;Грустно Goodbye Deponia 3 закончилась, но в принципе ..., с другой стороны, главный
 герой изменился хотя бы чуть-чуть внутренне и стал лучше. Т.к. до этого он
 столько всего натворил: и детей монстру скормил, и пару любимых
 разлучил в особо жестоком формате. Конечно хотелось бы увидеть,
@@ -2824,19 +2852,4 @@ Design (таже студия). Мне нравится их подход к с�
 &lt;p&gt;Машинариум не дал мне нормально поспать :) Всё обошлось мне в $10, я
 дал почти в два раза больше среднего, а если бы покупал по 1 игре, то
 вышло бы больше $100.&lt;/p&gt;
-</summary><category term="bundle"></category><category term="игры"></category><category term="humble"></category><category term="покупка"></category><category term="indie"></category></entry><entry><title>Старый комп</title><link href="http://imdagger.github.io/posts/2012/11/02/staryi-komp/" rel="alternate"></link><updated>2012-11-02T16:56:36+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-11-02:posts/2012/11/02/staryi-komp/</id><summary type="html">&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Измерив (приблизительно) линейкой свой старый дисплей от моего
-компьютера (с начала 2003 года) я понял, что: то ли DDC видеокарты
-возвращает неверный DPI или, что более вероятно, драйвер Nouveau
-возвращает или не может определить DPI монитора. Раньше был драйвер от
-Nvidia, но они больше не поддерживают мой старый Geforce 4 MX440.
-Поэтому пришлось сходить в богатое руководство ArchLinux и взглянуть,
-как получить, что за DPI выставлен у меня:&lt;/p&gt;
-&lt;blockquote&gt;
-xdpyinfo | grep -B2 resolution&lt;/blockquote&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Оказалось, что 96. А по моим расчётам у меня где-то 86 точек на
-дюйм. Поэтому после:&lt;/p&gt;
-&lt;blockquote&gt;
-xrandr –dpi 86&lt;/blockquote&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Приложения в libGDX на этом PC стали отображаться как положено и
-задано в сантиметрах.&lt;/p&gt;
-</summary><category term="nouveau"></category><category term="отображение"></category><category term="nvidia"></category><category term="компьютер"></category><category term="Xorg"></category><category term="dpi"></category><category term="видеокарта"></category><category term="старый"></category></entry></feed>
+</summary><category term="bundle"></category><category term="игры"></category><category term="humble"></category><category term="покупка"></category><category term="indie"></category></entry></feed>
