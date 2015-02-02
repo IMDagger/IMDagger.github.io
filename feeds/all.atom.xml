@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/all.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-01-26T01:30:00+03:00</updated><entry><title>Bumblebee, ION2 и NVidia в Ubuntu 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/" rel="alternate"></link><updated>2015-01-26T01:30:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-26:posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/</id><summary type="html">&lt;p&gt;После обновления с 12.04 LTS попытка запустить &lt;code class="code"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/all.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-02-02T14:32:00+03:00</updated><entry><title>Oscar и дополнительные блоки контента</title><link href="http://imdagger.github.io/posts/2015/02/02/oscar-i-dopolnitelnye-bloki-kontenta/" rel="alternate"></link><updated>2015-02-02T14:32:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-02-02:posts/2015/02/02/oscar-i-dopolnitelnye-bloki-kontenta/</id><summary type="html">&lt;p&gt;Хорошо описано, как перегрузить промо в Django Oscar, чтобы новый тип
+блока добавился в Dashboard.&lt;/p&gt;
+</summary><category term="django"></category><category term="oscar"></category><category term="promotions"></category><category term="content"></category><category term="block"></category><category term="dashboard"></category><category term="программирование"></category></entry><entry><title>Bumblebee, ION2 и NVidia в Ubuntu 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/" rel="alternate"></link><updated>2015-01-26T01:30:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-01-26:posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/</id><summary type="html">&lt;p&gt;После обновления с 12.04 LTS попытка запустить &lt;code class="code"&gt;
 optirun -b primus glxinfo&lt;/code&gt;
  завершалась
 ошибкой, что второе устройство не обнаружено.&lt;/p&gt;
@@ -2838,18 +2840,4 @@ sudo pacman -Sy &amp;amp;&amp;amp; sudo pacman -S bash-completion&lt;/blockquote
 обратил внимание, что робот-старик бросил бинт на землю). Может
 как-нибудь, если будет время, то куплю ещё игру Botanicula от Amanita
 Design (таже студия). Мне нравится их подход к созданию игр.&lt;/p&gt;
-</summary><category term="игра"></category><category term="прошёл"></category><category term="впечатление"></category><category term="Machinarium"></category><category term="квест"></category></entry><entry><title></title><link href="http://imdagger.github.io/posts/2012/11/11/urn:ya.ru:post/22199227/1711/" rel="alternate"></link><updated>2012-11-11T13:50:14+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-11-11:posts/2012/11/11/urn:ya.ru:post/22199227/1711/</id><summary type="html">&lt;p&gt;Купил Indie Humble Bundle for Android 4. Теперь у меня есть
-лицензионные, без какой-либо защиты игры (под любые платформы, я уже
-поставил на телефон и под GNU/Linux):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Machinarium&lt;/li&gt;
-&lt;li&gt;Splice&lt;/li&gt;
-&lt;li&gt;Superbrothers: Sword &amp;amp; Sworcery EP&lt;/li&gt;
-&lt;li&gt;Waking Mars&lt;/li&gt;
-&lt;li&gt;Eufloria (забавная игра про планетки и семена, и войны между ними)&lt;/li&gt;
-&lt;li&gt;Crayon Physics Deluxe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Машинариум не дал мне нормально поспать :) Всё обошлось мне в $10, я
-дал почти в два раза больше среднего, а если бы покупал по 1 игре, то
-вышло бы больше $100.&lt;/p&gt;
-</summary><category term="bundle"></category><category term="игры"></category><category term="humble"></category><category term="покупка"></category><category term="indie"></category></entry></feed>
+</summary><category term="игра"></category><category term="прошёл"></category><category term="впечатление"></category><category term="Machinarium"></category><category term="квест"></category></entry></feed>
