@@ -125,10 +125,14 @@ TAG_CLOUD_MAX_ITEMS = 20
 
 STATIC_PATHS = [
     'extra/favicon.ico',
+    'extra/yandex_753662dc098e0b00.txt',
 ]
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {
         'path': 'favicon.ico',
+    },
+    'extra/yandex_753662dc098e0b00.txt': {
+        'path': 'yandex_753662dc098e0b00.txt',
     },
 }
 
