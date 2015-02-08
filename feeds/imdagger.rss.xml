@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IMDagger</title><link>http://imdagger.github.io/</link><description></description><atom:link href="http://imdagger.github.io/feeds/imdagger.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 02 Feb 2015 14:32:00 +0300</lastBuildDate><item><title>Oscar и дополнительные блоки контента</title><link>http://imdagger.github.io/posts/2015/02/02/oscar-i-dopolnitelnye-bloki-kontenta/</link><description>&lt;p&gt;Хорошо описано, как перегрузить промо в Django Oscar, чтобы новый тип
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IMDagger</title><link>http://imdagger.github.io/</link><description></description><atom:link href="http://imdagger.github.io/feeds/imdagger.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 08 Feb 2015 04:58:00 +0300</lastBuildDate><item><title>Bumblebee обновление в 14.04 LTS</title><link>http://imdagger.github.io/posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</link><description>&lt;p&gt;После обновления пакетов включился вдруг nvidia-prime, не
+знаю в каком он сейчас состоянии (продукт от Nvidia), но
+совсем недавно, чтобы переключить карточку, в нём нужно было
+завершать текущий сеанс пользователя и входить снова, что
+для меня не приемлимо. В Bumblebee никуда не нужно выходить,
+всё переключается при помощи &lt;code class="code"&gt;
+optirun&lt;/code&gt;
+ тут же по месту
+в сеансе, при чём для каждого приложения можно выборочно.
+После прописывания конкретного драйвера ядра в bumblebee.conf на
+&lt;code class="code"&gt;
+nvidia-331-updates&lt;/code&gt;
+ и переброса ссылки с nvidia-current на
+nvidia-331-updates (была на nvidia-331-updates-prime), вылезла
+вот такая ошибка:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;/dev/dri/card0: failed to set DRM interface version 1.4: Permission denied&lt;/div&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Решается добавкой описанной в вики:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Section &amp;quot;Screen&amp;quot;&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Identifier &amp;quot;Default Screen&amp;quot;&lt;/div&gt;
+&lt;div class="line"&gt;Device &amp;quot;DiscreteNvidia&amp;quot;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line"&gt;EndSection&lt;/div&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Sun, 08 Feb 2015 04:58:00 +0300</pubDate><guid>tag:imdagger.github.io,2015-02-08:posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</guid><category>ubuntu</category><category>bumblebee</category><category>nvidia-prime</category><category>ion2</category></item><item><title>Oscar и дополнительные блоки контента</title><link>http://imdagger.github.io/posts/2015/02/02/oscar-i-dopolnitelnye-bloki-kontenta/</link><description>&lt;p&gt;Хорошо описано, как перегрузить промо в Django Oscar, чтобы новый тип
 блока добавился в Dashboard.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Mon, 02 Feb 2015 14:32:00 +0300</pubDate><guid>tag:imdagger.github.io,2015-02-02:posts/2015/02/02/oscar-i-dopolnitelnye-bloki-kontenta/</guid><category>django</category><category>oscar</category><category>promotions</category><category>content</category><category>block</category><category>dashboard</category><category>программирование</category></item><item><title>Bumblebee, ION2 и NVidia в Ubuntu 14.04 LTS</title><link>http://imdagger.github.io/posts/2015/01/26/bumblebee-ion2-i-nvidia-v-ubuntu-1404-lts/</link><description>&lt;p&gt;После обновления с 12.04 LTS попытка запустить &lt;code class="code"&gt;
 optirun -b primus glxinfo&lt;/code&gt;
@@ -2832,12 +2863,4 @@ sudo pacman -Sy &amp;amp;&amp;amp; sudo pacman -S bash-completion&lt;/blockquote
 &lt;p&gt;То, что нужно чтобы UTF-8 вывод работал для Python 2.7.1+ даже, если к
 пайпу подключён less.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Wed, 21 Nov 2012 21:45:46 +0300</pubDate><guid>tag:imdagger.github.io,2012-11-21:posts/2012/11/21/urn:ya.ru:post/22199227/1718/</guid><category>вывод</category><category>python</category><category>UTF-8</category></item><item><title></title><link>http://imdagger.github.io/posts/2012/11/17/urn:ya.ru:post/22199227/1715/</link><description>&lt;p&gt;релизнулись, осталось недочёты допилить&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Sat, 17 Nov 2012 02:49:09 +0300</pubDate><guid>tag:imdagger.github.io,2012-11-17:posts/2012/11/17/urn:ya.ru:post/22199227/1715/</guid></item><item><title></title><link>http://imdagger.github.io/posts/2012/11/14/urn:ya.ru:post/22199227/1713/</link><description>&lt;p&gt;Недавно прошёл Machinarium, занятный квест и добрый, приятный стиль.
-В нескольких местах сильно затупил, что пришлось пользоваться полной
-подсказкой: не мог понять как заставить ворону упасть с висящего кабеля,
-не догадался, что нужно повторить услышанную мелодию, чтобы лестница
-разблокировалась и затупил с тем, как связать две батарейки вместе (не
-обратил внимание, что робот-старик бросил бинт на землю). Может
-как-нибудь, если будет время, то куплю ещё игру Botanicula от Amanita
-Design (таже студия). Мне нравится их подход к созданию игр.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Wed, 14 Nov 2012 20:16:09 +0300</pubDate><guid>tag:imdagger.github.io,2012-11-14:posts/2012/11/14/urn:ya.ru:post/22199227/1713/</guid><category>игра</category><category>прошёл</category><category>впечатление</category><category>Machinarium</category><category>квест</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">IMDagger</dc:creator><pubDate>Sat, 17 Nov 2012 02:49:09 +0300</pubDate><guid>tag:imdagger.github.io,2012-11-17:posts/2012/11/17/urn:ya.ru:post/22199227/1715/</guid></item></channel></rss>

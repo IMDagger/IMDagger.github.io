@@ -2,9 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://imdagger.github.io/</loc>
-<lastmod>2015-02-02T14:32:00+03:00</lastmod>
+<lastmod>2015-02-08T04:58:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</loc>
+<lastmod>2015-02-08T04:58:00+03:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.90</priority>
 </url><url>
 <loc>http://imdagger.github.io/posts/2015/02/02/oscar-i-dopolnitelnye-bloki-kontenta/</loc>
 <lastmod>2015-02-02T14:32:00+03:00</lastmod>
@@ -5747,7 +5752,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/category/link.html</loc>
-<lastmod>2015-02-02T14:32:00+03:00</lastmod>
+<lastmod>2015-02-08T04:58:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -6522,7 +6527,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/bumblebee.html</loc>
-<lastmod>2015-01-26T01:30:00+03:00</lastmod>
+<lastmod>2015-02-08T04:58:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -7117,7 +7122,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/ion2.html</loc>
-<lastmod>2015-01-26T01:30:00+03:00</lastmod>
+<lastmod>2015-02-08T04:58:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -7423,6 +7428,11 @@
 </url><url>
 <loc>http://imdagger.github.io/tag/nvidia.html</loc>
 <lastmod>2015-01-26T01:30:00+03:00</lastmod>
+<changefreq>never</changefreq>
+<priority>0.00</priority>
+</url><url>
+<loc>http://imdagger.github.io/tag/nvidia-prime.html</loc>
+<lastmod>2015-02-08T04:58:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -8027,7 +8037,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/tag/ubuntu.html</loc>
-<lastmod>2015-01-26T01:30:00+03:00</lastmod>
+<lastmod>2015-02-08T04:58:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url><url>
@@ -12552,7 +12562,7 @@
 <priority>0.00</priority>
 </url><url>
 <loc>http://imdagger.github.io/author/imdagger.html</loc>
-<lastmod>2015-02-02T14:32:00+03:00</lastmod>
+<lastmod>2015-02-08T04:58:00+03:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.00</priority>
 </url>
