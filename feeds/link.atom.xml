@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/link.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-02-08T04:58:00+03:00</updated><entry><title>Bumblebee обновление в 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/" rel="alternate"></link><updated>2015-02-08T04:58:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-02-08:posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</id><summary type="html">&lt;p&gt;После обновления пакетов включился вдруг nvidia-prime, не
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/link.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-03-09T11:29:00+03:00</updated><entry><title>Асинхронный вывод в STDOUT из GNU Parallel</title><link href="http://imdagger.github.io/posts/2015/03/09/asinkhronnyi-vyvod-v-stdout-iz-gnu-parallel/" rel="alternate"></link><updated>2015-03-09T11:29:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-03-09:posts/2015/03/09/asinkhronnyi-vyvod-v-stdout-iz-gnu-parallel/</id><summary type="html">&lt;p&gt;Если нужно запустить несколько программ параллельно, но при этом
+в удобном формате и не превращая их в демонов, а закрепляя за родителем,
+то таким родительским процессом может выступить GNU Parallel утилита.
+Но она подготавливает и группирует вывод по каждому из процессов по умолчанию,
+что может быть не очень удобно, когда есть желание просто посмотреть на вывод каждой
+из утилит. Благо для этого предусмотрена опция &lt;code class="code"&gt;
+--ungroup&lt;/code&gt;
+, которая
+отключает группировку вывода в стандартный поток.&lt;/p&gt;
+</summary><category term="gnu"></category><category term="parallel"></category><category term=""></category></entry><entry><title>Bumblebee обновление в 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/" rel="alternate"></link><updated>2015-02-08T04:58:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-02-08:posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</id><summary type="html">&lt;p&gt;После обновления пакетов включился вдруг nvidia-prime, не
 знаю в каком он сейчас состоянии (продукт от Nvidia), но
 совсем недавно, чтобы переключить карточку, в нём нужно было
 завершать текущий сеанс пользователя и входить снова, что
