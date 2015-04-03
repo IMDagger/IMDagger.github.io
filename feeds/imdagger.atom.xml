@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/imdagger.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-03-09T11:29:00+03:00</updated><entry><title>Асинхронный вывод в STDOUT из GNU Parallel</title><link href="http://imdagger.github.io/posts/2015/03/09/asinkhronnyi-vyvod-v-stdout-iz-gnu-parallel/" rel="alternate"></link><updated>2015-03-09T11:29:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-03-09:posts/2015/03/09/asinkhronnyi-vyvod-v-stdout-iz-gnu-parallel/</id><summary type="html">&lt;p&gt;Если нужно запустить несколько программ параллельно, но при этом
+<feed xmlns="http://www.w3.org/2005/Atom"><title>IMDagger</title><link href="http://imdagger.github.io/" rel="alternate"></link><link href="http://imdagger.github.io/feeds/imdagger.atom.xml" rel="self"></link><id>http://imdagger.github.io/</id><updated>2015-04-03T03:39:00+03:00</updated><entry><title>raco decompile</title><link href="http://imdagger.github.io/posts/2015/04/03/raco-decompile/" rel="alternate"></link><updated>2015-04-03T03:39:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-04-03:posts/2015/04/03/raco-decompile/</id><summary type="html">&lt;p&gt;Интересно сделано получение встроенной функции по номеру в &lt;code class="code"&gt;
+compiler/decompile&lt;/code&gt;
+.
+Ведь встроенные константы в Racket помещаются в специальные глобальные ячейки и имеют
+свои номера. Соответственно в zo-байткод попадают только числа. И в языке доступна только проверка
+при помощи &lt;code class="code"&gt;
+primitive?&lt;/code&gt;
+ и ещё пару методов связанных с примитивами. Также есть
+возможность получить текущие объявления из &lt;code class="code"&gt;
+(namespace-mapped-symbols)&lt;/code&gt;
+.&lt;/p&gt;
+&lt;p&gt;Так вот &lt;code class="code"&gt;
+decompile&lt;/code&gt;
+ делает хитрый трюк, не применяя никаких хаков: создаёт пустой
+namespace, делает &lt;code class="code"&gt;
+require&lt;/code&gt;
+ всяких встроенных модулей в пространство (типа &lt;code class="code"&gt;
+'#%kernel&lt;/code&gt;
+
+&lt;code class="code"&gt;
+'#%unsafe&lt;/code&gt;
+ &lt;code class="code"&gt;
+'#%flfxnum&lt;/code&gt;
+ &lt;code class="code"&gt;
+'#%extfl&lt;/code&gt;
+ &lt;code class="code"&gt;
+'#%futures&lt;/code&gt;
+ &lt;code class="code"&gt;
+'#%foreign&lt;/code&gt;
+), затем
+пробегается по списку объявленных констант и вызывает для каждой из них
+стандартный &lt;code class="code"&gt;
+compile&lt;/code&gt;
+. Если константа скомпилировалась, то пробует её распарсить при помощи
+&lt;code class="code"&gt;
+zo-parse&lt;/code&gt;
+. Ну а дальше, просто выполняет &lt;code class="code"&gt;
+match&lt;/code&gt;
+ по выражению и, вуаля, получает число из
+структуры primval:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-k"&gt;...&lt;/span&gt;
+&lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;let&lt;/span&gt; &lt;span class="pgcss-p"&gt;([&lt;/span&gt;&lt;span class="pgcss-n"&gt;n&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;match&lt;/span&gt; &lt;span class="pgcss-n"&gt;v&lt;/span&gt;
+             &lt;span class="pgcss-p"&gt;[(&lt;/span&gt;&lt;span class="pgcss-k"&gt;struct&lt;/span&gt; &lt;span class="pgcss-n"&gt;compilation-top&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;_&lt;/span&gt; &lt;span class="pgcss-k"&gt;prefix&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-k"&gt;struct&lt;/span&gt; &lt;span class="pgcss-n"&gt;primval&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-n"&gt;n&lt;/span&gt;&lt;span class="pgcss-p"&gt;))))&lt;/span&gt; &lt;span class="pgcss-n"&gt;n&lt;/span&gt;&lt;span class="pgcss-p"&gt;]&lt;/span&gt;
+             &lt;span class="pgcss-p"&gt;[&lt;/span&gt;&lt;span class="pgcss-k"&gt;else&lt;/span&gt; &lt;span class="pgcss-no"&gt;#f&lt;/span&gt;&lt;span class="pgcss-p"&gt;])])&lt;/span&gt;
+       &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nb"&gt;hash-set!&lt;/span&gt; &lt;span class="pgcss-n"&gt;table&lt;/span&gt; &lt;span class="pgcss-n"&gt;n&lt;/span&gt; &lt;span class="pgcss-p"&gt;(&lt;/span&gt;&lt;span class="pgcss-nb"&gt;car&lt;/span&gt; &lt;span class="pgcss-n"&gt;b&lt;/span&gt;&lt;span class="pgcss-p"&gt;)))&lt;/span&gt;
+&lt;span class="pgcss-k"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="racket"></category><category term="raco"></category><category term="decompile"></category><category term="zo"></category></entry><entry><title>Асинхронный вывод в STDOUT из GNU Parallel</title><link href="http://imdagger.github.io/posts/2015/03/09/asinkhronnyi-vyvod-v-stdout-iz-gnu-parallel/" rel="alternate"></link><updated>2015-03-09T11:29:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-03-09:posts/2015/03/09/asinkhronnyi-vyvod-v-stdout-iz-gnu-parallel/</id><summary type="html">&lt;p&gt;Если нужно запустить несколько программ параллельно, но при этом
 в удобном формате и не превращая их в демонов, а закрепляя за родителем,
 то таким родительским процессом может выступить GNU Parallel утилита.
 Но она подготавливает и группирует вывод по каждому из процессов по умолчанию,
@@ -8,7 +55,7 @@
 --ungroup&lt;/code&gt;
 , которая
 отключает группировку вывода в стандартный поток.&lt;/p&gt;
-</summary><category term="gnu"></category><category term="parallel"></category><category term=""></category></entry><entry><title>Bumblebee обновление в 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/" rel="alternate"></link><updated>2015-02-08T04:58:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-02-08:posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</id><summary type="html">&lt;p&gt;После обновления пакетов включился вдруг nvidia-prime, не
+</summary><category term="gnu"></category><category term="parallel"></category></entry><entry><title>Bumblebee обновление в 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/" rel="alternate"></link><updated>2015-02-08T04:58:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-02-08:posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</id><summary type="html">&lt;p&gt;После обновления пакетов включился вдруг nvidia-prime, не
 знаю в каком он сейчас состоянии (продукт от Nvidia), но
 совсем недавно, чтобы переключить карточку, в нём нужно было
 завершать текущий сеанс пользователя и входить снова, что
@@ -2867,8 +2914,4 @@ sudo pacman -Sy &amp;amp;&amp;amp; sudo pacman -S bash-completion&lt;/blockquote
 (ага это не простой морской бой), которые были определены ранее&lt;/li&gt;
 &lt;li&gt;завершает сыгранные игры: проигранные или выигранные&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="бот"></category><category term="бой"></category><category term="морской"></category></entry><entry><title></title><link href="http://imdagger.github.io/posts/2012/11/21/urn:ya.ru:post/22199227/1718/" rel="alternate"></link><updated>2012-11-21T21:45:46+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2012-11-21:posts/2012/11/21/urn:ya.ru:post/22199227/1718/</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="pgcss-nb"&gt;export &lt;/span&gt;&lt;span class="pgcss-nv"&gt;PYTHONIOENCODING&lt;/span&gt;&lt;span class="pgcss-o"&gt;=&lt;/span&gt;utf-8
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;То, что нужно чтобы UTF-8 вывод работал для Python 2.7.1+ даже, если к
-пайпу подключён less.&lt;/p&gt;
-</summary><category term="вывод"></category><category term="python"></category><category term="UTF-8"></category></entry></feed>
+</summary><category term="бот"></category><category term="бой"></category><category term="морской"></category></entry></feed>

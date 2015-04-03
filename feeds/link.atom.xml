@@ -8,7 +8,7 @@
 --ungroup&lt;/code&gt;
 , которая
 отключает группировку вывода в стандартный поток.&lt;/p&gt;
-</summary><category term="gnu"></category><category term="parallel"></category><category term=""></category></entry><entry><title>Bumblebee обновление в 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/" rel="alternate"></link><updated>2015-02-08T04:58:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-02-08:posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</id><summary type="html">&lt;p&gt;После обновления пакетов включился вдруг nvidia-prime, не
+</summary><category term="gnu"></category><category term="parallel"></category></entry><entry><title>Bumblebee обновление в 14.04 LTS</title><link href="http://imdagger.github.io/posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/" rel="alternate"></link><updated>2015-02-08T04:58:00+03:00</updated><author><name>IMDagger</name></author><id>tag:imdagger.github.io,2015-02-08:posts/2015/02/08/bumblebee-obnovlenie-v-1404-lts/</id><summary type="html">&lt;p&gt;После обновления пакетов включился вдруг nvidia-prime, не
 знаю в каком он сейчас состоянии (продукт от Nvidia), но
 совсем недавно, чтобы переключить карточку, в нём нужно было
 завершать текущий сеанс пользователя и входить снова, что
