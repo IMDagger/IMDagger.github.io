@@ -1,7 +1,7 @@
 Асинхронный вывод в STDOUT из GNU Parallel
 ==========================================
 :date: 2015-03-09 11:29
-:tags: gnu, parallel,
+:tags: gnu, parallel
 :category: link
 :author: IMDagger
 :attached-url: http://www.gnu.org/software/parallel/man.html
